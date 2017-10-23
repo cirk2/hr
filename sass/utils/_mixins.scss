@@ -1,0 +1,257 @@
+
+@mixin brand-title($font-size) {
+  font: normal normal 400 $font-size 'Lora', 'Georgia', serif;
+  line-height: 0.9;
+  text-transform: capitalize;
+  text-align: center;
+  letter-spacing: -1.5px;
+  color: #333;
+}
+
+@mixin brand-nr($font-size) {
+  font: normal normal $font-size "Open Sans", "Montserrat", sans-serif !important;
+  text-align: center;
+  color: #dd3333;
+}
+
+// @include coverer($bottom)
+
+@mixin coverer($top) {
+    display: block;
+    position: absolute;
+    top: $top;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+// @include font-awesome()
+
+@mixin font-awesome($content) {
+  content: $content;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  font-family: FontAwesome;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin user-select-none {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+   -moz-touch-callout: none;
+    -ms-touch-callout: none;
+     -o-touch-callout: none;
+-webkit-touch-callout: none;
+        touch-callout: none;
+}
+
+// @include transitions($value)
+
+@mixin transition($value) {
+    -webkit-transition: $value; // obsolete
+          transition: $value; // IE 10, Fx 16+, Op 12.1+
+}
+
+@mixin transition_easing($value) {
+    -webkit-transition-timing-function: $value; // obsolete
+          transition-timing-function: $value; // IE 10, Fx 16+, Op 12.1+
+}
+
+@mixin transition_duration($value) {
+    -webkit-transition-duration: $value; // obsolete
+          transition-duration: $value; // IE 10, Fx 16+, Op 12.1+
+}
+
+@mixin transform($value)  {
+    -webkit-transform: $value; // Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4
+      -ms-transform: $value; // IE 9
+          transform: $value; // IE 10, Fx 16+, Op 12.1+
+}
+
+@mixin filter($value)  {
+    -webkit-filter: $value; /* Ch 23+, Saf 6.0+, BB 10.0+ */
+            filter: $value; /* FF 35+ */
+}
+
+@mixin keyframe($animation_name) {
+  @-webkit-keyframes $animation_name {
+    @content;
+  }
+  @keyframes $animation_name {
+    @content;
+  }
+}
+
+@mixin animation($name, $duration, $easing, $iterations) {
+  -webkit-animation: $name $duration $easing $iterations; /* Safari 4+ */
+          animation: $name $duration $easing $iterations; /* IE 10+, Fx 29+ */
+}
+
+
+// center vertically and/or horizontally an absolute positioned element
+
+@mixin center($xy:xy) {
+  @if $xy == xy {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    right: auto;
+    @include transform(translateX(-50%) translateY(-50%));
+  }
+  @else if $xy == x {
+    position: absolute;
+    left: 50%;
+    right: auto;
+    @include transform(translateX(-50%));
+  }
+  @else if $xy == y {
+    position: absolute;
+    top: 50%;
+    bottom: auto;
+    @include transform(translateY(-50%));
+  }
+}
+
+
+// ===============================================================//endregion
+// Breakpoints
+// ==================================================================//region
+
+$xl-width: 1441px;
+$lg-width: 1199px;
+$md-width:  991px;
+$sm-width:  768px;
+$xs-width:  575px;
+$xxs-width: 320px;
+
+$lg-dev-width: 1024px;
+$md-dev-width:  768px;
+$sm-dev-width:  414px;
+$xs-dev-width:  375px;
+$xxs-dev-width: 320px;
+
+$lg-dev-height: 736px;
+$md-dev-height: 667px;
+$sm-dev-height: 568px;
+$xs-dev-height: 480px;
+
+
+
+// ===============================================================//endregion
+// Media Query Mixin
+// ==================================================================//region
+
+@function translate-media-condition($c) {
+  $condMap: (
+        "screen":        "only screen",
+        "print":         "only print",
+        "retina":        "(-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-device-pixel-ratio: 1.5), (min-resolution: 120dpi)",
+        "from-xl":       "(min-width:         #{$xl-width + 1})",
+        "to-xl":         "(max-width:         #{$xl-width})",
+        "from-lg":       "(min-width:         #{$lg-width + 1})",
+        "to-lg":         "(max-width:         #{$lg-width})",
+        "from-md":       "(min-width:         #{$md-width + 1})",
+        "to-md":         "(max-width:         #{$md-width})",
+        "from-sm":       "(min-width:         #{$sm-width + 1})",
+        "to-sm":         "(max-width:         #{$sm-width})",
+        "from-xs":       "(min-width:         #{$xs-width + 1})",
+        "to-xs":         "(max-width:         #{$xs-width})",
+        "from-xxs":      "(min-width:         #{$xxs-width + 1})",
+        "to-xxs":        "(max-width:         #{$xxs-width})",
+        "from-lg-dev":   "(min-device-width:  #{$lg-dev-width})",
+        "from-md-dev":   "(min-device-width:  #{$md-dev-width})",
+        "from-sm-dev":   "(min-device-width:  #{$sm-dev-width})",
+        "from-xs-dev":   "(min-device-width:  #{$xs-dev-width})",
+        "from-xxs-dev":  "(min-device-width:  #{$xxs-dev-width})",
+        "to-lg-dev":     "(max-device-height: #{$lg-dev-height})",
+        "to-md-dev":     "(max-device-height: #{$md-dev-height})",
+        "to-sm-dev":     "(max-device-height: #{$sm-dev-height})",
+        "to-xs-dev":     "(max-device-height: #{$xs-dev-height})",
+        "ipad":          "(min-device-width:  #{$md-dev-width}) and (max-device-width: #{$lg-dev-width}) and (-webkit-min-device-pixel-ratio : 2)"
+        );
+  @return map-get( $condMap, $c );
+}
+
+// The mdia mixin
+@mixin media($args...) {
+  $query: "";
+  @each $arg in $args {
+    $op: "";
+    @if ( $query != "" ) {
+      $op: " and ";
+    }
+    $query: $query + $op + translate-media-condition($arg);
+  }
+  @media #{$query}  { @content; }
+}
+
+
+// ===============================================================//endregion
+//     Layout
+// ==================================================================//region
+
+@function _is-length($value) {
+  @return type-of($value) != "null" and (str-slice($value + "", 1, 4) == "calc"
+       or index(auto inherit initial 0, $value)
+       or (type-of($value) == "number" and not(unitless($value))));
+}
+
+@function _unpack-shorthand($shorthand) {
+  @if length($shorthand) == 1 {
+    @return nth($shorthand, 1) nth($shorthand, 1) nth($shorthand, 1) nth($shorthand, 1);
+  } @else if length($shorthand) == 2 {
+    @return nth($shorthand, 1) nth($shorthand, 2) nth($shorthand, 1) nth($shorthand, 2);
+  } @else if length($shorthand) == 3 {
+    @return nth($shorthand, 1) nth($shorthand, 2) nth($shorthand, 3) nth($shorthand, 2);
+  } @else {
+    @return $shorthand;
+  }
+}
+
+@mixin position(
+  $position,
+  $box-edge-values
+) {
+  $box-edge-values: _unpack-shorthand($box-edge-values);
+  $offsets: (
+  top:    nth($box-edge-values, 1),
+  right:  nth($box-edge-values, 2),
+  bottom: nth($box-edge-values, 3),
+  left:   nth($box-edge-values, 4),
+  );
+
+  position: $position;
+
+  @each $offset, $value in $offsets {
+  @if _is-length($value) {
+    #{$offset}: $value;
+  }
+  }
+}
+
+@mixin size($value) {
+  $width: nth($value, 1);
+  $height: $width;
+
+  @if length($value) > 1 {
+  $height: nth($value, 2);
+  }
+
+  @if is-size($height) {
+  height: $height;
+  } @else {
+  @warn "`#{$height}` is not a valid length for the `$height` parameter in the `size` mixin.";
+  }
+
+  @if is-size($width) {
+  width: $width;
+  } @else {
+  @warn "`#{$width}` is not a valid length for the `$width` parameter in the `size` mixin.";
+  }
+}

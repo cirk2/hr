@@ -1,0 +1,86 @@
+// Hamburger Menu
+
+$burger-size: 100px;
+$BS: $burger-size;
+$bun-size: ($BS / 25);
+$bs: $bun-size;
+$bun-margin: ($BS / 10);
+$bun-offset-top: ((((-$bs * 3) + (-$bun-margin * 4)) + $BS) / 2);
+$bun-offset-left: ($BS / 4) ;
+$cross-offset: ($BS / 2 - $bs / 2);
+
+$burger-duration: 200ms;
+$BD: $burger-duration;
+$rare:       ($BD *  .5);
+$mediumrare: ($BD * 1.5);
+$medium:     ($BD * 2  );
+$mediumwell: ($BD * 2.5);
+$welldone:   ($BD * 3  );
+
+
+
+#menu-toggle,
+#top-search {
+   position: relative;
+   @include size($BS);
+   margin: 0;
+   padding: 0;
+   cursor: pointer;
+}
+
+#menu-toggle {
+    * {
+        box-sizing: border-box;
+        transition: $BD ease-in-out;
+        transition-property: width, height, color;
+    }
+    span {
+        display: block;
+        background: #fff;
+        .shrink-nav & { background: #000; }
+    }
+    &:hover { background: transparentize(#000, .7); }
+    #hamburger {
+        position: absolute;
+        @include size(100%);
+        span {
+            @include position(relative, $bun-offset-top NULL NULL $bun-offset-left);
+            @include size(($BS / 2) $bs);
+            margin: $bun-margin 0;
+            &:nth-child(1) { transition-delay: $medium; }
+            &:nth-child(2) { transition-delay: $mediumwell; }
+            &:nth-child(3) { transition-delay: $welldone; }
+            .open & {
+                width: 0%;
+                &:nth-child(1) { transition-delay: 0s; }
+                &:nth-child(2) { transition-delay: $rare; }
+                &:nth-child(3) { transition-delay: $BD; }
+            }
+        }
+    }
+    #cross {
+        position: absolute;
+        @include size(100%);
+        transform: rotate(45deg) scale(.666);
+        span {
+            &:nth-child(1) {
+                @include position(absolute, 10% null null $cross-offset);
+                @include size(($bs / .666) 0%);
+                transition-delay: 0s;
+                .open & {
+                    height: 80%;
+                    transition-delay: $mediumwell;
+                }
+            }
+            &:nth-child(2) {
+                @include position(absolute, $cross-offset null null 10%);
+                @include size(0% ($bs / .666));
+                transition-delay: $BD;
+                .open & {
+                    width: 80%;
+                    transition-delay: $mediumrare;
+                }
+            }
+        }
+    }
+}

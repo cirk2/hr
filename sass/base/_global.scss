@@ -1,0 +1,16 @@
+// ===============================================================//endregion
+// Global
+// ==================================================================//region
+
+*, :after, :before {
+  -webkit-font-smoothing: antialiased !important;
+ -moz-osx-font-smoothing: grayscale !important;
+ @include media("retina") {
+  -webkit-font-smoothing: subpixel-antialiased !important;
+ }
+}
+
+html {
+    overflow-x: hidden;
+    width: 100%;
+}

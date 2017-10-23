@@ -1,0 +1,39 @@
+/*!
+ * Load Awesome v1.1.0 (http://github.danielcardoso.net/load-awesome/)
+ * Copyright 2015 Daniel Cardoso <@DanielCardoso>
+ * Licensed under MIT
+ */
+
+.la-timer.la-4x {
+	width: 128px;
+	height: 128px
+}
+
+.la-timer.la-4x>div {
+	width: 128px;
+	height: 128px;
+	border-width: 6px
+}
+
+.la-timer.la-4x>div:before,
+.la-timer.la-4x>div:after {
+	top: 56px;
+	left: 56px;
+	width: 8px;
+	margin-top: -4px;
+	margin-left: -4px;
+	border-radius: 8px;
+	-webkit-transform-origin: 4px 4px 0;
+	-moz-transform-origin: 4px 4px 0;
+	-ms-transform-origin: 4px 4px 0;
+	-o-transform-origin: 4px 4px 0;
+	transform-origin: 4px 4px 0
+}
+
+.la-timer.la-4x>div:before {
+	height: 48px
+}
+
+.la-timer.la-4x>div:after {
+	height: 32px
+}

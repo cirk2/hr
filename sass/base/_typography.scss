@@ -1,0 +1,86 @@
+// ===============================================================//endregion
+// ==== Headings
+// ==================================================================//region
+
+.menu-item a,
+h1, h2, h3, h4, h5, h6,
+.slider-typography {
+    font-family: "Montserrat", "Gotham Medium", "Proxima Nova Semibold", system-ui, sans-serif;
+}
+
+.entry-content {
+    h1, h2, h3, h4, h5, h6 {
+        margin-bottom: .5em;
+    }
+}
+
+// h1.section-title {
+//     padding-bottom: 20px;
+
+//     font-size: 32px !important;
+// }
+
+@mixin headerstyle-2($font-size) {
+    font: 700 $font-size/1 "Montserrat", sans-serif;
+    letter-spacing: -0.02em;
+    color: $red;
+    -webkit-font-smoothing: subpixel-antialiased !important;
+}
+
+.section-heading {
+    margin-bottom: 4em;
+    position: relative;
+    .subheader {
+        max-width: 30em;
+        h2.section-title {
+            padding-bottom: 0em;
+            font-size: calc(3vmax + 0.7em);
+            font-weight: 700;
+            line-height: 1 !important;;
+            letter-spacing: -0.01em;
+            text-transform: capitalize;
+            -webkit-font-smoothing: subpixel-antialiased !important;
+            color: $red;
+            &::after {
+                content: '';
+                @include position(absolute, -35% NULL NULL 5%);
+                @include size(150%);
+                z-index: 0;
+                pointer-events: none;
+                background: radial-gradient(circle farthest-side at top,rgba(255, 255, 255, 0.8) 0,rgba(255, 0, 0, 0) 100%);
+            }
+        }
+        h6 {
+            letter-spacing: 0;
+            font-size: 21px;
+            text-transform: none;
+            line-height: 1.5;
+        }
+        .icon-image,
+        .medium-icon {
+            max-height: 200px;
+            display: none;
+        }
+    }
+}
+
+// Post content
+
+blockquote {
+    line-height: 1.2;
+    padding: 1em;
+    font-family: "Lora",serif;
+    font-size: 2em;
+    font-style: italic;
+    quotes: "„" "“" "‚" "‘";
+    &:before {
+        content: open-quote;
+    }
+    &:after {
+        content: close-quote;
+    }
+}
+
+.blog-short-description {
+    background-color: #fff !important;
+}

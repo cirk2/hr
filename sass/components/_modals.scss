@@ -1,0 +1,132 @@
+// Reveal Modal
+
+$modal-text: #fff;
+$modal-bg: #000;
+
+body {
+    > nav,
+    > footer,
+    > section {
+        transition: filter $tduration ease;
+        .modal-open & {
+            filter: blur(3px);
+            pointer-events: none;
+        }
+    }
+}
+
+.modal-wrapper {
+    z-index: 1032;
+}
+    .modal {
+        position: relative;
+        padding: 3rem;
+        height: 100%;
+        background-color: transparentize($modal-bg, .1);
+        color: $modal-text !important;
+        box-shadow: none;
+        .close-modal {
+            @include position(fixed, 10px NULL NULL 10px);;
+            z-index: 100;
+            font: 100 5em/0.5 "Montserrat", sans-serif !important;
+            color: $modal-text;
+            cursor: pointer;
+        }
+        #modal-content {
+            clear: right;
+            * {
+                -webkit-font-smoothing: antialiased !important;
+                -moz-osx-font-smoothing: grayscale !important;
+            }
+            h1, h2, h3, h4 {
+                color: $modal-text;
+                margin-bottom: .5em;
+            }
+            h1 {
+                font-size: 1.7em;
+                margin-top: -1em;
+            }
+            a {
+              color: $modal-text;
+            }
+            blockquote {
+                padding-left: 1em;
+                font-size: 1.7em;
+            }
+            .rebsorte-featured-image-thumb {
+                pointer-events: none;
+            }
+            height: 100%;
+            .la-timer {
+                @include size(300%);
+                position: static;
+                display: block;
+                @include animation(fadeOut, 1s, ease-in, 1);
+
+                div {
+                    @include center(xy);
+                }
+            }
+            #modal-ready {
+                // opacity: 0;
+                @include animation(fadeIn, .5s, ease-in, 1);
+            }
+        }
+        .modal-small & {
+            @include center(xy);
+            height: auto !important;
+            min-height: 40%;
+            img {
+              border-radius: 50%;
+            }
+            @include media("screen", "from-lg") {
+                padding: 4rem 2rem 2rem;
+                width: 50%;
+                #modal-content {
+                    padding: 2em;
+                }
+            }
+            @include media("ipad") {
+                padding: 5rem 2rem 2rem;
+                width: 75%;
+                #modal-content {
+                    padding: 2em;
+                    font-size: 1.3em;
+                    line-height: 1.3;
+                }
+                img {
+                  width: 150%;
+                }
+            }
+        }
+    }
+    @include keyframe(fadeIn) {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+    }
+    @include keyframe(fadeOut) {
+        from { opacity: 1; }
+        to   { opacity: 0; }
+    }
+
+    // .next-post-reveal-nav,
+    // .prev-post-reveal-nav {
+    //     text-indent: 9999em;
+    //     &:after {
+    //         position: absolute;
+    //         top: 0;
+    //         text-indent: 0;
+    //     }
+    // }
+    // .next-post-reveal-nav {
+    //     &:after {
+    //        @include font-awesome("");
+    //     }
+    //     right: 10px;
+    // }
+    // .prev-post-reveal-nav {
+    //     &:after {
+    //         @include font-awesome("");
+    //     }
+    //     left: 14px;
+    // }
