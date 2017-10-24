@@ -7,9 +7,9 @@
 
 .custom-post-grid {
     &.vc_col-sm-4 {
-        @include media("from-lg") { width: 25%; }
+        @include media("from-lg") { width: 33%; }
         @include media("to-lg")   { width: 33%; }
-        @include media("to-md")   { width: 33%; }
+        @include media("to-md")   { width: 50%; }
         @include media("to-sm")   { width: 50%; }
     }
     .vc-gitem-zone-height-mode-auto:before {
