@@ -1,0 +1,23 @@
+delete assets/js/velocity-animation.js
+delete assets/js/velocity.min.js
+
+delete from style.css {
+	Line 79 [
+		* {
+			/* transition-timing-function: ease-in-out; */
+			-moz-transition-timing-function: ease-in-out;
+			/* -webkit-transition-timing-function: ease-in-out; */
+			-o-transition-timing-function: ease-in-out;
+			/* transition-duration: .2s; */
+			-moz-transition-duration: .2s;
+			/* -webkit-transition-duration: .2s; */
+			-o-transition-duration: .2s;
+		}
+	]
+	Line 3099 - 3102 [
+		.shrink-nav { background-color:#FFF; position: fixed !important; top: 0 !important; transition-timing-function: ease-in-out; -moz-transition-timing-function: ease-in-out; -webkit-transition-timing-function: ease-in-out; -o-transition-timing-function: ease-in-out; transition-duration: .5s; -moz-transition-duration: .5s; -webkit-transition-duration: .5s; -o-transition-duration: .5s; }
+		.sticky-nav { transition-timing-function: ease-in-out; -moz-transition-timing-function: ease-in-out; -webkit-transition-timing-function: ease-in-out; -o-transition-timing-function: ease-in-out; transition-duration: .4s; -moz-transition-duration: .4s; -webkit-transition-duration: .4s; -o-transition-duration: .4s; }
+		header .sticky-nav{ position: absolute; top: 38px; display: inline-table;}
+		header { position: absolute; width: 100%; top: 0; }
+	]
+}
