@@ -804,10 +804,6 @@ section#about .subheader .icon-image {
   border-radius: 50%;
   background: #fff;
   display: none; }
-/* line 31, pages/_home.scss */
-section#about .subheader .section-title {
-  color: #e14949 !important;
-  padding: 1rem !important; }
 
 @media only screen and (min-width: 992px) and (max-width: 1441px) {
   /* line 38, pages/_home.scss */
