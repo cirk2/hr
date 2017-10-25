@@ -78,11 +78,11 @@
             filter: $value; /* FF 35+ */
 }
 
-@mixin keyframe($animation_name) {
-  @-webkit-keyframes $animation_name {
+@mixin keyframe($name) {
+  @-webkit-keyframes #{$name} {
     @content;
   }
-  @keyframes $animation_name {
+  @keyframes #{$name} {
     @content;
   }
 }

@@ -67,15 +67,15 @@ body {
                     @include center(xy);
                 }
             }
-            #modal-ready {
-                // opacity: 0;
-                @include animation(fadeIn, .5s, ease-in, 1);
-            }
+            // #modal-ready {
+            //     // opacity: 0;
+            //     @include animation(fadeIn, .5s, ease-in, 1);
+            // }
         }
         .modal-small & {
             @include center(xy);
             height: auto !important;
-            min-height: 40%;
+            min-height: 60%;
             img {
               border-radius: 50%;
             }

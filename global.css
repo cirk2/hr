@@ -1,54 +1,55 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i");
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/utils\/_helpers\.scss}line{font-family:\000035}}
+/* line 5, utils/_helpers.scss */
 .flex-container,
 .flex-center {
   display: flex;
   justify-content: center;
   align-items: center; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/base\/_global\.scss}line{font-family:\000035}}
+/* line 5, base/_global.scss */
 *, :after, :before {
   -webkit-font-smoothing: antialiased !important;
   -moz-osx-font-smoothing: grayscale !important; }
   @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-device-pixel-ratio: 1.5), (min-resolution: 120dpi) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/base\/_global\.scss}line{font-family:\000035}}
+    /* line 5, base/_global.scss */
     *, :after, :before {
       -webkit-font-smoothing: subpixel-antialiased !important; } }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/base\/_global\.scss}line{font-family:\0000313}}
-html {
+/* line 13, base/_global.scss */
+html,
+body {
   overflow-x: hidden;
   width: 100%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/base\/_typography\.scss}line{font-family:\000035}}
+/* line 5, base/_typography.scss */
 .menu-item a,
 h1, h2, h3, h4, h5, h6,
 .slider-typography {
   font-family: "Montserrat", "Gotham Medium", "Proxima Nova Semibold", system-ui, sans-serif; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/base\/_typography\.scss}line{font-family:\0000312}}
+/* line 12, base/_typography.scss */
 .entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6 {
   margin-bottom: .5em; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/base\/_typography\.scss}line{font-family:\0000330}}
+/* line 30, base/_typography.scss */
 .section-heading {
   margin-bottom: 4em;
   position: relative; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/base\/_typography\.scss}line{font-family:\0000333}}
+  /* line 33, base/_typography.scss */
   .section-heading .subheader {
     max-width: 30em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/base\/_typography\.scss}line{font-family:\0000335}}
+    /* line 35, base/_typography.scss */
     .section-heading .subheader h2.section-title {
       padding-bottom: 0em;
       font-size: calc(3vmax + 0.7em);
       font-weight: 700;
       line-height: 1 !important;
       letter-spacing: -0.01em;
-      text-transform: capitalize;
+      text-transform: none;
       -webkit-font-smoothing: subpixel-antialiased !important;
       color: #d33; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/base\/_typography\.scss}line{font-family:\0000344}}
+      /* line 44, base/_typography.scss */
       .section-heading .subheader h2.section-title::after {
         content: '';
         position: absolute;
@@ -58,20 +59,20 @@ h1, h2, h3, h4, h5, h6,
         width: 150%;
         z-index: 0;
         pointer-events: none;
-        background: radial-gradient(circle farthest-side at top, rgba(255, 255, 255, 0.8) 0, rgba(255, 0, 0, 0) 100%); }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/base\/_typography\.scss}line{font-family:\0000353}}
+        background: radial-gradient(circle farthest-side at top, rgba(255, 255, 255, 0.6) 0, rgba(255, 0, 0, 0) 100%); }
+    /* line 53, base/_typography.scss */
     .section-heading .subheader h6 {
       letter-spacing: 0;
       font-size: 21px;
       text-transform: none;
       line-height: 1.5; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/base\/_typography\.scss}line{font-family:\0000359}}
+    /* line 59, base/_typography.scss */
     .section-heading .subheader .icon-image,
     .section-heading .subheader .medium-icon {
       max-height: 200px;
       display: none; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/base\/_typography\.scss}line{font-family:\0000369}}
+/* line 69, base/_typography.scss */
 blockquote {
   line-height: 1.2;
   padding: 1em;
@@ -79,24 +80,24 @@ blockquote {
   font-size: 2em;
   font-style: italic;
   quotes: "„" "“" "‚" "‘"; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/base\/_typography\.scss}line{font-family:\0000376}}
+  /* line 76, base/_typography.scss */
   blockquote:before {
     content: open-quote; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/base\/_typography\.scss}line{font-family:\0000379}}
+  /* line 79, base/_typography.scss */
   blockquote:after {
     content: close-quote; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/base\/_typography\.scss}line{font-family:\0000384}}
+/* line 84, base/_typography.scss */
 .blog-short-description {
   background-color: #fff !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/layout\/_header\.scss}line{font-family:\0000321}}
+/* line 21, layout/_header.scss */
 footer,
 .page-title,
 .entry-content div > section > *,
 .entry-content div > section {
   transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1); }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/layout\/_header\.scss}line{font-family:\0000327}}
+  /* line 27, layout/_header.scss */
   .show-menu footer, .show-menu
   .page-title, .show-menu
   .entry-content div > section > *, .show-menu
@@ -108,91 +109,91 @@ footer,
     transform: rotateY(4deg) scale(0.96);
     transition: filter 600ms cubic-bezier(0, -1, 1, 2) 200ms, transform 600ms cubic-bezier(0.215, 0.61, 0.355, 1); }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/layout\/_header\.scss}line{font-family:\0000335}}
+/* line 35, layout/_header.scss */
 .navbar-default {
   display: block !important;
   -webkit-transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
   transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
   background-color: rgba(255, 255, 255, 0); }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/layout\/_header\.scss}line{font-family:\0000339}}
+  /* line 39, layout/_header.scss */
   .navbar-default.shrink-nav {
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
     background-color: white;
     opacity: .93; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/layout\/_header\.scss}line{font-family:\0000345}}
+/* line 45, layout/_header.scss */
 .nav-container {
   height: 120px;
   align-items: flex-start;
   -webkit-transition: height 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
   transition: height 600ms cubic-bezier(0.215, 0.61, 0.355, 1); }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/layout\/_header\.scss}line{font-family:\0000349}}
+  /* line 49, layout/_header.scss */
   .shrink-nav .nav-container {
     height: 80px;
     align-items: center; }
     @media (max-width: 991px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/layout\/_header\.scss}line{font-family:\0000349}}
+      /* line 49, layout/_header.scss */
       .shrink-nav .nav-container {
         height: 60px; } }
   @media (min-device-width: 375px) and (max-device-height: 667px) and (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-device-pixel-ratio: 1.5), (min-resolution: 120dpi) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/layout\/_header\.scss}line{font-family:\0000345}}
+    /* line 45, layout/_header.scss */
     .nav-container {
       height: 60px !important;
       align-items: center; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/layout\/_header\.scss}line{font-family:\0000359}}
+      /* line 59, layout/_header.scss */
       .nav-container .nav-item {
         transform: scale(0.7) !important; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/layout\/_header\.scss}line{font-family:\0000365}}
+        /* line 65, layout/_header.scss */
         .nav-container .nav-item.top-logo {
           transform: none !important; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/layout\/_header\.scss}line{font-family:\0000375}}
+  /* line 75, layout/_header.scss */
   .nav-container .nav-item {
     z-index: 100;
     -webkit-transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
     transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1); }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/layout\/_header\.scss}line{font-family:\0000378}}
+    /* line 78, layout/_header.scss */
     .shrink-nav .nav-container .nav-item {
       transform: scale(0.8); }
       @media (max-width: 991px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/layout\/_header\.scss}line{font-family:\0000378}}
+        /* line 78, layout/_header.scss */
         .shrink-nav .nav-container .nav-item {
           transform: scale(0.6); } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/layout\/_header\.scss}line{font-family:\0000386}}
+  /* line 86, layout/_header.scss */
   .nav-container .top-logo {
     margin: 0 auto;
     padding-top: 10px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/layout\/_header\.scss}line{font-family:\0000389}}
+    /* line 89, layout/_header.scss */
     .nav-container .top-logo svg path {
       -webkit-transition: 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
       transition: 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
       transition-property: fill, stroke; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/layout\/_header\.scss}line{font-family:\0000393}}
+    /* line 93, layout/_header.scss */
     .nav-container .top-logo .shrink_fill-dark {
       fill: #fff; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/layout\/_header\.scss}line{font-family:\0000395}}
+      /* line 95, layout/_header.scss */
       .shrink-nav .nav-container .top-logo .shrink_fill-dark {
         fill: #1A171B; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/layout\/_header\.scss}line{font-family:\0000399}}
+    /* line 99, layout/_header.scss */
     .nav-container .top-logo .svg-logo {
       width: 350px;
       max-width: 350px !important;
       max-height: 100px; }
       @media (min-device-width: 375px) and (max-device-height: 667px) and (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-device-pixel-ratio: 1.5), (min-resolution: 120dpi) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/layout\/_header\.scss}line{font-family:\0000399}}
+        /* line 99, layout/_header.scss */
         .nav-container .top-logo .svg-logo {
           width: 175px; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/layout\/_header\.scss}line{font-family:\00003106}}
+      /* line 106, layout/_header.scss */
       .nav-container .top-logo .svg-logo .shrink_both-dark {
         fill: #fff;
         stroke: #fff; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/layout\/_header\.scss}line{font-family:\00003109}}
+        /* line 109, layout/_header.scss */
         .shrink-nav .nav-container .top-logo .svg-logo .shrink_both-dark {
           fill: #1A171B;
           stroke: #1A171B; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/layout\/_header\.scss}line{font-family:\00003114}}
+      /* line 114, layout/_header.scss */
       .shrink-nav .nav-container .top-logo .svg-logo {
         max-height: 80px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/layout\/_header\.scss}line{font-family:\00003118}}
+    /* line 118, layout/_header.scss */
     .nav-container .top-logo .logo-after {
       position: absolute;
       left: 50%;
@@ -201,42 +202,42 @@ footer,
       -ms-transform: translateX(-50%);
       transform: translateX(-50%);
       margin-top: 8px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/layout\/_header\.scss}line{font-family:\00003121}}
+      /* line 121, layout/_header.scss */
       .shrink-nav .nav-container .top-logo .logo-after {
         margin-top: -1px;
         filter: drop-shadow(0px -25px 15px rgba(0, 0, 0, 0.3));
         clip-path: inset(1% -100% -2% -100%); }
         @media (min-device-width: 320px) and (max-device-height: 667px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/layout\/_header\.scss}line{font-family:\00003121}}
+          /* line 121, layout/_header.scss */
           .shrink-nav .nav-container .top-logo .logo-after {
             transform: scale(0.8) !important;
             transform-origin: -200% top !important; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/layout\/_header\.scss}line{font-family:\00003130}}
+      /* line 130, layout/_header.scss */
       .nav-container .top-logo .logo-after .shrink_both-light {
         fill: transparent;
         stroke: transparent; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/layout\/_header\.scss}line{font-family:\00003133}}
+        /* line 133, layout/_header.scss */
         .shrink-nav .nav-container .top-logo .logo-after .shrink_both-light {
           fill: #fff;
           stroke: #fff; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/layout\/_header\.scss}line{font-family:\00003142}}
+  /* line 142, layout/_header.scss */
   .shrink-nav .nav-container .top-burger {
     margin-left: -1em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/layout\/_header\.scss}line{font-family:\00003146}}
+  /* line 146, layout/_header.scss */
   .nav-container .top-search {
     position: relative; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/layout\/_header\.scss}line{font-family:\00003148}}
+    /* line 148, layout/_header.scss */
     .nav-container .top-search:hover {
       background: rgba(0, 0, 0, 0.3); }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/layout\/_header\.scss}line{font-family:\00003151}}
+    /* line 151, layout/_header.scss */
     .shrink-nav .nav-container .top-search {
       margin-right: -1em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/layout\/_header\.scss}line{font-family:\00003154}}
+    /* line 154, layout/_header.scss */
     .nav-container .top-search .header-search-form {
       height: 100%;
       width: 100%;
       display: block; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/layout\/_header\.scss}line{font-family:\00003157}}
+      /* line 157, layout/_header.scss */
       .nav-container .top-search .header-search-form .search-button {
         position: absolute;
         left: 50%;
@@ -247,13 +248,13 @@ footer,
         -ms-transform: translateX(-50%) translateY(-50%);
         transform: translateX(-50%) translateY(-50%);
         font-size: 2em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/layout\/_header\.scss}line{font-family:\00003160}}
+        /* line 160, layout/_header.scss */
         .nav-container .top-search .header-search-form .search-button:hover {
           color: #fff; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/layout\/_header\.scss}line{font-family:\00003165}}
+    /* line 165, layout/_header.scss */
     .nav-container .top-search #top-search {
       margin-left: 0 !important; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/layout\/_header\.scss}line{font-family:\00003169}}
+  /* line 169, layout/_header.scss */
   .nav-container .menu-wrap {
     display: block;
     z-index: 99;
@@ -267,7 +268,7 @@ footer,
     /* FF 35+ */
     transform: translateY(-100%);
     transition: transform 600ms cubic-bezier(0.215, 0.61, 0.355, 1), background-color 600ms cubic-bezier(0.215, 0.61, 0.355, 1), filter 600ms cubic-bezier(0, -1, 1, 2) 200ms; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/layout\/_header\.scss}line{font-family:\00003181}}
+    /* line 181, layout/_header.scss */
     .show-menu .nav-container .menu-wrap {
       transform: translateY(0);
       -webkit-filter: none;
@@ -275,10 +276,10 @@ footer,
       filter: none;
       /* FF 35+ */
       background-color: rgba(0, 0, 0, 0.67) !important; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/layout\/_header\.scss}line{font-family:\00003186}}
+    /* line 186, layout/_header.scss */
     .shrink-nav .nav-container .menu-wrap {
       background-color: rgba(255, 255, 255, 0.67) !important; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/layout\/_header\.scss}line{font-family:\00003189}}
+    /* line 189, layout/_header.scss */
     .nav-container .menu-wrap .nav {
       position: absolute;
       left: 50%;
@@ -289,11 +290,11 @@ footer,
       -ms-transform: translateX(-50%) translateY(-50%);
       transform: translateX(-50%) translateY(-50%);
       padding: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/layout\/_header\.scss}line{font-family:\00003192}}
+      /* line 192, layout/_header.scss */
       .nav-container .menu-wrap .nav li {
         border: 0 !important;
         padding: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/layout\/_header\.scss}line{font-family:\00003195}}
+        /* line 195, layout/_header.scss */
         .nav-container .menu-wrap .nav li a.inner-link {
           display: block;
           padding: 7px;
@@ -301,36 +302,36 @@ footer,
           text-align: center !important;
           line-height: 1 !important;
           transition: color 600ms cubic-bezier(0.215, 0.61, 0.355, 1); }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/layout\/_header\.scss}line{font-family:\00003202}}
+          /* line 202, layout/_header.scss */
           .nav-container .menu-wrap .nav li a.inner-link:hover {
             background: rgba(255, 255, 255, 0.1) !important; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/layout\/_header\.scss}line{font-family:\00003205}}
+          /* line 205, layout/_header.scss */
           .shrink-nav .nav-container .menu-wrap .nav li a.inner-link {
             color: #000 !important; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/layout\/_header\.scss}line{font-family:\00003207}}
+            /* line 207, layout/_header.scss */
             .shrink-nav .nav-container .menu-wrap .nav li a.inner-link:hover {
               background: rgba(0, 0, 0, 0.1) !important; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/layout\/_header\.scss}line{font-family:\00003214}}
+    /* line 214, layout/_header.scss */
     .nav-container .menu-wrap #close-button {
       display: none; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/layout\/_slider\.scss}line{font-family:\000033}}
+/* line 3, layout/_slider.scss */
 .opacity-medium {
   opacity: 0.66; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/layout\/_slider\.scss}line{font-family:\000037}}
+/* line 7, layout/_slider.scss */
 .slider-typography {
   color: #fff; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/layout\/_slider\.scss}line{font-family:\0000310}}
+  /* line 10, layout/_slider.scss */
   .slider-typography .slider-text-middle-main {
     display: flex;
     justify-content: center;
     align-items: center; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/layout\/_slider\.scss}line{font-family:\0000315}}
+  /* line 15, layout/_slider.scss */
   .slider-typography .slider-text-middle {
     position: absolute;
     bottom: 5em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/layout\/_slider\.scss}line{font-family:\0000319}}
+    /* line 19, layout/_slider.scss */
     .slider-typography .slider-text-middle h1 {
       margin: 0 0 10% !important;
       font-size: calc(4em + 2vmin);
@@ -338,25 +339,25 @@ footer,
       text-transform: none;
       letter-spacing: -0.04em;
       color: rgba(255, 255, 255, 0.2); }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/layout\/_slider\.scss}line{font-family:\0000326}}
+      /* line 26, layout/_slider.scss */
       .slider-typography .slider-text-middle h1 strong {
         margin: 0 .2em 0 .1em;
         font-size: .8em;
         font-weight: 500;
         color: rgba(255, 255, 255, 0.9); }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/layout\/_slider\.scss}line{font-family:\0000332}}
+      /* line 32, layout/_slider.scss */
       .slider-typography .slider-text-middle h1 em {
         font-size: 0.8em;
         font-weight: 500;
         font-style: normal;
         color: #df4444; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/layout\/_slider\.scss}line{font-family:\0000339}}
+    /* line 39, layout/_slider.scss */
     .slider-typography .slider-text-middle a {
       background: #df4444;
       color: white;
       display: none !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_burger\.scss}line{font-family:\0000322}}
+/* line 22, components/_burger.scss */
 #menu-toggle,
 #top-search {
   position: relative;
@@ -366,27 +367,27 @@ footer,
   padding: 0;
   cursor: pointer; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_burger\.scss}line{font-family:\0000332}}
+/* line 32, components/_burger.scss */
 #menu-toggle * {
   box-sizing: border-box;
   transition: 200ms ease-in-out;
   transition-property: width, height, color; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_burger\.scss}line{font-family:\0000337}}
+/* line 37, components/_burger.scss */
 #menu-toggle span {
   display: block;
   background: #fff; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_burger\.scss}line{font-family:\0000340}}
+  /* line 40, components/_burger.scss */
   .shrink-nav #menu-toggle span {
     background: #000; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_burger\.scss}line{font-family:\0000342}}
+/* line 42, components/_burger.scss */
 #menu-toggle:hover {
   background: rgba(0, 0, 0, 0.3); }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_burger\.scss}line{font-family:\0000343}}
+/* line 43, components/_burger.scss */
 #menu-toggle #hamburger {
   position: absolute;
   height: 100%;
   width: 100%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_burger\.scss}line{font-family:\0000346}}
+  /* line 46, components/_burger.scss */
   #menu-toggle #hamburger span {
     position: relative;
     top: 24px;
@@ -394,34 +395,34 @@ footer,
     height: 4px;
     width: 50px;
     margin: 10px 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_burger\.scss}line{font-family:\0000350}}
+    /* line 50, components/_burger.scss */
     #menu-toggle #hamburger span:nth-child(1) {
       transition-delay: 400ms; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_burger\.scss}line{font-family:\0000351}}
+    /* line 51, components/_burger.scss */
     #menu-toggle #hamburger span:nth-child(2) {
       transition-delay: 500ms; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_burger\.scss}line{font-family:\0000352}}
+    /* line 52, components/_burger.scss */
     #menu-toggle #hamburger span:nth-child(3) {
       transition-delay: 600ms; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_burger\.scss}line{font-family:\0000353}}
+    /* line 53, components/_burger.scss */
     .open #menu-toggle #hamburger span {
       width: 0%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_burger\.scss}line{font-family:\0000355}}
+      /* line 55, components/_burger.scss */
       .open #menu-toggle #hamburger span:nth-child(1) {
         transition-delay: 0s; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_burger\.scss}line{font-family:\0000356}}
+      /* line 56, components/_burger.scss */
       .open #menu-toggle #hamburger span:nth-child(2) {
         transition-delay: 100ms; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_burger\.scss}line{font-family:\0000357}}
+      /* line 57, components/_burger.scss */
       .open #menu-toggle #hamburger span:nth-child(3) {
         transition-delay: 200ms; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_burger\.scss}line{font-family:\0000361}}
+/* line 61, components/_burger.scss */
 #menu-toggle #cross {
   position: absolute;
   height: 100%;
   width: 100%;
   transform: rotate(45deg) scale(0.666); }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_burger\.scss}line{font-family:\0000366}}
+  /* line 66, components/_burger.scss */
   #menu-toggle #cross span:nth-child(1) {
     position: absolute;
     top: 10%;
@@ -429,11 +430,11 @@ footer,
     height: 0%;
     width: 6.00601px;
     transition-delay: 0s; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_burger\.scss}line{font-family:\0000370}}
+    /* line 70, components/_burger.scss */
     .open #menu-toggle #cross span:nth-child(1) {
       height: 80%;
       transition-delay: 500ms; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_burger\.scss}line{font-family:\0000375}}
+  /* line 75, components/_burger.scss */
   #menu-toggle #cross span:nth-child(2) {
     position: absolute;
     top: 48px;
@@ -441,46 +442,50 @@ footer,
     height: 6.00601px;
     width: 0%;
     transition-delay: 200ms; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_burger\.scss}line{font-family:\0000379}}
+    /* line 79, components/_burger.scss */
     .open #menu-toggle #cross span:nth-child(2) {
       width: 80%;
       transition-delay: 300ms; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_rebsorten-grid\.scss}line{font-family:\000033}}
+/* line 3, components/_rebsorten-grid.scss */
 .vc_basic_grid .vc_grid.vc_row .vc_grid-item.vc_visible-item,
 .vc_media_grid .vc_grid.vc_row .vc_grid-item.vc_visible-item {
   display: inline-block !important; }
 
 @media (min-width: 1200px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_rebsorten-grid\.scss}line{font-family:\000039}}
+  /* line 9, components/_rebsorten-grid.scss */
   .custom-post-grid.vc_col-sm-4 {
-    width: 25%; } }
-@media (max-width: 1199px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_rebsorten-grid\.scss}line{font-family:\000039}}
+    width: 33%; } }
+@media (min-width: 1442px) {
+  /* line 9, components/_rebsorten-grid.scss */
   .custom-post-grid.vc_col-sm-4 {
     width: 33%; } }
 @media (max-width: 991px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_rebsorten-grid\.scss}line{font-family:\000039}}
-  .custom-post-grid.vc_col-sm-4 {
-    width: 33%; } }
-@media (max-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_rebsorten-grid\.scss}line{font-family:\000039}}
+  /* line 9, components/_rebsorten-grid.scss */
   .custom-post-grid.vc_col-sm-4 {
     width: 50%; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_rebsorten-grid\.scss}line{font-family:\0000315}}
+@media (max-width: 768px) {
+  /* line 9, components/_rebsorten-grid.scss */
+  .custom-post-grid.vc_col-sm-4 {
+    width: 50%; } }
+@media (max-width: 575px) {
+  /* line 9, components/_rebsorten-grid.scss */
+  .custom-post-grid.vc_col-sm-4 {
+    width: 100%; } }
+/* line 17, components/_rebsorten-grid.scss */
 .custom-post-grid .vc-gitem-zone-height-mode-auto:before {
   display: inline !important; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_rebsorten-grid\.scss}line{font-family:\0000319}}
+/* line 21, components/_rebsorten-grid.scss */
 .custom-post-grid .vc_grid-item-mini {
   border: 4px solid #f8f8f8; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_rebsorten-grid\.scss}line{font-family:\0000322}}
+/* line 24, components/_rebsorten-grid.scss */
 .custom-post-grid .NORMAL-STATE,
 .custom-post-grid .HOVER-STATE {
   background-size: 0% !important;
   display: flex !important;
   align-items: center;
   justify-content: center; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_rebsorten-grid\.scss}line{font-family:\0000328}}
+  /* line 30, components/_rebsorten-grid.scss */
   .custom-post-grid .NORMAL-STATE .vc_gitem-zone-img,
   .custom-post-grid .HOVER-STATE .vc_gitem-zone-img {
     width: 90% !important;
@@ -488,30 +493,30 @@ footer,
     visibility: visible;
     position: absolute;
     opacity: .07; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_rebsorten-grid\.scss}line{font-family:\0000337}}
+/* line 39, components/_rebsorten-grid.scss */
 .custom-post-grid .NORMAL-STATE .vc_gitem-zone-img {
   opacity: .05; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_rebsorten-grid\.scss}line{font-family:\0000341}}
+/* line 43, components/_rebsorten-grid.scss */
 .custom-post-grid .NORMAL-STATE .vc_gitem-zone-mini {
   width: 200%;
   padding: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_rebsorten-grid\.scss}line{font-family:\0000344}}
+  /* line 46, components/_rebsorten-grid.scss */
   .custom-post-grid .NORMAL-STATE .vc_gitem-zone-mini .vc_gitem-row-position-top {
     position: inherit; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_rebsorten-grid\.scss}line{font-family:\0000346}}
+    /* line 48, components/_rebsorten-grid.scss */
     .custom-post-grid .NORMAL-STATE .vc_gitem-zone-mini .vc_gitem-row-position-top .vc_gitem-col {
       padding: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_rebsorten-grid\.scss}line{font-family:\0000349}}
+    /* line 51, components/_rebsorten-grid.scss */
     .custom-post-grid .NORMAL-STATE .vc_gitem-zone-mini .vc_gitem-row-position-top .vc_custom_heading {
       max-width: 90%;
       padding: 0 0 1em;
       margin: -5em 3em     1em; }
       @media only screen and (max-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_rebsorten-grid\.scss}line{font-family:\0000349}}
+        /* line 51, components/_rebsorten-grid.scss */
         .custom-post-grid .NORMAL-STATE .vc_gitem-zone-mini .vc_gitem-row-position-top .vc_custom_heading {
           padding: 0 0 1vw !important;
           margin: -5vw auto 1vw; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_rebsorten-grid\.scss}line{font-family:\0000357}}
+      /* line 59, components/_rebsorten-grid.scss */
       .custom-post-grid .NORMAL-STATE .vc_gitem-zone-mini .vc_gitem-row-position-top .vc_custom_heading h2 {
         display: flex;
         justify-content: center;
@@ -523,79 +528,87 @@ footer,
         text-transform: capitalize;
         font-family: Lora; }
         @media only screen and (max-width: 991px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_rebsorten-grid\.scss}line{font-family:\0000357}}
+          /* line 59, components/_rebsorten-grid.scss */
           .custom-post-grid .NORMAL-STATE .vc_gitem-zone-mini .vc_gitem-row-position-top .vc_custom_heading h2 {
             font-size: 2.4em;
             line-height: 1.1; } }
         @media only screen and (max-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_rebsorten-grid\.scss}line{font-family:\0000357}}
+          /* line 59, components/_rebsorten-grid.scss */
           .custom-post-grid .NORMAL-STATE .vc_gitem-zone-mini .vc_gitem-row-position-top .vc_custom_heading h2 {
             font-size: 5vw; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_rebsorten-grid\.scss}line{font-family:\0000376}}
+    /* line 78, components/_rebsorten-grid.scss */
     .custom-post-grid .NORMAL-STATE .vc_gitem-zone-mini .vc_gitem-row-position-top .vc_gitem-acf {
       color: #dd3333;
       font-family: "Open Sans", "Montserrat", sans-serif;
       font-size: 2.6em; }
       @media only screen and (max-width: 991px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_rebsorten-grid\.scss}line{font-family:\0000376}}
+        /* line 78, components/_rebsorten-grid.scss */
         .custom-post-grid .NORMAL-STATE .vc_gitem-zone-mini .vc_gitem-row-position-top .vc_gitem-acf {
           font-size: 3.2em;
           line-height: 1; } }
       @media only screen and (max-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_rebsorten-grid\.scss}line{font-family:\0000376}}
+        /* line 78, components/_rebsorten-grid.scss */
         .custom-post-grid .NORMAL-STATE .vc_gitem-zone-mini .vc_gitem-row-position-top .vc_gitem-acf {
           font-size: 7vw; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_rebsorten-grid\.scss}line{font-family:\0000392}}
+/* line 94, components/_rebsorten-grid.scss */
 .custom-post-grid .HOVER-STATE .vc_gitem-zone-img {
   top: 4em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_rebsorten-grid\.scss}line{font-family:\0000395}}
+/* line 97, components/_rebsorten-grid.scss */
 .custom-post-grid .HOVER-STATE .more-button {
   margin-bottom: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_rebsorten-grid\.scss}line{font-family:\0000397}}
+  /* line 99, components/_rebsorten-grid.scss */
   .custom-post-grid .HOVER-STATE .more-button a {
     font-family: "Montserrat", sans-serif; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_rebsorten-grid\.scss}line{font-family:\00003102}}
+/* line 104, components/_rebsorten-grid.scss */
 .custom-post-grid .HOVER-STATE .grid-zitat {
   height: 1.8em;
   margin-left: 1em;
   font-size: 1.2em;
   font-style: italic; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_rebsorten-grid\.scss}line{font-family:\00003108}}
+/* line 110, components/_rebsorten-grid.scss */
 .custom-post-grid .HOVER-STATE .left-flow {
-  height: 360px;
+  height: 320px;
   width: 50%;
   float: left;
   shape-outside: polygon(0% 0%, 9% 0%, 9% 20%, 15% 43%, 24% 55%, 29% 60%, 36% 65%, 44% 70%, 67% 80%, 100% 89%, 100% 100%, 0% 100%);
-  shape-margin: 5px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_rebsorten-grid\.scss}line{font-family:\00003116}}
+  shape-margin: 2px; }
+/* line 118, components/_rebsorten-grid.scss */
 .custom-post-grid .HOVER-STATE .right-flow {
-  height: 360px;
+  height: 320px;
   width: 50%;
   float: right;
   shape-outside: polygon(0% 89%, 33% 80%, 56% 70%, 64% 65%, 70% 60%, 76% 55%, 85% 43%, 92% 20%, 92% 0%, 100% 0%, 100% 100%, 0% 100%);
-  shape-margin: 5px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_rebsorten-grid\.scss}line{font-family:\00003123}}
+  shape-margin: 2px; }
+/* line 125, components/_rebsorten-grid.scss */
 .custom-post-grid .HOVER-STATE .rebsorten-grid-excerpt p {
-  padding: 1.5em 0 0;
-  font-size: .95em;
-  font-weight: 400;
+  font: normal 400 0.9em/1.3 "Lora", serif;
+  padding: 1em 0 0;
   letter-spacing: -0.5px;
-  text-align: justify;
+  text-align: center;
   text-align-last: center;
-  line-height: 1.3;
   hyphens: auto;
   text-shadow: 0 0 2px white; }
+/* line 143, components/_rebsorten-grid.scss */
+.custom-post-grid .HOVER-STATE .more-button a:after {
+  content: "";
+  position: absolute;
+  bottom: -1em;
+  left: 0;
+  height: 1em;
+  width: 100%;
+  display: block;
+  background-color: #fff; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_rebsorten-grid\.scss}line{font-family:\00003141}}
+/* line 153, components/_rebsorten-grid.scss */
 .vc_grid-filter-item:nth-of-type(2) {
   position: relative;
   top: 0.6em;
   overflow: hidden; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_rebsorten-grid\.scss}line{font-family:\00003145}}
+  /* line 157, components/_rebsorten-grid.scss */
   .vc_grid-filter-item:nth-of-type(2) span {
     text-indent: -0.7em;
     display: inline-block; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_rebsorten-grid\.scss}line{font-family:\00003148}}
+    /* line 160, components/_rebsorten-grid.scss */
     .vc_grid-filter-item:nth-of-type(2) span:before {
       content: "";
       background: #fff;
@@ -605,27 +618,27 @@ footer,
       position: absolute;
       top: 20px;
       left: -6px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_rebsorten-grid\.scss}line{font-family:\00003159}}
+  /* line 171, components/_rebsorten-grid.scss */
   .vc_grid-filter-item:nth-of-type(2):hover span:before, .vc_grid-filter-item:nth-of-type(2).vc_active span:before {
     background-color: #ebebeb; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_modals\.scss}line{font-family:\000037}}
+/* line 7, components/_modals.scss */
 body > nav,
 body > footer,
 body > section {
   transition: filter 600ms ease; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_modals\.scss}line{font-family:\0000311}}
+  /* line 11, components/_modals.scss */
   .modal-open body > nav, .modal-open
   body > footer, .modal-open
   body > section {
     filter: blur(3px);
     pointer-events: none; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_modals\.scss}line{font-family:\0000318}}
+/* line 18, components/_modals.scss */
 .modal-wrapper {
   z-index: 1032; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_modals\.scss}line{font-family:\0000321}}
+/* line 21, components/_modals.scss */
 .modal {
   position: relative;
   padding: 3rem;
@@ -633,7 +646,7 @@ body > section {
   background-color: rgba(0, 0, 0, 0.9);
   color: #fff !important;
   box-shadow: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_modals\.scss}line{font-family:\0000328}}
+  /* line 28, components/_modals.scss */
   .modal .close-modal {
     position: fixed;
     top: 10px;
@@ -642,33 +655,33 @@ body > section {
     font: 100 5em/0.5 "Montserrat", sans-serif !important;
     color: #fff;
     cursor: pointer; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_modals\.scss}line{font-family:\0000335}}
+  /* line 35, components/_modals.scss */
   .modal #modal-content {
     clear: right;
     height: 100%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_modals\.scss}line{font-family:\0000337}}
+    /* line 37, components/_modals.scss */
     .modal #modal-content * {
       -webkit-font-smoothing: antialiased !important;
       -moz-osx-font-smoothing: grayscale !important; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_modals\.scss}line{font-family:\0000341}}
+    /* line 41, components/_modals.scss */
     .modal #modal-content h1, .modal #modal-content h2, .modal #modal-content h3, .modal #modal-content h4 {
       color: #fff;
       margin-bottom: .5em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_modals\.scss}line{font-family:\0000345}}
+    /* line 45, components/_modals.scss */
     .modal #modal-content h1 {
       font-size: 1.7em;
       margin-top: -1em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_modals\.scss}line{font-family:\0000349}}
+    /* line 49, components/_modals.scss */
     .modal #modal-content a {
       color: #fff; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_modals\.scss}line{font-family:\0000352}}
+    /* line 52, components/_modals.scss */
     .modal #modal-content blockquote {
       padding-left: 1em;
       font-size: 1.7em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_modals\.scss}line{font-family:\0000356}}
+    /* line 56, components/_modals.scss */
     .modal #modal-content .rebsorte-featured-image-thumb {
       pointer-events: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_modals\.scss}line{font-family:\0000360}}
+    /* line 60, components/_modals.scss */
     .modal #modal-content .la-timer {
       height: 300%;
       width: 300%;
@@ -678,7 +691,7 @@ body > section {
       /* Safari 4+ */
       animation: fadeOut 1s ease-in 1;
       /* IE 10+, Fx 29+ */ }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_modals\.scss}line{font-family:\0000366}}
+      /* line 66, components/_modals.scss */
       .modal #modal-content .la-timer div {
         position: absolute;
         left: 50%;
@@ -688,13 +701,7 @@ body > section {
         -webkit-transform: translateX(-50%) translateY(-50%);
         -ms-transform: translateX(-50%) translateY(-50%);
         transform: translateX(-50%) translateY(-50%); }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_modals\.scss}line{font-family:\0000370}}
-    .modal #modal-content #modal-ready {
-      -webkit-animation: fadeIn 0.5s ease-in 1;
-      /* Safari 4+ */
-      animation: fadeIn 0.5s ease-in 1;
-      /* IE 10+, Fx 29+ */ }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_modals\.scss}line{font-family:\0000375}}
+  /* line 75, components/_modals.scss */
   .modal-small .modal {
     position: absolute;
     left: 50%;
@@ -705,91 +712,132 @@ body > section {
     -ms-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
     height: auto !important;
-    min-height: 40%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_modals\.scss}line{font-family:\0000379}}
+    min-height: 60%; }
+    /* line 79, components/_modals.scss */
     .modal-small .modal img {
       border-radius: 50%; }
     @media only screen and (min-width: 1200px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_modals\.scss}line{font-family:\0000375}}
+      /* line 75, components/_modals.scss */
       .modal-small .modal {
         padding: 4rem 2rem 2rem;
         width: 50%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_modals\.scss}line{font-family:\0000385}}
+        /* line 85, components/_modals.scss */
         .modal-small .modal #modal-content {
           padding: 2em; } }
     @media (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_modals\.scss}line{font-family:\0000375}}
+      /* line 75, components/_modals.scss */
       .modal-small .modal {
         padding: 5rem 2rem 2rem;
         width: 75%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_modals\.scss}line{font-family:\0000392}}
+        /* line 92, components/_modals.scss */
         .modal-small .modal #modal-content {
           padding: 2em;
           font-size: 1.3em;
           line-height: 1.3; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/components\/_modals\.scss}line{font-family:\0000397}}
+        /* line 97, components/_modals.scss */
         .modal-small .modal img {
           width: 150%; } }
 
-@-webkit-keyframes $animation_name {
+@-webkit-keyframes fadeIn {
   from {
     opacity: 0; }
   to {
     opacity: 1; } }
-@keyframes $animation_name {
+@keyframes fadeIn {
   from {
     opacity: 0; }
   to {
     opacity: 1; } }
-@-webkit-keyframes $animation_name {
+@-webkit-keyframes fadeOut {
   from {
     opacity: 1; }
   to {
     opacity: 0; } }
-@keyframes $animation_name {
+@keyframes fadeOut {
   from {
     opacity: 1; }
   to {
     opacity: 0; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/pages\/_home\.scss}line{font-family:\000036}}
+@-webkit-keyframes jamesBond {
+  to {
+    shape-outside: circle(50% at center);
+    clip-path: circle(50% at center); } }
+@keyframes jamesBond {
+  to {
+    shape-outside: circle(50% at center);
+    clip-path: circle(50% at center); } }
+/* line 9, components/_modal-small.scss */
+.modal-small .modal {
+  transition: height 0.4s cubic-bezier(0.215, 0.61, 0.355, 1); }
+/* line 12, components/_modal-small.scss */
+.modal-small .alignright,
+.modal-small .alignleft {
+  shape-outside: circle(50% at center);
+  clip-path: circle(50% at center);
+  max-width: 45%; }
+/* line 21, components/_modal-small.scss */
+.modal-small p {
+  text-align: justify;
+  hyphens: auto; }
+  /* line 24, components/_modal-small.scss */
+  .modal-small p strong {
+    margin-bottom: .5em; }
+
+/* line 6, pages/_home.scss */
 section#slider {
   background-color: #444; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/pages\/_home\.scss}line{font-family:\000039}}
+  /* line 9, pages/_home.scss */
   section#slider .owl-prev .fa, section#slider .owl-next .fa {
     color: #fff; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/pages\/_home\.scss}line{font-family:\0000312}}
+  /* line 12, pages/_home.scss */
   section#slider .owl-prev:before, section#slider .owl-next:before {
     background-color: rgba(0, 0, 0, 0.3); }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/pages\/_home\.scss}line{font-family:\0000315}}
+  /* line 15, pages/_home.scss */
   section#slider .owl-prev:hover:before, section#slider .owl-next:hover:before {
     background-color: rgba(255, 255, 255, 0.3); }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/pages\/_home\.scss}line{font-family:\0000321}}
-section#about .subheader {
-  background-color: transparent !important; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/pages\/_home\.scss}line{font-family:\0000323}}
-  section#about .subheader .icon-image {
-    height: calc(2vw + 1.8em);
-    width: calc(2vw + 1.8em);
-    padding: 20px;
-    border-radius: 50%;
-    background: #fff;
-    display: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/pages\/_home\.scss}line{font-family:\0000331}}
-  section#about .subheader .section-title {
-    color: #e14949 !important;
-    padding: 1rem !important; }
+/* line 23, pages/_home.scss */
+section#about .subheader .icon-image {
+  height: calc(2vw + 1.8em);
+  width: calc(2vw + 1.8em);
+  padding: 20px;
+  border-radius: 50%;
+  background: #fff;
+  display: none; }
+/* line 31, pages/_home.scss */
+section#about .subheader .section-title {
+  color: #e14949 !important;
+  padding: 1rem !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/pages\/_home\.scss}line{font-family:\0000338}}
+@media only screen and (min-width: 992px) and (max-width: 1441px) {
+  /* line 38, pages/_home.scss */
+  section#mission .mission-col {
+    width: 100%; } }
+/* line 43, pages/_home.scss */
 section#mission .first-word {
   color: #d33;
   font-weight: bold; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/pages\/_home\.scss}line{font-family:\0000343}}
+/* line 48, pages/_home.scss */
+section#mission .mission-grid .vc_col-sm-3 {
+  max-height: 20%; }
+  @media (min-width: 1442px) {
+    /* line 48, pages/_home.scss */
+    section#mission .mission-grid .vc_col-sm-3 {
+      width: 25%; } }
+  @media (max-width: 1441px) {
+    /* line 48, pages/_home.scss */
+    section#mission .mission-grid .vc_col-sm-3 {
+      width: 50%; } }
+  @media (max-width: 768px) {
+    /* line 48, pages/_home.scss */
+    section#mission .mission-grid .vc_col-sm-3 {
+      width: 100%; } }
+/* line 56, pages/_home.scss */
 section#mission .mission-grid h3,
 section#mission .mission-grid .tagline,
 section#mission .mission-grid .mission-description-acf {
   margin: 0 auto;
-  font: 700 2em "Montserrat", sans-serif;
+  font: 700 1.8em "Montserrat", sans-serif;
   letter-spacing: -0.02em;
   color: #d33;
   -webkit-font-smoothing: subpixel-antialiased !important;
@@ -797,75 +845,64 @@ section#mission .mission-grid .mission-description-acf {
   max-width: 8em;
   color: rgba(123, 123, 123, 0.45);
   -webkit-font-smoothing: subpixel-antialiased !important; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/pages\/_home\.scss}line{font-family:\0000354}}
+/* line 67, pages/_home.scss */
 section#mission .mission-grid .tagline:before {
   content: "Wir ";
   font-weight: 800;
   color: #d33; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/pages\/_home\.scss}line{font-family:\0000360}}
+/* line 73, pages/_home.scss */
 section#mission .mission-grid h3 {
   color: #d33;
   text-transform: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/pages\/_home\.scss}line{font-family:\0000365}}
+/* line 78, pages/_home.scss */
 section#mission .mission-grid .mission-description-acf {
   color: rgba(255, 255, 255, 0.7);
   text-shadow: 0 0 30px rgba(25, 25, 25, 0.5); }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/pages\/_home\.scss}line{font-family:\0000366}}
+  /* line 79, pages/_home.scss */
   section#mission .mission-grid .mission-description-acf:after {
     content: "\:"; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/pages\/_home\.scss}line{font-family:\0000372}}
-section#mission .mission-grid .vc_col-sm-3 {
-  max-height: 20%; }
-  @media only screen and (max-width: 991px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/pages\/_home\.scss}line{font-family:\0000372}}
-    section#mission .mission-grid .vc_col-sm-3 {
-      width: 50%; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/pages\/_home\.scss}line{font-family:\0000378}}
+/* line 85, pages/_home.scss */
 section#mission .mission-grid .wpb_single_image {
   max-width: 280px;
   margin: 0 auto !important; }
-  @media only screen and (min-width: 992px) and (max-width: 1199px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/pages\/_home\.scss}line{font-family:\0000378}}
-    section#mission .mission-grid .wpb_single_image {
-      margin: 0 !important; } }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/pages\/_home\.scss}line{font-family:\0000388}}
+/* line 95, pages/_home.scss */
 section#rebsorten #logo-description {
   opacity: 1;
   transform: scale(0.8);
   margin: -4.5em 0 0 0em !important; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/pages\/_home\.scss}line{font-family:\0000392}}
+  /* line 99, pages/_home.scss */
   section#rebsorten #logo-description h2 {
     display: inline-block;
     height: 1em;
     line-height: 3.5; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/pages\/_home\.scss}line{font-family:\0000397}}
+  /* line 104, pages/_home.scss */
   section#rebsorten #logo-description .vc_gitem-acf {
     display: inline-block; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/pages\/_home\.scss}line{font-family:\00003100}}
+  /* line 107, pages/_home.scss */
   section#rebsorten #logo-description .vc_grid-item-mini {
     border: none; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/pages\/_home\.scss}line{font-family:\00003107}}
+/* line 114, pages/_home.scss */
 section#partner .vc_grid-item h3 {
   font-size: 1.5em;
   color: #fff;
   text-shadow: 0 0 2px #000; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/pages\/_home\.scss}line{font-family:\00003115}}
+/* line 122, pages/_home.scss */
 section#blog .section-title {
   padding-bottom: 0 !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/pages\/_home\.scss}line{font-family:\00003119}}
+/* line 126, pages/_home.scss */
 section#wortmarke {
   display: flex;
   align-items: center; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/pages\/_home\.scss}line{font-family:\00003123}}
+  /* line 130, pages/_home.scss */
   section#wortmarke .wortmarke figure {
     display: flex;
     justify-content: center;
     pointer-events: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/pages\/_home\.scss}line{font-family:\00003130}}
+    /* line 137, pages/_home.scss */
     section#wortmarke .wortmarke figure:before {
       display: block;
       position: absolute;
@@ -881,93 +918,93 @@ section#wortmarke {
       filter: blur(40px);
       transition: all .5s;
       opacity: .8; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/pages\/_home\.scss}line{font-family:\00003141}}
+    /* line 148, pages/_home.scss */
     section#wortmarke .wortmarke figure:hover img {
       opacity: 1; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/pages\/_home\.scss}line{font-family:\00003144}}
+    /* line 151, pages/_home.scss */
     section#wortmarke .wortmarke figure:hover:before {
       width: 60vw;
       height: 23vw;
       margin-top: -2.3vw;
       opacity: .95; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/pages\/_home\.scss}line{font-family:\00003150}}
+    /* line 157, pages/_home.scss */
     section#wortmarke .wortmarke figure .vc_single_image-wrapper {
       position: relative;
       padding: 1.4vw; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/pages\/_home\.scss}line{font-family:\00003153}}
+      /* line 160, pages/_home.scss */
       section#wortmarke .wortmarke figure .vc_single_image-wrapper img {
         height: auto;
         width: 40vw; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/pages\/_home\.scss}line{font-family:\00003162}}
+/* line 169, pages/_home.scss */
 section#counter {
   padding: 7vmax calc(5% - 10vmax) !important;
   margin: 10vmax 0 2vmax !important; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/pages\/_home\.scss}line{font-family:\00003165}}
+  /* line 172, pages/_home.scss */
   section#counter .row {
     display: flex;
     align-items: center;
     justify-content: space-around; }
     @media (max-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/pages\/_home\.scss}line{font-family:\00003165}}
+      /* line 172, pages/_home.scss */
       section#counter .row {
         flex-direction: column; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/pages\/_home\.scss}line{font-family:\00003171}}
+        /* line 178, pages/_home.scss */
         section#counter .row .col-xs-mobile-fullwidth {
           margin: 5vh 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/pages\/_home\.scss}line{font-family:\00003173}}
+          /* line 180, pages/_home.scss */
           section#counter .row .col-xs-mobile-fullwidth .icon-image {
             height: 15vw;
             width: 15vw; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/pages\/_home\.scss}line{font-family:\00003174}}
+          /* line 181, pages/_home.scss */
           section#counter .row .col-xs-mobile-fullwidth .large-icon {
             font-size: 15vw !important; } }
   @media (min-width: 769px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/pages\/_home\.scss}line{font-family:\00003178}}
+    /* line 185, pages/_home.scss */
     section#counter .col-xs-mobile-fullwidth {
       display: inline-block;
       float: none;
       width: 33%; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/pages\/_home\.scss}line{font-family:\00003184}}
+  /* line 191, pages/_home.scss */
   section#counter .col-xs-mobile-fullwidth:last-child .icon-image {
     filter: invert(1); }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/pages\/_home\.scss}line{font-family:\00003186}}
+  /* line 193, pages/_home.scss */
   section#counter .icon-image,
   section#counter .large-icon {
     margin-bottom: 2%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/pages\/_home\.scss}line{font-family:\00003190}}
+  /* line 197, pages/_home.scss */
   section#counter .icon-image {
     height: 5.5vmax; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/pages\/_home\.scss}line{font-family:\00003191}}
+  /* line 198, pages/_home.scss */
   section#counter .large-icon {
     font-size: 5vmax !important; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/pages\/_home\.scss}line{font-family:\00003192}}
+  /* line 199, pages/_home.scss */
   section#counter .counter-title {
     color: #e44;
     font: normal 600 2.5em/1 "Open Sans", "Montserrat", sans-serif;
     letter-spacing: -0.04em;
     text-transform: capitalize; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/pages\/_home\.scss}line{font-family:\00003199}}
+/* line 206, pages/_home.scss */
 section#testimonials
 .owl-item p {
   font-size: 16px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/pages\/_rebsorten-modal\.scss}line{font-family:\0000313}}
+/* line 13, pages/_rebsorten-modal.scss */
 .custom-post-header {
   margin-bottom: 1em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/pages\/_rebsorten-modal\.scss}line{font-family:\0000315}}
+  /* line 15, pages/_rebsorten-modal.scss */
   .custom-post-header .flex-container {
     height: 300px;
     flex-direction: column; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/pages\/_rebsorten-modal\.scss}line{font-family:\0000318}}
+    /* line 18, pages/_rebsorten-modal.scss */
     .custom-post-header .flex-container .watermark {
       width: 25%;
       display: flex;
       align-items: center;
       justify-content: center;
       position: absolute; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/pages\/_rebsorten-modal\.scss}line{font-family:\0000324}}
+      /* line 24, pages/_rebsorten-modal.scss */
       .custom-post-header .flex-container .watermark img {
         width: 100%;
         max-width: 300px;
@@ -987,7 +1024,7 @@ section#testimonials
         /* Ch 23+, Saf 6.0+, BB 10.0+ */
         filter: invert(1);
         /* FF 35+ */ }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/pages\/_rebsorten-modal\.scss}line{font-family:\0000334}}
+    /* line 34, pages/_rebsorten-modal.scss */
     .custom-post-header .flex-container .rebsorte-title {
       display: table;
       padding: 0 1em .5em;
@@ -1001,27 +1038,27 @@ section#testimonials
       letter-spacing: -1.5px;
       color: #333;
       max-width: 20%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/pages\/_rebsorten-modal\.scss}line{font-family:\0000343}}
+    /* line 43, pages/_rebsorten-modal.scss */
     .custom-post-header .flex-container .ursprungsnummer-title {
       font: normal normal 2em "Open Sans", "Montserrat", sans-serif !important;
       text-align: center;
       color: #dd3333; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/pages\/_rebsorten-modal\.scss}line{font-family:\0000347}}
+  /* line 47, pages/_rebsorten-modal.scss */
   .custom-post-header .rebsorte-featured-image {
     text-align: center; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/pages\/_rebsorten-modal\.scss}line{font-family:\0000352}}
+/* line 52, pages/_rebsorten-modal.scss */
 .rebsorte-featured-image-thumb {
   float: right;
   padding: 2px;
   border: 1px solid #dadada;
   margin: 0 1em 1em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/pages\/_rebsorten-modal\.scss}line{font-family:\0000357}}
+  /* line 57, pages/_rebsorten-modal.scss */
   .rebsorte-featured-image-thumb img {
     width: 200px;
     height: 200px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/pages\/_rebsorten-modal\.scss}line{font-family:\0000363}}
+/* line 63, pages/_rebsorten-modal.scss */
 .view-pdf {
   position: relative;
   display: inline-block;
@@ -1029,7 +1066,7 @@ section#testimonials
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.15);
   width: 150px;
   float: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/pages\/_rebsorten-modal\.scss}line{font-family:\0000371}}
+  /* line 71, pages/_rebsorten-modal.scss */
   .view-pdf img {
     -webkit-filter: blur(2px);
     /* Ch 23+, Saf 6.0+, BB 10.0+ */
@@ -1037,7 +1074,7 @@ section#testimonials
     /* FF 35+ */
     -webkit-transition: filter 0.5s ease;
     transition: filter 0.5s ease; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/pages\/_rebsorten-modal\.scss}line{font-family:\0000375}}
+  /* line 75, pages/_rebsorten-modal.scss */
   .view-pdf:after {
     content: "";
     display: inline-block;
@@ -1059,18 +1096,18 @@ section#testimonials
     line-height: 0;
     color: #d33;
     pointer-events: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/pages\/_rebsorten-modal\.scss}line{font-family:\0000385}}
+  /* line 85, pages/_rebsorten-modal.scss */
   .view-pdf:hover:after {
     content: "";
     opacity: 0.5; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/pages\/_rebsorten-modal\.scss}line{font-family:\0000390}}
+  /* line 90, pages/_rebsorten-modal.scss */
   .view-pdf:hover img {
     -webkit-filter: none;
     /* Ch 23+, Saf 6.0+, BB 10.0+ */
     filter: none;
     /* FF 35+ */ }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/pages\/_rebsorten-modal\.scss}line{font-family:\0000396}}
+/* line 96, pages/_rebsorten-modal.scss */
 p.wein-vorhanden i {
   font-size: 4em;
   display: block;
@@ -1081,18 +1118,18 @@ p.wein-vorhanden i {
  * Copyright 2015 Daniel Cardoso <@DanielCardoso>
  * Licensed under MIT
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/vendors\/_vendors\.scss}line{font-family:\000037}}
+/* line 7, vendors/_vendors.scss */
 .la-timer.la-4x {
   width: 128px;
   height: 128px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/vendors\/_vendors\.scss}line{font-family:\0000312}}
+/* line 12, vendors/_vendors.scss */
 .la-timer.la-4x > div {
   width: 128px;
   height: 128px;
   border-width: 6px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/vendors\/_vendors\.scss}line{font-family:\0000318}}
+/* line 18, vendors/_vendors.scss */
 .la-timer.la-4x > div:before,
 .la-timer.la-4x > div:after {
   top: 56px;
@@ -1107,11 +1144,11 @@ p.wein-vorhanden i {
   -o-transform-origin: 4px 4px 0;
   transform-origin: 4px 4px 0; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/vendors\/_vendors\.scss}line{font-family:\0000333}}
+/* line 33, vendors/_vendors.scss */
 .la-timer.la-4x > div:before {
   height: 48px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/vendors\/_vendors\.scss}line{font-family:\0000337}}
+/* line 37, vendors/_vendors.scss */
 .la-timer.la-4x > div:after {
   height: 32px; }
 
@@ -1120,36 +1157,36 @@ p.wein-vorhanden i {
  * Copyright 2015 Daniel Cardoso <@DanielCardoso>
  * Licensed under MIT
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/vendors\/_timer\.min\.scss}line{font-family:\000036}}
+/* line 6, vendors/_timer.min.scss */
 .la-timer, .la-timer > div {
   position: relative;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/vendors\/_timer\.min\.scss}line{font-family:\000036}}
+/* line 6, vendors/_timer.min.scss */
 .la-timer {
   display: block;
   font-size: 0;
   color: #fff; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/vendors\/_timer\.min\.scss}line{font-family:\000036}}
+/* line 6, vendors/_timer.min.scss */
 .la-timer.la-dark {
   color: #333; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/vendors\/_timer\.min\.scss}line{font-family:\000036}}
+/* line 6, vendors/_timer.min.scss */
 .la-timer > div {
   display: inline-block;
   float: none;
   background-color: currentColor;
   border: 0 solid currentColor; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/vendors\/_timer\.min\.scss}line{font-family:\000036}}
+/* line 6, vendors/_timer.min.scss */
 .la-timer {
   width: 32px;
   height: 32px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/vendors\/_timer\.min\.scss}line{font-family:\000036}}
+/* line 6, vendors/_timer.min.scss */
 .la-timer > div {
   width: 32px;
   height: 32px;
@@ -1157,7 +1194,7 @@ p.wein-vorhanden i {
   border-width: 2px;
   border-radius: 100%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/vendors\/_timer\.min\.scss}line{font-family:\000036}}
+/* line 6, vendors/_timer.min.scss */
 .la-timer > div:before, .la-timer > div:after {
   position: absolute;
   top: 14px;
@@ -1183,11 +1220,11 @@ p.wein-vorhanden i {
   -o-animation-delay: -625ms;
   animation-delay: -625ms; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/vendors\/_timer\.min\.scss}line{font-family:\000036}}
+/* line 6, vendors/_timer.min.scss */
 .la-timer > div:before {
   height: 12px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/vendors\/_timer\.min\.scss}line{font-family:\000036}}
+/* line 6, vendors/_timer.min.scss */
 .la-timer > div:after {
   height: 8px;
   -webkit-animation-duration: 15s;
@@ -1199,18 +1236,18 @@ p.wein-vorhanden i {
   -o-animation-delay: -7.5s;
   animation-delay: -7.5s; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/vendors\/_timer\.min\.scss}line{font-family:\000036}}
+/* line 6, vendors/_timer.min.scss */
 .la-timer.la-sm {
   width: 16px;
   height: 16px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/vendors\/_timer\.min\.scss}line{font-family:\000036}}
+/* line 6, vendors/_timer.min.scss */
 .la-timer.la-sm > div {
   width: 16px;
   height: 16px;
   border-width: 1px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/vendors\/_timer\.min\.scss}line{font-family:\000036}}
+/* line 6, vendors/_timer.min.scss */
 .la-timer.la-sm > div:before, .la-timer.la-sm > div:after {
   top: 7px;
   left: 7px;
@@ -1224,26 +1261,26 @@ p.wein-vorhanden i {
   -o-transform-origin: 0.5px 0.5px 0;
   transform-origin: 0.5px 0.5px 0; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/vendors\/_timer\.min\.scss}line{font-family:\000036}}
+/* line 6, vendors/_timer.min.scss */
 .la-timer.la-sm > div:before {
   height: 6px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/vendors\/_timer\.min\.scss}line{font-family:\000036}}
+/* line 6, vendors/_timer.min.scss */
 .la-timer.la-sm > div:after {
   height: 4px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/vendors\/_timer\.min\.scss}line{font-family:\000036}}
+/* line 6, vendors/_timer.min.scss */
 .la-timer.la-2x {
   width: 64px;
   height: 64px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/vendors\/_timer\.min\.scss}line{font-family:\000036}}
+/* line 6, vendors/_timer.min.scss */
 .la-timer.la-2x > div {
   width: 64px;
   height: 64px;
   border-width: 4px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/vendors\/_timer\.min\.scss}line{font-family:\000036}}
+/* line 6, vendors/_timer.min.scss */
 .la-timer.la-2x > div:before, .la-timer.la-2x > div:after {
   top: 28px;
   left: 28px;
@@ -1257,26 +1294,26 @@ p.wein-vorhanden i {
   -o-transform-origin: 2px 2px 0;
   transform-origin: 2px 2px 0; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/vendors\/_timer\.min\.scss}line{font-family:\000036}}
+/* line 6, vendors/_timer.min.scss */
 .la-timer.la-2x > div:before {
   height: 24px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/vendors\/_timer\.min\.scss}line{font-family:\000036}}
+/* line 6, vendors/_timer.min.scss */
 .la-timer.la-2x > div:after {
   height: 16px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/vendors\/_timer\.min\.scss}line{font-family:\000036}}
+/* line 6, vendors/_timer.min.scss */
 .la-timer.la-3x {
   width: 96px;
   height: 96px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/vendors\/_timer\.min\.scss}line{font-family:\000036}}
+/* line 6, vendors/_timer.min.scss */
 .la-timer.la-3x > div {
   width: 96px;
   height: 96px;
   border-width: 6px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/vendors\/_timer\.min\.scss}line{font-family:\000036}}
+/* line 6, vendors/_timer.min.scss */
 .la-timer.la-3x > div:before, .la-timer.la-3x > div:after {
   top: 42px;
   left: 42px;
@@ -1290,11 +1327,11 @@ p.wein-vorhanden i {
   -o-transform-origin: 3px 3px 0;
   transform-origin: 3px 3px 0; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/vendors\/_timer\.min\.scss}line{font-family:\000036}}
+/* line 6, vendors/_timer.min.scss */
 .la-timer.la-3x > div:before {
   height: 36px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kunsang\/dev\/HR-theme\/sass\/vendors\/_timer\.min\.scss}line{font-family:\000036}}
+/* line 6, vendors/_timer.min.scss */
 .la-timer.la-3x > div:after {
   height: 24px; }
 

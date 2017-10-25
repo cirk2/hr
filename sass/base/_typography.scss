@@ -38,7 +38,7 @@ h1, h2, h3, h4, h5, h6,
             font-weight: 700;
             line-height: 1 !important;;
             letter-spacing: -0.01em;
-            text-transform: capitalize;
+            text-transform: none;
             -webkit-font-smoothing: subpixel-antialiased !important;
             color: $red;
             &::after {
@@ -47,7 +47,7 @@ h1, h2, h3, h4, h5, h6,
                 @include size(150%);
                 z-index: 0;
                 pointer-events: none;
-                background: radial-gradient(circle farthest-side at top,rgba(255, 255, 255, 0.8) 0,rgba(255, 0, 0, 0) 100%);
+                background: radial-gradient(circle farthest-side at top,rgba(255, 255, 255, 0.6) 0,rgba(255, 0, 0, 0) 100%);
             }
         }
         h6 {

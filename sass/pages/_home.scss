@@ -19,7 +19,7 @@ section#slider {
 }
 section#about {
     .subheader {
-        background-color: transparent !important;
+
         .icon-image {
             @include size(calc(2vw + 1.8em));
             padding: 20px;
@@ -35,16 +35,29 @@ section#about {
     }
 }
 section#mission {
+    .mission-col {
+        @include media("screen", "from-md", "to-xl") {
+            width: 100%;
+        }
+    }
     .first-word {
         color: $red;
         font-weight: bold;
     }
     .mission-grid {
+        .vc_col-sm-3 {
+            max-height: 20%;
+            @include media("from-xl") { width: 25%; }
+            // @include media("from-lg") { width: 50%; }
+            @include media("to-xl")   { width: 50%; }
+            @include media("to-sm")   { width: 100%; }
+            // @include media("to-xs")   { width: 100%; }
+        }
         h3,
         .tagline,
         .mission-description-acf {
             margin: 0 auto;
-            @include headerstyle-2(2em);
+            @include headerstyle-2(1.8em);
             text-align: center !important;
             max-width: 8em;
             color: rgba(123, 123, 123, 0.45);
@@ -69,17 +82,11 @@ section#mission {
             color: rgba(255, 255, 255, 0.7);
             text-shadow: 0 0 30px rgba(25, 25, 25, 0.5);
         }
-        .vc_col-sm-3 {
-            max-height: 20%;
-            @include media("screen", "to-md") {
-                width: 50%;
-            }
-        }
         .wpb_single_image {
             max-width: 280px;
             margin: 0 auto !important;
             @include media("screen", "from-md", "to-lg") {
-                margin: 0 !important;
+                // margin: 0 !important;
             }
         }
     }

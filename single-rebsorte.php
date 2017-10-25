@@ -103,7 +103,7 @@ get_header(); ?>
                 ?>
 
                 <h3>Die Sorte im Detail</h3>
-                <p>Für noch ausführlichere Informationen gibt es hier noch eine mehrseitige PDF Datei.</p>
+                <p>Für noch ausführlichere Informationen gibt es hier eine mehrseitige PDF Datei.</p>
 
                 <div class="view-pdf" style="margin-bottom: 22px">
                     <a href="<?php the_field( 'pdf' ) ?>" class="fancybox-pdf">
