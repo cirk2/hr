@@ -12,36 +12,38 @@ get_header(); ?>
 
     while ( have_posts() ) : the_post();
 ?>
-<section <?php echo post_class($section_class); ?>>
-    <div class="container" id="modal-ready">
-        <div class="row">
-
+<section <?php echo post_class($section_class); ?>
+    <div id="modal-ready">
+        <!-- <div class="row"> -->
+        <div class="grid-container">
             <?php
                 $thumb_id = get_post_thumbnail_id();
                 $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
                 $thumb_url = $thumb_url_array[0];
             ?>
-            <div class="row custom-post-header">
-                <div class="col-md-12 flex-container">
+        <!--             <div class="row custom-post-header"> -->
+                <!-- <div class="col-md-12 flex-container"> -->
+
+            <header class="custom-post-header">
+
                     <div class="watermark">
                         <img src="<?php get_stylesheet_directory_uri() ?>/wp-content/themes/h-code-child/i/logo-hr.svg">
                     </div>
                     <h2 class="rebsorte-title"><?php the_title(); ?></h2>
                     <h2 class="ursprungsnummer-title">Nr. <?php the_field("ursprungsnummer") ?></h2>
-                </div>
-            </div>
 
-            <div class="entry-content">
+            </header>
+
+                <!-- </div> -->
+            <!-- </div> -->
+
+            <!-- <div class="entry-content"> -->
+
+            <main class="content">
 
                 <?php if (get_field( 'zitat' ) ): ?>
                 <blockquote><?php the_field( 'zitat' ) ?></blockquote>
                 <?php endif; ?>
-
-                <div class="rebsorte-featured-image-thumb">
-                    <a href="<?php echo $thumb_url ?>" class="fancybox">
-                        <?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'medium' ); }  ?>
-                    </a>
-                </div>
 
                 <?php if (get_field( 'status' )): ?>
 
@@ -97,21 +99,6 @@ get_header(); ?>
 
                 <?php endif; ?>
 
-                <?php if ( get_field( 'pdf' ) ):
-                        $pdf_url = get_field( 'pdf' );
-                        $pdf_thumb = substr($pdf_url, 0, -4) . '-pdf-212x300.jpg';
-                ?>
-
-                <h3>Die Sorte im Detail</h3>
-                <p>Für noch ausführlichere Informationen gibt es hier eine mehrseitige PDF Datei.</p>
-
-                <div class="view-pdf" style="margin-bottom: 22px">
-                    <a href="<?php the_field( 'pdf' ) ?>" class="fancybox-pdf">
-                        <img src="<?php echo $pdf_thumb ?>" alt="">
-                    </a>
-                </div>
-                <?php endif; ?>
-
                 <h3>Partnerwinzer</h3>
 
                     <ul class="partnerwinzer">
@@ -142,11 +129,39 @@ get_header(); ?>
                     <?php endif; ?>
 
                     </ul>
+            </main>
+            <!-- </div> -->
+
+
+            <div class="sidebar">
+
+                <div class="rebsorte-featured-image-thumb">
+                    <a href="<?php echo $thumb_url ?>" class="fancybox">
+                        <?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'medium' ); }  ?>
+                    </a>
+                </div>
+
+                <?php if ( get_field( 'pdf' ) ):
+                        $pdf_url = get_field( 'pdf' );
+                        $pdf_thumb = substr($pdf_url, 0, -4) . '-pdf-212x300.jpg';
+                ?>
+
+                <h3>Die Sorte im Detail</h3>
+                <p>Für noch ausführlichere Informationen gibt es hier eine mehrseitige PDF Datei.</p>
+
+                <div class="view-pdf" style="margin-bottom: 22px">
+                    <a href="<?php the_field( 'pdf' ) ?>" class="fancybox-pdf">
+                        <img src="<?php echo $pdf_thumb ?>" alt="">
+                    </a>
+                </div>
+                <?php endif; ?>
 
             </div>
 
+            <footer>footer</footer>
+
         </div>
-    </div>
+    <!-- </div> -->
 </section>
 
 <?php

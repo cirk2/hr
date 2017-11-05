@@ -16,7 +16,7 @@
         height: 300px;
         flex-direction: column;
         .watermark {
-            width: 25%;
+//             width: 25%;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -33,15 +33,15 @@
         }
         .rebsorte-title {
             display: table;
-            padding: 0 1em .5em;
-            border-bottom: 3px solid #dd3333;
-            margin-bottom: .2em !important;
+            padding: 0 1em;
+            margin-bottom: .4em !important;
             color: $modal-text;
-            @include brand-title(2em);
+            @include brand-title(1.6em);
             max-width: 20%;
         }
         .ursprungsnummer-title  {
-            @include brand-nr(2em);
+            @include brand-nr(1.6em);
+            border-top: 3px solid #dd3333;
         }
     }
     .rebsorte-featured-image {

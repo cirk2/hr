@@ -3,6 +3,60 @@
 $modal-text: #fff;
 $modal-bg: #000;
 
+
+.modal .grid-container {
+  display: grid;
+  grid-gap: 10px;
+  max-width: 991px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 500px) {
+
+  /* no grid support? */
+  .sidebar {
+    // float: left;
+    width: 19.1489%;
+  }
+
+  .content {
+    // float: right;
+    width: 79.7872%;
+  }
+
+  .modal .grid-container {
+    margin: 0 auto;
+    grid-template-columns: 5fr 2fr;
+  }
+
+  header, footer {
+    grid-column: 1 / -1;
+    /* needed for the floated layout */
+    clear: both;
+  }
+
+}
+
+.modal .grid-container > * {
+  // background-color: #444;
+  outline: 2px dashed gold;
+  color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  // font-size: 150%;
+  /* needed for the floated layout*/
+  margin-bottom: 10px;
+}
+
+/* We need to set the widths used on floated items back to auto, and remove the bottom margin as when we have grid we have gaps. */
+@supports (display: grid) {
+  .modal .grid-container > * {
+    width: auto;
+    margin: 0;
+  }
+}
+
+
 body {
     > nav,
     > footer,
@@ -25,6 +79,9 @@ body {
         background-color: transparentize($modal-bg, .1);
         color: $modal-text !important;
         box-shadow: none;
+        @include media("screen", "from-xxs-dev", "to-md-dev", "retina") {
+            padding: 1em;
+        }
         .close-modal {
             @include position(fixed, 10px NULL NULL 10px);;
             z-index: 100;
@@ -75,7 +132,8 @@ body {
         .modal-small & {
             @include center(xy);
             height: auto !important;
-            min-height: 60%;
+            min-height: 40%;
+            min-width: 50%;
             img {
               border-radius: 50%;
             }

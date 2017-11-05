@@ -6,14 +6,7 @@
 }
 
 .custom-post-grid {
-    &.vc_col-sm-4 {
 
-        @include media("from-lg") { width: 33%; }
-        @include media("from-xl") { width: 33%; }
-        @include media("to-md")   { width: 50%; }
-        @include media("to-sm")   { width: 50%; }
-        @include media("to-xs")   { width: 100%; }
-    }
     .vc-gitem-zone-height-mode-auto:before {
       display: inline !important;
     }
@@ -27,12 +20,16 @@
         display: flex !important;
         align-items: center;
         justify-content: center;
+        @include media("screen", "from-xxs-dev", "to-md-dev", "retina") {
+            height: 200px !important;
+        }
         .vc_gitem-zone-img {                // Wasserzeichen
             width: 90% !important;
             display: block !important;
             visibility: visible;
             position: absolute;
             opacity: .07;
+            // top: 6em;
         }
     }
     .NORMAL-STATE {
@@ -51,7 +48,7 @@
                 .vc_custom_heading {
                     max-width: 90%;
                     padding: 0 0 1em;
-                    margin: -5em 3em     1em;
+                    margin: -5em 3em 0;
                     @include media("screen", "to-sm") {
                         padding: 0 0 1vw !important;
                         margin: -5vw auto 1vw;
@@ -61,30 +58,26 @@
                         justify-content: center;
                         align-items: flex-end;
                         min-height: 2.2em;
-                        font-size: 2.5em;
+                        font-size: 2.3em;
                         line-height: 1;
-                        letter-spacing: -0.6px;
+                        letter-spacing: -1px;
                         text-transform: capitalize;
                         font-family: Lora;
-                        @include media("screen", "to-md") {
-                            font-size: 2.4em;
-                            line-height: 1.1;
-                        }
                         @include media("screen", "to-sm") {
-                            font-size: 5vw;
+                            font-size: 1.4em;
                         }
                     }
                 }
                 .vc_gitem-acf {             // Fundnummer
-                    color: #dd3333;
+                    padding-top: .5em;
+                    border-top: 2px solid $red;
+                    margin: 0 auto;
+                    max-width: 33%;
+                    color: $red;
                     font-family: "Open Sans", "Montserrat", sans-serif;
                     font-size: 2.6em;
-                    @include media("screen", "to-md") {
-                        font-size: 3.2em;
-                        line-height: 1;
-                    }
                     @include media("screen", "to-sm") {
-                        font-size: 7vw;
+                        font-size: 1.5em;
                     }
                 }
             }
@@ -92,7 +85,7 @@
     }
     .HOVER-STATE {
         .vc_gitem-zone-img {
-            top: 4em;
+            top: 5em;
         }
         .more-button {
             margin-bottom: 0;
@@ -102,43 +95,49 @@
             }
         }
         .grid-zitat {
-            height: 1.8em;
-            margin-left: 1em;
-            font-size: 1.2em;
-            font-style: italic;
+            display: block;
+            height: 2.9em;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font: normal 600 1.2em/1.5 "Lora", serif;
+            text-align: center;
+            letter-spacing: -1px;
+            color: #777;
+            @include media("screen", "from-xxs-dev", "to-md-dev", "retina") {
+                margin: 0;
+                hyphens: auto;
+                font-size: 1.1em;
+            }
+            &::before { content: open-quote; }
+            &::after { content: close-quote; }
         }
         .left-flow {
-            @include size(50% 320px);
+            @include size(50% 290px);
             float: left;
             shape-outside: polygon(0% 0%,  9%  0%,  9% 20%,  15% 43%,  24%  55%, 29%  60%,
                                  36% 65%, 44% 70%, 67% 80%, 100% 89%, 100% 100%,  0% 100% );
-            shape-margin: 2px;
+            shape-margin: 5px;
         }
 
         .right-flow {
-            @include size(50% 320px);
+            @include size(50% 290px);
             float: right;
             shape-outside: polygon(0% 89%, 33% 80%, 56% 70%,  64% 65%,  70%  60%, 76%  55%,
                                   85% 43%, 92% 20%, 92%  0%, 100%  0%, 100% 100%,  0% 100%);
-            shape-margin: 2px;
+            shape-margin: 5px;
         }
-        .rebsorten-grid-excerpt p {
-            font: normal 400 0.9em/1.3 "Lora", serif;
-            padding: 1em 0 0;
-            letter-spacing: -0.5px;
-            text-align: center;
-            text-align-last: center;
-            hyphens: auto;
-            text-shadow: 0 0 2px rgb(255, 255, 255);
-            // &:after {
-            //     position: absolute;
-            //     bottom: -1px;
-            //     left: 0;
-            //     width: 100%;
-            //     background: #fff;
-            //     height: 1em;
-            //     content: "";
-            // }
+        .rebsorten-grid-excerpt {
+                @include media("screen", "from-xxs-dev", "to-md-dev", "retina") {
+                    display: none;
+                }
+            p {
+                padding-top: 1em;
+                font: normal 400 1.2em/1.5 "Lora", serif;
+                letter-spacing: -1px;
+                text-align: justify;
+                text-align-last: center;
+                hyphens: auto !important;
+                color: #555;            }
         }
         .more-button a:after {
             content: "";

@@ -1,0 +1,51 @@
+.glass-container {
+  @include center(xy);
+  @include size(100px);
+  margin: 0 auto;
+  overflow: visible;
+  .glass-mask {
+    @include center(xy);
+    @include size(51%);
+    background: #B5F0E8;
+    opacity: 0.7;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    z-index: 2;
+    &::after {
+      content: "";
+      @include position(absolute, NULL NULL -100% 49%);
+      @include size(5% 100%);
+      background: inherit;
+    }
+    &::before {
+      content: "";
+      @include position(absolute, NULL NULL -100% 10%);
+      @include size(80% 5%);
+      background: inherit;
+    }
+    .glass {
+      @include position(absolute, 5% NULL NULL 5%);
+      @include size(90%);
+      opacity: 0.7;
+      border-bottom-left-radius: 50%;
+      border-bottom-right-radius: 50%;
+      z-index: 3;
+      overflow: hidden;
+      .fill {
+        @include position(absolute, NULL NULL -5% 0);
+        @include size(100% 5%);
+        background: #da0000;
+        opacity: 0.8;
+        animation: wine 2s infinite alternate;
+        z-index: 1;
+      }
+    }
+  }
+}
+
+//animations
+@keyframes wine{
+  to {
+    height: 90%;
+  }
+}

@@ -8,6 +8,11 @@
 .modal-small {
 	.modal {
 		transition: height .4s $ease-out-cubic;
+		@include media("screen", "from-xxs-dev", "to-md-dev", "retina") {
+			@include size(100%);
+			min-height: 100%;
+			padding: 6em 2em 2em;
+		}
 	}
 	.alignright,
 	.alignleft {

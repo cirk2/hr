@@ -2,12 +2,12 @@
 
 // wortmarke
 $logo-width: 350px;
-$retina-logo-width: 175px;
+$retina-logo-width: 250px;
 
 // logo below header
 $logo-size: 150px;
 
-$tdelay: 200ms;
+$tdelay: 600ms;
 $tduration: 600ms;
 $teasing: $ease-out-cubic;
 
@@ -40,35 +40,27 @@ footer,
         box-shadow: 0px 2px 10px transparentize(#000, .85);
         background-color: transparentize(#fff, 0);
         opacity: .93;
+        .has_backdropfilter & {
+            -webkit-backdrop-filter: blur(30px);
+            background-color: transparentize(#fff, 0.4);
+            opacity: 1;
+        }
     }
 }
 .nav-container {
     height: 120px;
     align-items: flex-start;
-
     .shrink-nav & {
         height: 80px;
         align-items: center;
-        @include media("to-md") {
-            height: 60px;
-        }
+        padding-top: 0;
     }
     @include media("from-xs-dev", "to-md-dev", "retina") {
         height: 60px !important;
+        margin: 0 auto;
         align-items: center;
         .nav-item {
-            transform: scale(0.7) !important;
-            // position: absolute;
-
-            // &.top-burger {  left:  -5%; }
-            // &.top-search { right: -42%; }
-            &.top-logo {
-                transform: none !important;
-                .logo-after {
-                    // transform: scale(0.66);
-
-                }
-            }
+            transform: scale(0.6) !important;
         }
     }
     @include transition(height $tduration $teasing);
@@ -76,18 +68,14 @@ footer,
         z-index: 100;
         @include transition(all $tduration $teasing);
         .shrink-nav & {
-            transform: scale(0.8);
-            @include media("to-md") {
-                transform: scale(0.6);
-            }
+            transform: scale(0.85);
         }
-
     }
     .top-logo {
         margin: 0 auto;
         padding-top: 10px;
         svg path {
-            @include transition($tduration $teasing);
+            @include transition(800ms $teasing);
             transition-property: fill, stroke;
         }
         .shrink_fill-dark {
@@ -98,10 +86,13 @@ footer,
         }
         .svg-logo {
             width: $logo-width;
-            max-width: $logo-width !important;
+            // max-width: $logo-width !important;
             max-height: 100px;
-            @include media("from-xs-dev", "to-md-dev", "retina") {
-               width: $retina-logo-width;
+            @include media("retina") {
+               margin-top: 2em;
+               .shrink-nav & {
+                margin-top: 0;
+               }
             }
             .shrink_both-dark {
                 fill: $logo-light-fill;
@@ -117,34 +108,40 @@ footer,
         }
         .logo-after {
             @include center(x);
-            margin-top: 8px;
+            // transition: all .5s $ease-in-quart;
+            transition: all .5s ease-in-out;
             .shrink-nav & {
                 margin-top: -1px;
-                filter: drop-shadow(0px -25px 15px rgba(0, 0, 0, 0.3));
-                clip-path: inset(1% -100% -2% -100%);
-                @include media("from-xxs-dev","to-md-dev") {
-                    transform: scale(0.8) !important;
-                    transform-origin: -200% top !important;
-                }
+                // filter: drop-shadow(0px -25px 15px rgba(0, 0, 0, 0.3));
+                // clip-path: inset(1% -100% -2% -100%);
+                opacity: 0;
+                // transform: translateX(-50%) translateY(200%) scale(5);
+                pointer-events: none;
+
+            }
+            .shrink_fill-dark {
+                fill: #fff;
             }
             .shrink_both-light {
                 fill: transparent;
                 stroke: transparent;
-                .shrink-nav & {
-                    fill: $logo-light-fill;
-                    stroke: $logo-light-fill;
-                }
             }
-            // border-top: 10px solid #fff;
         }
     }
     .top-burger {
         .shrink-nav & {
             margin-left: -1em;
         }
+        @include media("from-xs-dev", "to-md-dev", "retina") {
+            position: relative;
+            left: 1em;
+        }
     }
     .top-search {
         position: relative;
+        @include media("from-xs-dev", "to-md-dev", "retina") {
+            right: 1em;
+        }
         &:hover {
             background: transparentize(#000, .7);
         }
@@ -173,14 +170,14 @@ footer,
         padding-top: 220px;
         opacity: 1;
         background-color: transparentize(#000, .33);
-        @include filter(blur(4px));
+        // @include filter(blur(4px));
         transform: translateY(-100%);
         transition: transform $tduration $teasing,
                     background-color $tduration $teasing,
                     filter $tduration cubic-bezier(0, -1, 1, 2) $tdelay ;
         .show-menu & {
             transform: translateY(0);
-            @include filter(none);
+            // @include filter(none);
             background-color: transparentize(#000, .33) !important;
         }
         .shrink-nav & {

@@ -10,8 +10,13 @@
  }
 }
 
-html,
 body {
-    overflow-x: hidden;
-    width: 100%;
+  width: 100%;
+  > section {
+    overflow: hidden;
+  }
+  &.show-menu.overflow-hidden {
+    overflow-y: scroll !important;
+  }
 }
+

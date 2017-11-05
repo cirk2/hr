@@ -123,7 +123,8 @@
                     var postSlug = basename(postLink);
                     var dataDivID = ' #' + $this.attr('data-div');
                     var dataBuddypress = $this.attr('data-buddypress');
-                    var loader = '<div class="la-timer la-4x"><div></div></div>';
+                    // var loader = '<div class="la-timer la-4x"><div></div></div>';
+                    var loader = '<div class="glassContainer"><div class="glass"><div class="fill"></div></div></div>';
 
                     // prevent link from being followed
 
@@ -132,13 +133,6 @@
                         modalContent.html(loader);
                     // }
 
-                    $('html').addClass('modal-open');
-
-                    $('.modal-wrapper').fadeIn('slow', function () {
-                        $(this).addClass('show');
-                        $('.modal').addClass('show');
-
-                    });
                     // Use legacy method
                     if (fromPHP.legacy) {
                         // Load content from external
@@ -205,6 +199,11 @@
 
                     // show class to display the previously hidden modal
 
+                    $('html').addClass('modal-open');
+                    $('.modal-wrapper').fadeIn('slow', function () {
+                        $(this).addClass('show');
+                        $('.modal').addClass('show');
+                    });
 
                     return false;
                 });

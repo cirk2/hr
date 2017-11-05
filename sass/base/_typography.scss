@@ -12,6 +12,12 @@ h1, h2, h3, h4, h5, h6,
     h1, h2, h3, h4, h5, h6 {
         margin-bottom: .5em;
     }
+    p {
+        font-size: 1.2em;
+        line-height: 1.6;
+        hyphens: auto;
+        color: $text-color;
+    }
 }
 
 // h1.section-title {
@@ -21,8 +27,8 @@ h1, h2, h3, h4, h5, h6,
 // }
 
 @mixin headerstyle-2($font-size) {
-    font: 700 $font-size/1 "Montserrat", sans-serif;
-    letter-spacing: -0.02em;
+    font: 600 $font-size/1 "Montserrat", sans-serif;
+    letter-spacing: -0.01em;
     color: $red;
     -webkit-font-smoothing: subpixel-antialiased !important;
 }
@@ -31,12 +37,15 @@ h1, h2, h3, h4, h5, h6,
     margin-bottom: 4em;
     position: relative;
     .subheader {
-        max-width: 30em;
+        max-width: 32em;
+        .grey-bg & {
+            background: #eee !important;
+        }
         h2.section-title {
-            padding-bottom: 0em;
-            font-size: calc(3vmax + 0.7em);
-            font-weight: 700;
-            line-height: 1 !important;;
+
+            padding-bottom: 0;
+            margin-bottom: 0;
+            font: 700 calc(1vw + 2em)/1 "Montserrat", sans-serif !important;
             letter-spacing: -0.01em;
             text-transform: none;
             -webkit-font-smoothing: subpixel-antialiased !important;
@@ -47,14 +56,21 @@ h1, h2, h3, h4, h5, h6,
                 @include size(150%);
                 z-index: 0;
                 pointer-events: none;
-                background: radial-gradient(circle farthest-side at top,rgba(255, 255, 255, 0.6) 0,rgba(255, 0, 0, 0) 100%);
+                background: radial-gradient(circle farthest-side at top,
+                                            rgba(255, 255, 255, 0.6 ) 0,
+                                            rgba(255, 255, 255, 0) 100%);
+                .grey-bg & {
+                  background: radial-gradient(circle farthest-side at top,
+                                              rgba(238, 238, 238, 0.6) 0,
+                                              rgba(255, 255, 255, 0) 100%);
+                }
             }
         }
         h6 {
-            letter-spacing: 0;
-            font-size: 21px;
+            font-size: 24px;
+            line-height: 1.3;
             text-transform: none;
-            line-height: 1.5;
+            letter-spacing: -0.04em;
         }
         .icon-image,
         .medium-icon {
