@@ -2,12 +2,15 @@
 // Global
 // ==================================================================//region
 
-*, :after, :before {
+*, :after, :before, button, input, textarea {
   -webkit-font-smoothing: antialiased !important;
- -moz-osx-font-smoothing: grayscale !important;
- @include media("retina") {
-  -webkit-font-smoothing: subpixel-antialiased !important;
- }
+  -moz-osx-font-smoothing: grayscale !important;
+  @include media("retina") {
+    -webkit-font-smoothing: subpixel-antialiased !important;
+  }
+  @if ($debug) { // visualizing layout internals
+    outline: 1px dotted red;
+  }
 }
 
 body {
@@ -15,8 +18,22 @@ body {
   > section {
     overflow: hidden;
   }
+  .modal-open &,
   &.show-menu.overflow-hidden {
     overflow-y: scroll !important;
+  }
+
+  &.images-loaded {
+    #loading-page {
+      opacity: 0;
+    }
+  }
+  #loading-page {
+    @include coverer(0, fixed);
+    transition: opacity 1s;
+    background: #252525;
+    z-index: 1040;
+    pointer-events: none;
   }
 }
 

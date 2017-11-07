@@ -6,10 +6,11 @@
 //
 // TODO
 //
-// => remove .no-padding-bottom class
+// => try to somehow remove .no-padding-bottom class
 section,
 .no-padding-bottom {
-  padding-bottom: 200px !important
+    padding-bottom: 200px !important;
+//     padding-top: 60px;
 ;}
 
 .vc_grid {
@@ -18,8 +19,8 @@ section,
     // @include media("from-lg") { width: 33%; }
     // @include media("from-xl") { width: 33%; }
     // @include media("to-md")   { width: 33%; }
-    @include media("from-sm") { width: 33%; }
-    @include media("to-sm")   { width: 50%; }
+    @include media("from-md") { width: 33%; }
+    @include media("to-md")   { width: 50%; }
     @include media("ipad")    { width: 33%; }
   }
 }
@@ -150,7 +151,7 @@ section#rebsorten {
     transform: scale(0.8);
     margin: -4.5em 0 0 0em !important;
     img {
-      width: 60% !important;
+      width: 200px !important;
     }
     .vc_custom_heading {
       padding: 0;

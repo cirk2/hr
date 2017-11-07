@@ -27,10 +27,18 @@ get_header(); ?>
             <header class="custom-post-header">
 
                     <div class="watermark">
-                        <img src="<?php get_stylesheet_directory_uri() ?>/wp-content/themes/h-code-child/i/logo-hr.svg">
+
+                        <svg class="section-logo-svg animate-path" width="152" height="158" viewBox="0 0 152 158" xml:space="preserve">
+                          <use class="animate-draw draw-frame" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-frame" style="stroke-dasharray: 521px; stroke-dashoffset: 521px;"></use>
+                          <use class="animate-draw draw-mark" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-mark-1" style="stroke-dasharray: 585px; stroke-dashoffset: 585px;"></use>
+                          <use class="animate-draw draw-mark" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-mark-2" style="stroke-dasharray: 626px; stroke-dashoffset: 626px;"></use>
+                          <use class="animate-draw draw-mark" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-mark-3" style="stroke-dasharray: 439px; stroke-dashoffset: 439px;"></use>
+                          <use class="animate-draw draw-mark" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-mark-4" style="stroke-dasharray: 82px; stroke-dashoffset: 82px;"></use>
+                        </svg>
+
                     </div>
                     <h2 class="rebsorte-title"><?php the_title(); ?></h2>
-                    <h2 class="ursprungsnummer-title">Nr. <?php the_field("ursprungsnummer") ?></h2>
+                    <h2 class="ursprungsnummer-title"><?php the_field("ursprungsnummer") ?></h2>
 
             </header>
 

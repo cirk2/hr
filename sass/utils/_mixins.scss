@@ -16,9 +16,9 @@
 
 // @include coverer($bottom)
 
-@mixin coverer($top) {
+@mixin coverer($top: 0, $pos: absolute) {
     display: block;
-    position: absolute;
+    position: $pos;
     top: $top;
     right: 0;
     bottom: 0;
@@ -151,6 +151,8 @@ $xs-dev-height: 480px;
   $condMap: (
         "screen":        "only screen",
         "print":         "only print",
+        "portrait":      "(orientation:portrait)",
+        "landscape":     "(orientation:landscape)",
         "retina":        "(-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-device-pixel-ratio: 1.5), (min-resolution: 120dpi)",
         "from-xl":       "(min-width:         #{$xl-width + 1})",
         "to-xl":         "(max-width:         #{$xl-width})",
@@ -178,7 +180,7 @@ $xs-dev-height: 480px;
   @return map-get( $condMap, $c );
 }
 
-// The mdia mixin
+// The media mixin
 @mixin media($args...) {
   $query: "";
   @each $arg in $args {

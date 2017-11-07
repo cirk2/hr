@@ -6,7 +6,7 @@ $modal-bg: #000;
 
 .modal .grid-container {
   display: grid;
-  grid-gap: 10px;
+  grid-gap: 20px;
   max-width: 991px;
   margin: 0 auto;
 }
@@ -26,7 +26,7 @@ $modal-bg: #000;
 
   .modal .grid-container {
     margin: 0 auto;
-    grid-template-columns: 5fr 2fr;
+    grid-template-columns: 5fr 200px;
   }
 
   header, footer {
@@ -38,12 +38,10 @@ $modal-bg: #000;
 }
 
 .modal .grid-container > * {
-  // background-color: #444;
-  outline: 2px dashed gold;
+  // outline: 1px dashed red;
   color: #fff;
   border-radius: 5px;
-  padding: 20px;
-  // font-size: 150%;
+  padding: 0;
   /* needed for the floated layout*/
   margin-bottom: 10px;
 }
@@ -63,9 +61,13 @@ body {
     > section {
         transition: filter $tduration ease;
         .modal-open & {
-            filter: blur(3px);
+            @include filter(blur(5px));
             pointer-events: none;
+            @supports (-webkit-backdrop-filter: blur) {
+                @include filter(none);
+            }
         }
+
     }
 }
 
@@ -76,7 +78,8 @@ body {
         position: relative;
         padding: 3rem;
         height: 100%;
-        background-color: transparentize($modal-bg, .1);
+        background-color: transparentize($modal-bg, .2);
+        -webkit-backdrop-filter: blur(10px);
         color: $modal-text !important;
         box-shadow: none;
         @include media("screen", "from-xxs-dev", "to-md-dev", "retina") {
@@ -90,6 +93,10 @@ body {
             cursor: pointer;
         }
         #modal-content {
+            height: 100%;
+            > section {
+                padding: 0 !important;
+            }
             clear: right;
             * {
                 -webkit-font-smoothing: antialiased !important;
@@ -113,17 +120,7 @@ body {
             .rebsorte-featured-image-thumb {
                 pointer-events: none;
             }
-            height: 100%;
-            .la-timer {
-                @include size(300%);
-                position: static;
-                display: block;
-                @include animation(fadeOut, 1s, ease-in, 1);
 
-                div {
-                    @include center(xy);
-                }
-            }
             // #modal-ready {
             //     // opacity: 0;
             //     @include animation(fadeIn, .5s, ease-in, 1);

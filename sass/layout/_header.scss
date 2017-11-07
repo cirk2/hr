@@ -26,6 +26,12 @@ footer,
     // perspective: 500px;
     .show-menu & {
         @include filter(blur(3px));
+        @supports (-webkit-backdrop-filter: blur) {
+          @include filter(none);
+        }
+        @supports (-ms-ime-align: auto) {
+          @include filter(none);
+        }
         // transform: scale(0.9);
         transform: rotateY(4deg) scale(.96);
         transition: filter $tduration cubic-bezier(0, -1, 1, 2) $tdelay,
@@ -33,6 +39,9 @@ footer,
     }
 }
 .navbar-default {
+    body.overflow-hidden & { // search popup active
+        z-index: 1070;
+    }
     display: block !important;
     @include transition(all $tduration $teasing);
     background-color: transparentize(#fff, 1);
@@ -50,6 +59,7 @@ footer,
 .nav-container {
     height: 120px;
     align-items: flex-start;
+    justify-content: space-around;
     .shrink-nav & {
         height: 80px;
         align-items: center;
@@ -65,10 +75,11 @@ footer,
     }
     @include transition(height $tduration $teasing);
     .nav-item {
+        position: absolute;
         z-index: 100;
         @include transition(all $tduration $teasing);
         .shrink-nav & {
-            transform: scale(0.85);
+            transform: scale(0.8);
         }
     }
     .top-logo {
@@ -86,7 +97,6 @@ footer,
         }
         .svg-logo {
             width: $logo-width;
-            // max-width: $logo-width !important;
             max-height: 100px;
             @include media("retina") {
                margin-top: 2em;
@@ -108,14 +118,10 @@ footer,
         }
         .logo-after {
             @include center(x);
-            // transition: all .5s $ease-in-quart;
             transition: all .5s ease-in-out;
             .shrink-nav & {
                 margin-top: -1px;
-                // filter: drop-shadow(0px -25px 15px rgba(0, 0, 0, 0.3));
-                // clip-path: inset(1% -100% -2% -100%);
                 opacity: 0;
-                // transform: translateX(-50%) translateY(200%) scale(5);
                 pointer-events: none;
 
             }
@@ -129,24 +135,24 @@ footer,
         }
     }
     .top-burger {
+        left: 0;
         .shrink-nav & {
-            margin-left: -1em;
+            left: -0.5em;
         }
         @include media("from-xs-dev", "to-md-dev", "retina") {
-            position: relative;
-            left: 1em;
+            left: -1.25em !important;
         }
     }
     .top-search {
-        position: relative;
-        @include media("from-xs-dev", "to-md-dev", "retina") {
-            right: 1em;
-        }
+        right: 0;
         &:hover {
             background: transparentize(#000, .7);
         }
         .shrink-nav & {
-            margin-right: -1em;
+            right: -0.5em;
+        }
+        @include media("from-xs-dev", "to-md-dev", "retina") {
+            right: -1.25em !important;
         }
         .header-search-form {
             @include size(100%);
@@ -162,6 +168,16 @@ footer,
         #top-search {
             margin-left: 0 !important;
         }
+        .overflow-hidden & {
+            .search-button {
+                // color: #000;
+                position: fixed;
+                z-index: 9999;
+                right: .5em;
+                top: 1.5em;
+                left: auto;
+            }
+        }
     }
     .menu-wrap {
         display: block;
@@ -171,14 +187,14 @@ footer,
         opacity: 1;
         background-color: transparentize(#000, .33);
         // @include filter(blur(4px));
-        transform: translateY(-100%);
+        transform: translateY(100%);
         transition: transform $tduration $teasing,
                     background-color $tduration $teasing,
                     filter $tduration cubic-bezier(0, -1, 1, 2) $tdelay ;
         .show-menu & {
             transform: translateY(0);
-            // @include filter(none);
             background-color: transparentize(#000, .33) !important;
+            -webkit-backdrop-filter: blur(30px);
         }
         .shrink-nav & {
             background-color: transparentize(#fff, .33) !important;
@@ -210,6 +226,25 @@ footer,
         }
         #close-button {
             display: none;
+        }
+    }
+}
+.mfp-bg {
+    pointer-events: none;
+    display: none;
+}
+.mfp-wrap {
+    z-index: 1050;
+    background: rgba(255, 255, 255, 0.9);
+    #search-header {
+        .mfp-close {
+            // display: none !important;
+            z-index: 1046;
+            // opacity: 0;
+            @include position(absolute, 0.75em 0.75em NULL NULL);
+            &:hover {
+                background: transparentize(#f00, 0.5) !important;
+            }
         }
     }
 }

@@ -13,9 +13,12 @@
         align-items: center;
     }
     .slider-text-middle {
-        position: absolute;
-//         bottom: 5em;
-
+        @include media("screen", "to-sm") {
+            font-size: 150%;
+            @include media("screen", "landscape") {
+                margin-top: 15%;
+            }
+        }
         h1 {
             margin: 0 0 10% !important;
             font-size: calc(2vw + 2em);
@@ -34,6 +37,10 @@
                 font-weight: 500;
                 font-style: normal;
                 color: #df4444;
+                @include media("to-xs") {
+                    display: block;
+                    margin-top: 0.5em;
+                }
             }
         }
         a {
