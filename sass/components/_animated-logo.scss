@@ -43,11 +43,13 @@
   animation-iteration-count: 1;
   animation-duration: 2s, 2s, 1s;
   animation-delay: 0.5s, 1.5s, 2s;
+  animation-delay: 1s, 2s, 2.5s;
   .watermark & {
     animation-duration: 1s, 1s, 1s;
     animation-delay: 0s, 1s, 1s;
   }
   .section-logo.animated &,
+  .section-logo.animated & ,
   .watermark & {
     animation-name: DrawLine, FadeStroke, FillIn;
   }

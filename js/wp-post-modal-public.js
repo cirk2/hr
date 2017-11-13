@@ -24,9 +24,6 @@
 
     $(function () {
 
-        // Detect windows width function
-        var $window = $(window);
-
         /**
          * Close modal functionality
          */
@@ -50,7 +47,6 @@
         $(document).on('click', '.modal', function (e) {
             e.stopPropagation();
         });
-
 
         function checkWidth() {
             // remove click handler

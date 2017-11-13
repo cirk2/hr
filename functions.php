@@ -14,20 +14,6 @@ if ( ! function_exists( 'hcode_child_style' ) ) :
 endif;
 add_action( 'wp_enqueue_scripts', 'hcode_child_style' );
 
-
-// relative img URIs
-
-function switch_to_relative_url($html, $id, $caption, $title, $align, $url, $size, $alt)
-{
-$imageurl = wp_get_attachment_image_src($id, $size);
-$relativeurl = wp_make_link_relative($imageurl[0]);
-$html = str_replace($imageurl[0],$relativeurl,$html);
-
-return $html;
-}
-add_filter('image_send_to_editor','switch_to_relative_url',10,8);
-
-
 // add js to child theme
 
 function hr_add_scripts() {
@@ -162,10 +148,10 @@ function my_acf_admin_head() {
 
 add_action('acf/input/admin_head', 'my_acf_admin_head');
 
-
 //
 // remove wp emojis
 // wordpress.stackexchange.com/questions/185577/disable-emojicons-introduced-with-wp-4-2
+
 
 function disable_wp_emojicons() {
 

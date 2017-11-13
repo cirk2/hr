@@ -112,17 +112,62 @@
             //     console.log( 'image is ' + result + ' for ' + image.img.src );
             // });
 
+        // Debug
+
+        var rh = $('#rebsorten').height();
+        var ph = $('#partner').height();
+        console.log('rebsorten: ' + rh + 'px');
+        console.log('partner: ' + ph + 'px');
 
 
-        // Search popup
+        $('body').imagesLoaded()
 
-        // $('#search-header').on('click', function(event) {
-        //     event.preventDefault();
-        //     $('.mfp-close').trigger('click');
-        // });
+            .always( function( instance ) {
+                console.log('all images loaded');
+                $('body').addClass('images-loaded');
+            })
 
+            .done( function( instance ) {
 
-        // $('#search-header').trigger('click');
+                logoWaypoints();
+
+                var excLength = 150;
+
+                setTimeout(function() {
+                    $(".rebsorten-grid-excerpt p").each(
+                        function() {
+                            if ($(this).text().length > excLength) {
+                                $(this).text(
+                                    $(this).text().substring(0, excLength) + '...'
+                                );
+                            }
+                        });
+
+                    if ( Modernizr.shapes ) {
+                            $('.custom-post-grid .vc_gitem-link p')
+                                .before("<div class=left-flow></div>" +
+                                        "<div class=right-flow></div>");
+                        }
+
+                    $( '.wrap-first-word h6, .slider-text-middle span' ).each(function() {
+                        var me = $(this);
+                        me.html(me.text().replace(/(^\w+)/, '<span class="first-word">$1</span>'));
+                    });
+
+                    Waypoint.refreshAll();
+
+                }, 1000);
+
+            })
+
+            .fail( function() {
+                console.log( 'all images loaded, at least one is broken' );
+            })
+
+            // .progress( function( instance, image ) {
+            //     var result = image.isLoaded ? 'loaded' : 'broken';
+            //     console.log( 'image is ' + result + ' for ' + image.img.src );
+            // });
 
 
     });
@@ -141,8 +186,35 @@
         }
     });
 
-    // Initialize tooltips
+    // $('window').on('click', '.mfp-close', function(e) {
+    //     event.preventDefault();
 
+    // });
+
+        // Search popup
+
+        // $('#search-header').on('click', function(event) {
+        //     event.preventDefault();
+        //     $('.mfp-close').trigger('click');
+        // });
+
+    });
+
+    // Reset section logo animations after scrolling top
+
+    $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+        var logo   = $('.section-logo.animated');
+        if ( scroll < 10) {
+            console.log('scrolled top, logo animatons resetted');
+            if (logo.hasClass('animated')) {
+                logo.removeClass('animated wpb_start_animation');
+                Waypoint.refreshAll();
+            }
+        }
+    });
+
+    // Initialize tooltips
     // $('[data-tooltip!=""]').qtip({
     //       content: {
     //         attr: 'data-tooltip'

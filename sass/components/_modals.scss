@@ -4,7 +4,7 @@ $modal-bg: #000;
 
 .grid-container {
   display: grid;
-  grid-gap: 40px;
+  grid-gap: 20px;
   max-width: 991px;
   margin: 0 auto;
   > * {
@@ -26,6 +26,12 @@ $modal-bg: #000;
     clear: both;
   }
 }
+.modal .grid-container > * {
+  color: #fff;
+  border-radius: 5px;
+  padding: 0;
+  margin-bottom: 10px;
+}
 @supports (display: grid) {
     .grid-container > * {
     width: auto;
@@ -37,7 +43,6 @@ $modal-bg: #000;
 }
 
 .modal {
-
   overflow: auto !important;
   padding: 1rem 3rem 2rem;
   background-color: transparentize($modal-bg, .2);
@@ -63,15 +68,20 @@ $modal-bg: #000;
     }
   }
   #modal-content {
-    height: 100%;
-    clear: right;
     > section {
       padding: 2rem 0 !important;
+        transition: filter $tduration ease;
+        .modal-open & {
+            @include filter(blur(5px));
+            pointer-events: none;
+            @supports (-webkit-backdrop-filter: blur) {
+                @include filter(none);
+            }
+        }
     }
     h1, h2, h3, h4 {
       color: $text-color;
       margin-bottom: .5rem;
-
     }
     h1 {
       font-size: 2.5rem;
@@ -110,19 +120,13 @@ $modal-bg: #000;
     }
     a img {
       shape-outside: circle(50% at center);
-      // clip-path:      circle(50% at center);
-      // transition: all 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
-      // @include animation(Circle, .3s, $ease-out-cubic, 1);
-      // animation-fill-mode: forwards;
       max-width: 45%;
     }
-
     @include media("screen", "to-sm") {
       @include size(100%);
       min-height: 100%;
       padding: 2rem 2rem 2rem;
     }
-
     @include media("screen", "from-sm") {
       padding: 0 1rem 0;
       width: 50%;

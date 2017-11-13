@@ -14,6 +14,7 @@ html {
 *, :after, :before, button, input, textarea {
   // inherit box-sizing from :root
   box-sizing: inherit;
+
   // no subpixel antialiasing on non-retina displays
   -webkit-font-smoothing: antialiased !important;
   -moz-osx-font-smoothing: grayscale !important;

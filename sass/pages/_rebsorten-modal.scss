@@ -1,0 +1,115 @@
+// Rebsorten Custom Post Template
+
+// .margin-tb-30px {
+//     width: 400px;
+//     float: left;
+//     margin-right: 3em;
+// }
+
+// .parallax-fix {
+//     background-size: contain !important;
+// }
+
+.custom-post-header {
+  margin-bottom: 1em;
+  @include display(flex);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 250px;
+  .watermark {
+    position: absolute;
+  }
+  h2 {
+    opacity: 0;
+    // transition: all .5 s 5s;
+    animation: Appear 1s linear 1.5s forwards 1;
+  }
+  .rebsorte-title {
+    @include brand-title(2em);
+    position: relative;
+    max-width: 20%;
+    display: table;
+    padding: 0 1em;
+    margin-bottom: 0 !important;
+    color: $modal-text;
+    &::after {
+      @include size(0 3px);
+      content: "";
+      display: block;
+      margin: 0.3em auto 0;
+      background: #d33;
+      animation: borderWidth 1s linear 1.5s forwards 1;
+    }
+  }
+  .ursprungsnummer-title  {
+    @include brand-nr(2em);
+    padding: 0 1em;
+    // border-top: 0 solid #dd3333;
+  }
+}
+
+.rebsorte-featured-image {
+  text-align: center;
+}
+
+.rebsorte-featured-image-thumb {
+  border: 1px solid #dadada;
+  margin-bottom: 2em;
+  img {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+.content,
+.sidebar {
+  opacity: 0;
+  animation: Appear 1s linear 2s forwards 1;
+}
+
+.view-pdf {
+  position: relative;
+  display: inline-block;
+  border: 1px solid #dadada;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.15);
+  width: 150px;
+  float: none;
+
+  img {
+    @include filter(blur(2px));
+    @include transition(filter .5s ease);
+  }
+  &:after {
+    @include font-awesome("");
+    @include coverer(50%);
+    @include transition(all .5s ease);
+    font-size: 7em;
+    line-height: 0;
+    color: #d33;
+    pointer-events: none;
+  }
+  &:hover {
+    &:after {
+      content: "";
+      opacity: 0.5;
+      // font-size: 13em;
+    }
+    img {
+      @include filter(none);
+    }
+  }
+}
+
+p.wein-vorhanden i {
+  font-size: 4em;
+  display: block;
+  margin-bottom: 10px;
+}
+
+@keyframes Appear {
+  to { opacity: 1; }
+}
+@keyframes borderWidth {
+  to { width: 100px; }
+}
