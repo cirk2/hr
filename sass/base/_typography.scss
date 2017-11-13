@@ -2,101 +2,137 @@
 // ==== Headings
 // ==================================================================//region
 
+:root {
+  quotes: "„" "“" "‚" "‘";
+}
+
 .menu-item a,
 h1, h2, h3, h4, h5, h6,
 .slider-typography {
-    font-family: "Montserrat", "Gotham Medium", "Proxima Nova Semibold", system-ui, sans-serif;
+  font-family: $sans-stack;
+  text-transform: none !important;
 }
 
-.entry-content {
-    h1, h2, h3, h4, h5, h6 {
-        margin-bottom: .5em;
-    }
-    p {
-        font-size: 1.2em;
-        line-height: 1.6;
-        hyphens: auto;
-        color: $text-color;
-    }
-}
+// .entry-content {
+  h1, h2, h3, h4, h5, h6 {
+    margin: 2rem 0 1rem;
+    letter-spacing: -0.02em;
+  }
+  h1, h2, h3 {
+    font-weight: 700;
+  }
+  h1 { font-size: 2.1rem; }
+  h2 { font-size: 1.9rem; }
+  h3 { font-size: 1.7rem; }
+  h4 { font-size: 1.5rem; }
+  h5 { font-size: 1.4rem; }
+  h6 { font-size: 1.2rem; }
 
-// h1.section-title {
-//     padding-bottom: 20px;
-
-//     font-size: 32px !important;
+  p {
+    font-size: 1rem;
+    line-height: 1.6;
+    letter-spacing: -0.0115rem;
+    hyphens: auto;
+    color: $text-color;
+    .pilcrow:after {
+      content: "\2761"; // \2767 \2761
+      padding-right: 0.3rem;
+      color: lighten(#888, 20);
+    }
+  }
+  strong {
+    color: $light-red;
+  }
 // }
 
 @mixin headerstyle-2($font-size) {
-    font: 600 $font-size/1 "Montserrat", sans-serif;
-    letter-spacing: -0.01em;
-    color: $red;
-    -webkit-font-smoothing: subpixel-antialiased !important;
+  font: 600 $font-size/1 $sans-stack;
+  letter-spacing: -0.01em;
+  color: $red;
+  -webkit-font-smoothing: subpixel-antialiased !important;
 }
 
 .section-heading {
-    margin-bottom: 4em;
-    position: relative;
-    .subheader {
-        max-width: 32em;
-        .grey-bg & {
-            background: #eee !important;
-        }
-        h2.section-title {
-
-            padding-bottom: 0;
-            margin-bottom: 0;
-            font: 700 calc(1vw + 2em)/1 "Montserrat", sans-serif !important;
-            letter-spacing: -0.01em;
-            text-transform: none;
-            -webkit-font-smoothing: subpixel-antialiased !important;
-            color: $red;
-            &::after {
-                content: '';
-                @include position(absolute, -35% NULL NULL 5%);
-                @include size(150%);
-                z-index: 0;
-                pointer-events: none;
-                background: radial-gradient(circle farthest-side at top,
-                                            rgba(255, 255, 255, 0.6 ) 0,
-                                            rgba(255, 255, 255, 0) 100%);
-                .grey-bg & {
-                  background: radial-gradient(circle farthest-side at top,
-                                              rgba(238, 238, 238, 0.6) 0,
-                                              rgba(255, 255, 255, 0) 100%);
-                }
-            }
-        }
-        h6 {
-            font-size: 24px;
-            line-height: 1.3;
-            text-transform: none;
-            letter-spacing: -0.04em;
-        }
-        .icon-image,
-        .medium-icon {
-            max-height: 200px;
-            display: none;
-        }
+  margin-bottom: 4em;
+  position: relative;
+  .subheader {
+    &::after {
+      content: "\2766";
+      display: block;
+      margin: 2rem -1rem 1rem;
+      font-size: 2rem;
+      text-align: center;
+      color: hsl(0, 0%, 80%);
     }
+    .grey-bg & { background: #eee !important; }
+    .section-title {
+      padding: 0 1.5rem 0;
+      margin: 3rem -1rem 0;
+      font: 700 calc(0.2vw + 2rem)/1 $sans-stack !important;
+      -webkit-font-smoothing: subpixel-antialiased !important;
+      color: $red;
+      &::after {
+        content: '';
+        @include position(absolute, -35% NULL NULL 5%);
+        @include size(150%);
+        z-index: 0;
+        pointer-events: none;
+        background: radial-gradient(circle farthest-side at top,
+                      rgba(255, 255, 255, 0.6 ) 0,
+                      rgba(255, 255, 255, 0) 100%);
+        .grey-bg & {
+          background: radial-gradient(circle farthest-side at top,
+                        rgba(238, 238, 238, 0.6) 0,
+                        rgba(255, 255, 255, 0) 100%);
+        }
+        @include media("screen", "to-sm") {
+          top: 0;
+        }
+      }
+    }
+    h6 {
+      max-width: 23rem;
+      margin: .5em auto 0;
+      font-size: 1.2rem;
+      line-height: 1.3;
+    }
+    .icon-image,
+    .medium-icon {
+      max-height: 200px;
+      display: none;
+    }
+  }
+  &.no-subtitle .subheader .section-title {
+    margin: 3.8rem -1rem 0;
+  }
+  @include media("screen", "to-sm") {
+    margin: 0 0 1rem;
+    .subheader {
+      margin: 0 !important;
+      .section-title {
+        padding: 0 1rem 0 !important;
+      }
+    }
+  }
 }
 
 // Post content
 
 blockquote {
-    line-height: 1.2;
-    padding: 1em;
-    font-family: "Lora",serif;
-    font-size: 2em;
-    font-style: italic;
-    quotes: "„" "“" "‚" "‘";
-    &:before {
-        content: open-quote;
-    }
-    &:after {
-        content: close-quote;
-    }
+  line-height: 1.2;
+  padding: 1em;
+  font-family: $serif-stack;
+  font-size: 2em;
+  font-style: italic;
+  quotes: "„" "“" "‚" "‘";
+  &:before {
+    content: open-quote;
+  }
+  &:after {
+    content: close-quote;
+  }
 }
 
 .blog-short-description {
-    background-color: #fff !important;
+  background-color: #fff !important;
 }

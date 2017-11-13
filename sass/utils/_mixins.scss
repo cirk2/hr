@@ -1,24 +1,80 @@
+// fluid type
 
-@mixin brand-title($font-size) {
-  font: normal normal 400 $font-size 'Lora', 'Georgia', serif;
-  line-height: 0.9;
-  text-transform: capitalize;
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-font-size);
+  $u4: unit($max-font-size);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+      font-size: $min-font-size;
+      @media screen and (min-width: $min-vw) {
+        font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+      }
+      @media screen and (min-width: $max-vw) {
+        font-size: $max-font-size;
+      }
+    }
+  }
+}
+
+// rebsorten typo
+
+@mixin brand-title($font-size, $border-width: 0, $anim: borderWidth) {
+  @include display(flex);
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  min-height: ($font-size + 2rem);
+  margin: -1.7rem 2rem 0rem !important;
+  font: normal normal 400 $font-size $serif-stack;
+  line-height: 1;
   text-align: center;
-  letter-spacing: -1.5px;
-  color: #333;
+  letter-spacing: -0.05rem;
+  color: currentColor;
+  &::after {
+    @include size($border-width 3px);
+    content: "";
+    display: block;
+    margin: 0.5rem auto 0;
+    background: $light-red;
+    animation: $anim 1s linear 1.5s forwards 1;
+  }
 }
 
 @mixin brand-nr($font-size) {
-  font: normal normal $font-size "Open Sans", "Montserrat", sans-serif !important;
-  text-align: center;
-  color: #dd3333;
+  font: normal normal $font-size $sans-stack !important;
+  // text-align: center;
+  margin: 0 auto;
+  color: $light-red;
+}
+
+// progressbar bg
+
+@mixin pgBG() {
+  padding: 5px;
+  background: rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px rgba(255, 255, 255, 0.05);
+}
+@mixin pgBBG() {
+  padding: 5px;
+  background-image: radial-gradient(circle farthest-side at top,rgba(255, 255, 255, 0.1 ) 0,rgba(255, 255, 255, 0) 100%);
+  background-position: 0 0;
+  background-size: 150%;
+  background-color: #c76164;
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2), inset 0 1px rgba(255, 255, 255, 0.1);
 }
 
 // @include coverer($bottom)
 
-@mixin coverer($top) {
+@mixin coverer($top: 0, $pos: absolute) {
     display: block;
-    position: absolute;
+    position: $pos;
     top: $top;
     right: 0;
     bottom: 0;
@@ -126,7 +182,7 @@
 $xl-width: 1441px;
 $lg-width: 1199px;
 $md-width:  991px;
-$sm-width:  768px;
+$sm-width:  767px;
 $xs-width:  575px;
 $xxs-width: 320px;
 
@@ -151,6 +207,8 @@ $xs-dev-height: 480px;
   $condMap: (
         "screen":        "only screen",
         "print":         "only print",
+        "portrait":      "(orientation:portrait)",
+        "landscape":     "(orientation:landscape)",
         "retina":        "(-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-device-pixel-ratio: 1.5), (min-resolution: 120dpi)",
         "from-xl":       "(min-width:         #{$xl-width + 1})",
         "to-xl":         "(max-width:         #{$xl-width})",
@@ -178,7 +236,7 @@ $xs-dev-height: 480px;
   @return map-get( $condMap, $c );
 }
 
-// The mdia mixin
+// The media mixin
 @mixin media($args...) {
   $query: "";
   @each $arg in $args {

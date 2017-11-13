@@ -1,0 +1,60 @@
+.owl-carousel {
+  .bg-black {
+    background: hsla(0, 0%, 0%, 0.5) url(../i/patterns/noisy-net-dark.png);
+    opacity: 0.85;
+  }
+  .owl-prev, .owl-next {
+    .fa {
+      color: #fff;
+    }
+    &:before {
+      background-color: transparentize(#000, 0.7);
+    }
+    &:hover:before {
+      background-color: transparentize(#fff, 0.7)
+    }
+  }
+}
+
+.slider-typography {
+  .slider-text-middle-main {
+    @include display(flex);
+    justify-content: center;
+    align-items: center;
+  }
+  .slider-text-middle {
+    margin-top: 15%;
+    @include media("screen", "to-sm") {
+      font-size: 140%;
+    }
+    h1 {
+      margin: 0 0 10% !important;
+      font-size: calc(2vw + 2em);
+      font-weight: 400;
+      text-transform: none;
+      letter-spacing: -0.04em;
+      color: transparentize(#fff, .8);
+      strong {
+        margin: 0 -0.2em 0 0;
+        font-size: .8em;
+        font-weight: 500;
+        color: transparentize(#fff, .1);
+      }
+      em {
+        margin-left: -0.22em;
+        font: normal 500 0.8em $sans-stack;
+        color: $red-text;
+        @include media("to-xs") {
+          display: block;
+          margin-top: 0.5em;
+        }
+      }
+    }
+    a {
+      background: #df4444;
+      color: white;
+      display: none !important
+      ;
+    }
+  }
+}

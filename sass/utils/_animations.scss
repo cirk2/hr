@@ -1,0 +1,24 @@
+
+@include keyframe(fadeIn) {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@include keyframe(fadeOut) {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+
+@include keyframe(Appear) {
+  to { opacity: 1; }
+}
+@include keyframe(borderWidth) {
+  to { width: 100px; }
+}
+
+@include keyframe("Circle") {
+  to {
+    shape-outside: circle(50% at center);
+    clip-path: circle(50% at center);
+  }
+}

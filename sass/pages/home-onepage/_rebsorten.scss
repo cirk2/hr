@@ -1,0 +1,33 @@
+section#rebsorten {
+  @include media("screen", "to-xs") {
+    .col-xs-4 {
+      width: 100%;
+      padding: 10% 25% ;
+    }
+    .col-xs-8 {
+      width: 100%;
+    }
+    .logo-description {
+      .vc_gitem-zone-img {
+        margin-top: 1em !important;
+        height: 150px !important;
+      }
+    }
+  }
+  @include media("screen", "ipad") {
+    .logo-description {
+      .vc_gitem-zone-img {
+        margin-top: 1em !important;
+        height: 130px !important;
+      }
+    }
+  }
+  .logo-description-text {
+    p {
+      text-align: left;
+    }
+  }
+  .vc_gitem-zone {
+    overflow: visible;
+  }
+}

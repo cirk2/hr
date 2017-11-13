@@ -2,21 +2,35 @@
 // Global
 // ==================================================================//region
 
-*, :after, :before {
+:root {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+html {
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+}
+
+*, :after, :before, button, input, textarea {
+  // inherit box-sizing from :root
+  box-sizing: inherit;
+  // no subpixel antialiasing on non-retina displays
   -webkit-font-smoothing: antialiased !important;
- -moz-osx-font-smoothing: grayscale !important;
- @include media("retina") {
-  -webkit-font-smoothing: subpixel-antialiased !important;
- }
+  -moz-osx-font-smoothing: grayscale !important;
+  @include media("retina") {
+    -webkit-font-smoothing: subpixel-antialiased !important;
+  }
+
+  @if ($debug) { // visualizing layout internals
+    outline: 1px dotted red;
+  }
 }
 
 body {
   width: 100%;
+  overflow-y: scroll !important;
   > section {
     overflow: hidden;
-  }
-  &.show-menu.overflow-hidden {
-    overflow-y: scroll !important;
   }
 }
 

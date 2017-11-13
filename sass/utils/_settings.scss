@@ -1,0 +1,22 @@
+
+$output-bourbon-deprecation-warnings: false;
+
+// visualizing layout internals
+$debug: false;
+
+// Fonts
+
+$min_width: 320px;
+$max_width: 1440px;
+$min_font: 16px;
+$max_font: 24px;
+
+$sans-stack:  'Montserrat', 'Proxima Nova', 'Gotham', system-ui, sans-serif;
+$serif-stack: 'Lora', 'Abril', 'Miller', serif;
+
+// Colors
+
+$text-color	: 	#1a171b !default;
+$red		: 	#fa3232 !default;
+$red-text	: 	#df4444;
+$light-red	: 	#c76164 !default;

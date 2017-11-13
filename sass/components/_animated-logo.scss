@@ -2,30 +2,58 @@
   height: 200px;
   z-index: 3;
   position: relative;
-  margin: 0 0 2em !important;
   animation-delay: 0s;
+  @include media("screen", "to-sm") {
+    margin: -0.5rem 0 -3rem !important;
+  }
   h2 { display: none; }
-  .section-logo-svg {
-    @include size(152px 158px);
-    @include position(absolute, 0 -25%);
-    margin: auto;
-    display: block;
-    fill: #333;
-    fill: url("#MyGradient");
-    stroke: #333;
-    stroke-miterlimit: 5;
-    filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.08));
+}
+
+.section-logo-svg {
+  @include size(152px 158px);
+  @include position(absolute, 0 -25%);
+  margin: auto;
+  display: block;
+  fill: #333;
+  fill: url("#MyGradient");
+  stroke: #333;
+  stroke-miterlimit: 5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-opacity: 0.5;
+  filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.065));
+  .watermark & {
+    @include size(auto 230px);
+    @include center(xy);
+    fill: transparentize(#fff, 0.9);
+    stroke: transparentize(#fff, 0.5);
+    z-index: -1;
+    .single & {
+      fill: transparentize(#000, 0.9);
+      fill: url("#MyGradient");
+      stroke: #333 !important;
+    }
   }
 }
+
 .animate-draw {
   fill-opacity: 0;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
   animation-duration: 2s, 2s, 1s;
-  animation-delay: 1s, 2s, 2.5s;
-  .section-logo.animated & {
+  animation-delay: 0.5s, 1.5s, 2s;
+  .watermark & {
+    animation-duration: 1s, 1s, 1s;
+    animation-delay: 0s, 1s, 1s;
+  }
+  .section-logo.animated &,
+  .watermark & {
     animation-name: DrawLine, FadeStroke, FillIn;
+  }
+  .single & {
+    animation-name: DrawLine, FadeStroke, FillIn2 !important;
+    animation-delay: 2s, 4s, 4s !important;
   }
   &.draw-mark {
     .has_no-cssanimations & {
@@ -43,6 +71,13 @@
     .grey-bg & {
       fill: #eee;
     }
+    .watermark & {
+      fill: transparent;
+      .single & {
+        fill: #fff !important;
+        animation-delay: 3s, 5s, 5s;
+      }
+    }
   }
 }
 
@@ -55,4 +90,9 @@
 @keyframes FillIn {
   from { fill-opacity: 0; }
   to { fill-opacity: 1; }
+}
+
+@keyframes FillIn2 {
+  from { fill-opacity: 0; }
+  to { fill-opacity: 0.15; }
 }

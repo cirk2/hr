@@ -1,0 +1,74 @@
+.mission-col {
+  @include media("screen", "from-md", "to-xl") {
+    width: 100%;
+  }
+  .first-word {
+    color: $red;
+    font-weight: bold;
+  }
+}
+
+.mission-grid {
+  .vc_col-sm-3 {
+    // max-height: 10%;
+    @include media("from-xl") { width: 25%; }
+    @include media("to-xl")   { width: 50%; }
+    @include media("to-xs")   { width: 100%; }
+    @include media("from-sm", "to-lg") {
+      &:nth-of-type(odd) { left: 5%; }
+      &:nth-of-type(even) { right: 5%; }
+    }
+    @include media("from-lg", "to-xl") {
+      &:nth-of-type(odd) { left: 10%; }
+      &:nth-of-type(even) { right: 10%; }
+    }
+  }
+
+  h3,
+  .tagline,
+  .mission-description-acf {
+    margin: 0 auto;
+    @include headerstyle-2(1.8em);
+    text-align: center !important;
+    max-width: 8em;
+    color: #999;
+    -webkit-font-smoothing: subpixel-antialiased !important;
+  }
+  .tagline {
+    &:before {
+      content: "Wir ";
+      font-weight: 800;
+      color: $light-red;
+    }
+  }
+  .mission-description-acf {
+    &:after {
+      content: "\:";
+    }
+    font-size: 1.6em;
+    font-weight: 500;
+    color: #fff;
+    text-shadow: 0 0 30px rgba(25, 25, 25, 0.74);
+  }
+  h3 {                        // Name
+    color: rgba(221, 51, 51, 0.8);
+    text-transform: none;
+  }
+  .wpb_single_image {
+    max-width: 280px;
+    padding: 20px;
+    margin: 0 auto !important;
+  }
+  .vc_is-hover .vc_figure {
+    position: relative;
+    &:before {
+      @include coverer(0);
+      @include size(100%);
+      content: "";
+      background: transparentize(#fff, .5);
+    }
+  }
+  .vc_gitem-zone-c {
+    margin-top: -1.5em;
+  }
+}

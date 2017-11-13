@@ -1,0 +1,68 @@
+// =============================================================================
+//   global blur effects on modal or menu open
+// =============================================================================
+
+// body {
+//     perspective: 500px;
+// }
+
+// nav.navbar,
+
+nav + section,
+section + footer {
+  transition: all $tduration $teasing;
+  .has_no-backdropfilter .show-menu &,
+  .has_no-backdropfilter.modal-is-open & {
+    @include filter(blur(5px));
+  }
+}
+
+@include media("screen", "from-sm") {
+  nav + section,
+  section + footer {
+    transition: all $tduration $teasing;
+    .has_no-backdropfilter.modal-is-open & {
+      @include filter(blur(15px));
+    }
+    .has_no-backdropfilter .show-menu & {
+      @include filter(blur(4px));
+      // transform: scale(0.9);
+      // transform: rotateZ(15deg);
+      // transform: translate(100vw);
+      transform: rotateZ(1deg) scale(0.95);
+      // transform: translateY(100%) scale3d(1, 1, 0);
+      transition:    filter $tduration cubic-bezier(0, -1, 1, 2) $tdelay,
+                  transform $tduration $teasing;
+      @supports (-ms-ime-align: auto) {
+        @include filter(none);
+      }
+    }
+  }
+}
+
+body {
+  &.images-loaded {
+    #loading-page {
+      opacity: 0;
+    }
+  }
+  #loading-page {
+    @include coverer(0, fixed);
+    transition: opacity 1s;
+    background: #252525;
+    z-index: 1040;
+    pointer-events: none;
+  }
+  .modal-is-open & {
+    overflow-y: hidden !important;
+  }
+}
+
+// footer,
+// .page-title,
+// .entry-content div > section > *,
+// .entry-content div > section {
+//     transition: all .2s $teasing;
+//     // perspective: 500px;
+
+// }

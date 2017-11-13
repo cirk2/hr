@@ -1,0 +1,15 @@
+.progress {
+  height: 4em;
+  @include pgBG;
+  .progress-bar {
+    @include pgBBG;    animation: progressWidth25 1s linear 2s 1 forwards;
+    .developing ~ &  { animation: progressWidth50 1s linear 2s 1 forwards; }
+    .growing    ~ &  { animation: progressWidth75 1s linear 2s 1 forwards; }
+    .available  ~ &  { animation: progressWidth00 1s linear 2s 1 forwards; }
+  }
+}
+
+@keyframes progressWidth25  { to { width: 25%;  } }
+@keyframes progressWidth50  { to { width: 50%;  } }
+@keyframes progressWidth75  { to { width: 75%;  } }
+@keyframes progressWidth00 { to { width: 100%; } }

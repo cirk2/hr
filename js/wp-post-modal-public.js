@@ -1,49 +1,6 @@
 (function ($) {
+
     'use strict';
-
-    /**
-     * All of the code for your public-facing JavaScript source
-     * should reside in this file.
-     *
-     * Note: It has been assumed you will write jQuery code here, so the
-     * $ function reference has been prepared for usage within the scope
-     * of this function.
-     *
-     * This enables you to define handlers, for when the DOM is ready:
-     *
-     * $(function() {
-     *
-     * });
-     *
-     * When the window is loaded:
-     *
-     * $( window ).load(function() {
-     *
-     * });
-     *
-     * ...and/or other possibilities.
-     *
-     * Ideally, it is not considered best practise to attach more than a
-     * single DOM-ready or window-load handler for a particular page.
-     * Although scripts in the WordPress core, Plugins and Themes may be
-     * practising this, we should strive to set a better example in our own work.
-     */
-
-
-    /**
-     * Check if URL is external function
-     *
-     * @returns {boolean}
-     */
-    $.fn.isExternal = function () {
-
-        var host = window.location.host;
-        var link = $('<a>', {
-            href: this.attr('href')
-        })[0].hostname;
-        return (link !== host);
-
-    };
 
     /**
      * Basename function for JS
@@ -73,24 +30,20 @@
         /**
          * Close modal functionality
          */
-
         function hideModal() {
             // $('.modal').removeClass('show');
             $('.modal-wrapper').fadeOut('slow').removeClass('show');
             $('#modal-content').html('');
-            $('html').removeClass('modal-open');
+            $('html').removeClass('modal-is-open');
         }
-
         // when pressing esc
         $(document).keydown(function (e) {
             if (e.keyCode === 27 && $('.modal-wrapper').hasClass('show')) {
                 hideModal();
             }
         });
-
         // when clicking on close button
         $(document).on('click', '.close-modal', hideModal);
-
         // when clicking outside of modal
         $(window).on('click', hideModal);
 
@@ -98,139 +51,49 @@
             e.stopPropagation();
         });
 
+
         function checkWidth() {
-            var windowsize = $window.width();
+            // remove click handler
+            $('.vc_basic_grid').off("click", ".vc_gitem-link");
 
-            // if the window is greater than 767px wide then do below. we don't want the modal to show on mobile devices and instead the link will be followed.
-            if (windowsize >= fromPHP.breakpoint) {
+            $('body').off('click', '.modal-link');
 
-            // remove click handler from visual composer grid
-                $('.vc_basic_grid').off("click", ".vc_gitem-link");
+            $('body').on('click', '.modal-link', function (event) {
 
-                $('body').on('click', '.modal-link', function (e) {
+                event.stopImmediatePropagation();
 
-                    if ($(this).hasClass('small-modal')) {
-                        $('.modal-wrapper').addClass('modal-small');
-                    } else {
-                        $('.modal-wrapper').removeClass('modal-small');
-                    }
-
-                    // Define variables
-                    var modalContent = $('#modal-content');
-                    var $this = ($(this).attr('href') != null) ? $(this) : $(this).children('a').first();
-                    var postLink = $this.attr('href');
-                    var postUrl = $this[0].pathname.substring(1);
-                    var postSlug = basename(postLink);
-                    var dataDivID = ' #' + $this.attr('data-div');
-                    var dataBuddypress = $this.attr('data-buddypress');
-                    // var loader = '<div class="la-timer la-4x"><div></div></div>';
-                    var loader = '<div class="glassContainer"><div class="glass"><div class="fill"></div></div></div>';
-
-                    // prevent link from being followed
-
-                    // display loading animation or in this case static content
-                    // if (fromPHP.styled) {
-                        modalContent.html(loader);
-                    // }
-
-                    // Use legacy method
-                    if (fromPHP.legacy) {
-                        // Load content from external
-                        if ($this.isExternal()) {
-                            $.ajaxPrefilter(function (options) {
-                                if (options.crossDomain && jQuery.support.cors) {
-                                    var http = (window.location.protocol === 'http:' ? 'http:' : 'https:');
-                                    options.url = http + '//cors-anywhere.herokuapp.com/' + options.url;
-                                    //options.url = "http://cors.corsproxy.io/url=" + options.url;
-                                }
-                            });
-
-                            $.get(
-                                postLink,
-                                function (response) {
-                                    var html = $(response);
-                                    modalContent.html($(html).find(dataDivID).html());
-                                });
-                        }
-                        // Load content from internal
-                        else {
-                            if (dataBuddypress)
-                                modalContent.load(postLink + ' #buddypress');
-                            else
-                                modalContent.load(postLink + ' #modal-ready');
-                        }
-                    }
-                    // Use new REST API method
-                    else {
-                        // Load content from external
-                        if ($this.isExternal()) {
-                            $.ajaxPrefilter(function (options) {
-                                if (options.crossDomain && jQuery.support.cors) {
-                                    var http = (window.location.protocol === 'http:' ? 'http:' : 'https:');
-                                    options.url = http + '//cors-anywhere.herokuapp.com/' + options.url;
-                                    //options.url = "http://cors.corsproxy.io/url=" + options.url;
-                                }
-                            });
-
-                            $.get(
-                                postLink,
-                                function (response) {
-                                    var html = $(response);
-                                    modalContent.html($(html).find(dataDivID).html());
-                                });
-                        }
-                        // Load content from internal
-                        else {
-                            $.ajax({
-                                url: fromPHP.siteUrl + '/wp-json/wp-post-modal/v1/any-post-type?slug=' + postSlug,
-                                success: function (data) {
-                                    modalContent.html(data.post_content);
-                                },
-                                error: function () {
-                                    if (dataBuddypress)
-                                        modalContent.load(postLink + ' #buddypress');
-                                    else
-                                        modalContent.load(postLink + ' #modal-ready');
-                                },
-                                cache: false
-                            });
-                        }
-                    }
-
-                    // show class to display the previously hidden modal
-
-                    $('html').addClass('modal-open');
-                    $('.modal-wrapper').fadeIn('slow', function () {
-                        $(this).addClass('show');
-                        $('.modal').addClass('show');
-                    });
-
-                    return false;
+                if ($(this).hasClass('small-modal')) {
+                    $('.modal-wrapper').addClass('modal-small');
+                } else {
+                    $('.modal-wrapper').removeClass('modal-small');
+                }
+                // Define variables
+                var modalContent = $('#modal-content');
+                var $this = ($(this).attr('href') != null) ? $(this) : $(this).children('a').first();
+                var postLink = $this.attr('href');
+                var postUrl = $this[0].pathname.substring(1);
+                var postSlug = basename(postLink);
+                // var loader = '<section> <div class="grid-container"> <header class="custom-post-header"> <div class="watermark"> <svg class="section-logo-svg animate-path" width="152" height="158" viewBox="0 0 152 158" xml:space="preserve"> <use class="animate-draw draw-frame" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-frame" style="stroke-dasharray: 521px; stroke-dashoffset: 521px;"></use> <use class="animate-draw draw-mark" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-mark-1" style="stroke-dasharray: 585px; stroke-dashoffset: 585px;"></use> <use class="animate-draw draw-mark" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-mark-2" style="stroke-dasharray: 626px; stroke-dashoffset: 626px;"></use> <use class="animate-draw draw-mark" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-mark-3" style="stroke-dasharray: 439px; stroke-dashoffset: 439px;"></use> <use class="animate-draw draw-mark" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-mark-4" style="stroke-dasharray: 82px; stroke-dashoffset: 82px;"></use> </svg> </div> </header> </div> </section>';
+                var loader = '<div class="glass-container"><div class="glass-mask"><div class="glass"><div class="fill"></div></div></div></div>';
+                // prevent link from being followed
+                event.preventDefault();
+                // show loader
+                modalContent.html(loader);
+                // Load content from internal
+                modalContent.load(postLink + ' #modal-ready');
+                // add class to display the previously hidden modal
+                $('html').addClass('modal-is-open');
+                $('.modal-wrapper').fadeIn('slow', function () {
+                    $(this).addClass('show');
+                    $('.modal').addClass('show');
                 });
-            }
-        }
-
-        checkWidth();
+                // if (e.isDefaultPrevented()) {
+                //     e.stopPropagation();
+                // }
+                return false;
+            });
+        };
+        // checkWidth();
         $(window).resize(checkWidth);
     });
-
-    // Suppress modal link redirect in WP Customizer
-    function modalCustomizer() {
-        if (wp.customize) {
-            var body = $('body');
-            body.off('click.preview');
-
-            body.on('click.preview', 'a[href]:not(.modal-link)', function (e) {
-                var link = $(this);
-                e.preventDefault();
-                wp.customize.preview.send('scroll', 0);
-                wp.customize.preview.send('url', link.prop('href'));
-            });
-        }
-    }
-
-    $(window).on('load', function () {
-        modalCustomizer();
-    });
-
 })(jQuery);

@@ -1,0 +1,28 @@
+{
+  "name": "h-code-child",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "sassdoc": "^2.4.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kunsang/reflect-hr-wp-theme.git"
+  },
+  "author": "Kunsang Norbu Tsering / reflect.media GmbH",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kunsang/reflect-hr-wp-theme/issues"
+  },
+  "homepage": "https://github.com/kunsang/reflect-hr-wp-theme#readme"
+}

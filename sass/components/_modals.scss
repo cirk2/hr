@@ -1,190 +1,150 @@
-// Reveal Modal
 
-$modal-text: #fff;
+$text-color: #f7f7f7;
 $modal-bg: #000;
 
-
-.modal .grid-container {
+.grid-container {
   display: grid;
-  grid-gap: 10px;
+  grid-gap: 40px;
   max-width: 991px;
   margin: 0 auto;
+  > * {
+    color: #fff;
+    border-radius: 5px;
+    padding: 0;
+    margin-bottom: 10px;
+  }
 }
-
-@media screen and (min-width: 500px) {
-
-  /* no grid support? */
-  .sidebar {
-    // float: left;
-    width: 19.1489%;
-  }
-
-  .content {
-    // float: right;
-    width: 79.7872%;
-  }
-
-  .modal .grid-container {
+@include media("screen", "from-md") {
+  .sidebar { width: 19.1489%; }
+  .content { width: 79.7872%; }
+  .grid-container {
     margin: 0 auto;
-    grid-template-columns: 5fr 2fr;
+    grid-template-columns: 5fr 200px;
   }
-
   header, footer {
     grid-column: 1 / -1;
-    /* needed for the floated layout */
     clear: both;
   }
-
 }
-
-.modal .grid-container > * {
-  // background-color: #444;
-  outline: 2px dashed gold;
-  color: #fff;
-  border-radius: 5px;
-  padding: 20px;
-  // font-size: 150%;
-  /* needed for the floated layout*/
-  margin-bottom: 10px;
-}
-
-/* We need to set the widths used on floated items back to auto, and remove the bottom margin as when we have grid we have gaps. */
 @supports (display: grid) {
-  .modal .grid-container > * {
+    .grid-container > * {
     width: auto;
     margin: 0;
   }
 }
-
-
-body {
-    > nav,
-    > footer,
-    > section {
-        transition: filter $tduration ease;
-        .modal-open & {
-            filter: blur(3px);
-            pointer-events: none;
-        }
-    }
-}
-
 .modal-wrapper {
-    z-index: 1032;
+  z-index: 1032;
 }
-    .modal {
-        position: relative;
-        padding: 3rem;
-        height: 100%;
-        background-color: transparentize($modal-bg, .1);
-        color: $modal-text !important;
-        box-shadow: none;
-        @include media("screen", "from-xxs-dev", "to-md-dev", "retina") {
-            padding: 1em;
-        }
-        .close-modal {
-            @include position(fixed, 10px NULL NULL 10px);;
-            z-index: 100;
-            font: 100 5em/0.5 "Montserrat", sans-serif !important;
-            color: $modal-text;
-            cursor: pointer;
-        }
-        #modal-content {
-            clear: right;
-            * {
-                -webkit-font-smoothing: antialiased !important;
-                -moz-osx-font-smoothing: grayscale !important;
-            }
-            h1, h2, h3, h4 {
-                color: $modal-text;
-                margin-bottom: .5em;
-            }
-            h1 {
-                font-size: 1.7em;
-                margin-top: -1em;
-            }
-            a {
-              color: $modal-text;
-            }
-            blockquote {
-                padding-left: 1em;
-                font-size: 1.7em;
-            }
-            .rebsorte-featured-image-thumb {
-                pointer-events: none;
-            }
-            height: 100%;
-            .la-timer {
-                @include size(300%);
-                position: static;
-                display: block;
-                @include animation(fadeOut, 1s, ease-in, 1);
 
-                div {
-                    @include center(xy);
-                }
-            }
-            // #modal-ready {
-            //     // opacity: 0;
-            //     @include animation(fadeIn, .5s, ease-in, 1);
-            // }
-        }
-        .modal-small & {
-            @include center(xy);
-            height: auto !important;
-            min-height: 40%;
-            min-width: 50%;
-            img {
-              border-radius: 50%;
-            }
-            @include media("screen", "from-lg") {
-                padding: 4rem 2rem 2rem;
-                width: 50%;
-                #modal-content {
-                    padding: 2em;
-                }
-            }
-            @include media("ipad") {
-                padding: 5rem 2rem 2rem;
-                width: 75%;
-                #modal-content {
-                    padding: 2em;
-                    font-size: 1.3em;
-                    line-height: 1.3;
-                }
-                img {
-                  width: 150%;
-                }
-            }
-        }
+.modal {
+
+  overflow: auto !important;
+  padding: 1rem 3rem 2rem;
+  background-color: transparentize($modal-bg, .2);
+  -webkit-backdrop-filter: blur(10px);
+  color: $text-color !important;
+  box-shadow: none;
+  @include media("screen", "from-xxs-dev", "to-md-dev", "retina") {
+    padding: 1rem;
+  }
+  .close-modal {
+    @include position(fixed, 10px NULL NULL 10px);
+    z-index: 100;
+    overflow: hidden;
+    font: 100 5rem/0.5 $sans-stack !important;
+    color: $text-color;
+    cursor: pointer;
+    &:hover { color: lighten($light-red, 2); }
+  }
+  .modal-wrapper:not(.modal-small) & {
+    top: 80px;
+    .close-modal {
+      top: 90px;
     }
-    @include keyframe(fadeIn) {
-        from { opacity: 0; }
-        to   { opacity: 1; }
+  }
+  #modal-content {
+    height: 100%;
+    clear: right;
+    > section {
+      padding: 2rem 0 !important;
     }
-    @include keyframe(fadeOut) {
-        from { opacity: 1; }
-        to   { opacity: 0; }
+    h1, h2, h3, h4 {
+      color: $text-color;
+      margin-bottom: .5rem;
+
+    }
+    h1 {
+      font-size: 2.5rem;
+      color: $text-color;
+    }
+    a { color: $text-color; }
+    blockquote {
+      padding-left: 1rem;
+      font-size: 1.7rem;
+    }
+    .modal-small & {
+      h1 { font-size: 1.8rem; }
+      h2 {
+        margin: 1rem 0 0;
+        font-size: 1.3rem;
+        color: $light-red;
+      }
+      p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+        text-align: left;
+        color: $text-color;
+        .has_no-csshyphens & {
+          text-align: left;
+        }
+      }
+    }
+  }
+  .modal-small & {
+    @include center(xy);
+    height: auto !important;
+    min-height: 40%;
+    min-width: 60%;
+    img {
+      border-radius: 100% 0 100% 100%;
+    }
+    a img {
+      shape-outside: circle(50% at center);
+      // clip-path:      circle(50% at center);
+      // transition: all 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
+      // @include animation(Circle, .3s, $ease-out-cubic, 1);
+      // animation-fill-mode: forwards;
+      max-width: 45%;
     }
 
-    // .next-post-reveal-nav,
-    // .prev-post-reveal-nav {
-    //     text-indent: 9999em;
-    //     &:after {
-    //         position: absolute;
-    //         top: 0;
-    //         text-indent: 0;
-    //     }
-    // }
-    // .next-post-reveal-nav {
-    //     &:after {
-    //        @include font-awesome("");
-    //     }
-    //     right: 10px;
-    // }
-    // .prev-post-reveal-nav {
-    //     &:after {
-    //         @include font-awesome("");
-    //     }
-    //     left: 14px;
-    // }
+    @include media("screen", "to-sm") {
+      @include size(100%);
+      min-height: 100%;
+      padding: 2rem 2rem 2rem;
+    }
+
+    @include media("screen", "from-sm") {
+      padding: 0 1rem 0;
+      width: 50%;
+      #modal-content {
+        padding: 2rem;
+      }
+    }
+    @include media("ipad") {
+      padding: 0 2rem 2rem;
+      width: 75%;
+      #modal-content {
+        padding: 2rem;
+        font-size: 1.3rem;
+        line-height: 1.3;
+      }
+      img {
+        width: 150%;
+      }
+    }
+  }
+}
+
+
+
+

@@ -1,0 +1,21 @@
+.partner-grid {
+  .vc_grid-item {
+    @include media("from-xs") { width: 25%; }
+    @include media("to-xs")   { width: 50%; }
+    .partner-grid-item {
+      background-size: auto !important;
+      @include media("screen", "to-sm", "to-lg-dev", "retina",) {
+        background-size: 90% !important;
+      }
+    }
+    h3 {
+      font-size: 1.5em;
+      color: #fff;
+      text-shadow: 0 0 2px #000;
+    }
+  }
+}
+
+
+
+
