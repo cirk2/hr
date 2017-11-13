@@ -1,0 +1,36 @@
+.grid-container {
+  display: grid;
+  grid-gap: 20px;
+  max-width: 991px;
+  margin: 0 auto;
+  > * {
+    color: #fff;
+    border-radius: 5px;
+    padding: 0;
+    margin-bottom: 10px;
+  }
+}
+@include media("screen", "from-md") {
+  .sidebar { width: 19.1489%; }
+  .content { width: 79.7872%; }
+  .grid-container {
+    margin: 0 auto;
+    grid-template-columns: 5fr 200px;
+  }
+  header, footer {
+    grid-column: 1 / -1;
+    clear: both;
+  }
+}
+.grid-container > * {
+  color: #fff;
+  border-radius: 5px;
+  padding: 0;
+  margin-bottom: 10px;
+}
+@supports (display: grid) {
+    .grid-container > * {
+    width: auto;
+    margin: 0;
+  }
+}

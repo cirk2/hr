@@ -29,7 +29,6 @@
     <link rel="apple-touch-icon" sizes="114x114" href="<?php if (hcode_option('apple_iPhone_retina_favicon')) { echo hcode_option_url('apple_iPhone_retina_favicon'); } else { echo HCODE_THEME_IMAGES.'/apple-touch-icon-114x114.png'; }?>">
     <link rel="apple-touch-icon" sizes="149x149" href="<?php if (hcode_option('apple_iPad_retina_favicon')) { echo hcode_option_url('apple_iPad_retina_favicon'); } else { echo HCODE_THEME_IMAGES.'/apple-touch-icon-114x114.png'; }?>">
     <?php // End favicon. ?>
-<<<<<<< HEAD
 <!--     <script>
         var Hyphenopoly = {
             require: {
@@ -46,8 +45,6 @@
             }
         };
     </script> -->
-=======
->>>>>>> e20edc0eca05a04e903f0a22c86aa34e39b7a2fc
     <?php
         // Set Header for Ajax Popup.
         hcode_set_header( get_the_ID() );

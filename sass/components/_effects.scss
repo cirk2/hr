@@ -29,13 +29,15 @@ section + footer {
       // transform: scale(0.9);
       // transform: rotateZ(15deg);
       // transform: translate(100vw);
-      transform: rotateZ(1deg) scale(0.95);
+      // transform: rotateZ(1deg) scale(0.95);
       // transform: translateY(100%) scale3d(1, 1, 0);
-      transition:    filter $tduration cubic-bezier(0, -1, 1, 2) $tdelay,
-                  transform $tduration $teasing;
-      @supports (-ms-ime-align: auto) {
-        @include filter(none);
-      }
+
+      transition: filter 4s $ease-in-cubic .3s,
+                  opacity   $tduration .1s $ease-in-sine,
+                  transform $tduration $ease-in-expo;
+      // @supports (-ms-ime-align: auto) {
+      //   @include filter(none);
+      // }
     }
   }
 }

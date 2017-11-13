@@ -1,5 +1,5 @@
 .section-logo {
-  height: 200px;
+  height: 250px;
   z-index: 3;
   position: relative;
   animation-delay: 0s;
@@ -10,7 +10,7 @@
 }
 
 .section-logo-svg {
-  @include size(152px 158px);
+  @include size(calc(8vw + 7rem) calc(7vh + 8rem));
   @include position(absolute, 0 -25%);
   margin: auto;
   display: block;

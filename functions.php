@@ -29,6 +29,9 @@ function hr_add_scripts() {
 
     wp_register_script('reflect-main', get_stylesheet_directory_uri().'/js/main.js');
     wp_enqueue_script('reflect-main');
+
+    wp_register_script('adobe-shapes-polyfill', get_stylesheet_directory_uri().'/js/shapes-polyfill.min.js');
+    wp_enqueue_script('adobe-shapes-polyfill');
 }
 add_action( 'wp_enqueue_scripts', 'hr_add_scripts', 35);
 

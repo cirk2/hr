@@ -42,6 +42,7 @@ get_header(); ?>
             <div class="content">
 
                 <h2>Winzer / Weingut</h2>
+
                 <?php the_excerpt(); ?>
 
                 <p>Spicy jalapeno bacon ipsum dolor amet boudin reprehenderit meatloaf ex mollit dolore excepteur picanha kielbasa. Shankle minim est voluptate short ribs ham hock filet mignon ea dolore in. Andouille short ribs lorem spare ribs duis jowl short loin pancetta meatloaf hamburger landjaeger porchetta consequat ut. Filet mignon ham hock venison do aute sed. Nostrud reprehenderit burgdoggen, sirloin excepteur quis velit pork chop corned beef commodo duis deserunt tail pastrami. Consectetur laboris flank, hamburger meatball cillum kevin lorem.</p>
@@ -54,10 +55,10 @@ get_header(); ?>
 
                     if( $posts ): ?>
                         <ul>
-                        <?php foreach( $posts as $post):)?>
+                        <?php foreach( $posts as $post):?>
                             <?php setup_postdata($post); ?>
                             <li>
-                                <a class="modal-link" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                <a class="modal-link" href="<?php the_permalink(); ?>"> <?php the_title(); ?></a>
                             </li>
                         <?php endforeach; ?>
                         </ul>

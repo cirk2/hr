@@ -1,276 +1,240 @@
-// Header
+// =============================================================================
+//   Header Layout
+// =============================================================================
 
 // wortmarke
 $logo-width: 350px;
-$retina-logo-width: 250px;
+$logo-height: 100px;
+$retina-logo-width: 200px;
+$retina-logo-height: 70px;
 
 // logo below header
 $logo-size: 150px;
 
-$tdelay: 300ms;
+// nav-items
+$navbutton-offset: -0.6em;
+$nav-scale-shrunk:  0.8;
+$nav-scale-retina:  0.6;
+
+// transitions
+$tdelay: 500ms;
 $tduration: 600ms;
 $teasing: $ease-out-cubic;
 
+// svg fill
 $logo-dark-fill: #1A171B;
 $logo-light-fill: #fff;
 
+//
+
 .navbar-default {
-    body.overflow-hidden & { // search popup active
-        z-index: 1070;
-    }
-    display: block !important;
-    @include transition(all $tduration $teasing);
-    background-color: transparentize(#fff, 1);
-    &.shrink-nav {
-        box-shadow: 0px 2px 10px transparentize(#000, .85);
-        background-color: transparentize(#fff, 0);
-        opacity: .93;
-        .has_backdropfilter & {
-            -webkit-backdrop-filter: blur(30px);
-            background-color: transparentize(#fff, 0.4);
-            opacity: 1;
-        }
-    }
+  @include transition(all $tduration $teasing);
+  background-color: transparentize(#fff, 1);
 }
-.nav-container {
+  .nav-container {
     height: 120px;
     align-items: center;
-    align-items: flex-start;
-    justify-content: space-around;
-    .shrink-nav & {
-        height: 80px;
-        align-items: center;
-        padding-top: 0;
-    }
-    @include media("from-xs-dev", "to-md-dev", "retina") {
-        height: 60px !important;
-        margin: 0 auto;
-        align-items: center;
-    }
+    justify-content: space-between;
     @include transition(height $tduration $teasing);
+    @include media("from-xs-dev", "to-md-dev", "retina") { // iPhone
+      height: 60px !important;
+      margin: 0 auto;
+      align-items: center;
+    }
     .nav-item {
-        z-index: 9000;
-        @include transition(all $tduration $teasing);
-        position: absolute;
-        z-index: 100;
-        @include transition(all $tduration $teasing);
-        .shrink-nav & {
-            transform: scale(0.8);
-        }
+      margin-top: -1em;
+      @include transition(all $tduration $teasing);
+      @include media("from-xs-dev", "to-md-dev", "retina") { // iPhone
+        transform: scale($nav-scale-retina) !important;
+      }
     }
     .top-logo {
-        margin: 0 auto;
-        padding-top: 10px;
-        svg path {
-            @include transition(800ms $teasing);
-            transition-property: fill, stroke;
-        }
-        .shrink_fill-dark {
-            fill: $logo-light-fill;
-            .shrink-nav & {
-                fill: $logo-dark-fill;
-            }
-        }
-        .svg-logo {
-            width: $logo-width;
-            max-height: 100px;
-            @include media("retina") {
-                margin-top: 1em;
-                width: 200px;
-                max-height: 70px;
-                .shrink-nav & {
-                    margin-top: 0;
-               }
-            }
-            .shrink_both-dark {
-                fill: $logo-light-fill;
-                stroke: $logo-light-fill;
-                .shrink-nav & {
-                    fill: $logo-dark-fill;
-                    stroke: $logo-dark-fill;
-                }
-            }
-            .shrink-nav & {
-                max-height: 80px;
-                transform: scale(0.8) !important;
-            }
-        }
-        .logo-after {
-            @include center(x);
-            transition: all .5s ease-in-out;
-            .shrink-nav & {
-                margin-top: -1px;
-                opacity: 0;
-                pointer-events: none;
+      z-index: 1099;
+      margin: 0 auto;
+      padding-top: 10px;
+      .svg-logo {
+        width: $logo-width;
+        max-height: $logo-height;
 
-            }
-            .shrink_fill-dark {
-                fill: #fff;
-            }
-            .shrink_both-light {
-                fill: transparent;
-                stroke: transparent;
-            }
-            svg {
-                @include media("retina") {
-                    max-height: 100px;
-                }
-            }
+        @include media("retina") { // retina logo
+          margin-top: 1em;
+          width: $retina-logo-width;
+          max-height: $retina-logo-height;
+          .shrink-nav & { margin-top: 0; }
         }
+        path {
+          @include transition(800ms $teasing);
+          transition-property: fill, stroke;
+        }
+        .shrink_fill-dark { fill: $logo-light-fill;
+          .shrink-nav &   { fill: $logo-dark-fill; } }
+        .shrink_both-dark { fill: $logo-light-fill;
+                          stroke: $logo-light-fill;
+          .shrink-nav & {   fill: $logo-dark-fill;
+                          stroke: $logo-dark-fill; } } }
+      .logo-after {
+        @include center(x);
+        transition: all $tduration $teasing;
+        .shrink_fill-dark { fill: $logo-light-fill; }
+        .shrink_both-light {fill: transparent;
+                          stroke: transparent; }
+        svg {// retina logo
+          @include media("retina") { max-height: 100px; }
+        }
+      }
     }
     .top-burger {
-        left: 0;
-        .shrink-nav & {
-            margin-left: -0.6em;
-            transform: scale(0.8);
-        }
-        @include media("from-xs-dev", "to-md-dev", "retina") {
-            margin: 1em 0 0 -0.75em !important;
-            transform: scale(0.6) !important;
-            .shrink-nav & {
-                margin: 0 0 0 -1.25em !important;
-            }
-            left: -0.5em;
-        }
-        @include media("from-xs-dev", "to-md-dev", "retina") {
-            left: -1.25em !important;
-        }
+      z-index: 1099;
+      @include media("from-xs-dev", "to-md-dev", "retina") { // iPhone
+                        margin: 1em 0 0 -0.75em !important;
+        .shrink-nav & { margin: 0 0 0 -1.25em !important; }
+      }
     }
     .top-search {
-        right: 0;
-        &:hover {
-            background: transparentize(#000, .7);
+      #top-search { margin: 0 !important; }
+      @include media("from-xs-dev", "to-md-dev", "retina") { // iPhone
+                        margin: 1em -0.75em 0 0 !important;
+        .shrink-nav & { margin: 0   -1.25em 0 0 !important; } }
+      &:hover { background: transparentize(#000, .7); }
+      .header-search-form { // search button
+        @include size(100%);
+        display: block;
+        .search-button {
+          @include center(xy);
+          font-size: 2em;
+          &:hover { color: #fff; }
         }
-        .shrink-nav & {
-            margin-right: -0.6em;
-            transform: scale(0.8);
+      }
+      .overflow-hidden & {
+        .search-button {
+          @include position(fixed, NULL 0.5em NULL auto);
+          z-index: 9999;
         }
-        @include media("from-xs-dev", "to-md-dev", "retina") {
-            margin: 1em -0.75em 0 0 !important;
-            transform: scale(0.6) !important;
-            .shrink-nav & {
-                margin: 0 -1.25em 0 0 !important;
-            }
-            right: -0.5em;
-        }
-        @include media("from-xs-dev", "to-md-dev", "retina") {
-            right: -1.25em !important;
-        }
-        .header-search-form {
-            @include size(100%);
-            display: block;
-            .search-button {
-                @include center(xy);
-                font-size: 2em;
-                &:hover {
-                    color: #fff;
-                }
-            }
-        }
-        #top-search {
-            margin-left: 0 !important;
-        }
-        .overflow-hidden & {
-            .search-button {
-                position: fixed;
-                z-index: 9999;
-                right: .5em;
-                top: 1.5em;
-                left: auto;
-            }
-        }
+      }
     }
     .menu-wrap {
-        display: block;
-        z-index: 99;
-        top: 0;
-        padding-top: 220px;
-        opacity: 1;
-        background-color: transparentize(#000, .33);
-        transform: translate(-100%);
-        transition: transform $tduration $teasing;
+      @include position(fixed, 0);
+      display: block;
+      z-index: 99;
+      padding-top: 220px !important;
+      background-color: transparentize(#000, .33) !important;
+      opacity: 0 !important;
+      pointer-events: none;
+      // transform: translateY(-100%);
+      transition: opacity $tduration $ease-in-sine,
+                  transform $tduration .2s $ease-in-expo;
+      // .show-menu & {
+      //   transform: translateY(0%);
+      //   -webkit-backdrop-filter: blur(30px);
+      //   opacity: 1 !important;
+      // }
+      // @include filter(blur(4px));
+      // @include media("screen", "from-sm") {
+        // transform: translate(-100vw);
+        // transition: transform $tduration $teasing,
+        //             background-color $tduration $teasing,
+        //             filter $tduration cubic-bezier(0, -1, 1, 2) $tdelay ;
+        transform: translateY(-200%) scale3D(50, 50, 1);
         .show-menu & {
-            transform: translate(0);
-            background-color: transparentize(#000, .33) !important;
-            -webkit-backdrop-filter: blur(30px);
-        }
-        // @include filter(blur(4px));
-        @include media("screen", "from-sm") {
-            transform: translateY(-600%) scale3D(255, 255, 1);
-            opacity: 0;
-            pointer-events: none;
-            // transform: translate(-100vw);
-            transition: transform $tduration $teasing,
-                        background-color $tduration $teasing,
-                        filter $tduration cubic-bezier(0, -1, 1, 2) $tdelay ;
-            .show-menu & {
-                transform: translateY(-10%) scale3D(1.5, 1.5, 1);
-                opacity: 1;
-                pointer-events: all;
-                // transform: translate(0);
-                background-color: transparentize(#000, .33) !important;
-                -webkit-backdrop-filter: blur(30px);
+          transform: translateY(-10%) scale3D(1.2, 1.2, 1);
+          pointer-events: all;
+          // transition: opacity $tduration .1s $ease-in-sine,
+          //             transform $tduration  $ease-out-expo;
+          -webkit-backdrop-filter: blur(30px);
+          opacity: 1 !important;
+          // transform: translate(0);
+        // }
+      }
+      .nav {
+        @include center(xy);
+        padding: 0;
+        li {
+          border: 0 !important;
+          padding: 0;
+          a.inner-link {
+            display: block;
+            padding: 7px;
+            color: #fff;
+            text-align: center !important;
+            text-transform: uppercase !important;
+            line-height: 1 !important;
+            transition: color $tduration $teasing;
+            &:hover {
+              background: transparentize(#fff, .9) !important;
             }
-        // @include filter(blur(4px));
-        transform: translateY(100%);
-        transition: transform $tduration $teasing,
-                    background-color $tduration $teasing,
-                    filter $tduration cubic-bezier(0, -1, 1, 2) $tdelay ;
-        .show-menu & {
-            transform: translateY(0);
-            background-color: transparentize(#000, .33) !important;
-            -webkit-backdrop-filter: blur(30px);
-        }
-        .shrink-nav & {
-            background-color: transparentize(#fff, .33) !important;
-        }
-        .nav {
-            @include center(xy);
-            padding: 0;
-            li {
-                border: 0 !important;
-                padding: 0;
-                a.inner-link {
-                    display: block;
-                    padding: 7px;
-                    color: #fff;
-                    text-align: center !important;
-                    text-transform: uppercase !important;
-                    line-height: 1 !important;
-                    transition: color $tduration $teasing;
-                    &:hover {
-                        background: transparentize(#fff, .9) !important;
-                    }
-                    .shrink-nav & {
-                        color: #000 !important;
-                        &:hover {
-                            background: transparentize(#000, .9) !important;
-                        }
-                    }
-                }
+            .shrink-nav & { color: #000 !important;
+              &:hover { background: transparentize(#000, .9) !important; }
             }
+          }
         }
-        #close-button {
-            display: none;
-        }
+      }
+      #close-button {
+        display: none;
+      }
     }
+  }
+
+.shrink-nav {
+  box-shadow: 0px 2px 10px transparentize(#000, .85);
+  background-color: transparentize(#fff, 0);
+  opacity: .93;
+  .has_backdropfilter & {
+    -webkit-backdrop-filter: blur(30px);
+    background-color: transparentize(#fff, 0.4);
+    opacity: 1;
+  }
+  .nav-container {
+    height: 80px;
+    padding-top: 0;
+    .nav-item {
+      margin-top: 0;
+      transform: scale($nav-scale-shrunk);  // scale 0.8
+    }
+    .top-logo {
+      .svg-logo {
+        max-height: 80px;
+        transform: scale(0.8) !important;
+      }
+      .logo-after {
+        opacity: 0;
+        pointer-events: none;
+      }
+    }
+    .top-burger {
+      margin-left: $navbutton-offset;
+    }
+    .top-search {
+      margin-right: $navbutton-offset;
+      transform: scale($nav-scale-shrunk);
+    }
+    .menu-wrap {
+      background-color: transparentize(#fff, .33) !important;
+    }
+  }
 }
+
+//
+
 .mfp-bg {
-    pointer-events: none;
-    display: none;
+  pointer-events: none;
+  display: none;
 }
 .mfp-wrap {
-    z-index: 1050;
-    background: rgba(255, 255, 255, 0.9);
-    #search-header {
-        .mfp-close {
-            // display: none !important;
-            z-index: 1046;
-            // opacity: 0;
-            @include position(absolute, 0.75em 0.75em NULL NULL);
-            &:hover {
-                background: transparentize(#f00, 0.5) !important;
-            }
-        }
+  z-index: 1050;
+  background: rgba(255, 255, 255, 0.9);
+  #search-header {
+    .mfp-close {
+      // display: none !important;
+      z-index: 1046;
+      // opacity: 0;
+      @include position(absolute, 0.75em 0.75em NULL NULL);
+      &:hover {
+        background: transparentize(#f00, 0.5) !important;
+      }
     }
+  }
 }
+
+
+
+

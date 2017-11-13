@@ -21,6 +21,7 @@ section,
 .vc_grid {
   .vc_col-sm-3,
   .vc_col-sm-4 {
+    display: inline-block !important;
     // @include media("from-lg") { width: 33%; }
     // @include media("from-xl") { width: 33%; }
     // @include media("to-md")   { width: 33%; }

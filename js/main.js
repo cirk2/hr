@@ -198,7 +198,7 @@
         //     $('.mfp-close').trigger('click');
         // });
 
-    });
+    // });
 
     // Reset section logo animations after scrolling top
 
