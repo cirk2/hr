@@ -42,7 +42,16 @@ get_header(); ?>
             <div class="content">
 
                 <?php if (get_field( 'zitat' ) ): ?>
-                <blockquote><?php the_field( 'zitat' ) ?></blockquote>
+                <div class="section-heading">
+                    <div class="subheader">
+                        <h2 class="section-title">
+                            <b class="quote-mark-left">&#x275E;</b>
+                                <?php the_field( 'zitat' ) ?>
+                            <b class="quote-mark-right">&#x275D;</b>
+                        </h2>
+                    </div>
+                </div>
+                <blockquote id="claim"><?php the_field( 'zitat' ) ?></blockquote>
                 <?php endif; ?>
 
                 <div class="pull-right rebsorte-featured-image-thumb visible-xs">

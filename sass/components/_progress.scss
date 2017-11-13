@@ -2,7 +2,7 @@
   height: 4em;
   @include pgBG;
   .progress-bar {
-    @include pgBBG;    animation: progressWidth25 1s linear 2s 1 forwards;
+    @include pgBBG(150%);    animation: progressWidth25 1s linear 2s 1 forwards;
     .developing ~ &  { animation: progressWidth50 1s linear 2s 1 forwards; }
     .growing    ~ &  { animation: progressWidth75 1s linear 2s 1 forwards; }
     .available  ~ &  { animation: progressWidth00 1s linear 2s 1 forwards; }

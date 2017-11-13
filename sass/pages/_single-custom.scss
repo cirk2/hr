@@ -1,0 +1,244 @@
+// Custom Post Template
+
+$text-color: #f7f7f7;
+$modal-bg: #000;
+
+.single-rebsorte {
+    .logo-after {
+        display: none;
+    }
+    .parallax-fix {
+        background-size: 168% !important;
+        .bg-black {
+                background: hsla(0, 0%, 0%, 0.33);
+        }
+        .white-text {
+            display: none;
+        }
+        + .hentry {
+            .watermark svg {
+                fill: hsla(0, 0%, 100%, 0.2);
+            }
+            .brand-wrapper {
+                z-index: 1;
+                position: fixed;
+                margin-top: -420px;
+                @include center(xy);
+                h2 {
+                    font-size: 1.7rem;
+                    // text-shadow: 1px 1px 15px transparentize(#000, 0.6);
+                }
+                .ursprungsnummer-title {
+                    font-size: 1.6rem !important;
+                    // color: hsl(0, 90%, 65%) !important;
+                    color: #fff !important;
+                }
+                .rebsorte-title::after {
+                    background: $red;
+                    // box-shadow: 0 0 5px transparentize(#000, 0.5);
+                }
+            }
+            #claim { display: none; }
+
+            .section-heading {
+                margin: 0 0 1rem;
+                text-align: left;
+                .subheader {
+                    padding: 0;
+                    font-size: 1.7rem;
+                    h2 {
+                        padding: 0;
+                        font-size: inherit !important;
+                        margin: 1rem 0 0;
+                    }
+                }
+            }
+            b.quote-mark-left {  @include position(absolute, 50px NULL NULL -33px); }
+            b.quote-mark-right { @include position(absolute, 13px -32px NULL NULL); }
+
+            .content,
+            .sidebar {
+                color: #333;
+                p {
+                    color: inherit;
+                }
+            }
+        }
+    }
+    section.hentry {
+        padding: 0 !important;
+    }
+}
+
+.modal-is-open .rebsorte-template-default {
+    .navbar {
+        visibility: hidden;
+        pointer-events: none;
+    }
+    .modal-wrapper:not(.modal-small) .modal {
+        top: 0;
+    }
+}
+
+#modal-content {
+    .section-heading {
+        display: none !important;
+    }
+}
+
+.grid-container{
+    .brand-wrapper {
+        @include display(flex);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        @include size(250px);
+        margin: 0 auto;
+        .watermark {
+            position: absolute;
+        }
+        h2 {
+            opacity: 0;
+            animation: Appear 1s linear 1.5s forwards 1;
+        }
+        .rebsorte-title {
+            @include brand-title(1.5rem);
+        }
+        .ursprungsnummer-title {
+            @include brand-nr(1.8rem);
+            color: $light-red !important;
+        }
+    }
+
+    .content,
+    .sidebar {
+        opacity: 0;
+        color: $text-color;
+        animation: Appear 1s linear 1s forwards 1;
+        h2, h3 {
+            margin: 2rem 0 1rem;
+            text-transform: none;
+            font-weight: 700;
+            color: $light-red;
+        }
+        p {
+            font-size: 0.86rem ;
+            color: $text-color;
+        }
+    }
+    .content {
+        .rebsorte-status {
+            position: relative;
+            .rebsorte-status-icons {
+                @include display(flex);
+                align-items: center;
+                justify-content: space-around;
+                position: absolute;
+                width: 100%;
+                height: 4em;
+                color: #eee;
+                span {
+                    font-family: $sans-stack;
+                    font-weight: 700;
+                }
+                i {
+                    font-size: 1.5em;
+                    color: inherit;
+                    &::before {
+                        margin-right: .2em;
+                        vertical-align: middle;
+                    }
+                }
+            }
+        }
+        $winzerSize: 132px;
+        .partnerwinzer {
+            @include display(flex);
+            // margin-bottom: 1rem;
+            ul {
+                padding: 0;
+                list-style-type: none;
+                li {
+                    @include size($winzerSize + 10px);
+                    display: inline-block;
+                    margin-right: 0.2rem;
+                    @include pgBG;
+
+                    a.modal-link {
+                        @include size($winzerSize);
+                        display: table-cell;
+                        @include pgBBG(0);
+                        img {
+                            background: $light-red;
+                        }
+                    }
+                }
+            }
+        }
+        .section-science {
+            font-size: 1.6rem;
+            line-height: 1;
+            color: #333;
+        }
+        .rebsorte-featured-image-thumb {
+            padding: 0 0 1rem 1rem;
+        }
+        &:first-of-type::after {
+                content: "";
+                @include position(absolute, NULL 0);
+                border-bottom: 3px double hsla(0, 0%, 100%, 0.2);
+                margin: 2rem 3rem 0;
+        }
+    }
+    .sidebar {
+        color: $text-color;
+        .rebsorte-featured-image-thumb {
+            img {
+                float: right;
+                width: 200px;
+                height: 200px;
+                margin-top: 4rem;
+                padding: 5px;
+                background: hsla(0, 0%, 0%, 0.15);
+                display: block;
+                height: 100%;
+                box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px rgba(255, 255, 255, 0.05);
+            }
+        }
+        .view-pdf {
+            position: relative;
+            display: inline-block;
+            border: 1px solid #dadada;
+            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.15);
+            width: 150px;
+            float: none;
+            // pointer-events: none;
+
+            img {
+                @include filter(blur(2px));
+                @include transition(filter .5s ease);
+            }
+            &:after {
+                @include font-awesome("");
+                @include coverer(50%);
+                @include transition(all .5s ease);
+                font-size: 7em;
+                line-height: 0;
+                color: #d33;
+                pointer-events: none;
+            }
+            &:hover {
+                &:after {
+                    content: "";
+                    opacity: 0.5;
+                    // font-size: 13em;
+                }
+                img {
+                    @include filter(none);
+                }
+            }
+        }
+    }
+}
+
+

@@ -17,8 +17,8 @@ section#rebsorten {
   @include media("screen", "ipad") {
     .logo-description {
       .vc_gitem-zone-img {
-        margin-top: 1em !important;
-        height: 130px !important;
+        margin-top: 0 !important;
+        height: 180px !important;
       }
     }
   }

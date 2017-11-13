@@ -7,7 +7,7 @@
     @include display(flex);
     align-items: center;
     justify-content: center;
-    @include media("screen", "from-xxs-dev", "to-md-dev", "retina") {
+    @include media("screen", "to-md-dev") {
       height: 200px !important;
     }
     // Wasserzeichen
@@ -73,7 +73,7 @@
       &::after  { content: close-quote; }
     }
     .rebsorten-grid-excerpt {
-      @include media("screen", "from-xxs-dev", "to-md-dev", "retina") {
+      @include media("screen", "to-md-dev") {
         display: none;
       }
       p {

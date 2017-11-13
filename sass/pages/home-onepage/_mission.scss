@@ -13,7 +13,7 @@
     // max-height: 10%;
     @include media("from-xl") { width: 25%; }
     @include media("to-xl")   { width: 50%; }
-    @include media("to-xs")   { width: 100%; }
+    @include media("to-xs")   { width: 80%; }
     @include media("from-sm", "to-lg") {
       &:nth-of-type(odd) { left: 5%; }
       &:nth-of-type(even) { right: 5%; }

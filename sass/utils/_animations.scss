@@ -22,3 +22,16 @@
     clip-path: circle(50% at center);
   }
 }
+
+// SVG Animations
+
+@keyframes DrawLine {
+  to { stroke-dashoffset: 0; }
+}
+@keyframes FadeStroke {
+  to { stroke-opacity: 0; }
+}
+@keyframes FillIn {
+  from { fill-opacity: 0; }
+  to { fill-opacity: 1; }
+}
