@@ -22,8 +22,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1, h2, h3 {
-  font-weight: 600;
-  letter-spacing: -0.02em !important;
+  font-weight: 700;
+  letter-spacing: -0.07rem !important;
 }
 
 h1 { font-size: 2.1rem; }
@@ -49,13 +49,13 @@ p {
 }
 
 strong {
-  color: $light-red;
-  font-weight: 500;
+  color: $red;
+  font-weight: 600;
 }
 
 @mixin headerstyle-2($font-size) {
   font: 600 $font-size/1 $sans-stack;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.06rem;
   color: $red;
   // -webkit-font-smoothing: subpixel-antialiased !important;
 }
@@ -63,7 +63,7 @@ strong {
 // Onepage section headings
 
 .section-heading {
-  margin-bottom: 2rem;
+  margin: 2rem 0;
   position: relative;
   .subheader {
    .home &::after {
@@ -76,9 +76,12 @@ strong {
     }
     .grey-bg & { background: #eee !important; }
     .section-title {
-      padding: 0 1.5rem 0;
-      margin: 3rem -1rem 0;
-      font: 700 calc(0.5vw + 2.2rem)/1 $sans-stack !important;
+      padding: 0;
+      margin: 1rem 0 .5rem;
+      @include media("screen", "to-md-dev") {
+        margin: 1.7rem -4rem .5rem;
+      }
+      font: 800 calc(2.5rem)/1 $sans-stack !important;
       color: $red;
       &::after {
         content: '';
@@ -101,13 +104,18 @@ strong {
       }
     }
     h6 {
-      max-width: 24rem;
-      margin: 0.34rem auto 0;
-      font-size: 1.1rem;
+      max-width: 25rem;
+      padding: 0;
+      margin: 0.5rem auto 0;
+      font-size: 1.5rem;
       line-height: 1.3;
-      font-weight: 600;
-      letter-spacing: -0.015em !important;
+      font-weight: 400;
+      letter-spacing: -0.05em !important;
       color: #777;
+      @include media("screen", "to-md-dev") {
+        font-size: 1.2rem;
+        max-width: 15rem;
+      }
     }
   }
   &.no-subtitle .subheader .section-title {

@@ -68,7 +68,7 @@
 
                     // trim excerpt length without cutting words
 
-                    var excLength = 170;
+                    var excLength = 200;
 
                     $(".rebsorten-grid-excerpt p").each(
                         function() {
@@ -92,7 +92,7 @@
 
                     $( '.wrap-first-word h6, .slider-text-middle span' ).each(function() {
                         var me = $(this);
-                        me.html(me.text().replace(/(^\w+)/, '<span class="first-word">$1</span>'));
+                        me.html(me.text().replace(/(^\w+)/, '<strong class="first-word">$1</strong>'));
                     });
 
                     // refresh waypoint triggers
@@ -111,14 +111,6 @@
             //     var result = image.isLoaded ? 'loaded' : 'broken';
             //     console.log( 'image is ' + result + ' for ' + image.img.src );
             // });
-
-        // Debug
-
-        var rh = $('#rebsorten').height();
-        var ph = $('#partner').height();
-        console.log('rebsorten: ' + rh + 'px');
-        console.log('partner: ' + ph + 'px');
-
 
         $('body').imagesLoaded()
 
@@ -200,19 +192,6 @@
 
     // });
 
-    // Reset section logo animations after scrolling top
-
-    $(window).scroll(function() {
-        var scroll = $(window).scrollTop();
-        var logo   = $('.section-logo.animated');
-        if ( scroll < 10) {
-            console.log('scrolled top, logo animatons resetted');
-            if (logo.hasClass('animated')) {
-                logo.removeClass('animated wpb_start_animation');
-                Waypoint.refreshAll();
-            }
-        }
-    });
 
     // Initialize tooltips
     // $('[data-tooltip!=""]').qtip({

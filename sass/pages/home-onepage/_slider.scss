@@ -16,6 +16,8 @@
   }
 }
 
+$h1-size: 2rem;
+
 .slider-typography {
   .slider-text-middle-main {
     @include display(flex);
@@ -24,29 +26,31 @@
   }
   .slider-text-middle {
     margin-top: 15%;
-    @include media("screen", "to-sm") {
-      font-size: 140%;
-    }
+    font: normal 500 3rem $sans-stack;
     h1 {
       margin: 0 0 10% !important;
-      font-size: calc(2vw + 2em);
-      font-weight: 400;
+      font-size: 3.3rem;
+      font-weight: 500;
       text-transform: none;
-      letter-spacing: -0.04em;
-      color: transparentize(#fff, .8);
+      color: transparentize(#fff, .75);
+      strong, em {
+        font-size: 2.8rem;
+        font-weight: 700;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: rgba(0, 0, 0, 0.4);
+      }
       strong {
-        margin: 0 -0.2em 0 0;
-        font-size: .8em;
-        font-weight: 500;
+        margin: 0;
         color: transparentize(#fff, .1);
       }
       em {
-        margin-left: -0.22em;
-        font: normal 500 0.8em $sans-stack;
+        margin-left: -0.5rem;
+        font-style: normal;
         color: $red-text;
+
         @include media("to-xs") {
           display: block;
-          margin-top: 0.5em;
+          margin-top: 1rem;
         }
       }
     }

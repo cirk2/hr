@@ -10,6 +10,9 @@
     @include media("screen", "to-md-dev") {
       height: 200px !important;
     }
+    @include media("ipad") {
+      height: 220px !important;
+    }
     // Wasserzeichen
     .vc_gitem-zone-img {
       display: block !important;
@@ -39,6 +42,9 @@
           &::after { margin-top: 0.5rem; }
           h2 { font-size: 1.1rem !important; }
         }
+        @include media("ipad") {
+          h2 { font-size: 1.2rem !important; }
+        }
         h2 { all: inherit; }
       }
       // Fundnummer
@@ -47,6 +53,9 @@
         @include media("screen", "to-sm") {
           font-size: 1.4rem !important;
           padding-top: 0.2rem;
+        }
+        @include media("ipad") {
+          font-size: 1.6rem !important;
         }
       }
     }
@@ -74,6 +83,9 @@
     }
     .rebsorten-grid-excerpt {
       @include media("screen", "to-md-dev") {
+        display: none;
+      }
+      @include media("ipad") {
         display: none;
       }
       p {

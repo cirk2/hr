@@ -133,13 +133,29 @@ $modal-bg: #000;
                 @include display(flex);
                 align-items: center;
                 justify-content: space-around;
+                flex-grow: 1;
                 position: absolute;
                 width: 100%;
                 height: 4em;
                 color: #eee;
+                @include media("to-md-dev") {
+                    align-items: stretch;
+                    flex-direction: column-reverse;
+                    height: 100%;
+
+                    div {
+                        height: 100%;
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                        border: 2px solid transparentize(#fff, .8);
+                        text-align: center;
+                    }
+                }
                 span {
                     font-family: $sans-stack;
-                    font-weight: 700;
+                    font-weight: 400;
+                    letter-spacing: -0.01rem;
                 }
                 i {
                     font-size: 1.5em;
@@ -149,6 +165,15 @@ $modal-bg: #000;
                         vertical-align: middle;
                     }
                 }
+            }
+        }
+        .progress {
+            @include media("to-md-dev") {
+                transform: rotateZ(-90deg);
+                height: 91vw;
+                z-index: -1;
+                position: relative;
+                padding: 0;
             }
         }
         $winzerSize: 132px;
@@ -178,7 +203,7 @@ $modal-bg: #000;
         .section-science {
             font-size: 1.6rem;
             line-height: 1;
-            color: #333;
+            color: $light-red;
         }
         .rebsorte-featured-image-thumb {
             padding: 0 0 1rem 1rem;

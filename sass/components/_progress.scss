@@ -2,14 +2,14 @@
   height: 4em;
   @include pgBG;
   .progress-bar {
+  	animation-timing-function: $ease-out-quart;
     @include pgBBG(150%);    animation: progressWidth25 1s linear 2s 1 forwards;
-    .developing ~ &  { animation: progressWidth50 1s linear 2s 1 forwards; }
-    .growing    ~ &  { animation: progressWidth75 1s linear 2s 1 forwards; }
-    .available  ~ &  { animation: progressWidth00 1s linear 2s 1 forwards; }
+    .developing ~ &  { animation: progressWidth50 2s /* steps(2, end) */ 2s 1 forwards; }
+    .growing    ~ &  { animation: progressWidth75 2s /* steps(3, end) */ 2s 1 forwards; }
+    .available  ~ &  { animation: progressWidth00 2s /* steps(4, end) */ 2s 1 forwards; }
   }
 }
-
 @keyframes progressWidth25  { to { width: 25%;  } }
 @keyframes progressWidth50  { to { width: 50%;  } }
 @keyframes progressWidth75  { to { width: 75%;  } }
-@keyframes progressWidth00 { to { width: 100%; } }
+@keyframes progressWidth00  { to { width: 100%; } }

@@ -18,9 +18,9 @@ html {
   // no subpixel antialiasing on non-retina displays
   -webkit-font-smoothing: antialiased !important;
   -moz-osx-font-smoothing: grayscale !important;
-  @include media("retina") {
-    -webkit-font-smoothing: subpixel-antialiased !important;
-  }
+  // @include media("retina") {
+  //   -webkit-font-smoothing: subpixel-antialiased !important;
+  // }
 
   @if ($debug) { // visualizing layout internals
     outline: 1px dotted red;

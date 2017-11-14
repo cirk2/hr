@@ -2,10 +2,6 @@
   @include media("screen", "from-md", "to-xl") {
     width: 100%;
   }
-  .first-word {
-    color: $red;
-    font-weight: bold;
-  }
 }
 
 .mission-grid {
@@ -28,7 +24,7 @@
   .tagline,
   .mission-description-acf {
     margin: 0 auto;
-    @include headerstyle-2(1.8em);
+    @include headerstyle-2(1.3rem);
     text-align: center !important;
     max-width: 8em;
     color: #999;

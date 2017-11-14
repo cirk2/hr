@@ -120,30 +120,23 @@ $logo-light-fill: #fff;
     background-color: transparentize(#000, .33) !important;
     opacity: 0 !important;
     pointer-events: none;
-    // transform: translateY(-100%);
+    transform: translateY(-100%) scale3D(0.1, 0.1, 1);
     transition: opacity $tduration $ease-in-sine,
                 transform $tduration .2s $ease-out-quint;
-    // .show-menu & {
-    //   transform: translateY(0%);
-    //   -webkit-backdrop-filter: blur(30px);
-    //   opacity: 1 !important;
-    // }
-    // @include filter(blur(4px));
-    // @include media("screen", "from-sm") {
-      // transform: translate(-100vw);
-      // transition: transform $tduration $teasing,
-      //             background-color $tduration $teasing,
-      //             filter $tduration cubic-bezier(0, -1, 1, 2) $tdelay ;
+    .show-menu & {
+      transform: translateY(0%) scale3D(1, 1, 1);
+      -webkit-backdrop-filter: blur(30px);
+      opacity: 1 !important;
+      pointer-events: all;
+    }
+    @include media("screen", "from-sm") {
       transform: translateY(-200%) scale3D(50, 50, 1);
       .show-menu & {
         transform: translateY(-10%) scale3D(1.2, 1.2, 1);
         pointer-events: all;
-        // transition: opacity $tduration .1s $ease-in-sine,
-        //             transform $tduration  $ease-out-expo;
         -webkit-backdrop-filter: blur(30px);
         opacity: 1 !important;
-        // transform: translate(0);
-      // }
+      }
     }
     .nav {
       @include center(xy);
@@ -158,7 +151,11 @@ $logo-light-fill: #fff;
           text-align: center !important;
           text-transform: uppercase !important;
           line-height: 1 !important;
+          letter-spacing: -0.01rem;
           transition: color $tduration $teasing;
+          @include media("screen", "to-md-dev") {
+            font-size: 1.4rem;
+          }
           &:hover {
             background: transparentize(#fff, .9) !important;
           }
