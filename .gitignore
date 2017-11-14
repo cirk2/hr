@@ -1,3 +1,4 @@
+# *.css.map
+# global.css
 .sass-cache/
-*.css.map
-global.css
+.node_modules/
