@@ -220,6 +220,7 @@ $modal-bg: #000;
         .rebsorte-featured-image-thumb {
             img {
                 float: right;
+                @include size(200px);
                 width: 200px;
                 height: 200px;
                 margin-top: 4rem;
