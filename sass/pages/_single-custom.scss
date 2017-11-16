@@ -22,8 +22,8 @@ $modal-bg: #000;
             .brand-wrapper {
                 z-index: 1;
                 position: fixed;
-                margin-top: -420px;
-                @include center(xy);
+                @include center(x);
+                top: 150px;
                 h2 {
                     font-size: 1.7rem;
                     // text-shadow: 1px 1px 15px transparentize(#000, 0.6);
@@ -109,7 +109,6 @@ $modal-bg: #000;
             color: $light-red !important;
         }
     }
-
     .content,
     .sidebar {
         opacity: 0;
@@ -135,9 +134,8 @@ $modal-bg: #000;
                 justify-content: space-around;
                 flex-grow: 1;
                 position: absolute;
-                width: 100%;
-                height: 4em;
-                color: #eee;
+                @include size(100% 4em);
+                color: #fff;
                 @include media("to-md-dev") {
                     align-items: stretch;
                     flex-direction: column-reverse;
@@ -212,7 +210,7 @@ $modal-bg: #000;
                 content: "";
                 @include position(absolute, NULL 0);
                 border-bottom: 3px double hsla(0, 0%, 100%, 0.2);
-                margin: 2rem 3rem 0;
+                margin: 1rem 4rem 0rem;
         }
     }
     .sidebar {

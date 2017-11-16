@@ -24,7 +24,7 @@
             length = Math.round($(this).get(0).getTotalLength());
             pathLengths.push(length);
         });
-         console.log(pathLengths);
+        console.log(pathLengths);
 
         $('.section-logo').each(function() {
             var self = $(this);
@@ -37,10 +37,8 @@
                     });
                     if (isIE) {
                         $(this).stop(true, true)
-                    .delay(1000)
-                    .animate({
-                        strokeDashoffset: 0
-                    },
+                               .delay(1000)
+                               .animate({ strokeDashoffset: 0 },
                     2000);
                     }
                 });
@@ -68,14 +66,14 @@
 
                     // trim excerpt length without cutting words
 
-                    var excLength = 200;
+                    var excLength = 185;
 
                     $(".rebsorten-grid-excerpt p").each(
                         function() {
                             if ($(this).text().length > excLength) {
 
-                                var trimmedExc = $(this).text().substr(0, excLength);
-                                    trimmedExc = trimmedExc.substr(0, Math.min(trimmedExc.length, trimmedExc.lastIndexOf(" ")))
+                                var trimmedExc = $(this).text().substr(0, excLength),
+                                    trimmedExc = trimmedExc.substr(0, Math.min(trimmedExc.length, trimmedExc.lastIndexOf(" ")));
                                 $(this).text( trimmedExc + ' ...' );
                             }
                         });
@@ -84,8 +82,8 @@
 
                     if ( Modernizr.shapes ) {
                             $('.rebsorten-grid-item .vc_gitem-link p')
-                                .before("<div class='left-flow pull-left'></div>" +
-                                        "<div class='right-flow pull-right'></div>");
+                                .before("<div class='left-flow'></div>" +
+                                        "<div class='right-flow'></div>");
                         }
 
                     // highlight first word
@@ -98,6 +96,21 @@
                     // refresh waypoint triggers
 
                     Waypoint.refreshAll();
+
+
+                    // Reset section logo animations after scrolling top
+
+                    $(window).scroll(function() {
+                        var scroll = $(window).scrollTop();
+                        var logo   = $('.section-logo.animated');
+                        if ( scroll < 10) {
+                            console.log('scrolled top, logo animatons resetted');
+                            if (logo.hasClass('animated')) {
+                                logo.removeClass('animated wpb_start_animation');
+                                Waypoint.refreshAll();
+                            }
+                        }
+                    });
 
                 }, 2000);
 
@@ -112,71 +125,8 @@
             //     console.log( 'image is ' + result + ' for ' + image.img.src );
             // });
 
-        $('body').imagesLoaded()
-
-            .always( function( instance ) {
-                console.log('all images loaded');
-                $('body').addClass('images-loaded');
-            })
-
-            .done( function( instance ) {
-
-                logoWaypoints();
-
-                var excLength = 150;
-
-                setTimeout(function() {
-                    $(".rebsorten-grid-excerpt p").each(
-                        function() {
-                            if ($(this).text().length > excLength) {
-                                $(this).text(
-                                    $(this).text().substring(0, excLength) + '...'
-                                );
-                            }
-                        });
-
-                    if ( Modernizr.shapes ) {
-                            $('.custom-post-grid .vc_gitem-link p')
-                                .before("<div class=left-flow></div>" +
-                                        "<div class=right-flow></div>");
-                        }
-
-                    $( '.wrap-first-word h6, .slider-text-middle span' ).each(function() {
-                        var me = $(this);
-                        me.html(me.text().replace(/(^\w+)/, '<span class="first-word">$1</span>'));
-                    });
-
-                    Waypoint.refreshAll();
-
-                }, 1000);
-
-            })
-
-            .fail( function() {
-                console.log( 'all images loaded, at least one is broken' );
-            })
-
-            // .progress( function( instance, image ) {
-            //     var result = image.isLoaded ? 'loaded' : 'broken';
-            //     console.log( 'image is ' + result + ' for ' + image.img.src );
-            // });
-
-
     });
 
-    // Reset section logo animations after scrolling top
-
-    $(window).scroll(function() {
-        var scroll = $(window).scrollTop();
-        var logo   = $('.section-logo.animated');
-        if ( scroll < 10) {
-            console.log('scrolled top, logo animatons resetted');
-            if (logo.hasClass('animated')) {
-                logo.removeClass('animated wpb_start_animation');
-                Waypoint.refreshAll();
-            }
-        }
-    });
 
     // $('window').on('click', '.mfp-close', function(e) {
     //     event.preventDefault();

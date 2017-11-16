@@ -65,7 +65,10 @@ $modal-bg: #000;
       font-size: 1.7rem;
     }
     .modal-small & {
-      h1 { font-size: 1.8rem; }
+      h1 {
+        font-size: 1.8rem;
+        margin-top: 0;
+      }
       h2 {
         margin: 1rem 0 0.5rem;
         font-size: 1.3rem;
@@ -97,13 +100,13 @@ $modal-bg: #000;
     @include media("screen", "to-sm") {
       @include size(100%);
       min-height: 100%;
-      padding: 2rem 2rem 2rem;
+      padding: 2rem;
     }
     @include media("screen", "from-sm") {
       // padding: 0 1rem 0;
       width: 50%;
       #modal-content {
-        padding: 2rem;
+        padding: 1rem;
       }
     }
     @include media("ipad") {

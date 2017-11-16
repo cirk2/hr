@@ -16,7 +16,7 @@ section,
   }
 }
 
-.svg-defs { height: 0; * {height: inherit;} }
+#Logo-Defs { height: 0; position: absolute; }
 
 .vc_grid {
   .vc_col-sm-3,

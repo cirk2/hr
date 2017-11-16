@@ -7,7 +7,7 @@
     @include display(flex);
     align-items: center;
     justify-content: center;
-    @include media("screen", "to-md-dev") {
+    @include media("screen", "to-lg-dev") {
       height: 200px !important;
     }
     @include media("ipad") {
@@ -15,18 +15,14 @@
     }
     // Wasserzeichen
     .vc_gitem-zone-img {
+      @include position(absolute, 2rem NULL NULL 0);
       display: block !important;
-      position: absolute;
-      top: 2rem;
-      left: 0;
+      visibility: visible;
+      opacity: .04;
+      -moz-backface-visibility: hidden;
       @include media("screen", "to-md") {
-        top: 1rem;
-      }
-      @include media("screen", "to-xs") {
         top: 1.5rem;
       }
-      visibility: visible;
-      opacity: .06;
     }
   }
   .normal-state {
@@ -61,64 +57,53 @@
     }
   }
   .hover-state {
-    .more-button {
-      margin-bottom: 0;
-      font-family: $sans-stack;
-    }
+    // Zitat
     .grid-zitat {
       height: 2.8rem;
-      font: normal 500 0.85rem/1.2 $sans-stack;
-      text-align: left;
+      font: normal 600 1rem/1.1 $sans-stack;
       letter-spacing: -1px;
       color: $light-red;
       @include hyphens(auto);
-      @include media("screen", "from-xxs-dev", "to-md-dev", "retina") {
+      @include media("screen", "to-lg-dev") {
         height: auto;
-      }
-      @include media("screen", "from-xxs-dev", "to-md-dev", "retina") {
         font-size: 1.1em;
       }
       &::before { content: open-quote;  }
       &::after  { content: close-quote; }
     }
     .rebsorten-grid-excerpt {
-      @include media("screen", "to-md-dev") {
-        display: none;
-      }
-      @include media("ipad") {
+      // Kurztext
+      @include media("screen", "to-md") {
         display: none;
       }
       p {
-        padding-top: 0.5em;
         font: normal 400 1.1em/1.4 $serif-stack;
         letter-spacing: -0.8px;
         text-align: center;
-        .has_csshyphens & {
+        .has_shapes & {
           text-align: justify;
         }
-        text-align-last: center;
         @include hyphens(auto);
         color: #444;
       }
     }
     .left-flow, .right-flow {
-      @include size(50% 270px);
+      @include size(50% 260px);
       shape-margin: 7px;
     }
-    .left-flow {  -webkit-shape-outside: polygon(0% 0%,  9%  0%,  9%  20%,  15% 43%,  25%  55%, 30%  60%, 35% 65%, 45% 70%, 65% 80%, 100% 90%, 100% 100%,  0% 100% );
-                     -moz-shape-outside: polygon(0% 0%,  9%  0%,  9%  20%,  15% 43%,  25%  55%, 30%  60%, 35% 65%, 45% 70%, 65% 80%, 100% 90%, 100% 100%,  0% 100% );
-                          shape-outside: polygon(0% 0%,  9%  0%,  9%  20%,  15% 43%,  25%  55%, 30%  60%, 35% 65%, 45% 70%, 65% 80%, 100% 90%, 100% 100%,  0% 100% ); }
-
-    .right-flow { -webkit-shape-outside: polygon(0% 90%, 33% 80%, 55% 70%,  65% 65%,  70%  60%, 75%  55%, 85% 43%, 92% 20%, 92%  0%, 100%  0%, 100% 100%,  0% 100% );
-                     -moz-shape-outside: polygon(0% 90%, 33% 80%, 55% 70%,  65% 65%,  70%  60%, 75%  55%, 85% 43%, 92% 20%, 92%  0%, 100%  0%, 100% 100%,  0% 100% );
-                          shape-outside: polygon(0% 90%, 33% 80%, 55% 70%,  65% 65%,  70%  60%, 75%  55%, 85% 43%, 92% 20%, 92%  0%, 100%  0%, 100% 100%,  0% 100% ); }
-
-    .more-button a:after {
-      content: "";
-      @include position(absolute, NULL NULL -1em 0);
-      @include size(100% 1em);
-      display: block;
-      background-color: #fff;
+    .left-flow {
+      float: left;
+      -webkit-shape-outside: polygon(0% 0%, 9%  0%, 9%  20%,15% 43%,25% 55%,30% 60%,35% 65%,45% 70%,65% 80%,100% 90%,100% 100%,0% 100% );
+         -moz-shape-outside: polygon(0% 0%, 9%  0%, 9%  20%,15% 43%,25% 55%,30% 60%,35% 65%,45% 70%,65% 80%,100% 90%,100% 100%,0% 100% );
+              shape-outside: polygon(0% 0%, 9%  0%, 9%  20%,15% 43%,25% 55%,30% 60%,35% 65%,45% 70%,65% 80%,100% 90%,100% 100%,0% 100% ); }
+    .right-flow {
+      float: right;
+      -webkit-shape-outside: polygon(0% 90%,33% 80%,55% 70%,65% 65%,70% 60%,75% 55%,85% 43%,92% 20%,92%  0%,100%  0%,100% 100%,0% 100% );
+         -moz-shape-outside: polygon(0% 90%,33% 80%,55% 70%,65% 65%,70% 60%,75% 55%,85% 43%,92% 20%,92%  0%,100%  0%,100% 100%,0% 100% );
+              shape-outside: polygon(0% 90%,33% 80%,55% 70%,65% 65%,70% 60%,75% 55%,85% 43%,92% 20%,92%  0%,100%  0%,100% 100%,0% 100% ); }
+    .more-button {
+      margin-bottom: 0;
+      font-family: $sans-stack;
     }
   }
 }
