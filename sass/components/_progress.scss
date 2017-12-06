@@ -1,15 +1,36 @@
 .progress {
-  height: 4em;
-  @include pgBG;
-  .progress-bar {
+  height: $progress-height;
+  border-radius: 4px;
+  @include pgBorder;
+  .progress-bar.animated {
   	animation-timing-function: $ease-out-quart;
-    @include pgBBG(150%);    animation: progressWidth25 1s linear 2s 1 forwards;
-    .developing ~ &  { animation: progressWidth50 2s /* steps(2, end) */ 2s 1 forwards; }
-    .growing    ~ &  { animation: progressWidth75 2s /* steps(3, end) */ 2s 1 forwards; }
-    .available  ~ &  { animation: progressWidth00 2s /* steps(4, end) */ 2s 1 forwards; }
+    @include pgContainerBg(150%);    animation: progressWidth25 2s $ease-out-quart 1s 1 forwards;
+    .developing ~ &  { animation-name: progressWidth50 /* 2s steps(2, end) 0.5s 1 forwards */; }
+    .growing    ~ &  { animation-name: progressWidth75 /* 2s steps(3, end) 0.5s 1 forwards */; }
+    .available  ~ &  { animation-name: progressWidth00 /* 2s steps(4, end) 0.5s 1 forwards */; }
+  }
+  @include media(mobile) {
+    .progress-bar {
+      @include position(absolute, NULL NULL 0 NULL);
+      z-index: -1;
+      height: 0;
+      width: 100% !important;
+    }
+    .progress-bar.animated {
+      animation-name: progressHeight25;
+      .developing ~ &  { animation-name: progressHeight50; }
+      .growing    ~ &  { animation-name: progressHeight75; }
+      .available  ~ &  { animation-name: progressHeight00; }
+    }
   }
 }
+
 @keyframes progressWidth25  { to { width: 25%;  } }
 @keyframes progressWidth50  { to { width: 50%;  } }
 @keyframes progressWidth75  { to { width: 75%;  } }
 @keyframes progressWidth00  { to { width: 100%; } }
+
+@keyframes progressHeight25  { to { height: 25%;  } }
+@keyframes progressHeight50  { to { height: 50%;  } }
+@keyframes progressHeight75  { to { height: 75%;  } }
+@keyframes progressHeight00  { to { height: 100%; } }

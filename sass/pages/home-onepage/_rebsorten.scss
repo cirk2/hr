@@ -25,9 +25,15 @@ section#rebsorten {
   .logo-description-text {
     p {
       text-align: left;
+      hyphens: none;
     }
   }
   .vc_gitem-zone {
     overflow: visible;
   }
+}
+
+.vc_grid-loading, .vc_grid-loading:after, .vc_grid-loading:before {
+  -webkit-animation: none !important;
+  animation: none !important;
 }

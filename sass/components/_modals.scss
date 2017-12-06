@@ -1,68 +1,88 @@
 
-$text-color: #f7f7f7;
-$modal-bg: #000;
+$modal-text: #f7f7f7;
+$modal-bg: #111;
+
+// prevent triggering event handlers on links inside vc_grid
+// .vc_grid .modal-link a {
+//   pointer-events: none !important;
+// }
+
+// close button in header
+.close-modal {
+  display: none;
+  z-index: 100;
+  overflow: hidden;
+  cursor: pointer;
+  .modal-is-open .top-burger > & {
+    @include position(absolute, 0);
+    display: block;
+    &:hover { background-color: transparentize($red, 0.7); }
+  }
+}
+
+// modal appear effect
+.modal,
+.modal-wrapper {
+  display: none;
+  opacity: 0;
+  transition: opacity .5s ease-out, 
+              backdrop-filter .5s .5s ease-out,
+              -webkit-backdrop-filter .5s .5s ease-out;
+  .modal-is-open & {
+    display: block !important;
+    transition-delay: .5s, 0s, 0s;
+  }
+  &.show {
+    opacity: 1;
+  }
+}
 
 .modal-wrapper {
-  z-index: 1032;
+  @include position(fixed, 0);
+  z-index: 1050;
+  overflow-y: auto;
+  &.show {
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+  }
+  &:not(.modal-small) {
+    .close-modal { display: none; }
+    top: $header-height;
+  }
 }
 
 .modal {
   overflow: auto !important;
+  background-color: transparentize($modal-bg, .12);
   padding: 2rem;
-  background-color: transparentize($modal-bg, .2);
-  -webkit-backdrop-filter: blur(10px);
-  color: $text-color !important;
-  box-shadow: none;
-  @include media("screen", "to-md-dev") {
+  @include media("screen", "to-md-devX") {
     padding: 1rem;
   }
   .close-modal {
-    @include position(fixed, 10px NULL NULL 10px);
-    z-index: 100;
-    overflow: hidden;
-    font: 100 5rem/0.5 $sans-stack !important;
-    color: $text-color;
-    cursor: pointer;
-    &:hover { color: lighten($light-red, 2); }
+    @include position(absolute, 0 NULL NULL 12px);
+    display: block;
+    font: 100 2.5rem/1 sans-serif !important;
+    color: $modal-text;
+    &:hover { color: lighten($light-red, 10); }
   }
-  .modal-wrapper:not(.modal-small) & {
-    top: 80px;
-    @include media("retina") {
-      top: 60px;
-    }
-    .close-modal {
-      top: 90px;
-    }
-  }
+
   #modal-content {
+    #wineLoader {
+      @include center(xy);
+      // opacity: ;
+    }
     > section {
-      padding: 0 !important;
+      padding: 80px 0 60px !important;
     }
-  }
-  #modal-content {
-    // > section {
-    //   padding: 2rem 0 !important;
-    //     transition: filter $tduration ease;
-    //     .modal-open & {
-    //         @include filter(blur(5px));
-    //         pointer-events: none;
-    //         @supports (-webkit-backdrop-filter: blur) {
-    //             @include filter(none);
-    //         }
-    //     }
-    // }
     h1, h2, h3, h4 {
-      color: $text-color;
-      margin-bottom: .5rem;
+      color: $modal-text;
     }
-    h1 {
-      font-size: 2.5rem;
-      color: $text-color;
-    }
-    a { color: $text-color; }
+    h1 { font-size: 2.5rem; }
+    a { color: $modal-text; }
     blockquote {
-      padding-left: 1rem;
+      padding: 0 1rem;
       font-size: 1.7rem;
+      text-align: center;
     }
     .modal-small & {
       h1 {
@@ -78,33 +98,34 @@ $modal-bg: #000;
         font-size: 0.9rem;
         line-height: 1.6;
         text-align: left;
-        color: $text-color;
+        color: $modal-text;
         .has_no-csshyphens & {
           text-align: left;
         }
       }
     }
   }
+
   .modal-small & {
     @include center(xy);
     height: auto !important;
     min-height: 40%;
     min-width: 60%;
+    border-radius: 4px;
     img {
       border-radius: 100% 0 100% 100%;
-    }
-    a img {
+      margin: 1rem;
       shape-outside: circle(50% at center);
       max-width: 45%;
     }
-    @include media("screen", "to-sm") {
+    @include media(mobile) {
       @include size(100%);
       min-height: 100%;
       padding: 2rem;
+      margin-top: 60px;
+      .close-modal { display:none; }
     }
     @include media("screen", "from-sm") {
-      // padding: 0 1rem 0;
-      width: 50%;
       #modal-content {
         padding: 1rem;
       }
@@ -123,7 +144,3 @@ $modal-bg: #000;
     }
   }
 }
-
-
-
-

@@ -12,12 +12,13 @@ html {
 }
 
 *, :after, :before, button, input, textarea {
+
   // inherit box-sizing from :root
   box-sizing: inherit;
 
   // no subpixel antialiasing on non-retina displays
-  -webkit-font-smoothing: antialiased !important;
-  -moz-osx-font-smoothing: grayscale !important;
+
+
   // @include media("retina") {
   //   -webkit-font-smoothing: subpixel-antialiased !important;
   // }
@@ -25,13 +26,48 @@ html {
   @if ($debug) { // visualizing layout internals
     outline: 1px dotted red;
   }
+
 }
 
 body {
   width: 100%;
-  overflow-y: scroll !important;
+  overflow-y: auto !important;
+  font-style: normal;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "pnum";
+  font-variant-numeric: proportional-nums;
   > section {
     overflow: hidden;
   }
+  // .has_no-hiddenscroll & {
+  //   padding-right: 1em;
+  // }
 }
 
+input, textarea, select {
+  padding: 8px 15px;
+  border: 1px solid hsl(0, 0%, 87%);
+  margin: 0 0 20px 0;
+  width: 100%;
+  font-size: 12px;
+  font-family: $serif-stack;
+  letter-spacing: -1px;
+  max-width: 100%;
+  resize: none;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+}
+
+// images
+
+img.wp-post-image,
+img.size-large, 
+img.size-full,
+img {
+  max-width: 100%;
+  height: auto;
+}
+ 

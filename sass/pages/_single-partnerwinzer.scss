@@ -1,0 +1,90 @@
+$rSize: 150px;
+
+.partnerwinzer {
+	.grid-container {
+		display: block;
+		max-width: 900px;
+		header {
+			max-width: 212px !important;
+			margin: 1rem auto 3rem;
+			text-align: center;
+      
+      .featured-image-thumb {
+      	  pointer-events: none;
+          @include pgBorder;
+          img {
+            padding: 10px;
+            background: white;
+          }
+      }
+		}
+	}
+	.rebsorten {
+		margin: 1rem 0 2rem;
+		ul {
+			padding: 0;
+			display: grid;
+  			grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; 
+        @include media(mobile) {
+          grid-template-columns: 1fr 1fr;
+        }
+		}
+		li {
+			// @include size($rSize);
+			float: left;
+			margin: 0 auto;
+			list-style: none;
+/* 			// border: 1px solid transparentize(white, 0.9); */
+			a {
+				@include size($rSize);
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				border: 1px solid transparent;
+				.watermark {
+					@include size(($rSize - 20px));
+					position: absolute;
+					background:transparent url('/wp-content/themes/hr/i/logo-hr-white.svg') left top/contain no-repeat;
+					opacity: 0.06;
+				}
+				.rebsorte-title {
+					@include brand-title(1rem, ($rSize /2), none);
+					min-height: 2.5rem;
+					max-width: ($rSize - 20px);
+					margin: 0 auto !important;
+					text-align: center;
+				}
+				.ursprungsnummer-title {
+					@include brand-nr(1rem);
+					margin-top: 0.3rem;
+					text-align: center;
+				}
+				&:link h2, &:visited h2 {
+					color: #aaa !important;
+				}
+				&:hover {
+					border-color: transparentize($light-red, 0.5);
+					h2 {
+						color: #fff !important;
+					}
+				}
+			}
+		}
+		&::after {
+			content: "";
+			display: table;
+			clear: left;
+		}
+	}
+}
+
+.post-19215.partnerwinzer .grid-container header .featured-image-thumb {
+  background: none;
+  box-shadow: none;
+  opacity: 0.8;
+  img {
+    padding: 0;
+    background: none;
+  }
+}

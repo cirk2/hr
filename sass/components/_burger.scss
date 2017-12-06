@@ -1,6 +1,6 @@
 // Hamburger Menu
 
-$burger-size: 100px;
+$burger-size: $header-height;
 $BS: $burger-size;
 $bun-size: ($BS / 25);
 $bs: $bun-size;
@@ -17,7 +17,6 @@ $medium:     ($BD * 2  );
 $mediumwell: ($BD * 2.5);
 $welldone:   ($BD * 3  );
 
-
 #menu-toggle,
 #top-search {
    position: relative;
@@ -30,14 +29,16 @@ $welldone:   ($BD * 3  );
     * {
         box-sizing: border-box;
         transition: $BD ease-in-out;
-        transition-property: width, height, color;
+        transition-property: width, height, background-color;
     }
     span {
         display: block;
-        background: #fff;
-        .shrink-nav & { background: #000; }
+        background-color: #fff;
+        .shrink-nav & { 
+          background-color: #000;
+        }
     }
-    &:hover { background: transparentize(#000, .7); }
+    &:hover { background: black(0.3); }
     #hamburger {
         position: absolute;
         @include size(100%);
@@ -45,9 +46,23 @@ $welldone:   ($BD * 3  );
             @include position(relative, $bun-offset-top NULL NULL $bun-offset-left);
             @include size(($BS / 2) $bs);
             margin: $bun-margin 0;
-            &:nth-child(1) { transition-delay: $medium; }
-            &:nth-child(2) { transition-delay: $mediumwell; }
-            &:nth-child(3) { transition-delay: $welldone; }
+            &:nth-child(1) { transition-delay: $medium, $medium, 0s; }
+            &:nth-child(2) { transition-delay: $mediumwell, $mediumwell, 0s; }
+            &:nth-child(3) { transition-delay: $welldone, $welldone, 0s; }
+            @include media("!retina") {
+              .shrink-nav & {
+                &:nth-child(1) { transition-delay: $medium, $medium, ($htd * 2); }
+                &:nth-child(2) { transition-delay: $mediumwell, $mediumwell, ($htd * 2); }
+                &:nth-child(3) { transition-delay: $welldone, $welldone, ($htd * 2); }
+              }
+            }
+            @include media("mobile") { 
+              .shrink-nav & {
+                &:nth-child(1) { transition-delay: $medium, $medium, ($htd / 2); }
+                &:nth-child(2) { transition-delay: $mediumwell, $mediumwell, ($htd / 2); }
+                &:nth-child(3) { transition-delay: $welldone, $welldone, ($htd / 2); }
+              }
+            }
             .open & {
                 width: 0%;
                 &:nth-child(1) { transition-delay: 0s; }

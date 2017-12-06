@@ -3,20 +3,45 @@
 // Home
 // ==================================================================//region
 
-//
-// TODO
-//
-// => try to somehow remove .no-padding-bottom class
-section,
-.no-padding-bottom {
-    padding-bottom: 200px !important;
-//     padding-top: 60px;
-  @include media("screen", "to-xs") {
-    padding: 100px 0 !important;
+
+section.parent-section.no-padding {
+  padding: 0;
+}
+
+.container {
+  &.full-screen {
+    width: 100vw;
+    padding: 0;
+  }
+}
+.dividers-header {
+  z-index: 0;
+  margin: -1rem 0 0rem;
+  &::before {
+    @include position(absolute, 50% 0 NULL auto);
+    @include size(100% 0);
+    content: "";
+    z-index: 0;
+    border-top: 4px double hsla(0, 0%, 0%, 0.15);
+  }
+  .subheader {
+    display: inline-block;
+    padding: 0 30px;
+    position: relative;
+    z-index: 2;
+    @include media("mobile") {
+      padding: 0;
+    } 
   }
 }
 
+
 #Logo-Defs { height: 0; position: absolute; }
+
+// =============================================================================
+// vc grid
+// =============================================================================
+
 
 .vc_grid {
   .vc_col-sm-3,
@@ -29,8 +54,26 @@ section,
     @include media("to-md")   { width: 50%; }
     @include media("ipad")    { width: 33%; }
   }
+  .vc_grid-item-mini.vc_clearfix {
+    border: 0;
+    border-radius: 3px;
+    box-shadow: $box-shadow !important;
+  }
 }
 
+
+//
+// TODO
+//
+// => try to somehow remove .no-padding-bottom class
+// .home section,
+// .no-padding-bottom {
+//     padding-bottom: 200px !important;
+// //     padding-top: 60px;
+//   @include media("screen", "to-xs") {
+//     padding: 100px 0 !important;
+//   }
+// }
 
 // section#wortmarke {
 //   @include display(flex);

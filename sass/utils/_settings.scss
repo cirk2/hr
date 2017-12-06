@@ -13,10 +13,24 @@ $max_font: 24px;
 $sans-stack:  'Montserrat', 'Proxima Nova', 'Gotham', system-ui, sans-serif;
 $serif-stack: 'Lora', 'Abril', 'Miller', serif;
 
+// 
+
+$progress-height: 6em;
+
 // Colors
 
-$text-color	: 	#1a171b !default;
-$red		: 	#fa3232 !default;
-$red-text	: 	#df4444;
-$light-red	: 	#c76164 !default;
+$text-color: #1a171b !default;
 
+// brand color //#e3001a
+
+$red: #df4444  !default;
+
+$red-text: $red !default;
+$light-red: $red !default;
+
+$red-text  :   #df4444;
+$light-red :   #c76164 !default;
+
+// box-shadow default
+
+$box-shadow: 0 4px 6px rgba(90,50,50,.11), 0 1px 3px rgba(0,0,0,.08);

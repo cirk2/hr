@@ -1,0 +1,6426 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: H-Code\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-29 09:04+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Aniket <aniket@linksture.com>\n"
+"Language-Team: Themezaa <info@themezaa.com>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;esc_html_e;esc_html__;esc_attr_e;wp_kses;_x;"
+"esc_attr;esc_html;_e;_n;_nx;esc_attr__\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-Country: UNITED STATES\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-SearchPath-0: .\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION\n"
+"X-Generator: Loco - https://localise.biz/"
+
+#: author-bio.php:37
+msgid "About The Author"
+msgstr ""
+
+#: comments.php:39
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:40
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: comments.php:41
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: comments.php:48
+msgid "Comments are closed."
+msgstr ""
+
+#: comments.php:51
+msgid "Blog Comments"
+msgstr ""
+
+#: comments.php:70
+msgid "NAME *"
+msgstr ""
+
+#: comments.php:71
+msgid "EMAIL *"
+msgstr ""
+
+#: comments.php:72
+msgid "WEBSITE"
+msgstr ""
+
+#: comments.php:74
+msgid "COMMENT *"
+msgstr ""
+
+#: comments.php:75
+msgid "*Please complete all fields correctly"
+msgstr ""
+
+#: comments.php:80
+msgid "Add a comment"
+msgstr ""
+
+#: comments.php:81
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr ""
+
+#: comments.php:82
+msgid "Cancel Reply"
+msgstr ""
+
+#: comments.php:83
+msgid "send message"
+msgstr ""
+
+#: 404.php:16
+msgid "Go to home page"
+msgstr ""
+
+#: 404.php:73
+msgid "or"
+msgstr ""
+
+#: functions.php:118
+msgid "H-Code Mega Menu"
+msgstr ""
+
+#: functions.php:119
+msgid "Footer Menu"
+msgstr ""
+
+#: functions.php:167
+msgid "Main Sidebar"
+msgstr ""
+
+#: functions.php:169 functions.php:190 functions.php:199 functions.php:209
+#: functions.php:218 functions.php:227 functions.php:236 functions.php:251
+#: functions.php:261 functions.php:271 functions.php:281 functions.php:296
+#: functions.php:306 functions.php:316 functions.php:326 functions.php:336
+msgid "Add widgets here to appear in your sidebar."
+msgstr ""
+
+#: functions.php:177
+msgid "Mini Header Sidebar"
+msgstr ""
+
+#: functions.php:179
+msgid "Add widgets here to appear in your mini header."
+msgstr ""
+
+#: functions.php:188
+msgid "Shop Sidebar"
+msgstr ""
+
+#: functions.php:197
+msgid "Mini Cart"
+msgstr ""
+
+#: functions.php:207
+msgid "Page Left Sidebar"
+msgstr ""
+
+#: functions.php:216
+msgid "Page Right Sidebar"
+msgstr ""
+
+#: functions.php:225
+msgid "Post Left Sidebar"
+msgstr ""
+
+#: functions.php:234
+msgid "Post Right Sidebar"
+msgstr ""
+
+#: functions.php:249
+msgid "Shop Banner Widget 1"
+msgstr ""
+
+#: functions.php:259
+msgid "Shop Banner Widget 2"
+msgstr ""
+
+#: functions.php:269
+msgid "Shop Banner Widget 3"
+msgstr ""
+
+#: functions.php:279
+msgid "Shop Banner Widget 4"
+msgstr ""
+
+#: functions.php:294
+msgid "Footer Sidebar 1"
+msgstr ""
+
+#: functions.php:304
+msgid "Footer Sidebar 2"
+msgstr ""
+
+#: functions.php:314
+msgid "Footer Sidebar 3"
+msgstr ""
+
+#: functions.php:324
+msgid "Footer Sidebar 4"
+msgstr ""
+
+#: functions.php:334
+msgid "Footer Sidebar 5"
+msgstr ""
+
+#: page.php:115 single-portfolio.php:69 single-portfolio.php:129
+msgid "Pages:"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:65
+msgid "There are no reviews yet."
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:83
+msgid "Name"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:84
+msgid "Email"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:86
+msgid "Submit"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:93
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a review."
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:97
+msgid "Your rating"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:98
+msgid "Rate&hellip;"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:99
+msgid "Perfect"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:100
+msgid "Good"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:101
+msgid "Average"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:102
+msgid "Not that bad"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:103
+msgid "Very poor"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:107
+msgid "Your review"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:116
+msgid ""
+"Only logged in customers who have purchased this product may leave a review."
+msgstr ""
+
+#: woocommerce/global/form-login.php:26
+msgid "Username or email"
+msgstr ""
+
+#: woocommerce/global/form-login.php:30
+msgid "Password"
+msgstr ""
+
+#: woocommerce/global/form-login.php:39
+msgid "Login"
+msgstr ""
+
+#: woocommerce/global/form-login.php:42
+msgid "Remember me"
+msgstr ""
+
+#: woocommerce/global/form-login.php:45
+msgid "Lost your password?"
+msgstr ""
+
+#: woocommerce/single-product/review.php:27
+msgid "Your review is awaiting approval"
+msgstr ""
+
+#: woocommerce/single-product/review.php:36
+msgid "verified owner"
+msgstr ""
+
+#: woocommerce/single-product/product-thumbnails.php:75
+#: woocommerce/single-product/product-image.php:147
+msgid "Placeholder"
+msgstr ""
+
+#: woocommerce/single-product/sale-flash.php:19
+msgid "Sale!"
+msgstr ""
+
+#: woocommerce/single-product/up-sells.php:42
+msgid "You may also like&hellip;"
+msgstr ""
+
+#: woocommerce/single-product/rating.php:31
+#, php-format
+msgid "%s reviews"
+msgstr ""
+
+#: woocommerce/single-product/rating.php:33
+#, php-format
+msgid "%s review"
+msgstr ""
+
+#: woocommerce/single-product/product-image.php:51
+msgid "Awaiting product image"
+msgstr ""
+
+#: woocommerce/single-product/meta.php:37
+msgid "Category:"
+msgstr ""
+
+#: woocommerce/single-product/meta.php:42
+msgid "Tag:"
+msgstr ""
+
+#: woocommerce/single-product/related.php:69
+msgid "Related products"
+msgstr ""
+
+#: woocommerce/single-product/add-to-cart/grouped.php:38
+msgid "quantity["
+msgstr ""
+
+#: woocommerce/single-product/add-to-cart/variable.php:23
+msgid "This product is currently out of stock and unavailable."
+msgstr ""
+
+#: woocommerce/single-product/add-to-cart/variable.php:33
+msgid "Clear"
+msgstr ""
+
+#: woocommerce/myaccount/orders.php:45 woocommerce/myaccount/my-orders.php:55
+msgid "#"
+msgstr ""
+
+#: woocommerce/myaccount/orders.php:57 woocommerce/myaccount/my-orders.php:67
+#, php-format
+msgid "%1$s for %2$s item"
+msgstr ""
+
+#: woocommerce/myaccount/orders.php:65 woocommerce/myaccount/my-orders.php:75
+msgid "Pay"
+msgstr ""
+
+#: woocommerce/myaccount/orders.php:69 woocommerce/myaccount/my-orders.php:79
+msgid "View"
+msgstr ""
+
+#: woocommerce/myaccount/orders.php:73 woocommerce/myaccount/my-orders.php:83
+msgid "Cancel"
+msgstr ""
+
+#: woocommerce/myaccount/orders.php:104
+msgid "Previous"
+msgstr ""
+
+#: woocommerce/myaccount/orders.php:108
+msgid "Next"
+msgstr ""
+
+#: woocommerce/myaccount/orders.php:116
+msgid "Go shop"
+msgstr ""
+
+#: woocommerce/myaccount/orders.php:118
+msgid "No order has been made yet."
+msgstr ""
+
+#: woocommerce/myaccount/my-orders.php:13
+msgid "Order"
+msgstr ""
+
+#: woocommerce/myaccount/my-orders.php:14
+msgid "Date"
+msgstr ""
+
+#: woocommerce/myaccount/my-orders.php:15
+msgid "Status"
+msgstr ""
+
+#: woocommerce/myaccount/my-orders.php:16
+msgid "Total"
+msgstr ""
+
+#: woocommerce/myaccount/my-orders.php:30
+msgid "Recent orders"
+msgstr ""
+
+#: woocommerce/myaccount/my-address.php:19
+msgid "My Addresses"
+msgstr ""
+
+#: woocommerce/myaccount/my-address.php:21
+#: woocommerce/myaccount/my-address.php:27
+#: woocommerce/myaccount/form-edit-address.php:14
+msgid "Billing address"
+msgstr ""
+
+#: woocommerce/myaccount/my-address.php:22
+#: woocommerce/myaccount/form-edit-address.php:14
+msgid "Shipping address"
+msgstr ""
+
+#: woocommerce/myaccount/my-address.php:25
+msgid "My Address"
+msgstr ""
+
+#: woocommerce/myaccount/my-address.php:38
+msgid "The following addresses will be used on the checkout page by default."
+msgstr ""
+
+#: woocommerce/myaccount/my-address.php:48
+msgid "Edit"
+msgstr ""
+
+#: woocommerce/myaccount/my-address.php:67
+msgid "You have not set up this type of address yet."
+msgstr ""
+
+#: woocommerce/myaccount/view-order.php:21
+#, php-format
+msgid "Order #%1$s was placed on %2$s and is currently %3$s."
+msgstr ""
+
+#: woocommerce/myaccount/view-order.php:32
+msgid "Order updates"
+msgstr ""
+
+#: woocommerce/myaccount/view-order.php:38
+msgid "l jS \\o\\f F Y, h:ia"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:25
+msgid "First name"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:29
+msgid "Last name"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:35
+msgid "Email address"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:42
+msgid "Password change"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:45
+msgid "Current password (leave blank to leave unchanged)"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:49
+msgid "New password (leave blank to leave unchanged)"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:53
+msgid "Confirm new password"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:64
+msgid "Save changes"
+msgstr ""
+
+#: woocommerce/myaccount/dashboard.php:29
+#, php-format
+msgid "Hello %1$s (not %1$s? <a href=\"%2$s\">Log out</a>)"
+msgstr ""
+
+#: woocommerce/myaccount/dashboard.php:39
+#, php-format
+msgid ""
+"From your account dashboard you can view your <a href=\"%1$s\">recent "
+"orders</a>, manage your <a href=\"%2$s\">shipping and billing addresses</a> "
+"and <a href=\"%3$s\">edit your password and account details</a>."
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-address.php:45
+msgid "Save address"
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:36
+msgid "Username or email address"
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:69
+#: woocommerce/myaccount/form-login.php:106
+msgid "Register"
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:78
+msgid "Username"
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:99
+msgid "Anti-spam"
+msgstr ""
+
+#: woocommerce/myaccount/form-reset-password.php:20
+msgid "Enter a new password below."
+msgstr ""
+
+#: woocommerce/myaccount/form-reset-password.php:23
+msgid "New password"
+msgstr ""
+
+#: woocommerce/myaccount/form-reset-password.php:27
+msgid "Re-enter new password"
+msgstr ""
+
+#: woocommerce/myaccount/form-reset-password.php:40
+msgid "Save"
+msgstr ""
+
+#: woocommerce/myaccount/downloads.php:63
+msgid "&infin;"
+msgstr ""
+
+#: woocommerce/myaccount/downloads.php:69
+msgid "Never"
+msgstr ""
+
+#: woocommerce/myaccount/downloads.php:77
+msgid "Download"
+msgstr ""
+
+#: woocommerce/myaccount/downloads.php:104
+msgid "No downloads available yet."
+msgstr ""
+
+#: woocommerce/myaccount/form-lost-password.php:20
+msgid ""
+"Lost your password? Please enter your username or email address. You will "
+"receive a link to create a new password via email."
+msgstr ""
+
+#: woocommerce/myaccount/form-lost-password.php:33
+msgid "Reset password"
+msgstr ""
+
+#: woocommerce/checkout/form-checkout.php:28
+msgid "You must be logged in to checkout."
+msgstr ""
+
+#: woocommerce/checkout/payment.php:29
+msgid ""
+"Sorry, it seems that there are no available payment methods for your state. "
+"Please contact us if you require assistance or wish to make alternate "
+"arrangements."
+msgstr ""
+
+#: woocommerce/checkout/payment.php:29
+msgid "Please fill in your details above to see available payment methods."
+msgstr ""
+
+#: woocommerce/checkout/payment.php:38
+msgid ""
+"Since your browser does not support JavaScript, or it is disabled, please "
+"ensure you click the <em>Update Totals</em> button before placing your order."
+" You may be charged more than the amount stated above if you fail to do so."
+msgstr ""
+
+#: woocommerce/checkout/payment.php:39
+msgid "Update totals"
+msgstr ""
+
+#: woocommerce/checkout/form-shipping.php:19
+msgid "Ship to a different address?"
+msgstr ""
+
+#: woocommerce/checkout/form-shipping.php:49
+msgid "Additional information"
+msgstr ""
+
+#: woocommerce/checkout/review-order.php:22
+#: woocommerce/checkout/review-order.php:58
+#: woocommerce/checkout/form-pay.php:24
+msgid "Product"
+msgstr ""
+
+#: woocommerce/checkout/review-order.php:65
+msgid "SKU:"
+msgstr ""
+
+#: woocommerce/checkout/review-order.php:66
+msgid "N/A"
+msgstr ""
+
+#: woocommerce/checkout/review-order.php:87
+#: woocommerce/checkout/review-order.php:88
+msgid "Subtotal"
+msgstr ""
+
+#: woocommerce/checkout/thankyou.php:22
+msgid ""
+"Unfortunately your order cannot be processed as the originating "
+"bank/merchant has declined your transaction. Please attempt your purchase "
+"again."
+msgstr ""
+
+#: woocommerce/checkout/thankyou.php:27
+msgid "My account"
+msgstr ""
+
+#: woocommerce/checkout/thankyou.php:33 woocommerce/checkout/thankyou.php:72
+msgid "Thank you. Your order has been received."
+msgstr ""
+
+#: woocommerce/checkout/thankyou.php:37
+msgid "Order number:"
+msgstr ""
+
+#: woocommerce/checkout/thankyou.php:41
+msgid "Date:"
+msgstr ""
+
+#: woocommerce/checkout/thankyou.php:45
+msgid "Total:"
+msgstr ""
+
+#: woocommerce/checkout/thankyou.php:50
+msgid "Payment method:"
+msgstr ""
+
+#: woocommerce/checkout/thankyou.php:64
+msgid "Continue shopping"
+msgstr ""
+
+#: woocommerce/checkout/form-coupon.php:20
+msgid "Have a coupon?"
+msgstr ""
+
+#: woocommerce/checkout/form-coupon.php:20
+msgid "Click here to enter your code"
+msgstr ""
+
+#: woocommerce/checkout/form-coupon.php:36
+msgid "Coupon code"
+msgstr ""
+
+#: woocommerce/checkout/form-coupon.php:40
+msgid "Apply coupon"
+msgstr ""
+
+#: woocommerce/checkout/form-login.php:18
+msgid "Returning customer?"
+msgstr ""
+
+#: woocommerce/checkout/form-login.php:19
+msgid "Click here to login"
+msgstr ""
+
+#: woocommerce/checkout/form-login.php:36
+msgid ""
+"If you have shopped with us before, please enter your details in the boxes "
+"below. If you are a new customer, please proceed to the Billing &amp; "
+"Shipping section."
+msgstr ""
+
+#: woocommerce/checkout/form-billing.php:18
+msgid "Billing &amp; Shipping"
+msgstr ""
+
+#: woocommerce/checkout/form-billing.php:20
+msgid "Billing details"
+msgstr ""
+
+#: woocommerce/checkout/form-billing.php:36
+msgid "Create an account?"
+msgstr ""
+
+#: woocommerce/checkout/form-pay.php:25
+msgid "Qty"
+msgstr ""
+
+#: woocommerce/checkout/form-pay.php:26
+msgid "Totals"
+msgstr ""
+
+#: woocommerce/checkout/form-pay.php:76
+msgid ""
+"Sorry, it seems that there are no available payment methods for your "
+"location. Please contact us if you require assistance or wish to make "
+"alternate arrangements."
+msgstr ""
+
+#: woocommerce/checkout/terms.php:25
+#, php-format
+msgid ""
+"I&rsquo;ve read and accept the <a href=\"%s\" class=\"woocommerce-terms-and-"
+"conditions-link\">terms &amp; conditions</a>"
+msgstr ""
+
+#: woocommerce/loop/sale-flash.php:20
+msgid "Sale"
+msgstr ""
+
+#: woocommerce/loop/sale-flash.php:27
+msgid "New"
+msgstr ""
+
+#: woocommerce/loop/add-to-cart.php:22
+msgid "button"
+msgstr ""
+
+#: woocommerce/loop/result-count.php:54 woocommerce/loop/result-count.php:57
+msgid "Showing the single result"
+msgstr ""
+
+#: woocommerce/order/order-again.php:25
+msgid "Order again"
+msgstr ""
+
+#: woocommerce/order/order-details-customer.php:15
+msgid "Customer details"
+msgstr ""
+
+#: woocommerce/order/order-details-customer.php:20
+msgid "Note:"
+msgstr ""
+
+#: woocommerce/order/order-details-customer.php:21
+msgid "Note"
+msgstr ""
+
+#: woocommerce/order/order-details-customer.php:27
+msgid "Email:"
+msgstr ""
+
+#: woocommerce/order/order-details-customer.php:34
+msgid "Phone:"
+msgstr ""
+
+#: woocommerce/order/order-details-customer.php:35
+msgid "phone"
+msgstr ""
+
+#: woocommerce/order/order-details.php:20
+msgid "Order details"
+msgstr ""
+
+#: woocommerce/cart/cart-totals.php:45
+msgid "Shipping"
+msgstr ""
+
+#: woocommerce/cart/cart-totals.php:61
+#, php-format
+msgid "estimated for %s"
+msgstr ""
+
+#: woocommerce/cart/proceed-to-checkout-button.php:16
+msgid "Proceed to checkout"
+msgstr ""
+
+#: woocommerce/cart/hcode-widget-cart.php:26
+msgid "Display the user's Cart in the sidebar."
+msgstr ""
+
+#: woocommerce/cart/hcode-widget-cart.php:28
+msgid "WooCommerce Cart"
+msgstr ""
+
+#: woocommerce/cart/hcode-widget-cart.php:32
+msgid "Cart"
+msgstr ""
+
+#: woocommerce/cart/hcode-widget-cart.php:33
+msgid "Title"
+msgstr ""
+
+#: woocommerce/cart/hcode-widget-cart.php:38
+msgid "Hide if cart is empty"
+msgstr ""
+
+#: woocommerce/cart/cross-sells.php:42
+msgid "You may be interested in&hellip;"
+msgstr ""
+
+#: woocommerce/cart/mini-cart.php:25
+msgid "(0) item"
+msgstr ""
+
+#: woocommerce/cart/mini-cart.php:27
+#, php-format
+msgid "(%d) item"
+msgstr ""
+
+#: woocommerce/cart/mini-cart.php:29
+#, php-format
+msgid "(%d) items"
+msgstr ""
+
+#: woocommerce/cart/mini-cart.php:69 woocommerce/cart/cart.php:181
+msgid "Remove this item"
+msgstr ""
+
+#: woocommerce/cart/mini-cart.php:102
+msgid "No products in the cart."
+msgstr ""
+
+#: woocommerce/cart/mini-cart.php:118
+msgid "View cart"
+msgstr ""
+
+#: woocommerce/cart/mini-cart.php:119
+msgid "Checkout"
+msgstr ""
+
+#: woocommerce/cart/cart.php:72 woocommerce/cart/cart.php:147
+msgid "Price"
+msgstr ""
+
+#: woocommerce/cart/cart.php:73 woocommerce/cart/cart.php:153
+msgid "Quantity"
+msgstr ""
+
+#: woocommerce/cart/cart.php:136
+msgid "Available on backorder"
+msgstr ""
+
+#: woocommerce/cart/cart.php:203
+msgid "Empty Cart"
+msgstr ""
+
+#: woocommerce/cart/cart.php:205
+msgid "Update cart"
+msgstr ""
+
+#: woocommerce/cart/cart-empty.php:21
+msgid "Your cart is currently empty."
+msgstr ""
+
+#: woocommerce/cart/cart-empty.php:24
+msgid "Return to shop"
+msgstr ""
+
+#: woocommerce/cart/shipping-calculator.php:24
+msgid "Calculate shipping"
+msgstr ""
+
+#: woocommerce/cart/shipping-calculator.php:30
+msgid "Select a country&hellip;"
+msgstr ""
+
+#: woocommerce/cart/shipping-calculator.php:47
+#: woocommerce/cart/shipping-calculator.php:65
+msgid "State / County"
+msgstr ""
+
+#: woocommerce/cart/shipping-calculator.php:54
+msgid "Select a state&hellip;"
+msgstr ""
+
+#: woocommerce/cart/shipping-calculator.php:74
+msgid "City"
+msgstr ""
+
+#: woocommerce/cart/shipping-calculator.php:82
+msgid "Postcode / Zip"
+msgstr ""
+
+#: woocommerce/cart/cart-shipping.php:49
+msgid "Shipping costs will be calculated once you have provided your address."
+msgstr ""
+
+#: woocommerce/cart/cart-shipping.php:51
+msgid ""
+"There are no shipping methods available. Please double check your address, "
+"or contact us if you need any help."
+msgstr ""
+
+#: templates/template-sitemap.php:76
+msgid "Pages"
+msgstr ""
+
+#: templates/template-sitemap.php:84
+msgid "All Blog Posts"
+msgstr ""
+
+#: templates/template-sitemap.php:97
+msgid "Categories"
+msgstr ""
+
+#: templates/template-sitemap.php:104
+msgid "Archives"
+msgstr ""
+
+#: templates/template-sitemap.php:111
+msgid "Portfolio Categories"
+msgstr ""
+
+#: templates/template-sitemap.php:119 templates/template-sitemap.php:148
+#: templates/template-sitemap.php:181
+#, php-format
+msgid "View all posts in %s"
+msgstr ""
+
+#: templates/template-sitemap.php:127
+msgid "All Products"
+msgstr ""
+
+#: templates/template-sitemap.php:140
+msgid "Product Categories"
+msgstr ""
+
+#: templates/template-sitemap.php:159
+msgid "All Portfolio Posts"
+msgstr ""
+
+#: templates/template-sitemap.php:173
+msgid "Product Brands"
+msgstr ""
+
+#: templates/menu-woocommerce.php:293 templates/menu-woocommerce.php:359
+#: templates/menu-woocommerce.php:434
+msgid "Close Menu"
+msgstr ""
+
+#: templates/menu-woocommerce.php:296 templates/menu-woocommerce.php:365
+#: templates/menu-woocommerce.php:440
+msgid "Open Menu"
+msgstr ""
+
+#: templates/menu-woocommerce.php:556
+msgid "Toggle navigation"
+msgstr ""
+
+#: templates/content-none.php:12
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: templates/content-none.php:14
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: templates/index/layout.php:43 templates/index/layout.php:44
+msgid "Home"
+msgstr ""
+
+#: templates/page-content/grid/content.php:80
+msgid "Posted by "
+msgstr ""
+
+#: templates/page-content/grid/content.php:147
+msgid "<i class=\"fa fa-comment-o\"></i>Leave a comment"
+msgstr ""
+
+#: templates/page-content/grid/content.php:147
+msgid "<i class=\"fa fa-comment-o\"></i>1 Comment"
+msgstr ""
+
+#: templates/page-content/grid/content.php:147
+msgid "<i class=\"fa fa-comment-o\"></i>% Comment(s)"
+msgstr ""
+
+#: templates/page-content/grid/content.php:166
+msgid "Older Post"
+msgstr ""
+
+#: templates/page-content/box/content.php:141
+#: templates/index-content/content.php:816
+msgid "<i class=\"fa fa-comment-o\"></i>Comment"
+msgstr ""
+
+#: templates/single-post/full-post-with-slider.php:61
+msgid "Posted by - "
+msgstr ""
+
+#: templates/single-post/full-post-with-slider.php:147
+#: templates/single-post/full-post.php:68
+#: templates/single-post/standard-post.php:131
+#: templates/single-post/full-width-with-lightbox-gallery.php:124
+msgid ", "
+msgstr ""
+
+#: inc/hcode-product-tabs.php:12
+msgid "Special Product"
+msgstr ""
+
+#: inc/hcode-product-tabs.php:13
+msgid "Washing Instructions"
+msgstr ""
+
+#: inc/hcode-product-tabs.php:14
+msgid "Sizes"
+msgstr ""
+
+#: inc/hcode-product-tabs.php:36
+msgid "Order:"
+msgstr ""
+
+#: inc/hcode-product-tabs.php:37
+msgid "Enter your Order"
+msgstr ""
+
+#: inc/hcode-product-tabs.php:40
+msgid "Feature:"
+msgstr ""
+
+#: inc/hcode-product-tabs.php:51
+msgid "New Product:"
+msgstr ""
+
+#: inc/hcode-product-tabs.php:81
+msgid "Sizes Description:"
+msgstr ""
+
+#: inc/hcode-product-tabs.php:82
+msgid "Enter your sizes content"
+msgstr ""
+
+#: inc/hcode-product-tabs.php:104
+msgid "Washing Instruction:"
+msgstr ""
+
+#: inc/hcode-product-tabs.php:105
+msgid "Enter your washing instruction"
+msgstr ""
+
+#: inc/hcode-custom-menu-widget.php:16
+msgid "H-Code Custom Menu"
+msgstr ""
+
+#: inc/hcode-custom-menu-widget.php:17
+msgid "Add a custom menu to your sidebar."
+msgstr ""
+
+#: inc/hcode-custom-menu-widget.php:47 inc/hcode-recent-post-widget.php:124
+#: inc/hcode-recent-post-widget.php:226
+msgid "Title:"
+msgstr ""
+
+#: inc/hcode-custom-menu-widget.php:51
+msgid "Select Menu :"
+msgstr ""
+
+#: inc/hcode-recent-post-widget.php:16
+msgid "H-Code Recent Post Widget"
+msgstr ""
+
+#: inc/hcode-recent-post-widget.php:17
+msgid "Your site most recent Posts."
+msgstr ""
+
+#: inc/hcode-recent-post-widget.php:60
+msgid "No Image"
+msgstr ""
+
+#: inc/hcode-recent-post-widget.php:128
+msgid "Number of posts to show:"
+msgstr ""
+
+#: inc/hcode-recent-post-widget.php:133
+msgid "Display Thumbnail?"
+msgstr ""
+
+#: inc/hcode-recent-post-widget.php:137
+msgid "Display Post Title?"
+msgstr ""
+
+#: inc/hcode-recent-post-widget.php:141
+msgid "Display Post Author?"
+msgstr ""
+
+#: inc/hcode-recent-post-widget.php:145
+msgid "Display Post Date?"
+msgstr ""
+
+#: inc/hcode-recent-post-widget.php:148
+msgid "Date Format:"
+msgstr ""
+
+#: inc/hcode-recent-post-widget.php:181
+msgid "H-Code Recent Comments Widget"
+msgstr ""
+
+#: inc/hcode-recent-post-widget.php:182
+msgid "Your site most recent comments."
+msgstr ""
+
+#: inc/hcode-recent-post-widget.php:208
+msgctxt "Keine Kommentare"
+msgid "No comments"
+msgstr ""
+
+#: inc/hcode-recent-post-widget.php:230
+msgid "Number of posts to show :"
+msgstr ""
+
+#: lib/hcode-woocommerce-functions.php:194
+msgid "In stock"
+msgstr ""
+
+#: lib/hcode-woocommerce-functions.php:243
+#: lib/hcode-woocommerce-functions.php:256
+msgid "Add color code with #"
+msgstr ""
+
+#: lib/hcode-woocommerce-functions.php:246
+#: lib/hcode-woocommerce-functions.php:259
+msgid "Enter a color code. ex. for white = #FFFFFF"
+msgstr ""
+
+#: lib/hcode-woocommerce-functions.php:339
+msgid "Details"
+msgstr ""
+
+#: lib/hcode-woocommerce-functions.php:359
+msgid "Sizing"
+msgstr ""
+
+#: lib/hcode-breadcrumb.php:51
+msgid "Weblog"
+msgstr ""
+
+#: lib/hcode-breadcrumb.php:58
+msgid "Search"
+msgstr ""
+
+#: lib/hcode-breadcrumb.php:68
+msgid "Browse to: "
+msgstr ""
+
+#: lib/hcode-breadcrumb.php:80
+msgid "Tag: "
+msgstr ""
+
+#: lib/hcode-breadcrumb.php:84
+msgid "404"
+msgstr ""
+
+#: lib/hcode-breadcrumb.php:86
+msgid "Portfolio"
+msgstr ""
+
+#: lib/hcode-breadcrumb.php:90
+msgid "Link of current page (click to refresh)"
+msgstr ""
+
+#: lib/hcode-breadcrumb.php:318
+msgid "Blog"
+msgstr ""
+
+#: lib/hcode-extra-functions.php:695
+msgid "Search For "
+msgstr ""
+
+#: lib/hcode-extra-functions.php:703
+msgid "F Y"
+msgstr ""
+
+#: lib/hcode-extra-functions.php:706
+msgid "Y"
+msgstr ""
+
+#: lib/hcode-extra-functions.php:1218
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: lib/hcode-extra-functions.php:1225
+#, php-format
+msgid "%s, "
+msgstr ""
+
+#: lib/hcode-extra-functions.php:1230
+#, php-format
+msgid "%1$s"
+msgstr ""
+
+#: lib/hcode-extra-functions.php:1375 lib/hcode-extra-functions.php:1404
+msgid "Previous Post"
+msgstr ""
+
+#: lib/hcode-extra-functions.php:1387 lib/hcode-extra-functions.php:1399
+msgid "Next Post"
+msgstr ""
+
+#: lib/hcode-extra-functions.php:1399 lib/hcode-extra-functions.php:1538
+#: lib/hcode-extra-functions.php:1550
+msgid "Next Project"
+msgstr ""
+
+#: lib/hcode-extra-functions.php:1404 lib/hcode-extra-functions.php:1526
+#: lib/hcode-extra-functions.php:1555
+msgid "Previous Project"
+msgstr ""
+
+#: lib/hcode-extra-functions.php:1986
+msgid "Select Position"
+msgstr ""
+
+#: lib/hcode-extra-functions.php:2143
+msgid "Created by"
+msgstr ""
+
+#: lib/hcode-extra-functions.php:2178 lib/hcode-extra-functions.php:2180
+#, php-format
+msgid "View all post filed under %s"
+msgstr ""
+
+#: lib/hcode-extra-functions.php:2256
+msgid "Full size"
+msgstr ""
+
+#: lib/hcode-extra-functions.php:2265
+msgid "Leave a comment"
+msgstr ""
+
+#: lib/hcode-extra-functions.php:2265
+msgid "1 Comment"
+msgstr ""
+
+#: lib/hcode-extra-functions.php:2265
+msgid "% Comments"
+msgstr ""
+
+#: lib/hcode-extra-functions.php:2317
+msgid "<h5 class=\"widget-title margin-one no-margin-top\">Tags</h5>"
+msgstr ""
+
+#: lib/hcode-extra-functions.php:2450
+msgid ""
+"This content is password protected. To view it please enter your password "
+"below:"
+msgstr ""
+
+#: lib/hcode-extra-functions.php:2455
+msgid "Enter"
+msgstr ""
+
+#: lib/hcode-extra-functions.php:2616
+msgid "Default"
+msgstr ""
+
+#: lib/hcode-extra-functions.php:2617 lib/hcode-extra-functions.php:2632
+msgid "Light Header"
+msgstr ""
+
+#: lib/hcode-extra-functions.php:2618 lib/hcode-extra-functions.php:2633
+msgid "Dark Header"
+msgstr ""
+
+#: lib/hcode-extra-functions.php:2619 lib/hcode-extra-functions.php:2634
+msgid "Dark Transparent Header"
+msgstr ""
+
+#: lib/hcode-extra-functions.php:2620 lib/hcode-extra-functions.php:2635
+msgid "Light Transparent Header"
+msgstr ""
+
+#: lib/hcode-extra-functions.php:2621 lib/hcode-extra-functions.php:2636
+msgid "Static Sticky Header"
+msgstr ""
+
+#: lib/hcode-extra-functions.php:2622 lib/hcode-extra-functions.php:2637
+msgid "White Sticky Header"
+msgstr ""
+
+#: lib/hcode-extra-functions.php:2623 lib/hcode-extra-functions.php:2638
+msgid "Gray Header"
+msgstr ""
+
+#: lib/hcode-extra-functions.php:2624 lib/hcode-extra-functions.php:2639
+msgid "Non Sticky Header"
+msgstr ""
+
+#: lib/hcode-extra-functions.php:2625 lib/hcode-extra-functions.php:2640
+msgid "Hamburger Header 1"
+msgstr ""
+
+#: lib/hcode-extra-functions.php:2626 lib/hcode-extra-functions.php:2641
+msgid "Hamburger Header 2"
+msgstr ""
+
+#: lib/hcode-extra-functions.php:2627 lib/hcode-extra-functions.php:2642
+msgid "Hamburger Header 3"
+msgstr ""
+
+#: lib/hcode-scripts.php:138 lib/hcode-scripts.php:219
+msgid "All Post Loaded"
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:333
+msgid "Install Required Plugins"
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:334
+msgid "Install Plugins"
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:335
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:336
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:397
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:398
+msgid "Return to the dashboard"
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:399
+#: lib/tgm/class-tgm-plugin-activation.php:3029
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:400
+#: lib/tgm/class-tgm-plugin-activation.php:2832
+msgid "The following plugin was activated successfully:"
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:401
+#, php-format
+msgid "No action taken. Plugin %1$s was already active."
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:402
+#, php-format
+msgid ""
+"Plugin not activated. A higher version of %s is needed for this theme. "
+"Please update the plugin."
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:403
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:404
+msgid "Dismiss this notice"
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:405
+msgid "Please contact the administrator of this site for help."
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:520
+msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:521
+msgid "Update Required"
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:635
+msgid "Set the parent_slug config variable instead."
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:828
+#: lib/tgm/class-tgm-plugin-activation.php:3438
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:935
+msgid ""
+"The remote plugin package does not contain a folder with the desired slug "
+"and renaming did not work."
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:935
+#: lib/tgm/class-tgm-plugin-activation.php:938
+msgid ""
+"Please contact the plugin provider and ask them to package their plugin "
+"according to the WordPress guidelines."
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:938
+msgid ""
+"The remote plugin package consists of more than one file, but the files are "
+"not packaged in a folder."
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:1881
+#, php-format
+msgid "TGMPA v%s"
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:2167
+msgid "Required"
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:2170
+msgid "Recommended"
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:2186
+msgid "WordPress Repository"
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:2189
+msgid "External Source"
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:2192
+msgid "Pre-Packaged"
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:2209
+msgid "Not Installed"
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:2213
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:2215
+msgid "Active"
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:2221
+msgid "Required Update not Available"
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:2224
+msgid "Requires Update"
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:2227
+msgid "Update recommended"
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:2235
+#, php-format
+msgid "%1$s, %2$s"
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:2280
+#, php-format
+msgid "All <span class=\"count\">(%s)</span>"
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:2283
+#, php-format
+msgid "To Install <span class=\"count\">(%s)</span>"
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:2286
+#, php-format
+msgid "Update Available <span class=\"count\">(%s)</span>"
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:2289
+#, php-format
+msgid "To Activate <span class=\"count\">(%s)</span>"
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:2371
+msgid "unknown"
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:2379
+msgid "Installed version:"
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:2387
+msgid "Minimum required version:"
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:2399
+msgid "Available version:"
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:2422
+#, php-format
+msgid ""
+"No plugins to install, update or activate. <a href=\"%1$s\">Return to the "
+"Dashboard</a>"
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:2436
+msgid "Plugin"
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:2437
+msgid "Source"
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:2438
+msgid "Type"
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:2442
+msgid "Version"
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:2491
+#, php-format
+msgid "Install %2$s"
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:2495
+#, php-format
+msgid "Update %2$s"
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:2500
+#, php-format
+msgid "Activate %2$s"
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:2570
+msgid "Upgrade message from the plugin author:"
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:2603
+msgid "Install"
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:2609
+msgid "Update"
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:2612
+msgid "Activate"
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:2643
+msgid "No plugins were selected to be installed. No action taken."
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:2645
+msgid "No plugins were selected to be updated. No action taken."
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:2681
+msgid "No plugins are available to be installed at this time."
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:2683
+msgid "No plugins are available to be updated at this time."
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:2788
+msgid "No plugins were selected to be activated. No action taken."
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:2814
+msgid "No plugins are available to be activated at this time."
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:3028
+msgid "Plugin activation failed."
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:3362
+#, php-format
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:3364
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:3365
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:3369
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:3370
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:3370
+#: lib/tgm/class-tgm-plugin-activation.php:3376
+msgid "Show Details"
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:3370
+#: lib/tgm/class-tgm-plugin-activation.php:3376
+msgid "Hide Details"
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:3371
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:3372
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:3375
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:3376
+#, php-format
+msgid "%1$s installed successfully."
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:3377
+msgid "All installations have been completed."
+msgstr ""
+
+#: lib/tgm/class-tgm-plugin-activation.php:3378
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: lib/meta-box/meta-box-maps.php:186 lib/meta-box/meta-box-maps.php:223
+msgid "Browse"
+msgstr ""
+
+#: lib/meta-box/meta-box-maps.php:187 lib/meta-box/meta-box-maps.php:218
+msgid "Remove"
+msgstr ""
+
+#: lib/meta-box/meta-box-maps.php:223
+msgid " Select Files"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_post_setting.php:10
+#: lib/meta-box/metabox-tabs/metabox_post_setting.php:18
+msgid "Featured Image in Post Page"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_post_setting.php:11
+#: lib/meta-box/metabox-tabs/metabox_portfolio_setting.php:25
+msgid "Select a image"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_post_setting.php:12
+#: lib/meta-box/metabox-tabs/metabox_post_setting.php:19
+#: lib/meta-box/metabox-tabs/metabox_post_setting.php:27
+#: lib/meta-box/metabox-tabs/metabox_post_setting.php:67
+#: lib/meta-box/metabox-tabs/metabox_post_setting.php:75
+#: lib/meta-box/metabox-tabs/metabox_post_setting.php:82
+#: lib/meta-box/metabox-tabs/metabox_post_setting.php:89
+#: lib/meta-box/metabox-tabs/metabox_portfolio_setting.php:15
+#: lib/meta-box/metabox-tabs/metabox_portfolio_setting.php:26
+#: lib/meta-box/metabox-tabs/metabox_portfolio_setting.php:34
+#: lib/meta-box/metabox-tabs/metabox_header.php:13
+#: lib/meta-box/metabox-tabs/metabox_header.php:47
+#: lib/meta-box/metabox-tabs/metabox_header.php:61
+#: lib/meta-box/metabox-tabs/metabox_header.php:84
+#: lib/meta-box/metabox-tabs/metabox_header.php:92
+#: lib/meta-box/metabox-tabs/metabox_footer.php:13
+#: lib/meta-box/metabox-tabs/metabox_footer.php:20
+#: lib/meta-box/metabox-tabs/metabox_footer.php:55
+#: lib/meta-box/metabox-tabs/metabox_footer.php:66
+#: lib/meta-box/metabox-tabs/metabox_content.php:14
+#: lib/meta-box/metabox-tabs/metabox_content.php:24
+#: lib/meta-box/metabox-tabs/metabox_content.php:33
+#: lib/meta-box/metabox-tabs/metabox_layout_settings.php:35
+#: lib/meta-box/metabox-tabs/metabox_single_post_layout.php:25
+#: lib/meta-box/metabox-tabs/metabox_single_post_layout.php:34
+#: lib/meta-box/metabox-tabs/metabox_single_post_layout.php:42
+#: lib/meta-box/metabox-tabs/metabox_single_post_layout.php:50
+#: lib/meta-box/metabox-tabs/metabox_single_post_layout.php:58
+#: lib/meta-box/metabox-tabs/metabox_single_post_layout.php:66
+#: lib/meta-box/metabox-tabs/metabox_single_post_layout.php:76
+#: lib/meta-box/metabox-tabs/metabox_single_post_layout.php:84
+#: lib/meta-box/metabox-tabs/metabox_single_post_layout.php:92
+#: lib/meta-box/metabox-tabs/metabox_single_post_layout.php:100
+#: lib/meta-box/metabox-tabs/metabox_footer_wrapper.php:13
+#: lib/meta-box/metabox-tabs/metabox_title_wrapper.php:13
+#: lib/meta-box/metabox-tabs/metabox_title_wrapper.php:65
+#: lib/meta-box/metabox-tabs/metabox_title_wrapper.php:73
+msgid "No"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_post_setting.php:13
+#: lib/meta-box/metabox-tabs/metabox_post_setting.php:20
+#: lib/meta-box/metabox-tabs/metabox_post_setting.php:26
+#: lib/meta-box/metabox-tabs/metabox_post_setting.php:68
+#: lib/meta-box/metabox-tabs/metabox_post_setting.php:74
+#: lib/meta-box/metabox-tabs/metabox_post_setting.php:81
+#: lib/meta-box/metabox-tabs/metabox_post_setting.php:88
+#: lib/meta-box/metabox-tabs/metabox_portfolio_setting.php:16
+#: lib/meta-box/metabox-tabs/metabox_portfolio_setting.php:27
+#: lib/meta-box/metabox-tabs/metabox_portfolio_setting.php:35
+#: lib/meta-box/metabox-tabs/metabox_header.php:12
+#: lib/meta-box/metabox-tabs/metabox_header.php:46
+#: lib/meta-box/metabox-tabs/metabox_header.php:60
+#: lib/meta-box/metabox-tabs/metabox_header.php:83
+#: lib/meta-box/metabox-tabs/metabox_header.php:91
+#: lib/meta-box/metabox-tabs/metabox_footer.php:12
+#: lib/meta-box/metabox-tabs/metabox_footer.php:19
+#: lib/meta-box/metabox-tabs/metabox_footer.php:54
+#: lib/meta-box/metabox-tabs/metabox_footer.php:65
+#: lib/meta-box/metabox-tabs/metabox_content.php:13
+#: lib/meta-box/metabox-tabs/metabox_content.php:23
+#: lib/meta-box/metabox-tabs/metabox_content.php:32
+#: lib/meta-box/metabox-tabs/metabox_layout_settings.php:36
+#: lib/meta-box/metabox-tabs/metabox_single_post_layout.php:24
+#: lib/meta-box/metabox-tabs/metabox_single_post_layout.php:33
+#: lib/meta-box/metabox-tabs/metabox_single_post_layout.php:41
+#: lib/meta-box/metabox-tabs/metabox_single_post_layout.php:49
+#: lib/meta-box/metabox-tabs/metabox_single_post_layout.php:57
+#: lib/meta-box/metabox-tabs/metabox_single_post_layout.php:67
+#: lib/meta-box/metabox-tabs/metabox_single_post_layout.php:75
+#: lib/meta-box/metabox-tabs/metabox_single_post_layout.php:83
+#: lib/meta-box/metabox-tabs/metabox_single_post_layout.php:91
+#: lib/meta-box/metabox-tabs/metabox_single_post_layout.php:99
+#: lib/meta-box/metabox-tabs/metabox_footer_wrapper.php:12
+#: lib/meta-box/metabox-tabs/metabox_title_wrapper.php:12
+#: lib/meta-box/metabox-tabs/metabox_title_wrapper.php:64
+#: lib/meta-box/metabox-tabs/metabox_title_wrapper.php:72
+msgid "Yes"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_post_setting.php:15
+msgid ""
+"Select No if you do not want to show featured image in the post detail page"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_post_setting.php:22
+msgid ""
+"Select No if you do not want to show featured image in the post detail page."
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_post_setting.php:25
+msgid "Post title in post page"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_post_setting.php:29
+msgid "Select Yes if you want to show title in the post detail page."
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_post_setting.php:32
+#: lib/meta-box/metabox-tabs/metabox_portfolio_setting.php:20
+msgid "Blockquote"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_post_setting.php:33
+#: lib/meta-box/metabox-tabs/metabox_portfolio_setting.php:21
+msgid "Add block quote content"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_post_setting.php:36
+msgid "List Type"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_post_setting.php:37
+msgid "Lightbox"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_post_setting.php:38
+msgid "Slider"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_post_setting.php:40
+msgid "Select listing type"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_post_setting.php:43
+#: lib/meta-box/metabox-tabs/metabox_portfolio_setting.php:41
+msgid "Images"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_post_setting.php:44
+#: lib/meta-box/metabox-tabs/metabox_portfolio_setting.php:42
+msgid "Upload / select multiple images to build a gallery"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_post_setting.php:47
+#: lib/meta-box/metabox-tabs/metabox_portfolio_setting.php:46
+msgid "Link Type"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_post_setting.php:48
+#: lib/meta-box/metabox-tabs/metabox_post_setting.php:61
+#: lib/meta-box/metabox-tabs/metabox_portfolio_setting.php:47
+msgid "External Url"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_post_setting.php:49
+#: lib/meta-box/metabox-tabs/metabox_portfolio_setting.php:48
+msgid "Ajax Popup"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_post_setting.php:51
+#: lib/meta-box/metabox-tabs/metabox_portfolio_setting.php:50
+msgid "Select link type"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_post_setting.php:54
+#: lib/meta-box/metabox-tabs/metabox_portfolio_setting.php:60
+msgid "External Link"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_post_setting.php:55
+#: lib/meta-box/metabox-tabs/metabox_portfolio_setting.php:61
+msgid "Add external link"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_post_setting.php:58
+msgid "Video Type"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_post_setting.php:59
+msgid "Select Video Type"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_post_setting.php:60
+msgid "Self Hosted"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_post_setting.php:63
+msgid "Select video type"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_post_setting.php:66
+msgid "Enable Video Mute"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_post_setting.php:70
+msgid "Select yes to mute video sound."
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_post_setting.php:73
+msgid "Enable Video Loop"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_post_setting.php:77
+msgid "Select yes to loop video."
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_post_setting.php:80
+msgid "Enable Video Autoplay"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_post_setting.php:84
+msgid "Select yes to autoplay video."
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_post_setting.php:87
+msgid "Enable Video Controls"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_post_setting.php:91
+msgid "Select yes to add controls in video."
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_post_setting.php:94
+msgid "MP4 Video URL"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_post_setting.php:95
+#: lib/meta-box/metabox-tabs/metabox_post_setting.php:100
+#: lib/meta-box/metabox-tabs/metabox_post_setting.php:105
+msgid "Video url is required here if self hosted option is selected"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_post_setting.php:99
+msgid "OGG Video URL"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_post_setting.php:104
+msgid "WEBM Video URL"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_post_setting.php:109
+msgid "Add Youtube/Vimeo Embed Url"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_post_setting.php:111
+msgid ""
+"Add YOUTUBE VIDEO EMBED URL like https://www.youtube.com/embed/xxxxxxxxxx, "
+"you will get this from youtube embed iframe src code. or add VIMEO VIDEO "
+"EMBED URL like https://player.vimeo.com/video/xxxxxxxx, you will get this "
+"from vimeo embed iframe src code."
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_menu.php:10
+msgid "Select Primary Menu"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_menu.php:12
+#: lib/meta-box/metabox-tabs/metabox_menu.php:17
+msgid "You can manage menu using Appearance > Menus"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_menu.php:15
+msgid "Select Secondary Menu"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_portfolio_setting.php:10
+msgid "Title on Hover"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_portfolio_setting.php:11
+msgid "This title will be displayed on hover of the portfolio image"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_portfolio_setting.php:14
+msgid "Enable Ajax Popup"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_portfolio_setting.php:24
+#: lib/meta-box/metabox-tabs/metabox_portfolio_setting.php:33
+msgid "Featured Image in Portfolio Page"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_portfolio_setting.php:29
+#: lib/meta-box/metabox-tabs/metabox_portfolio_setting.php:37
+msgid ""
+"Select No if you do not want to show featured image in the portfolio detail "
+"page."
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_portfolio_setting.php:30
+msgid "select_image"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_portfolio_setting.php:43
+msgid "select_gallery"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_portfolio_setting.php:53
+msgid "Link Target"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_portfolio_setting.php:54
+msgid "Same window / tab"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_portfolio_setting.php:55
+msgid "New window / tab"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_portfolio_setting.php:57
+msgid ""
+"Select link target. This setting will be applicable when link type is set to "
+"External URL"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_portfolio_setting.php:63
+msgid "select_link"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_portfolio_setting.php:66
+msgid "Add Youtube/Vimeo Url"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_portfolio_setting.php:67
+msgid "Video url is required here if external url option is selected."
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_portfolio_setting.php:68
+msgid ""
+"Add YOUTUBE VIDEO URL like https://www.youtube.com/watch?v=xxxxxxxxxx, you "
+"will get this from youtube video url. or add VIMEO VIDEO EMBED URL like "
+"https://player.vimeo.com/video/xxxxxxxx, you will get this from vimeo embed "
+"iframe src code"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_portfolio_setting.php:69
+msgid "select_video"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_header.php:10
+msgid "Enable Header"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_header.php:17
+msgid "Select a Header Style"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_header.php:21
+msgid "Header Text Color"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_header.php:23
+msgid "Black"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_header.php:24
+msgid "White"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_header.php:28
+msgid "Header Logo Position"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_header.php:30
+msgid "Left"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_header.php:31
+msgid "Center"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_header.php:32
+msgid "Top"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_header.php:36
+msgid "Menu Background Image"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_header.php:37
+msgid "Upload the logo that will be displayed in the background"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_header.php:40
+msgid "Menu Logo"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_header.php:41
+msgid "Upload a logo used in menu style."
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_header.php:44
+msgid "Enable Menu Social Icons"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_header.php:53
+msgid "Menu Social Sidebar"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_header.php:55
+#: lib/meta-box/metabox-tabs/metabox_footer.php:29
+#: lib/meta-box/metabox-tabs/metabox_footer.php:34
+#: lib/meta-box/metabox-tabs/metabox_footer.php:39
+#: lib/meta-box/metabox-tabs/metabox_footer.php:44
+#: lib/meta-box/metabox-tabs/metabox_footer.php:49
+#: lib/meta-box/metabox-tabs/metabox_footer.php:72
+msgid "Select custom sidebar"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_header.php:58
+msgid "Enable Menu Separator"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_header.php:65
+msgid "Logo"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_header.php:66
+msgid "Upload the logo that will be displayed in the header"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_header.php:69
+msgid "Logo (Light)"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_header.php:70
+msgid ""
+"Upload a light version of logo used in dark backgrounds header template."
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_header.php:73
+msgid "Retina Logo"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_header.php:74
+msgid ""
+"Optional retina version displayed in devices with retina display (high "
+"resolution display)."
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_header.php:77
+msgid "Retina Logo (Light)"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_header.php:78
+msgid ""
+"(Upload a light version of logo) optional retina version displayed in "
+"devices with retina display (high resolution display)."
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_header.php:81
+msgid "Search Modules"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_header.php:86
+msgid "If on, a search module will be displayed in header section."
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_header.php:89
+msgid "Cart Module"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_header.php:94
+msgid ""
+"If on, a cart module will be displayed in header section. It will only work "
+"if Woocommerce plugin is installed and active."
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_footer.php:10
+msgid "Enable Footer?"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_footer.php:17
+msgid "Enable Footer Information Links Block"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_footer.php:27
+msgid "Information Block"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_footer.php:32
+msgid "Link Block 1"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_footer.php:37
+msgid "Link Block 2"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_footer.php:42
+msgid "Link Block 3"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_footer.php:47
+msgid "Link Block 4"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_footer.php:52
+msgid "Enable Footer Menu"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_footer.php:59
+msgid "Select Footer Menu"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_footer.php:63
+#: lib/meta-box/metabox-tabs/metabox_single_post_layout.php:55
+#: lib/meta-box/metabox-tabs/metabox_single_post_layout.php:97
+msgid "Enable Social Icons"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_footer.php:70
+msgid "Social Sidebar"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_content.php:11
+#: lib/meta-box/metabox-tabs/metabox_content.php:21
+#: lib/meta-box/metabox-tabs/metabox_content.php:30
+msgid "Enable Comments"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_content.php:16
+msgid "Select enable post comments"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_content.php:26
+msgid "Select enable portfolio comments"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_content.php:35
+msgid "Select enable page comments."
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_layout_settings.php:10
+msgid "Sidebar Settings"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_layout_settings.php:12
+msgid "Two Columns Left"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_layout_settings.php:13
+msgid "Two Columns Right"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_layout_settings.php:14
+msgid "Three Columns"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_layout_settings.php:15
+msgid "One Column"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_layout_settings.php:22
+msgid "Left Sidebar"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_layout_settings.php:24
+msgid "Select sidebar to display in left column of page"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_layout_settings.php:27
+msgid "Right Sidebar"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_layout_settings.php:29
+msgid "Select sidebar to display in right column of page"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_layout_settings.php:33
+msgid "Enable Container Fluid"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_single_post_layout.php:11
+msgid "Single Post Layout Settings"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_single_post_layout.php:13
+msgid "Standard"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_single_post_layout.php:14
+msgid "Full width header"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_single_post_layout.php:15
+msgid "Full width with image slider"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_single_post_layout.php:16
+msgid "Full width with lightbox gallery"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_single_post_layout.php:18
+msgid ""
+"Select main content and sidebar alignment. Choose between 1 or 2 column "
+"layout."
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_single_post_layout.php:22
+msgid "Enable Recent Post"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_single_post_layout.php:27
+msgid "Enable recent post"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_single_post_layout.php:31
+msgid "Enable Navigation Post"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_single_post_layout.php:36
+msgid "Enable navigation post"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_single_post_layout.php:39
+#: lib/meta-box/metabox-tabs/metabox_single_post_layout.php:81
+msgid "Enable Post Meta Tags"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_single_post_layout.php:44
+#: lib/meta-box/metabox-tabs/metabox_single_post_layout.php:86
+msgid "Enable post meta tags"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_single_post_layout.php:47
+#: lib/meta-box/metabox-tabs/metabox_single_post_layout.php:89
+msgid "Enable Post Author"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_single_post_layout.php:52
+#: lib/meta-box/metabox-tabs/metabox_single_post_layout.php:94
+msgid "Enable post author"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_single_post_layout.php:60
+#: lib/meta-box/metabox-tabs/metabox_single_post_layout.php:102
+msgid "Enable social icons"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_single_post_layout.php:64
+msgid "Enable Recent Project"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_single_post_layout.php:69
+msgid "Enable recent project"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_single_post_layout.php:73
+msgid "Enable Navigation Portfolio"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_single_post_layout.php:78
+msgid "Enable navigation portfolio"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_footer_wrapper.php:10
+msgid "Enable Footer Wrapper"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_footer_wrapper.php:15
+msgid "Select enable footer wrapper"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_title_wrapper.php:10
+msgid "Enable Title"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_title_wrapper.php:15
+msgid "If on, a title will display in page"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_title_wrapper.php:18
+msgid "Title Template Style"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_title_wrapper.php:19
+msgid "default"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_title_wrapper.php:20
+msgid "Title White"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_title_wrapper.php:21
+msgid "Title Gray"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_title_wrapper.php:22
+msgid "Title Dark Gray"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_title_wrapper.php:23
+msgid "Title Black"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_title_wrapper.php:24
+msgid "Title With Image"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_title_wrapper.php:25
+msgid "Title Large"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_title_wrapper.php:26
+msgid "Title Large Without Overlay"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_title_wrapper.php:27
+msgid "Title Small White"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_title_wrapper.php:28
+msgid "Title Small Gray"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_title_wrapper.php:29
+msgid "Title Small Dark Gray"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_title_wrapper.php:30
+msgid "Title Small Black"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_title_wrapper.php:31
+msgid "Title Center Align"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_title_wrapper.php:33
+msgid "Choose template style for the title"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_title_wrapper.php:36
+msgid "Subtitle"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_title_wrapper.php:39
+msgid "Title Background Image"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_title_wrapper.php:40
+msgid "Recommended image size (1920px X 700px) for better result."
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_title_wrapper.php:43
+msgid "Parallax effect"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_title_wrapper.php:45
+msgid "No Effect"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_title_wrapper.php:46
+msgid "parallax-effect-1"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_title_wrapper.php:47
+msgid "parallax-effect-2"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_title_wrapper.php:48
+msgid "parallax-effect-3"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_title_wrapper.php:49
+msgid "parallax-effect-4"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_title_wrapper.php:50
+msgid "parallax-effect-5"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_title_wrapper.php:51
+msgid "parallax-effect-6"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_title_wrapper.php:52
+msgid "parallax-effect-7"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_title_wrapper.php:53
+msgid "parallax-effect-8"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_title_wrapper.php:54
+msgid "parallax-effect-9"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_title_wrapper.php:55
+msgid "parallax-effect-10"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_title_wrapper.php:56
+msgid "parallax-effect-11"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_title_wrapper.php:57
+msgid "parallax-effect-12"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_title_wrapper.php:59
+msgid "Choose parallax effect"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_title_wrapper.php:62
+msgid "Enable Breadcrumb"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_title_wrapper.php:67
+msgid "If on, breadcrumb will display in title section"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_title_wrapper.php:70
+msgid "Enable Separator"
+msgstr ""
+
+#: lib/meta-box/metabox-tabs/metabox_title_wrapper.php:75
+msgid "If on, separator will display in title section"
+msgstr ""
+
+#: lib/mega-menu/mega-menu-addon.php:167
+#, php-format
+msgid "%s (Invalid)"
+msgstr ""
+
+#: lib/mega-menu/mega-menu-addon.php:171
+#, php-format
+msgid "%s (Pending)"
+msgstr ""
+
+#: lib/mega-menu/mega-menu-addon.php:181
+msgid "sub item"
+msgstr ""
+
+#: lib/mega-menu/mega-menu-addon.php:197
+msgid "Move up"
+msgstr ""
+
+#: lib/mega-menu/mega-menu-addon.php:210
+msgid "Move down"
+msgstr ""
+
+#: lib/mega-menu/mega-menu-addon.php:212 lib/mega-menu/mega-menu-addon.php:214
+msgid "Edit Menu Item"
+msgstr ""
+
+#: lib/mega-menu/mega-menu-addon.php:223
+msgid "URL"
+msgstr ""
+
+#: lib/mega-menu/mega-menu-addon.php:230
+msgid "Navigation Label"
+msgstr ""
+
+#: lib/mega-menu/mega-menu-addon.php:236
+msgid "Title Attribute"
+msgstr ""
+
+#: lib/mega-menu/mega-menu-addon.php:243
+msgid "Open link in a new window/tab"
+msgstr ""
+
+#: lib/mega-menu/mega-menu-addon.php:248
+msgid "CSS Classes (optional)"
+msgstr ""
+
+#: lib/mega-menu/mega-menu-addon.php:254
+msgid "Link Relationship (XFN)"
+msgstr ""
+
+#: lib/mega-menu/mega-menu-addon.php:260
+msgid "Description"
+msgstr ""
+
+#: lib/mega-menu/mega-menu-addon.php:262
+msgid ""
+"The description will be displayed in the menu if the current theme supports "
+"it."
+msgstr ""
+
+#: lib/mega-menu/mega-menu-addon.php:287
+msgid "Submenu Position"
+msgstr ""
+
+#: lib/mega-menu/mega-menu-addon.php:289
+msgid "Right"
+msgstr ""
+
+#: lib/mega-menu/mega-menu-addon.php:299
+msgid "Enable Onepage For This Item (only for main parent)"
+msgstr ""
+
+#: lib/mega-menu/mega-menu-addon.php:306
+msgid "Enable H-Code Mega Menu For This Item (only for main parent)"
+msgstr ""
+
+#: lib/mega-menu/mega-menu-addon.php:316
+msgid ""
+"Enable H-Code Mega Menu Title For This Item (It Remove Url For This Item)."
+msgstr ""
+
+#: lib/mega-menu/mega-menu-addon.php:325
+msgid "Select Mega Menu Number of Columns"
+msgstr ""
+
+#: lib/mega-menu/mega-menu-addon.php:342
+msgid "Select Widget Area"
+msgstr ""
+
+#: lib/mega-menu/mega-menu-addon.php:356
+msgid "Select Mega Menu Item Icon"
+msgstr ""
+
+#: lib/mega-menu/mega-menu-addon.php:362
+msgid "Select Menu Icon"
+msgstr ""
+
+#: lib/mega-menu/mega-menu-addon.php:378
+msgid "Select Mega Menu Item Sidebar"
+msgstr ""
+
+#: lib/mega-menu/mega-menu-addon.php:389
+msgid "Move"
+msgstr ""
+
+#: lib/mega-menu/mega-menu-addon.php:390
+msgid "Up one"
+msgstr ""
+
+#: lib/mega-menu/mega-menu-addon.php:391
+msgid "Down one"
+msgstr ""
+
+#: lib/mega-menu/mega-menu-addon.php:394
+msgid "To the top"
+msgstr ""
+
+#: lib/mega-menu/mega-menu-addon.php:400
+#, php-format
+msgid "Original: %s"
+msgstr ""
+
+#: lib/admin/admin_option.php:87
+msgid "Section via hook"
+msgstr ""
+
+#: lib/admin/admin_option.php:88
+msgid ""
+"<p class=\"description\">This is a section created by adding a filter to the "
+"sections array. Can be used by child themes to add/remove sections from the "
+"options.</p>"
+msgstr ""
+
+#: lib/admin/admin_option.php:160
+#, php-format
+msgid "Customize &#8220;%s&#8221;"
+msgstr ""
+
+#: lib/admin/admin_option.php:167 lib/admin/admin_option.php:170
+msgid "Current theme preview"
+msgstr ""
+
+#: lib/admin/admin_option.php:177
+#, php-format
+msgid "By %s"
+msgstr ""
+
+#: lib/admin/admin_option.php:178
+#, php-format
+msgid "Version %s"
+msgstr ""
+
+#: lib/admin/admin_option.php:179
+msgid "Tags"
+msgstr ""
+
+#: lib/admin/admin_option.php:184
+#, php-format
+msgid "This <a href=\"%1$s\">child theme</a> requires its parent theme, %2$s."
+msgstr ""
+
+#: lib/admin/admin_option.php:232
+msgid "Documentation"
+msgstr ""
+
+#: lib/admin/admin_option.php:243
+msgid "Theme Information 1"
+msgstr ""
+
+#: lib/admin/admin_option.php:244 lib/admin/admin_option.php:250
+msgid "<p>This is the tab content, HTML is allowed.</p>"
+msgstr ""
+
+#: lib/admin/admin_option.php:249
+msgid "Theme Information 2"
+msgstr ""
+
+#: lib/admin/admin_option.php:254
+msgid "<p>This is the sidebar content, HTML is allowed.</p>"
+msgstr ""
+
+#: lib/admin/admin_option.php:272 lib/admin/admin_option.php:273
+msgid "Theme Settings"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:11
+msgid "Color Settings"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:12
+msgid "Configure content styles"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:17
+msgid "Background Color"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:18
+msgid "Set background color"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:24
+msgid "Body Background"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:31
+msgid "Black Background Opacity"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:39
+msgid "White Background"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:46
+msgid "Yellow Background"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:53
+msgid "Deep Yellow Background"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:60
+msgid "Deep Golden Background"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:68
+msgid "Fast Yellow Background"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:75
+msgid "Dark Gray Background"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:82
+msgid "Dark Mid Background"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:89
+msgid "Black Background"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:96
+msgid "Green Background"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:103
+msgid "Gray Background"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:110
+msgid "Yellow Ochre Background"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:117
+msgid "Deep Brown Background"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:124
+msgid "Orange Background"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:131
+msgid "Deep Orange Background"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:138
+msgid "Fast Orange Background"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:145
+msgid "Pink Background"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:152
+msgid "Deep Red Background"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:159
+msgid "Red Background"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:166
+msgid "Deep Pink Background"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:173
+msgid "Light Pink Background"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:180
+msgid "Fast Pink Background"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:187
+msgid "Magenta Background"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:194
+msgid "Light Yellow Background"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:201
+msgid "Dark Green Background"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:208
+msgid "Dark Blue Background"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:215
+msgid "Violet Background"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:222
+msgid "Light gray Background"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:229
+msgid "Light Gray2 Background"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:236
+msgid "Light Gray3 Background"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:243
+msgid "Slider Background"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:251
+msgid "Wide Separator Line Background"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:258
+msgid "Video Background"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:267
+msgid "Overlay Yellow Background"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:274
+msgid "Overlay Blue Background"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:281
+msgid "Overlay gray Background"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:288
+msgid "Overlay Green Background"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:303
+msgid "Header Background Color"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:304
+msgid "Set header background color"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:310
+msgid "Default Header Background"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:317
+msgid "Default Header - Dropdown Menu Background"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:325
+msgid "Default Header - Cart Content Background"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:333
+msgid "White Header Background"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:340
+msgid "White Header - Dropdown Menu Background"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:348
+msgid "White Header - Cart Content Background"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:356
+msgid "Sticky Header Background"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:363
+msgid "Sticky Header - Dropdown Menu Background"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:371
+msgid "Sticky Header - Cart Content Background"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:379
+msgid "Gray Sticky Header Background"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:386
+msgid "Gray Sticky Header - Dropdown Menu Background"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:394
+msgid "Gray Sticky Header - Cart Content Background"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:402
+msgid "Dark Header Background"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:409
+msgid "Dark Header - Dropdown Menu Background"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:417
+msgid "Dark Header - Cart Content Background"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:426
+msgid "Transparent Dark Header Background"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:434
+msgid "Transparent Dark Header - Dropdown Menu Background"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:442
+msgid "Transparent Dark Header - Cart Content Background"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:450
+msgid "Transparent Light Header Background"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:458
+msgid "Transparent Light Header - Dropdown Menu Background"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:466
+msgid "Transparent Light Header - Cart Content Background"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:474
+msgid "Non Sticky Header Background"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:481
+msgid "Non Sticky Header - Dropdown Menu Background"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:489
+msgid "Non Sticky Header - Cart Content Background"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:497
+msgid "Hamburger 1 Header Background"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:504
+msgid "Hamburger 2 Header Background"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:511
+msgid "Hamburger 3 Header Background"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:526
+msgid "Text Color"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:527
+msgid "Set text color"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:533
+msgid "Body Text"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:540
+msgid "Link Text"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:547
+msgid "Link Hover Text"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:554
+msgid "Heading Text"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:561
+msgid "White Breadcrumb Title & link"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:568
+msgid "Gray Breadcrumb Title & link"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:582
+msgid "Icon Text"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:589
+msgid "White Text"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:596
+msgid "Magenta Text"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:603
+msgid "Orange Text"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:610
+msgid "Deep Red Text"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:617
+msgid "Red Text"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:624
+msgid "Black Text"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:631
+msgid "Black Link Text"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:638
+msgid "Black Link Hover Text"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:645
+msgid "White Link Text"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:652
+msgid "White Link Hover Text"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:659
+msgid "Gray Link Text"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:666
+msgid "Gray Link Hover Text"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:673
+msgid "Yellow Text"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:680
+msgid "Yellow Text2"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:687
+msgid "Fast Yellow Text"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:694
+msgid "Pink Text"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:701
+msgid "Light Gray Text"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:708
+msgid "Light Gray Text2"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:715
+msgid "Deep Gray Text"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:722
+msgid "Deep Light Gray Text"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:729
+msgid "Gray Text"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:736
+msgid "Dark Gray Text"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:752
+msgid "Set menu and submenu text color."
+msgstr ""
+
+#: lib/admin/options/color-setting.php:758
+msgid "Menu Text Color"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:764
+msgid "Menu Text Hover Color"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:770
+msgid "Submenu Text Color"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:776
+msgid "Submenu Text Hover Color"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:782
+msgid "Submenu Separator/Line Color"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:796
+msgid "Mobile Menu Color"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:797
+msgid "Set mobile menu color & background color"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:803
+msgid "Menu Background"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:810
+msgid "Menu Icon Background"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:816
+msgid "Menu Icon Color"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:822
+msgid "Menu Icon Border Color"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:836
+msgid "Mini Header Color"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:837
+msgid "Set mini header color"
+msgstr ""
+
+#: lib/admin/options/color-setting.php:843
+msgid "Mini Header Background"
+msgstr ""
+
+#: lib/admin/options/page-title.php:14
+msgid "WooCommerce Categories Page Title Settings"
+msgstr ""
+
+#: lib/admin/options/page-title.php:15
+msgid "Set woocommerce categories, brands and shop page title settings."
+msgstr ""
+
+#: lib/admin/options/page-title.php:23 lib/admin/options/page-title.php:217
+#: lib/admin/options/page-title.php:514
+msgid "If on, a title will display in category page"
+msgstr ""
+
+#: lib/admin/options/page-title.php:30 lib/admin/options/page-title.php:130
+#: lib/admin/options/page-title.php:224 lib/admin/options/page-title.php:323
+#: lib/admin/options/page-title.php:422 lib/admin/options/page-title.php:521
+msgid "Title Style"
+msgstr ""
+
+#: lib/admin/options/page-title.php:31 lib/admin/options/page-title.php:131
+#: lib/admin/options/page-title.php:225 lib/admin/options/page-title.php:324
+#: lib/admin/options/page-title.php:423 lib/admin/options/page-title.php:522
+msgid "Please select style"
+msgstr ""
+
+#: lib/admin/options/page-title.php:32
+msgid "Title Shop Style"
+msgstr ""
+
+#: lib/admin/options/page-title.php:46 lib/admin/options/page-title.php:145
+#: lib/admin/options/page-title.php:239 lib/admin/options/page-title.php:338
+#: lib/admin/options/page-title.php:437 lib/admin/options/page-title.php:536
+msgid "Choose style for the title"
+msgstr ""
+
+#: lib/admin/options/page-title.php:116
+msgid "Page Title"
+msgstr ""
+
+#: lib/admin/options/page-title.php:208
+msgid "Default Posts / Blog Page Title Settings"
+msgstr ""
+
+#: lib/admin/options/page-title.php:209
+msgid "Set default / blog page title settings."
+msgstr ""
+
+#: lib/admin/options/page-title.php:307
+msgid "Archive Page Title Settings"
+msgstr ""
+
+#: lib/admin/options/page-title.php:308
+msgid "Set archive, categories, tags, author and search page title settings."
+msgstr ""
+
+#: lib/admin/options/page-title.php:316 lib/admin/options/page-title.php:415
+msgid "If on, a title will display in archive page"
+msgstr ""
+
+#: lib/admin/options/page-title.php:406
+msgid "Portfolio Posts Title Settings"
+msgstr ""
+
+#: lib/admin/options/page-title.php:407
+msgid "Set portfolio posts title settings."
+msgstr ""
+
+#: lib/admin/options/page-title.php:505
+msgid "Category Portfolio Post Title Settings"
+msgstr ""
+
+#: lib/admin/options/page-title.php:506
+msgid "Set categories portfolio post title settings."
+msgstr ""
+
+#: lib/admin/options/mini-header.php:11
+msgid "Mini Header"
+msgstr ""
+
+#: lib/admin/options/mini-header.php:12
+msgid ""
+"This header bar will be displayed at very top of the page if it is enabled."
+msgstr ""
+
+#: lib/admin/options/mini-header.php:12
+msgid "Mini Header section configuration settings"
+msgstr ""
+
+#: lib/admin/options/mini-header.php:17
+msgid "Enable Mini Header"
+msgstr ""
+
+#: lib/admin/options/mini-header.php:25
+msgid "Enable Sticky Mini Header"
+msgstr ""
+
+#: lib/admin/options/mini-header.php:34
+msgid "Sidebar"
+msgstr ""
+
+#: lib/admin/options/mini-header.php:37
+msgid "Select sidebar to display in mini header for all pages"
+msgstr ""
+
+#: lib/admin/options/mini-header.php:43
+msgid "Enable Mini Header in Mobile"
+msgstr ""
+
+#: lib/admin/options/menu.php:11
+msgid "Menu"
+msgstr ""
+
+#: lib/admin/options/menu.php:12
+msgid "Assign menu for header section."
+msgstr ""
+
+#: lib/admin/options/menu.php:26
+msgid ""
+"Select secondary menu when you have set center logo within menu. You can "
+"manage center logo using Appearance > Theme Settings > Header. Also you can "
+"manage menu using Appearance > Menus"
+msgstr ""
+
+#: lib/admin/options/menu.php:32
+msgid "Menu Hover Delay"
+msgstr ""
+
+#: lib/admin/options/social_post.php:11 lib/admin/options/social.php:11
+msgid "Social Sharing Links"
+msgstr ""
+
+#: lib/admin/options/social_post.php:12
+msgid "Select on to show that specific social sharing icon on blog posts."
+msgstr ""
+
+#: lib/admin/options/social_post.php:17 lib/admin/options/social.php:122
+msgid "Social Sharing Links For Single Post"
+msgstr ""
+
+#: lib/admin/options/social_post.php:18 lib/admin/options/social.php:123
+msgid "Set Social Sharing Links For Single Post"
+msgstr ""
+
+#: lib/admin/options/social_post.php:24 lib/admin/options/social.php:37
+#: lib/admin/options/social.php:135
+msgid "Facebook"
+msgstr ""
+
+#: lib/admin/options/social_post.php:32 lib/admin/options/social.php:44
+#: lib/admin/options/social.php:142
+msgid "Twitter"
+msgstr ""
+
+#: lib/admin/options/social_post.php:40 lib/admin/options/social.php:51
+#: lib/admin/options/social.php:149
+msgid "Google Plus"
+msgstr ""
+
+#: lib/admin/options/social_post.php:48 lib/admin/options/social.php:58
+#: lib/admin/options/social.php:156
+msgid "LinkedIn"
+msgstr ""
+
+#: lib/admin/options/social_post.php:56 lib/admin/options/social.php:65
+#: lib/admin/options/social.php:163
+msgid "Pinterest"
+msgstr ""
+
+#: lib/admin/options/social_post.php:64 lib/admin/options/social.php:79
+#: lib/admin/options/social.php:170
+msgid "Delicious"
+msgstr ""
+
+#: lib/admin/options/social_post.php:70 lib/admin/options/social.php:86
+#: lib/admin/options/social.php:177
+msgid "Reddit"
+msgstr ""
+
+#: lib/admin/options/social_post.php:76 lib/admin/options/social.php:93
+#: lib/admin/options/social.php:184
+msgid "Stumbleupon"
+msgstr ""
+
+#: lib/admin/options/social_post.php:82 lib/admin/options/social.php:100
+#: lib/admin/options/social.php:191
+msgid "Digg"
+msgstr ""
+
+#: lib/admin/options/social_post.php:88 lib/admin/options/social.php:107
+#: lib/admin/options/social.php:198
+msgid "Tumblr"
+msgstr ""
+
+#: lib/admin/options/page-template.php:11
+msgid "Page/Template"
+msgstr ""
+
+#: lib/admin/options/page-template.php:18
+#: lib/admin/options/page-template.php:25
+msgid "Under Construction Page"
+msgstr ""
+
+#: lib/admin/options/page-template.php:19
+msgid "Select page to display when site is in under construction mode"
+msgstr ""
+
+#: lib/admin/options/page-template.php:38
+msgid "Comments Settings"
+msgstr ""
+
+#: lib/admin/options/page-template.php:39
+msgid "Enable/Disable comments in post or portfolio page"
+msgstr ""
+
+#: lib/admin/options/page-template.php:45
+msgid "Enable Comments in Page"
+msgstr ""
+
+#: lib/admin/options/page-template.php:51
+msgid "Enable Comments in Post"
+msgstr ""
+
+#: lib/admin/options/page-template.php:57
+msgid "Enable Comments in Portfolio"
+msgstr ""
+
+#: lib/admin/options/page-template.php:70
+msgid "404 Page Settings"
+msgstr ""
+
+#: lib/admin/options/page-template.php:71
+msgid ""
+"Set title, content, image, button text and button URL for 404 / page not "
+"found page"
+msgstr ""
+
+#: lib/admin/options/page-template.php:77
+msgid "Title Text"
+msgstr ""
+
+#: lib/admin/options/page-template.php:83
+msgid "404 Content Text"
+msgstr ""
+
+#: lib/admin/options/page-template.php:91
+msgid "404 Background Image"
+msgstr ""
+
+#: lib/admin/options/page-template.php:92
+msgid "Upload image"
+msgstr ""
+
+#: lib/admin/options/page-template.php:97
+msgid "Background color"
+msgstr ""
+
+#: lib/admin/options/page-template.php:102
+msgid "404 Content Font Color"
+msgstr ""
+
+#: lib/admin/options/page-template.php:108
+msgid "Enable Button"
+msgstr ""
+
+#: lib/admin/options/page-template.php:116
+#: lib/admin/options/general_layout.php:272
+#: lib/admin/options/general_layout.php:910
+msgid "Button Text"
+msgstr ""
+
+#: lib/admin/options/page-template.php:123
+msgid "Button Url"
+msgstr ""
+
+#: lib/admin/options/page-template.php:130
+msgid "Enable Search"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:12
+#: lib/admin/options/general_layout.php:19
+msgid "Page"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:13
+#: lib/admin/options/general_layout.php:20
+msgid "Post"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:27
+#: lib/admin/options/general_layout.php:773
+#: lib/admin/options/general_layout.php:1007
+msgid "Layout Settings"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:89
+msgid "Enable Page Featured Image"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:98
+msgid "Default Posts / Blog Page Layout Settings"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:99
+msgid "Settings for default posts / blog landing page"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:152
+msgid "Blog Page Title"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:158
+msgid "Blog Layout"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:160
+#: lib/admin/options/general_layout.php:775
+#: lib/admin/options/general_layout.php:1009
+#: lib/admin/options/woocommerce.php:245
+msgid "Grid"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:161
+#: lib/admin/options/general_layout.php:776
+#: lib/admin/options/general_layout.php:1015
+msgid "Masonry"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:162
+#: lib/admin/options/general_layout.php:777
+msgid "Classic"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:163
+#: lib/admin/options/general_layout.php:389
+#: lib/admin/options/general_layout.php:632
+#: lib/admin/options/general_layout.php:778
+msgid "Modern"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:164
+#: lib/admin/options/general_layout.php:779
+msgid "Box"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:165
+#: lib/admin/options/general_layout.php:780
+msgid "List"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:172
+msgid "Blog Column Layout"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:174
+msgid "Column 2"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:175
+msgid "Column 3"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:176
+msgid "Column 4"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:184
+#: lib/admin/options/general_layout.php:799
+msgid "Enable Pagination"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:190
+#: lib/admin/options/general_layout.php:805
+msgid "Pagination Types"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:192
+#: lib/admin/options/general_layout.php:807
+msgid "Number Pagination"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:193
+#: lib/admin/options/general_layout.php:808
+msgid "Infinite Scroll"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:201
+msgid "Show Post Meta Author"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:208
+msgid "Show Post Meta Date"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:215
+#: lib/admin/options/general_layout.php:413
+#: lib/admin/options/general_layout.php:516
+#: lib/admin/options/general_layout.php:652
+#: lib/admin/options/general_layout.php:843
+msgid "Date Format"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:222
+msgid "Show Post Excerpt"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:229
+#: lib/admin/options/general_layout.php:859
+msgid "Excerpt"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:231
+#: lib/admin/options/general_layout.php:861
+msgid "Specify content length in no. of words"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:237
+msgid "Show Post Content"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:244
+msgid "Show Post Category"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:251
+msgid "Show Post Like Button"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:258
+msgid "Show Post Comments"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:265
+msgid "Show Button"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:279
+#: lib/admin/options/general_layout.php:917
+#: lib/admin/options/general_layout.php:1034
+msgid "No. of items per Page"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:294
+msgid "Single Post/Custom Post Layout Settings"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:295
+msgid "Set layout for single post/custom post"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:356
+msgid "Select Layout"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:368
+msgid "Enable Featured Image"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:374
+msgid "Enable Post Title"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:380
+#: lib/admin/options/general_layout.php:623
+msgid "Enable Navigation"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:386
+#: lib/admin/options/general_layout.php:629
+msgid "Select Navigation Style"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:388
+#: lib/admin/options/general_layout.php:631
+msgid "Normal"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:397
+#: lib/admin/options/general_layout.php:640
+msgid "Enable Post Meta Author"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:405
+#: lib/admin/options/general_layout.php:646
+msgid "Enable Post Meta Date"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:414
+msgid "Date format not work for \"Full width with image slider\" post type."
+msgstr ""
+
+#: lib/admin/options/general_layout.php:421
+#: lib/admin/options/general_layout.php:659
+msgid "Enable Post Meta Category"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:435
+#: lib/admin/options/general_layout.php:671
+msgid "Enable Post Author Box"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:455
+msgid "Single Post/Custom Related Post Layout Settings"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:456
+msgid "Set layout for single post/custom related post"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:462
+#: lib/admin/options/general_layout.php:608
+msgid "Enable Related Post"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:470
+msgid "Related Post Title"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:477
+msgid "Enable Related Post Excerpt"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:485
+msgid "Related Post Excerpt Length"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:492
+msgid "Enable Related Post Title"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:500
+msgid "Enable Related Post Author"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:508
+msgid "Enable Related Post Date"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:523
+msgid "Enable Related Post Like Button"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:531
+msgid "Enable Related Post Comments Button"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:547
+msgid "Single Portfolio Post Settings"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:548
+msgid "Single portfolio post configurations"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:616
+msgid "Related Portfolio Title"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:683
+msgid "Enable Portfolio Text In Breadcrumb"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:689
+msgid "Breadcrumb Portfolio Text"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:696
+msgid "Breadcrumb Portfolio URL"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:711
+msgid "Pages Layout Settings"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:712
+msgid ""
+"Page layout settings only for Archive, Category, Search, Tag, Author pages"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:787
+#: lib/admin/options/general_layout.php:1022
+msgid "Layout Columns Settings"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:789
+#: lib/admin/options/general_layout.php:1024
+msgid "column 2"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:790
+#: lib/admin/options/general_layout.php:1025
+msgid "column 3"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:791
+#: lib/admin/options/general_layout.php:1026
+msgid "column 4"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:825
+msgid "Show Author"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:834
+msgid "Show Date"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:850
+msgid "Show Excerpt"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:867
+msgid "Show Full Content"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:874
+msgid "Show Like"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:883
+msgid "Show Comment"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:892
+msgid "Show Separator"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:901
+msgid "Show Continue Button"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:923
+msgid "Search Content"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:939
+msgid "Portfolio Category Layout Settings"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:940
+msgid "Portfolio category page configurations"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:1001
+msgid "Portfolio Page Title"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:1010
+msgid "Grid Gutter"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:1011
+msgid "Grid With Title"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:1012
+msgid "Wide"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:1013
+msgid "Wide Gutter"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:1014
+msgid "Wide With Title"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:1027
+msgid "column 5"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:1048
+#: lib/admin/options/woocommerce.php:357
+msgid "Header Settings"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:1049
+msgid "Header settings only for Archive, Category, Search, Tag, Author Pages"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:1137
+#: lib/admin/options/woocommerce.php:444
+msgid "Header menu"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:1144
+#: lib/admin/options/woocommerce.php:451
+msgid "Secondary Menu"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:1161
+#: lib/admin/options/woocommerce.php:473
+msgid "Upload a light version of logo used in dark backgrounds header template"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:1168
+#: lib/admin/options/woocommerce.php:480
+msgid "Logo Retina"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:1176
+#: lib/admin/options/woocommerce.php:488
+msgid "Logo Retina (Light)"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:1182
+#: lib/admin/options/woocommerce.php:494
+msgid "Retina logo Width"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:1184
+#: lib/admin/options/woocommerce.php:496
+msgid "Specify the width in pixel eg. 15px"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:1189
+#: lib/admin/options/woocommerce.php:501
+msgid "Retina logo Height"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:1191
+#: lib/admin/options/woocommerce.php:503
+msgid "Specify the height in pixel eg. 15px"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:1200
+#: lib/admin/options/woocommerce.php:510
+msgid "If on, a search module will be displayed in header section"
+msgstr ""
+
+#: lib/admin/options/general_layout.php:1209
+#: lib/admin/options/woocommerce.php:517
+msgid ""
+"If on, a cart module will be displayed in header section. It will only work "
+"if WooCommerce plugin is installed and active."
+msgstr ""
+
+#: lib/admin/options/general_layout.php:1214
+#: lib/admin/options/woocommerce.php:522
+msgid "Header Mini cart"
+msgstr ""
+
+#: lib/admin/options/footer-wrapper.php:12
+msgid "Footer Wrapper"
+msgstr ""
+
+#: lib/admin/options/footer-wrapper.php:25
+msgid "Enable Phone Number"
+msgstr ""
+
+#: lib/admin/options/footer-wrapper.php:33
+msgid "Custom Phone Icon"
+msgstr ""
+
+#: lib/admin/options/footer-wrapper.php:41
+msgid "Phone Icon"
+msgstr ""
+
+#: lib/admin/options/footer-wrapper.php:50
+#: lib/admin/options/footer-wrapper.php:87
+#: lib/admin/options/footer-wrapper.php:124
+msgid "Upload Image"
+msgstr ""
+
+#: lib/admin/options/footer-wrapper.php:51
+#: lib/admin/options/footer-wrapper.php:88
+#: lib/admin/options/footer-wrapper.php:125
+msgid "Recommended image size (25px X 25px)"
+msgstr ""
+
+#: lib/admin/options/footer-wrapper.php:57
+msgid "Phone Number Text"
+msgstr ""
+
+#: lib/admin/options/footer-wrapper.php:62
+msgid "Enable Map"
+msgstr ""
+
+#: lib/admin/options/footer-wrapper.php:70
+msgid "Custom Map Icon"
+msgstr ""
+
+#: lib/admin/options/footer-wrapper.php:78
+msgid "Map Icon"
+msgstr ""
+
+#: lib/admin/options/footer-wrapper.php:94
+msgid "Map Address Text"
+msgstr ""
+
+#: lib/admin/options/footer-wrapper.php:99
+msgid "Enable Email"
+msgstr ""
+
+#: lib/admin/options/footer-wrapper.php:107
+msgid "Custom Email Icon"
+msgstr ""
+
+#: lib/admin/options/footer-wrapper.php:115
+msgid "Email Icon"
+msgstr ""
+
+#: lib/admin/options/footer-wrapper.php:131
+msgid "Email Address"
+msgstr ""
+
+#: lib/admin/options/footer.php:11
+msgid "Footer"
+msgstr ""
+
+#: lib/admin/options/footer.php:12
+msgid "Footer section configuration settings"
+msgstr ""
+
+#: lib/admin/options/footer.php:17
+msgid "Enable Footer"
+msgstr ""
+
+#: lib/admin/options/footer.php:95
+msgid "Enable Footer Logo"
+msgstr ""
+
+#: lib/admin/options/footer.php:106
+msgid "Footer Logo"
+msgstr ""
+
+#: lib/admin/options/footer.php:128
+msgid "Enable Footer Copyright"
+msgstr ""
+
+#: lib/admin/options/footer.php:136
+msgid "Copyright"
+msgstr ""
+
+#: lib/admin/options/footer.php:138
+msgid "Add copyright content here"
+msgstr ""
+
+#: lib/admin/options/footer.php:143
+msgid "Enable ScrollToTop Button"
+msgstr ""
+
+#: lib/admin/options/import-export.php:21
+msgid ""
+"Notice: Please deactivate WordPress Importer plugin and then try demo data "
+"import to make it run successfully."
+msgstr ""
+
+#: lib/admin/options/import-export.php:25
+msgid "Import Demo Data"
+msgstr ""
+
+#: lib/admin/options/import-export.php:28
+msgid ""
+"( Note: Please check <a href=\"http://wpdemos.themezaa.com/h-"
+"code/documentation/\" target=\"_blank\">H-Code documentation</a> to import "
+"intro demo content in Slider Revolution. )"
+msgstr ""
+
+#: lib/admin/options/import-export.php:32
+msgid "Import/Export"
+msgstr ""
+
+#: lib/admin/options/import-export.php:33
+msgid "Import/Export options"
+msgstr ""
+
+#: lib/admin/options/import-export.php:41
+msgid "Import Demo Content"
+msgstr ""
+
+#: lib/admin/options/import-export.php:42
+msgid ""
+"Import demo content data including posts, pages, portfolio, theme options, "
+"widgets, images, sliders etc… It may take several minutes, so please have "
+"some patience."
+msgstr ""
+
+#: lib/admin/options/import-export.php:43
+msgid "Warning"
+msgstr ""
+
+#: lib/admin/options/import-export.php:44
+msgid ""
+"Importing demo content will import sliders, pages, posts, portfolio, theme "
+"options, widgets, sidebars and other settings. Your existing setup will be "
+"replaced with new demo data and settings from the installed theme version "
+"demo content and configurations. So we recommend you take the backup of your "
+"existing WordPress setup and database for your safety."
+msgstr ""
+
+#: lib/admin/options/import-export.php:45
+msgid "Demo Import Requirements"
+msgstr ""
+
+#: lib/admin/options/import-export.php:47
+msgid ""
+"Memory Limit of 256 MB and max execution time (php time limit) of 300 "
+"seconds."
+msgstr ""
+
+#: lib/admin/options/import-export.php:48
+msgid ""
+"Hcode Addon must be activated for Custom post type and Shortcodes to import."
+msgstr ""
+
+#: lib/admin/options/import-export.php:49
+msgid ""
+"Visual Composer and Revolution Slider must be activated for content and "
+"sliders to import."
+msgstr ""
+
+#: lib/admin/options/import-export.php:50
+msgid "WooCommerce must be activated for shop data to import."
+msgstr ""
+
+#: lib/admin/options/import-export.php:51
+msgid "Contact Form 7 must be activated for form data to import."
+msgstr ""
+
+#: lib/admin/options/import-export.php:52
+msgid ""
+"Newsletter Manager must be activated for newsletter form data to import."
+msgstr ""
+
+#: lib/admin/options/import-export.php:56
+msgid "Demo data successfully imported. Now, please install and run "
+msgstr ""
+
+#: lib/admin/options/import-export.php:56
+msgid "Regenerate Thumbnails"
+msgstr ""
+
+#: lib/admin/options/import-export.php:56
+msgid "plugin once."
+msgstr ""
+
+#: lib/admin/options/import-export.php:65
+msgid "Import / Export"
+msgstr ""
+
+#: lib/admin/options/import-export.php:66
+msgid "Save and restore your H-Code options"
+msgstr ""
+
+#: lib/admin/options/font-setting.php:11
+msgid "Font Settings"
+msgstr ""
+
+#: lib/admin/options/font-setting.php:12
+msgid "Font Setting"
+msgstr ""
+
+#: lib/admin/options/font-setting.php:17
+msgid "Font Family"
+msgstr ""
+
+#: lib/admin/options/font-setting.php:18
+msgid "Set font family"
+msgstr ""
+
+#: lib/admin/options/font-setting.php:24
+msgid "Main Font"
+msgstr ""
+
+#: lib/admin/options/font-setting.php:40
+msgid "Alt Font"
+msgstr ""
+
+#: lib/admin/options/font-setting.php:64
+msgid "Font Size"
+msgstr ""
+
+#: lib/admin/options/font-setting.php:65
+msgid "Set font size"
+msgstr ""
+
+#: lib/admin/options/font-setting.php:71
+msgid "Body Font Size"
+msgstr ""
+
+#: lib/admin/options/font-setting.php:90
+msgid "Header Font Size"
+msgstr ""
+
+#: lib/admin/options/font-setting.php:108
+msgid "Header Icon Font Size"
+msgstr ""
+
+#: lib/admin/options/font-setting.php:126
+msgid "Header Dropdown Menu Font Size"
+msgstr ""
+
+#: lib/admin/options/font-setting.php:144
+msgid "Heading h1 Font Size"
+msgstr ""
+
+#: lib/admin/options/font-setting.php:162
+msgid "Heading h2 Font Size"
+msgstr ""
+
+#: lib/admin/options/font-setting.php:180
+msgid "Heading h3 Font Size"
+msgstr ""
+
+#: lib/admin/options/font-setting.php:198
+msgid "Heading h4 Font Size"
+msgstr ""
+
+#: lib/admin/options/font-setting.php:216
+msgid "Heading h5 Font Size"
+msgstr ""
+
+#: lib/admin/options/font-setting.php:234
+msgid "Heading h6 Font Size"
+msgstr ""
+
+#: lib/admin/options/font-setting.php:252
+msgid "Section Title h1 Font Size"
+msgstr ""
+
+#: lib/admin/options/font-setting.php:270
+msgid "Section Title h2 Font Size"
+msgstr ""
+
+#: lib/admin/options/font-setting.php:288
+msgid "Section Title h3 Font Size"
+msgstr ""
+
+#: lib/admin/options/font-setting.php:306
+msgid "Section Title h5 Font Size"
+msgstr ""
+
+#: lib/admin/options/font-setting.php:324
+msgid "Section Title h6 Font Size"
+msgstr ""
+
+#: lib/admin/options/font-setting.php:342
+msgid "Small Text Font Size"
+msgstr ""
+
+#: lib/admin/options/font-setting.php:361
+msgid "Medium Text Font Size"
+msgstr ""
+
+#: lib/admin/options/font-setting.php:380
+msgid "Large Text Font Size"
+msgstr ""
+
+#: lib/admin/options/font-setting.php:399
+msgid "Extra Large Text Font Size"
+msgstr ""
+
+#: lib/admin/options/font-setting.php:418
+msgid "Small Title Text Font Size"
+msgstr ""
+
+#: lib/admin/options/font-setting.php:437
+msgid "Medium Title Text Font Size"
+msgstr ""
+
+#: lib/admin/options/font-setting.php:456
+msgid "Large Title Text Font Size"
+msgstr ""
+
+#: lib/admin/options/font-setting.php:475
+msgid "Extra Large Title Text Font Size"
+msgstr ""
+
+#: lib/admin/options/font-setting.php:494
+msgid "Page Title Font Size"
+msgstr ""
+
+#: lib/admin/options/font-setting.php:512
+msgid "Page Subtitle Font Size"
+msgstr ""
+
+#: lib/admin/options/font-setting.php:530
+msgid "Page Breadcrumb Font Size"
+msgstr ""
+
+#: lib/admin/options/font-setting.php:548
+msgid "Page Breadcrumb Pipe Font Size"
+msgstr ""
+
+#: lib/admin/options/font-setting.php:566
+msgid "Page Title Shop Font Size"
+msgstr ""
+
+#: lib/admin/options/font-setting.php:584
+msgid "Page Title Small Font Size"
+msgstr ""
+
+#: lib/admin/options/font-setting.php:602
+msgid "Standard Post Title Font Size"
+msgstr ""
+
+#: lib/admin/options/font-setting.php:621
+msgid "Standard Post Meta Font Size"
+msgstr ""
+
+#: lib/admin/options/font-setting.php:640
+msgid "Full Width Header Post Title Font Size"
+msgstr ""
+
+#: lib/admin/options/font-setting.php:659
+msgid "Full Width Header Post Meta Font Size"
+msgstr ""
+
+#: lib/admin/options/font-setting.php:678
+msgid "Full Width With Image Slider Post Title Font Size"
+msgstr ""
+
+#: lib/admin/options/font-setting.php:697
+msgid "Full Width With Image Slider Post Meta Font Size"
+msgstr ""
+
+#: lib/admin/options/font-setting.php:716
+msgid "Footer Font Size"
+msgstr ""
+
+#: lib/admin/options/woocommerce.php:11
+msgid "WooCommerce"
+msgstr ""
+
+#: lib/admin/options/woocommerce.php:16
+msgid "Product Page"
+msgstr ""
+
+#: lib/admin/options/woocommerce.php:17
+msgid "Set product page layout with breadcrumb and navigation options"
+msgstr ""
+
+#: lib/admin/options/woocommerce.php:23 lib/admin/options/woocommerce.php:157
+msgid "Page Layout"
+msgstr ""
+
+#: lib/admin/options/woocommerce.php:69
+msgid "Enable Default WC Image Gallery"
+msgstr ""
+
+#: lib/admin/options/woocommerce.php:75
+msgid "Enable Category"
+msgstr ""
+
+#: lib/admin/options/woocommerce.php:77
+msgid "If on, category will display on product page"
+msgstr ""
+
+#: lib/admin/options/woocommerce.php:82
+msgid "Enable Tags"
+msgstr ""
+
+#: lib/admin/options/woocommerce.php:84
+msgid "If on, tags will display on product page"
+msgstr ""
+
+#: lib/admin/options/woocommerce.php:91
+msgid "If on, breadcrumb will display on product page"
+msgstr ""
+
+#: lib/admin/options/woocommerce.php:96
+msgid "Enable Next/Previous Product Button"
+msgstr ""
+
+#: lib/admin/options/woocommerce.php:102
+msgid "Enable Product Stock Status Message"
+msgstr ""
+
+#: lib/admin/options/woocommerce.php:108
+msgid "Enable Product Shipping Available Message"
+msgstr ""
+
+#: lib/admin/options/woocommerce.php:114
+msgid "Shipping Available Text"
+msgstr ""
+
+#: lib/admin/options/woocommerce.php:121
+msgid "Read More In Short Description"
+msgstr ""
+
+#: lib/admin/options/woocommerce.php:127
+msgid "Read More Button Text"
+msgstr ""
+
+#: lib/admin/options/woocommerce.php:139
+msgid "Shop / Category / Brand / Product Listing Page"
+msgstr ""
+
+#: lib/admin/options/woocommerce.php:140
+msgid "Set product listing type, page layout and configurations"
+msgstr ""
+
+#: lib/admin/options/woocommerce.php:146
+msgid "Listing Type"
+msgstr ""
+
+#: lib/admin/options/woocommerce.php:147
+msgid "Select default listing type"
+msgstr ""
+
+#: lib/admin/options/woocommerce.php:149
+msgid "Grid View"
+msgstr ""
+
+#: lib/admin/options/woocommerce.php:150
+msgid "List View"
+msgstr ""
+
+#: lib/admin/options/woocommerce.php:209
+msgid "No. of columns per row"
+msgstr ""
+
+#: lib/admin/options/woocommerce.php:211 lib/admin/options/woocommerce.php:255
+#: lib/admin/options/woocommerce.php:269 lib/admin/options/woocommerce.php:283
+#: lib/admin/options/woocommerce.php:295
+msgid "1"
+msgstr ""
+
+#: lib/admin/options/woocommerce.php:212 lib/admin/options/woocommerce.php:256
+#: lib/admin/options/woocommerce.php:270 lib/admin/options/woocommerce.php:284
+#: lib/admin/options/woocommerce.php:296
+msgid "2"
+msgstr ""
+
+#: lib/admin/options/woocommerce.php:213 lib/admin/options/woocommerce.php:257
+#: lib/admin/options/woocommerce.php:271 lib/admin/options/woocommerce.php:285
+msgid "3"
+msgstr ""
+
+#: lib/admin/options/woocommerce.php:214 lib/admin/options/woocommerce.php:258
+#: lib/admin/options/woocommerce.php:272
+msgid "4"
+msgstr ""
+
+#: lib/admin/options/woocommerce.php:215 lib/admin/options/woocommerce.php:259
+#: lib/admin/options/woocommerce.php:273
+msgid "6"
+msgstr ""
+
+#: lib/admin/options/woocommerce.php:223
+msgid "No. of items per page"
+msgstr ""
+
+#: lib/admin/options/woocommerce.php:235
+msgid "Related Products"
+msgstr ""
+
+#: lib/admin/options/woocommerce.php:236
+msgid "Set related products display style and settings"
+msgstr ""
+
+#: lib/admin/options/woocommerce.php:242
+msgid "Related Product Display Style"
+msgstr ""
+
+#: lib/admin/options/woocommerce.php:246
+msgid "Remove Related product Block"
+msgstr ""
+
+#: lib/admin/options/woocommerce.php:252
+msgid "No. of items per row"
+msgstr ""
+
+#: lib/admin/options/woocommerce.php:266
+msgid "No. of items per slide ( Desktop View )"
+msgstr ""
+
+#: lib/admin/options/woocommerce.php:281
+msgid "No. of items per slide ( iPad/Tablet View )"
+msgstr ""
+
+#: lib/admin/options/woocommerce.php:293
+msgid "No. of items per slide ( Mobile View )"
+msgstr ""
+
+#: lib/admin/options/woocommerce.php:304
+msgid "Display number of maximum products in slider / Grid"
+msgstr ""
+
+#: lib/admin/options/woocommerce.php:316
+msgid "Product Attributes"
+msgstr ""
+
+#: lib/admin/options/woocommerce.php:317
+msgid "Set color/size attribute and enable/disable it"
+msgstr ""
+
+#: lib/admin/options/woocommerce.php:323
+msgid "Enable Color Attribute"
+msgstr ""
+
+#: lib/admin/options/woocommerce.php:330
+msgid "Select Color Attribute"
+msgstr ""
+
+#: lib/admin/options/woocommerce.php:336
+msgid "Enable Size Attribute"
+msgstr ""
+
+#: lib/admin/options/woocommerce.php:343
+msgid "Select Size Attribute"
+msgstr ""
+
+#: lib/admin/options/woocommerce.php:358
+msgid ""
+"Header settings only for Single Product, Product Category, Product Tag, "
+"Product Brand Pages"
+msgstr ""
+
+#: lib/admin/options/woocommerce.php:457
+msgid "Logo Settings"
+msgstr ""
+
+#: lib/admin/options/social.php:12
+msgid ""
+"Select on to show that specific social sharing icon on blog posts and "
+"product pages."
+msgstr ""
+
+#: lib/admin/options/social.php:17
+msgid "Social Sharing Links For WooCommerce"
+msgstr ""
+
+#: lib/admin/options/social.php:18
+msgid "Set Social Sharing Links For WooCommerce"
+msgstr ""
+
+#: lib/admin/options/social.php:24 lib/admin/options/social.php:129
+msgid "Enable Social Sharing"
+msgstr ""
+
+#: lib/admin/options/header.php:11
+msgid "Header"
+msgstr ""
+
+#: lib/admin/options/header.php:12
+msgid "Header section configuration settings"
+msgstr ""
+
+#: lib/admin/options/header.php:150
+msgid "Modules Settings"
+msgstr ""
+
+#: lib/admin/options/general.php:14
+msgid "Portfolio Rewrite / URL Settings"
+msgstr ""
+
+#: lib/admin/options/general.php:15
+msgid ""
+"Set portfolio, categories and tags url slug. After updating slug in this "
+"setting please go to Settings > Permalinks and click Save Changes button to "
+"have this new url slug change affected in your overall website."
+msgstr ""
+
+#: lib/admin/options/general.php:21
+msgid "Portfolio URL Slug"
+msgstr ""
+
+#: lib/admin/options/general.php:26
+msgid "Categories URL Slug"
+msgstr ""
+
+#: lib/admin/options/general.php:31
+msgid "Tags URL Slug"
+msgstr ""
+
+#: lib/admin/options/general.php:43
+msgid "General"
+msgstr ""
+
+#: lib/admin/options/general.php:48
+msgid "Enable Under Construction"
+msgstr ""
+
+#: lib/admin/options/general.php:50
+msgid ""
+"Select on to put the site under construction. Only administrator will be "
+"able to see frontend site. Please logout to check under construction mode is "
+"enabled or not."
+msgstr ""
+
+#: lib/admin/options/general.php:55
+msgid "Custom Sidebars"
+msgstr ""
+
+#: lib/admin/options/general.php:56
+msgid "Custom sidebars can be assigned to any post or pages "
+msgstr ""
+
+#: lib/admin/options/general.php:57
+msgid "You can add multiple custom sidebars"
+msgstr ""
+
+#: lib/admin/options/general.php:62
+msgid "CSS Code"
+msgstr ""
+
+#: lib/admin/options/general.php:63
+msgid "Add your custom CSS code here"
+msgstr ""
+
+#: lib/admin/options/general.php:71
+msgid ""
+"Any Tracking Code / Space Before Head End Tag / Space Before Body End Tag"
+msgstr ""
+
+#: lib/admin/options/general.php:76
+msgid "Any Tracking Code"
+msgstr ""
+
+#: lib/admin/options/general.php:77
+msgid ""
+"Paste your google analytics (GA) or other tracking code here. This will be "
+"added into the &lt;/head&gt; tag. Please put code with script tags."
+msgstr ""
+
+#: lib/admin/options/general.php:82
+msgid "Space Before &lt;/head&gt;"
+msgstr ""
+
+#: lib/admin/options/general.php:83
+msgid "Code that you want to add before the &lt;/head&gt; tag"
+msgstr ""
+
+#: lib/admin/options/general.php:88
+msgid "Space Before &lt;/body&gt;"
+msgstr ""
+
+#: lib/admin/options/general.php:89
+msgid "Code that you want to add before the &lt;/body&gt; tag"
+msgstr ""
+
+#: lib/admin/options/general.php:94
+msgid "Favicon Settings"
+msgstr ""
+
+#: lib/admin/options/general.php:95
+msgid ""
+"Set favicon for general desktop, Apple iPhone, Apple iPhone Retina, Apple "
+"iPad, Apple iPad Retina "
+msgstr ""
+
+#: lib/admin/options/general.php:103
+msgid "Favicon"
+msgstr ""
+
+#: lib/admin/options/general.php:104
+msgid "Favicon for your website (32px x 32px)"
+msgstr ""
+
+#: lib/admin/options/general.php:111
+msgid "Apple iPhone Icon"
+msgstr ""
+
+#: lib/admin/options/general.php:112
+msgid "Favicon for apple iPhone (57px x 57px)"
+msgstr ""
+
+#: lib/admin/options/general.php:119
+msgid "Apple iPhone Retina Icon"
+msgstr ""
+
+#: lib/admin/options/general.php:120
+msgid "Favicon for apple iPhone retina version (149px x 149px)"
+msgstr ""
+
+#: lib/admin/options/general.php:127
+msgid "Apple iPad Icon"
+msgstr ""
+
+#: lib/admin/options/general.php:128
+msgid "Favicon for apple iPad (72px x 72px)"
+msgstr ""
+
+#: lib/admin/options/general.php:135
+msgid "Apple iPad Retina Icon"
+msgstr ""
+
+#: lib/admin/options/general.php:136
+msgid "Favicon for apple iPad retina version (149px x 149px)"
+msgstr ""
+
+#: lib/admin/options/general.php:146
+msgid "Image Meta Data Settings"
+msgstr ""
+
+#: lib/admin/options/general.php:147
+msgid "Set visibility for image alt, title and caption "
+msgstr ""
+
+#: lib/admin/options/general.php:153
+msgid "Render Image Alt"
+msgstr ""
+
+#: lib/admin/options/general.php:159
+msgid "Render Image Title"
+msgstr ""
+
+#: lib/admin/options/general.php:165
+msgid "Show Image Title in Lightbox Popup"
+msgstr ""
+
+#: lib/admin/options/general.php:171
+msgid "Show Image Caption in Lightbox Popup"
+msgstr ""
+
+#: lib/admin/options/general.php:182
+msgid "Search Block Settings"
+msgstr ""
+
+#: lib/admin/options/general.php:183
+msgid "Set search placeholder text."
+msgstr ""
+
+#: lib/admin/options/general.php:189
+msgid "Placeholder Text"
+msgstr ""
+
+#: lib/admin/options/general.php:200
+msgid "Post Default Image Settings"
+msgstr ""
+
+#: lib/admin/options/general.php:201
+msgid ""
+"Upload your default image which will be displayed in portfolio and blog post "
+"grid / list if there is no featured image assigned to post."
+msgstr ""
+
+#: lib/admin/options/general.php:219
+msgid "Popup Cursor Settings"
+msgstr ""
+
+#: lib/admin/options/general.php:220
+msgid ""
+"Enable / Disable + / - cursor or upload your custom cursor image (32px X "
+"32px size)"
+msgstr ""
+
+#: lib/admin/options/general.php:226
+msgid "Show Cursor"
+msgstr ""
+
+#: lib/admin/options/general.php:234
+msgid "Cursor Image for Open Popup"
+msgstr ""
+
+#: lib/admin/options/general.php:242
+msgid "Cursor Image for Close Popup"
+msgstr ""
+
+#: lib/admin/options/general.php:248
+msgid "Close Popup on Click"
+msgstr ""
+
+#: lib/admin/ReduxCore/framework.php:220
+#, php-format
+msgid "Options panel for %1$s"
+msgstr ""
+
+#: lib/admin/ReduxCore/framework.php:220
+msgid "H-Code"
+msgstr ""
+
+#: lib/admin/ReduxCore/framework.php:224 lib/admin/ReduxCore/framework.php:228
+msgid "Options"
+msgstr ""
+
+#: lib/admin/ReduxCore/framework.php:1743
+msgid "Enable"
+msgstr ""
+
+#: lib/admin/ReduxCore/framework.php:1748
+msgid "Disable"
+msgstr ""
+
+#: lib/admin/ReduxCore/framework.php:1754
+msgid "moving the mouse over"
+msgstr ""
+
+#: lib/admin/ReduxCore/framework.php:1756
+msgid "clicking"
+msgstr ""
+
+#: lib/admin/ReduxCore/framework.php:1760
+#, php-format
+msgid ""
+"Hints are tooltips that popup when %d the hint icon, offering addition "
+"information about the field in which they appear.  They can be %d d by using "
+"the link below."
+msgstr ""
+
+#: lib/admin/ReduxCore/framework.php:1765
+msgid "Hints"
+msgstr ""
+
+#: lib/admin/ReduxCore/framework.php:2770
+msgid "Invalid security credential.  Please reload the page and try again."
+msgstr ""
+
+#: lib/admin/ReduxCore/framework.php:2779
+msgid "Invalid user capability.  Please reload the page and try again."
+msgstr ""
+
+#: lib/admin/ReduxCore/framework.php:2854
+msgid "Your panel has no fields. Nothing to save."
+msgstr ""
+
+#: lib/admin/ReduxCore/framework.php:3969
+msgid ""
+"<strong>Redux Framework Notice: </strong>There are references to the Redux "
+"Framework support site in your config's <code>admin_bar_links</code> "
+"argument.  This is sample data.  Please change or remove this data before "
+"shipping your product."
+msgstr ""
+
+#: lib/admin/ReduxCore/framework.php:3984
+msgid ""
+"<strong>Redux Framework Notice: </strong>There are references to the Redux "
+"Framework support site in your config's <code>share_icons</code> argument.  "
+"This is sample data.  Please change or remove this data before shipping your "
+"product."
+msgstr ""
+
+#: lib/admin/ReduxCore/core/enqueue.php:452
+msgid "You have changes that are not saved. Would you like to save them now?"
+msgstr ""
+
+#: lib/admin/ReduxCore/core/enqueue.php:460
+msgid "Are you sure? Resetting will lose all custom values."
+msgstr ""
+
+#: lib/admin/ReduxCore/core/enqueue.php:468
+msgid "Are you sure? Resetting will lose all custom values in this section."
+msgstr ""
+
+#: lib/admin/ReduxCore/core/enqueue.php:476
+msgid ""
+"Your current options will be replaced with the values of this preset. Would "
+"you like to proceed?"
+msgstr ""
+
+#: lib/admin/ReduxCore/core/enqueue.php:483
+msgid "Please Wait"
+msgstr ""
+
+#: lib/admin/ReduxCore/core/enqueue.php:494
+msgid "There was an error saving. Here is the result of your action:"
+msgstr ""
+
+#: lib/admin/ReduxCore/core/enqueue.php:495
+msgid ""
+"There was a problem with your action. Please try again or reload the page."
+msgstr ""
+
+#: lib/admin/ReduxCore/core/panel.php:65
+msgid "Warning- This options panel will not work properly without javascript!"
+msgstr ""
+
+#: lib/admin/ReduxCore/core/panel.php:140
+msgid "Settings Imported!"
+msgstr ""
+
+#: lib/admin/ReduxCore/core/panel.php:155
+msgid "All Defaults Restored!"
+msgstr ""
+
+#: lib/admin/ReduxCore/core/panel.php:169
+msgid "Section Defaults Restored!"
+msgstr ""
+
+#: lib/admin/ReduxCore/core/panel.php:183
+msgid "Settings Saved!"
+msgstr ""
+
+#: lib/admin/ReduxCore/core/panel.php:203
+msgid "Settings have changed, you should save them!"
+msgstr ""
+
+#: lib/admin/ReduxCore/core/panel.php:211
+msgid "error(s) were found!"
+msgstr ""
+
+#: lib/admin/ReduxCore/core/panel.php:219
+msgid "warning(s) were found!"
+msgstr ""
+
+#: lib/admin/ReduxCore/core/panel.php:311
+msgid ""
+"<strong>Your panel has bundled outdated copies of Redux Framework template "
+"files</strong> &#8211; if you encounter functionality issues this could be "
+"the reason. Ensure you update or remove them."
+msgstr ""
+
+#: lib/admin/ReduxCore/templates/panel/footer.tpl.php:57
+#: lib/admin/ReduxCore/templates/panel/header_stickybar.tpl.php:21
+msgid "Save Changes"
+msgstr ""
+
+#: lib/admin/ReduxCore/templates/panel/footer.tpl.php:61
+#: lib/admin/ReduxCore/templates/panel/header_stickybar.tpl.php:25
+msgid "Reset Section"
+msgstr ""
+
+#: lib/admin/ReduxCore/templates/panel/footer.tpl.php:62
+#: lib/admin/ReduxCore/templates/panel/header_stickybar.tpl.php:26
+msgid "Reset All"
+msgstr ""
+
+#: lib/admin/ReduxCore/templates/panel/footer.tpl.php:67
+#: lib/admin/ReduxCore/templates/panel/header_stickybar.tpl.php:29
+msgid "Working..."
+msgstr ""
+
+#: lib/admin/ReduxCore/templates/panel/header.tpl.php:11
+msgid "Developer Mode Enabled"
+msgstr ""
+
+#: lib/admin/ReduxCore/templates/panel/header.tpl.php:20
+msgid "WP_DEBUG is enabled"
+msgstr ""
+
+#: lib/admin/ReduxCore/templates/panel/header.tpl.php:26
+msgid "you are working in a localhost environment"
+msgstr ""
+
+#: lib/admin/ReduxCore/templates/panel/header.tpl.php:31
+msgid "and"
+msgstr ""
+
+#: lib/admin/ReduxCore/templates/panel/header.tpl.php:34
+msgid "This has been automatically enabled because"
+msgstr ""
+
+#: lib/admin/ReduxCore/templates/panel/header.tpl.php:36
+msgid ""
+"If you are not a developer, your theme/plugin author shipped with developer "
+"mode enabled. Contact them directly to fix it."
+msgstr ""
+
+#: lib/admin/ReduxCore/templates/panel/header.tpl.php:56
+msgid "Online Documentation"
+msgstr ""
+
+#: lib/admin/ReduxCore/templates/panel/header.tpl.php:57
+msgid "Support Center"
+msgstr ""
+
+#: lib/admin/ReduxCore/templates/panel/header_stickybar.tpl.php:14
+msgid " expanded"
+msgstr ""
+
+#: lib/admin/ReduxCore/templates/panel/header_stickybar.tpl.php:15
+msgid "Expand"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/class.redux_filesystem.php:31
+#: lib/admin/ReduxCore/inc/class.redux_filesystem.php:60
+#: lib/admin/ReduxCore/inc/class.redux_filesystem.php:271
+msgid "File Permission Issues"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/class.redux_filesystem.php:31
+#, php-format
+msgid ""
+"We were unable to modify required files. Please check your permissions, or "
+"modify your wp-config.php file to contain your FTP login credentials as <a "
+"href=\"%s\" target=\"_blank\">outlined here</a>."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/class.redux_filesystem.php:60
+#: lib/admin/ReduxCore/inc/class.redux_filesystem.php:271
+#, php-format
+msgid ""
+"We were unable to modify required files. Please ensure that <code>%1s</code> "
+"has the proper read-write permissions, or modify your wp-config.php file to "
+"contain your FTP login credentials as <a href=\"%2s\" target=\"_blank\">"
+"outlined here</a>."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/class.redux_admin_notices.php:97
+msgid "Dismiss"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/class.redux_cdn.php:74
+msgid ""
+"Please wait a few minutes, then try refreshing the page. Unable to load some "
+"remotely hosted scripts."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/class.redux_cdn.php:76
+#, php-format
+msgid ""
+"If you are developing offline, please download and install the <a "
+"href=\"%s\" target=\"_blank\">Redux Vendor Support</a> plugin/extension to "
+"bypass the our CDN and avoid this warning"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/class.redux_cdn.php:81
+msgid "Redux Framework Warning"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/class.redux_cdn.php:81
+#, php-format
+msgid "%s CDN unavailable.  Some controls may not render properly."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/class.redux_cdn.php:113
+#, php-format
+msgid ""
+"The <a href=\"%s\">Vendor Support plugin</a> (or extension) is either not "
+"installed or not activated and thus, some controls may not render properly.  "
+"Please ensure that it is installed and <a href=\"%s\">activated</a>"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/tracking.php:129
+msgid "Help improve Our Panel"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/tracking.php:130
+msgid ""
+"Please helps us improve our panel by allowing us to gather anonymous usage "
+"stats so we know which configurations, plugins and themes to test to ensure "
+"compatibility."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/tracking.php:135
+msgid "Allow tracking"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/tracking.php:140
+msgid "Do not allow tracking"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/tracking.php:151
+msgid "Welcome to the Redux Demo Panel"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/tracking.php:152
+msgid "Getting Started"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/tracking.php:152
+#, php-format
+msgid ""
+"This panel demonstrates the many features of Redux.  Before digging in, we "
+"suggest you get up to speed by reviewing %1$s."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/tracking.php:152
+msgid "our documentation"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/tracking.php:153
+msgid "Redux Generator"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/tracking.php:153
+#, php-format
+msgid ""
+"Want to get a head start? Use the %1$s. It will create a customized "
+"boilerplate theme or a standalone admin folder complete with all things "
+"Redux (with the help of Underscores and TGM). Save yourself a headache and "
+"try it today."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/tracking.php:154
+msgid "Redux Extensions"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/tracking.php:154
+#, php-format
+msgid ""
+"Did you know we have extensions, which greatly enhance the features of Redux?"
+"  Visit our %1$s to learn more!"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/tracking.php:154
+msgid "extensions directory"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/tracking.php:155
+msgid "Like Redux?"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/tracking.php:155
+#, php-format
+msgid ""
+"If so, please %1$s and consider making a %2$s to keep development of Redux "
+"moving forward."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/tracking.php:155
+msgid "leave us a favorable review on WordPress.org"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/tracking.php:155
+msgid "donation"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/tracking.php:156
+msgid "Newsletter"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/tracking.php:156
+msgid ""
+"If you'd like to keep up to with all things Redux, please subscribe to our "
+"newsletter"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/tracking.php:157
+msgid "Subscribe"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/tracking.php:166
+msgid "Close"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/class.redux_helpers.php:610
+#, php-format
+msgid ""
+"<code>%s</code> version <strong style=\"color:red\">%s</strong> is out of "
+"date. The core version is %s"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/extensions/customizer/extension_customizer.php:720
+msgid "You have changes that are not saved.  Would you like to save them now?"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/extensions/customizer/extension_customizer.php:721
+msgid "Are you sure?  Resetting will lose all custom values."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/extensions/customizer/extension_customizer.php:722
+msgid ""
+"Your current options will be replaced with the values of this preset.  Would "
+"you like to proceed?"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/extensions/customizer/inc/customizer_section.php:72
+msgid "Press return or enter to open"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/extensions/customizer/inc/customizer_section.php:79
+#: lib/admin/ReduxCore/inc/extensions/customizer/inc/customizer_panel.php:138
+msgid "Back"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/extensions/customizer/inc/customizer_section.php:122
+msgid "Press return or enter to expand"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/extensions/customizer/inc/customizer_panel.php:89
+msgid "Press return or enter to open this panel"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/extensions/customizer/inc/customizer_panel.php:114
+#: lib/admin/ReduxCore/inc/extensions/customizer/inc/customizer_panel.php:142
+#, php-format
+msgid "You are customizing %s"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/extensions/customizer/inc/customizer_panel.php:146
+msgid "Help"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/extensions/options_object/extension_options_object.php:82
+#: lib/admin/ReduxCore/inc/extensions/options_object/options_object/field_options_object.php:104
+msgid "Options Object"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/extensions/options_object/options_object/field_options_object.php:107
+msgid "Show Object in Javascript Console Object"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/extensions/import_export/import_export/field_import_export.php:91
+msgid "Import Options"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/extensions/import_export/import_export/field_import_export.php:95
+msgid "Import from File"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/extensions/import_export/import_export/field_import_export.php:98
+msgid "Import from URL"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/extensions/import_export/import_export/field_import_export.php:104
+msgid ""
+"Input your backup file below and hit Import to restore your sites options "
+"from a backup."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/extensions/import_export/import_export/field_import_export.php:111
+msgid ""
+"Input the URL to another sites options set and hit Import to load the "
+"options from that site."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/extensions/import_export/import_export/field_import_export.php:116
+msgid "Import"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/extensions/import_export/import_export/field_import_export.php:116
+msgid ""
+"WARNING! This will overwrite all existing option values, please proceed with "
+"caution!"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/extensions/import_export/import_export/field_import_export.php:120
+msgid "Export Options"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/extensions/import_export/import_export/field_import_export.php:124
+msgid ""
+"Here you can copy/download your current option settings. Keep this safe as "
+"you can use it as a backup should anything go wrong, or you can use it to "
+"restore your settings on this site (or any other site)."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/extensions/import_export/import_export/field_import_export.php:132
+msgid "Copy Data"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/extensions/import_export/import_export/field_import_export.php:133
+msgid "Download Data File"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/extensions/import_export/import_export/field_import_export.php:134
+msgid "Copy Export URL"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/themecheck/checks/full_package.php:16
+msgid "Redux localization utilities"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/themecheck/checks/full_package.php:17
+msgid "Redux Resting Diles"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/themecheck/checks/full_package.php:18
+msgid "Redux Code Styles"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/themecheck/checks/full_package.php:19
+msgid "Redux Unit Testing"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/themecheck/checks/full_package.php:20
+msgid "Redux Plugin File"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/themecheck/checks/full_package.php:21
+msgid "Redux Boostrap Tests"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/themecheck/checks/full_package.php:22
+msgid "CI Testing FIle"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/themecheck/checks/full_package.php:23
+msgid "PHP Unit Testing"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/themecheck/checks/full_package.php:36
+msgid ""
+"It appears that you have embedded the full Redux package inside your theme. "
+"You need only embed the <strong>ReduxCore</strong> folder. Embedding "
+"anything else will get your rejected from theme submission. Suspected Redux "
+"package file(s):"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/themecheck/checks/embedded.php:15
+#, php-format
+msgid ""
+"<span class=\"tc-lead tc-recommended\">RECOMMENDED</span>: If you are "
+"submitting to WordPress.org Theme Repository, it is <strong>strongly</strong>"
+" suggested that you read <a href=\"%s\" target=\"_blank\">this document</a>, "
+"or your theme will be rejected because of Redux."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/themecheck/checks/embedded.php:24
+#, php-format
+msgid ""
+"<span class=\"tc-lead tc-required\">REQUIRED</span>: You MUST delete <strong>"
+" %s </strong>, or your theme will be rejected by WP.org theme submission "
+"because of Redux."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/themecheck/checks/embedded.php:38
+msgid "Optional"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/themecheck/checks/embedded.php:40
+msgid ""
+"<span class=\"tc-lead tc-recommended\">RECOMMENDED</span>: The following "
+"arguments MUST be used for WP.org submissions, or you will be rejected "
+"because of your Redux configuration."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/fields/sorter/field_sorter.php:153
+msgid "_"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/fields/sorter/field_sorter.php:168
+msgid "["
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/fields/color/field_color.php:73
+msgid "Transparent"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/fields/border/field_border.php:125
+msgid "All"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/fields/border/field_border.php:152
+msgid "Bottom"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/fields/border/field_border.php:174
+msgid "Border style"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/fields/multi_text/field_multi_text.php:61
+msgid "Add More"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/fields/dimensions/field_dimensions.php:162
+msgid "Width"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/fields/dimensions/field_dimensions.php:178
+msgid "Height"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/fields/dimensions/field_dimensions.php:189
+#: lib/admin/ReduxCore/inc/fields/dimensions/field_dimensions.php:190
+msgid "Units"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/fields/switch/field_switch.php:41
+msgid "On"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/fields/switch/field_switch.php:44
+msgid "Off"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/fields/media/field_media.php:149
+msgid "No media selected"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/fields/media/field_media.php:198
+msgid "Upload"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/fields/link_color/field_link_color.php:88
+msgid "Regular"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/fields/link_color/field_link_color.php:92
+msgid "Hover"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/fields/link_color/field_link_color.php:96
+msgid "Visited"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/fields/gallery/field_gallery.php:73
+msgid "Add/Edit Gallery"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/fields/gallery/field_gallery.php:74
+msgid "Clear Gallery"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/fields/color_gradient/field_color_gradient.php:68
+msgid "From "
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/fields/color_gradient/field_color_gradient.php:82
+msgid "To "
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/fields/select/field_select.php:83
+#: lib/admin/ReduxCore/inc/fields/select_image/field_select_image.php:63
+msgid "Select an item"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/fields/select/field_select.php:134
+#: lib/admin/ReduxCore/inc/fields/select_image/field_select_image.php:144
+msgid "No items of this type were found."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/fields/background/field_background.php:141
+msgid "Background Repeat"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/fields/background/field_background.php:157
+msgid "Background Clip"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/fields/background/field_background.php:173
+msgid "Background Origin"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/fields/background/field_background.php:188
+msgid "Background Size"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/fields/background/field_background.php:203
+msgid "Background Attachment"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/fields/background/field_background.php:223
+msgid "Background Position"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/fields/slides/field_slides.php:68
+msgid "Slide"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/fields/slides/field_slides.php:73
+#: lib/admin/ReduxCore/inc/fields/slides/field_slides.php:174
+#, php-format
+msgid "New %s"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/fields/slides/field_slides.php:167
+#: lib/admin/ReduxCore/inc/fields/slides/field_slides.php:220
+msgid "Delete"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/fields/slides/field_slides.php:223
+#, php-format
+msgid "Add %s"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/fields/typography/field_typography.php:232
+msgid "Font family"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/fields/typography/field_typography.php:258
+#: lib/admin/ReduxCore/inc/fields/typography/field_typography.php:259
+msgid "Backup Font Family"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/fields/typography/field_typography.php:273
+#: lib/admin/ReduxCore/inc/fields/typography/field_typography.php:281
+msgid "Font style"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/fields/typography/field_typography.php:274
+msgid "Font Weight &amp; Style"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/fields/typography/field_typography.php:281
+msgid "Style"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/fields/typography/field_typography.php:321
+msgid "Font subsets"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/fields/typography/field_typography.php:323
+msgid "Font Subsets"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/fields/typography/field_typography.php:325
+msgid "Subsets"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/fields/typography/field_typography.php:325
+msgid "Font script"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/fields/typography/field_typography.php:342
+#: lib/admin/ReduxCore/inc/fields/typography/field_typography.php:343
+#: lib/admin/ReduxCore/inc/fields/typography/field_typography.php:344
+msgid "Text Align"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/fields/typography/field_typography.php:365
+#: lib/admin/ReduxCore/inc/fields/typography/field_typography.php:366
+#: lib/admin/ReduxCore/inc/fields/typography/field_typography.php:367
+msgid "Text Transform"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/fields/typography/field_typography.php:388
+#: lib/admin/ReduxCore/inc/fields/typography/field_typography.php:389
+#: lib/admin/ReduxCore/inc/fields/typography/field_typography.php:390
+msgid "Font Variant"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/fields/typography/field_typography.php:408
+#: lib/admin/ReduxCore/inc/fields/typography/field_typography.php:409
+#: lib/admin/ReduxCore/inc/fields/typography/field_typography.php:410
+msgid "Text Decoration"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/fields/typography/field_typography.php:433
+msgid "Size"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/fields/typography/field_typography.php:441
+#: lib/admin/ReduxCore/inc/fields/typography/field_typography.php:442
+msgid "Line Height"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/fields/typography/field_typography.php:450
+#: lib/admin/ReduxCore/inc/fields/typography/field_typography.php:451
+msgid "Word Spacing"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/fields/typography/field_typography.php:459
+#: lib/admin/ReduxCore/inc/fields/typography/field_typography.php:460
+msgid "Letter Spacing"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/fields/typography/field_typography.php:478
+msgid "Font Color"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/fields/typography/field_typography.php:480
+msgid "Font color"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/fields/typography/field_typography.php:890
+msgid "Standard Fonts"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/fields/typography/field_typography.php:991
+msgid "Google Webfonts"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/validation/not_empty/validation_not_empty.php:16
+msgid "This field cannot be empty. Please provide a value."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/validation/color/validation_color.php:15
+#: lib/admin/ReduxCore/inc/validation/color_rgba/validation_color_rgba.php:14
+#: lib/admin/ReduxCore/inc/validation/colorrgba/validation_colorrgba.php:16
+msgid "This field must be a valid color value."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/validation/no_html/validation_no_html.php:15
+msgid ""
+"You must not enter any HTML in this field, all HTML tags have been removed."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/validation/unique_slug/validation_unique_slug.php:16
+#, php-format
+msgid ""
+"That URL slug is in use, please choose another. <code>%s</code> is open for "
+"use."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/validation/email/validation_email.php:16
+msgid "You must provide a valid email for this option."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/validation/no_special_chars/validation_no_special_chars.php:16
+msgid ""
+"You must not enter any special characters in this field, all special "
+"characters have been removed."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/validation/url/validation_url.php:16
+msgid "You must provide a valid URL for this option."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/validation/numeric_not_empty/validation_numeric_not_empty.php:16
+#: lib/admin/ReduxCore/inc/validation/numeric/validation_numeric.php:16
+msgid "You must provide a numerical value for this option."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/validation/comma_numeric/validation_comma_numeric.php:16
+msgid ""
+"You must provide a comma separated list of numerical values for this option."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/validation/date/validation_date.php:16
+msgid "This field must be a valid date."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/validation/css/validation_css.php:39
+msgid "Unsafe strings were found in your CSS and have been filtered out."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/welcome.php:106
+msgid ""
+"If you like <strong>Redux</strong> please leave us a <a href=\"https:"
+"//wordpress.org/support/view/plugin-reviews/redux-framework?"
+"filter=5#postform\" target=\"_blank\" class=\"redux-rating-link\" data-"
+"rated=\"Thanks :)\">&#9733;&#9733;&#9733;&#9733;&#9733;</a> rating. A huge "
+"thank you from Redux in advance!"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/welcome.php:183
+msgid "Support hash could not be generated. Please try again later."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/welcome.php:205
+msgid "Welcome to Redux Framework"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/welcome.php:205
+msgid "Redux Framework"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/welcome.php:213
+msgid "Redux Framework Changelog"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/welcome.php:221
+msgid "Get Support"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/welcome.php:238
+msgid "The people that develop Redux Framework"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/welcome.php:246
+msgid "Redux Framework Status"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/welcome.php:346
+msgid "What's New"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/welcome.php:349
+msgid "Extensions"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/welcome.php:352
+msgid "Changelog"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/welcome.php:355
+msgid "Credits"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/welcome.php:358
+msgid "Support"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/welcome.php:521
+#, php-format
+msgid "View %s"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:26
+msgid "Redux Framework - System Status"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:30
+#: lib/admin/ReduxCore/inc/welcome/views/changelog.php:5
+msgid ""
+"Our core mantra at Redux is backwards compatibility. With hundreds of "
+"thousands of instances worldwide, you can be assured that we will take care "
+"of you and your clients."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:43
+msgid ""
+"Please copy and paste this information in your ticket when contacting "
+"support:"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:48
+msgid "Get System Report"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:53
+msgid "Understanding the Status Report"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:62
+msgid "Copied!"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:63
+msgid "Copy for Support"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:73
+msgid "WordPress Environment"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:80
+msgid "Home URL"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:83
+msgid "The URL of your site's homepage."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:89
+msgid "Site URL"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:92
+msgid "The root URL of your site."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:100
+msgid "Redux Version"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:103
+msgid "The version of Redux Framework installed on your site."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:111
+msgid "Redux Data Directory Writable"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:114
+msgid ""
+"Redux and its extensions write data to the <code>uploads</code> directory. "
+"This directory must be writable."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:120
+#, php-format
+msgid "To allow data saving, make <code>%s</code> writable."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:126
+msgid "WP Content URL"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:129
+msgid "The location of Wordpress's content URL."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:137
+msgid "WP Version"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:140
+msgid "The version of WordPress installed on your site."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:148
+msgid "WP Multisite"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:151
+msgid "Whether or not you have WordPress Multisite enabled."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:162
+msgid "Permalink Structure"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:165
+msgid ""
+"The current permalink structure as defined in Wordpress Settings->Permalinks."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:174
+msgid "Front Page Display"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:176
+msgid "The current Reading mode of Wordpress."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:185
+msgid "Front Page"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:188
+msgid "The currently selected page which acts as the site's Front Page."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:196
+msgid "Posts Page"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:199
+msgid "The currently selected page in where blog posts are displayed."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:210
+msgid "WP Memory Limit"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:213
+msgid "The maximum amount of memory (RAM) that your site can use at one time."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:220
+#, php-format
+msgid ""
+"%s - We recommend setting memory to at least 40MB. See: <a href=\"%s\" "
+"target=\"_blank\">Increasing memory allocated to PHP</a>"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:229
+msgid "Database Table Prefix"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:232
+msgid "The prefix structure of the current Wordpress database."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:240
+msgid "WP Debug Mode"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:243
+msgid "Displays whether or not WordPress is in Debug Mode."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:255
+msgid "Language"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:258
+msgid "The current language used by WordPress. Default = English"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:270
+msgid "Browser"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:277
+msgid "Browser Info"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:280
+msgid "Information about web browser current in use."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:297
+msgid "Server Environment"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:304
+msgid "Server Info"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:307
+msgid "Information about the web server that is currently hosting your site."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:315
+msgid "Localhost Environment"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:318
+msgid "Is the server running in a localhost environment."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:332
+msgid "PHP Version"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:335
+msgid "The version of PHP installed on your hosting server."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:343
+msgid "ABSPATH"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:346
+msgid "The ABSPATH variable on the server."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:355
+msgid "PHP Memory Limit"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:356
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:361
+msgid "The largest filesize that can be contained in one post."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:360
+msgid "PHP Post Max Size"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:365
+msgid "PHP Time Limit"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:366
+msgid ""
+"The amount of time (in seconds) that your site will spend on a single "
+"operation before timing out (to avoid server lockups)"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:370
+msgid "PHP Max Input Vars"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:371
+msgid ""
+"The maximum number of variables your server can use for a single function to "
+"avoid overloads."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:375
+msgid "PHP Display Errors"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:376
+msgid "Determines if PHP will display errors within the browser."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:387
+msgid "SUHOSIN Installed"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:388
+msgid ""
+"Suhosin is an advanced protection system for PHP installations. It was "
+"designed to protect your servers on the one hand against a number of well "
+"known problems in PHP applications and on the other hand against potential "
+"unknown vulnerabilities within these applications or the PHP core itself.  "
+"If enabled on your server, Suhosin may need to be configured to increase its "
+"data submission limits."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:399
+msgid "MySQL Version"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:400
+msgid "The version of MySQL installed on your hosting server."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:404
+msgid "Max Upload Size"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:405
+msgid ""
+"The largest filesize that can be uploaded to your WordPress installation."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:410
+msgid "Default Timezone is UTC"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:412
+msgid "The default timezone for your server."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:416
+#, php-format
+msgid "Default timezone is %s - it should be UTC"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:428
+msgid "Used when communicating with remote services with PHP."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:434
+msgid ""
+"Your server does not have fsockopen or cURL enabled - cURL is used to "
+"communicate with other servers. Please contact your hosting provider."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:473
+msgid "Remote Post"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:474
+msgid "Used to send data to remote servers."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:479
+msgid ""
+"wp_remote_post() failed. Many advanced features may not function. Contact "
+"your hosting provider."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:482
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:497
+#, php-format
+msgid "Error: %s"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:489
+msgid "Remote Get"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:490
+msgid "Used to grab information from remote servers for updates updates."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:495
+msgid ""
+"wp_remote_get() failed. This is needed to get information from remote "
+"servers. Contact your hosting provider."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:531
+msgid "Active Plugins"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:546
+msgid "Visit plugin homepage"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:553
+#, php-format
+msgid "by %s"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:572
+msgid "Redux Instance: "
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:579
+msgid "The opt_name argument for this instance of Redux."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:587
+msgid "The global_variable argument for this instance of Redux."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:595
+msgid "Indicates if developer mode is enabled for this instance of Redux."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:600
+msgid "Indicates if ajax based saving is enabled for this instance of Redux."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:605
+msgid ""
+"The page slug denotes the string used for the options panel page for this "
+"instance of Redux."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:610
+msgid ""
+"The page permissions variable sets the permission level required to access "
+"the options panel for this instance of Redux."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:615
+msgid ""
+"This variable set whether or not the menu is displayed as an admin menu item "
+"for this instance of Redux."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:620
+msgid ""
+"The page parent variable sets where the options menu will be placed on the "
+"WordPress admin sidebar for this instance of Redux."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:626
+msgid "Indicates if the compiler flag is enabled for this instance of Redux."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:631
+msgid ""
+"Indicates if output flag for globally shutting off all CSS output is enabled "
+"for this instance of Redux."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:636
+msgid ""
+"The output_tag variable sets whether or not dynamic CSS will be generated "
+"for the customizer and Google fonts for this instance of Redux."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:645
+msgid ""
+"The specified template path containing custom template files for this "
+"instance of Redux."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:650
+msgid "List of template files overriding the default Redux template files."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:676
+msgid "Indicates the installed Redux extensions and their version numbers."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:705
+msgid "Theme"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:711
+msgid "The name of the current active theme."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:716
+msgid "The installed version of the current active theme."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:722
+msgid "is available"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:728
+msgid "Author URL"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:729
+msgid "The theme developers URL."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:733
+msgid "Child Theme"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:734
+msgid "Displays whether or not the current theme is a child theme."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:737
+#, php-format
+msgid ""
+"If you're modifying Redux Framework or a parent theme you didn't build "
+"personally, we recommend using a child theme. See: <a href=\"%s\" "
+"target=\"_blank\">How to create a child theme</a>"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:745
+msgid "Parent Theme Name"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:747
+msgid "The name of the parent theme."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:752
+msgid "Parent Theme Version"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:754
+msgid "The installed version of the parent theme."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:759
+msgid "Parent Theme Author URL"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/status_report.php:761
+msgid "The parent theme developers URL."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/extensions.php:73
+msgid "Redux Framework - Extensions"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/extensions.php:76
+msgid ""
+"Supercharge your Redux experience. Our extensions provide you with features "
+"that will take your products to the next level."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/extensions.php:89
+msgid ""
+"While some are built specificially for developers, extensions such as Custom "
+"Fonts are sure to make any user happy."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/credits.php:2
+msgid "Redux Framework - A Community Effort"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/credits.php:5
+msgid ""
+"We recognize we are nothing without our community. We would like to thank "
+"all of those who help Redux to be what it is. Thank you for your involvement."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/credits.php:18
+#, php-format
+msgid ""
+"Redux is created by a community of developers world wide. Want to have your "
+"name listed too? <a href=\"%d\" target=\"_blank\">Contribute to Redux</a>."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/changelog.php:2
+msgid "Redux Framework - Changelog"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/support.php:2
+msgid "Redux Framework - Support"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/support.php:4
+msgid ""
+"We are an open source project used by developers to make powerful control "
+"panels."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/support.php:19
+#: lib/admin/ReduxCore/inc/welcome/views/support.php:40
+msgid "Generate a Support URL"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/support.php:20
+msgid "Select Support Type"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/support.php:21
+#: lib/admin/ReduxCore/inc/welcome/views/support.php:87
+msgid "How to Get Support"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/support.php:27
+msgid "Submit a Support Request"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/support.php:31
+msgid "To get started, we will need to generate a support hash."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/support.php:35
+#, php-format
+msgid ""
+"This will provide to your developer all the information they may need to "
+"remedy your issue. This action WILL send information securely to a remote "
+"server. To see the type of information sent, please look at the  <a "
+"href=\"%s\">Status tab</a>."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/support.php:52
+msgid "Select Your Support Type"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/support.php:56
+msgid "What type of user are you?"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/support.php:63
+msgid "User"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/support.php:65
+msgid "I am a user, using a pre-built product."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/support.php:70
+msgid "Developer"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/support.php:72
+msgid "I am a developer, building a product using Redux."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/support.php:92
+msgid ""
+"Please proceed to the Redux Framework issue tracker and supply us with your "
+"support URL below. Please also provide any information that will help us to "
+"reproduce your issue."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/support.php:101
+msgid ""
+"Listed below are the Wordpress plugins and/or theme installed on your site "
+"that utilize Redux Framework. We do not directly support products created "
+"with our framework.  It is the responsibility of the plugin or theme "
+"developer to support their work. You will need to contact the author(s) of "
+"the products listed below with your support questions."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/support.php:105
+msgid ""
+"Please be sure to include for your developer - via cut and paste - the "
+"Support URL in the box below."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/support.php:134
+#, php-format
+msgid ""
+"Should the developer not be responsive, read the <a href=\"%s\" "
+"target=\"_blank\">following article</a> before asking for support from us "
+"directly."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/about.php:2
+#, php-format
+msgid "Welcome to Redux Framework %s"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/about.php:5
+#, php-format
+msgid ""
+"Thank you for updating to the latest version! Redux Framework %s is a huge "
+"step forward in Redux Development. Look at all that's new."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/about.php:15
+msgid "What is Redux Framework?"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/about.php:17
+msgid ""
+"Redux Framework is the core of many products on the web. It is an option "
+"framework which developers use to\n"
+"            enhance their products."
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/about.php:22
+msgid "Learn More"
+msgstr ""
+
+#: lib/admin/ReduxCore/inc/welcome/views/about.php:28
+msgid "New in this Release"
+msgstr ""
+
+#: lib/importer/wordpress-importer.php:137
+#: lib/importer/wordpress-importer.php:146
+#: lib/importer/wordpress-importer.php:197
+#: lib/importer/wordpress-importer.php:201
+#: lib/importer/wordpress-importer.php:210
+msgid "Sorry, there has been an error."
+msgstr ""
+
+#: lib/importer/wordpress-importer.php:138
+msgid "The file does not exist, please try again."
+msgstr ""
+
+#: lib/importer/wordpress-importer.php:181
+msgid "All done."
+msgstr ""
+
+#: lib/importer/wordpress-importer.php:181
+msgid "Have fun!"
+msgstr ""
+
+#: lib/importer/wordpress-importer.php:182
+msgid "Remember to update the passwords and roles of imported users."
+msgstr ""
+
+#: lib/importer/wordpress-importer.php:202
+#, php-format
+msgid ""
+"The export file could not be found at <code>%s</code>. It is likely that "
+"this was caused by a permissions problem."
+msgstr ""
+
+#: lib/importer/wordpress-importer.php:218
+#, php-format
+msgid ""
+"This WXR file (version %s) may not be supported by this version of the "
+"importer. Please consider updating."
+msgstr ""
+
+#: lib/importer/wordpress-importer.php:243
+#, php-format
+msgid ""
+"Failed to import author %s. Their posts will be attributed to the current "
+"user."
+msgstr ""
+
+#: lib/importer/wordpress-importer.php:269
+msgid "Assign Authors"
+msgstr ""
+
+#: lib/importer/wordpress-importer.php:270
+msgid ""
+"To make it easier for you to edit and save the imported content, you may "
+"want to reassign the author of the imported item to an existing user of this "
+"site. For example, you may want to import all the entries as <code>"
+"admin</code>s entries."
+msgstr ""
+
+#: lib/importer/wordpress-importer.php:272
+#, php-format
+msgid ""
+"If a new user is created by WordPress, a new password will be randomly "
+"generated and the new user&#8217;s role will be set as %s. Manually changing "
+"the new user&#8217;s details will be necessary."
+msgstr ""
+
+#: lib/importer/wordpress-importer.php:282
+msgid "Import Attachments"
+msgstr ""
+
+#: lib/importer/wordpress-importer.php:285
+msgid "Download and import file attachments"
+msgstr ""
+
+#: lib/importer/wordpress-importer.php:302
+msgid "Import author:"
+msgstr ""
+
+#: lib/importer/wordpress-importer.php:313
+msgid "or create new user with login name:"
+msgstr ""
+
+#: lib/importer/wordpress-importer.php:316
+msgid "as a new user:"
+msgstr ""
+
+#: lib/importer/wordpress-importer.php:324
+msgid "assign posts to an existing user:"
+msgstr ""
+
+#: lib/importer/wordpress-importer.php:326
+msgid "or assign posts to an existing user:"
+msgstr ""
+
+#: lib/importer/wordpress-importer.php:327
+msgid "- Select -"
+msgstr ""
+
+#: lib/importer/wordpress-importer.php:377
+#, php-format
+msgid ""
+"Failed to create new user for %s. Their posts will be attributed to the "
+"current user."
+msgstr ""
+
+#: lib/importer/wordpress-importer.php:428
+#, php-format
+msgid "Failed to import category %s"
+msgstr ""
+
+#: lib/importer/wordpress-importer.php:468
+#, php-format
+msgid "Failed to import post tag %s"
+msgstr ""
+
+#: lib/importer/wordpress-importer.php:517
+#: lib/importer/wordpress-importer.php:658
+#, php-format
+msgid "Failed to import %s %s"
+msgstr ""
+
+#: lib/importer/wordpress-importer.php:543
+#, php-format
+msgid "Failed to import &#8220;%s&#8221;: Invalid post type %s"
+msgstr ""
+
+#: lib/importer/wordpress-importer.php:565
+#, php-format
+msgid "%s &#8220;%s&#8221; already exists."
+msgstr ""
+
+#: lib/importer/wordpress-importer.php:624
+#, php-format
+msgid "Failed to import %s &#8220;%s&#8221;"
+msgstr ""
+
+#: lib/importer/wordpress-importer.php:789
+msgid "Menu item skipped due to missing menu slug"
+msgstr ""
+
+#: lib/importer/wordpress-importer.php:796
+#, php-format
+msgid "Menu item skipped due to invalid menu slug: %s"
+msgstr ""
+
+#: lib/importer/wordpress-importer.php:886
+msgid "Fetching attachments is not enabled"
+msgstr ""
+
+#: lib/importer/wordpress-importer.php:899
+msgid "Invalid file type"
+msgstr ""
+
+#: lib/importer/wordpress-importer.php:945
+msgid "Remote server did not respond"
+msgstr ""
+
+#: lib/importer/wordpress-importer.php:951
+#, php-format
+msgid "Remote server returned error response %1$d %2$s"
+msgstr ""
+
+#: lib/importer/wordpress-importer.php:958
+msgid "Remote file is incorrect size"
+msgstr ""
+
+#: lib/importer/wordpress-importer.php:963
+msgid "Zero size file downloaded"
+msgstr ""
+
+#: lib/importer/wordpress-importer.php:969
+#, php-format
+msgid "Remote file is too large, limit is %s"
+msgstr ""
+
+#: lib/importer/wordpress-importer.php:1068
+msgid "Import WordPress"
+msgstr ""
+
+#: lib/importer/wordpress-importer.php:1075
+#, php-format
+msgid ""
+"A new version of this importer is available. Please update to version %s to "
+"ensure compatibility with newer export files."
+msgstr ""
+
+#: lib/importer/wordpress-importer.php:1090
+msgid ""
+"Howdy! Upload your WordPress eXtended RSS (WXR) file and we&#8217;ll import "
+"the posts, pages, comments, custom fields, categories, and tags into this "
+"site."
+msgstr ""
+
+#: lib/importer/wordpress-importer.php:1091
+msgid "Choose a WXR (.xml) file to upload, then click Upload file and import."
+msgstr ""
+
+#: lib/importer/wordpress-importer.php:1165
+msgid ""
+"Import <strong>posts, pages, comments, custom fields, categories, and "
+"tags</strong> from a WordPress export file."
+msgstr ""
+
+#: lib/importer/parsers.php:43 lib/importer/parsers.php:73
+#: lib/importer/parsers.php:81
+msgid "There was an error when reading this WXR file"
+msgstr ""
+
+#: lib/importer/parsers.php:44
+msgid ""
+"Details are shown above. The importer will now try again with a different "
+"parser..."
+msgstr ""
+
+#: lib/importer/parsers.php:85 lib/importer/parsers.php:90
+#: lib/importer/parsers.php:282 lib/importer/parsers.php:473
+msgid ""
+"This does not appear to be a WXR file, missing/invalid WXR version number"
+msgstr ""

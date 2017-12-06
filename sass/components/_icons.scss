@@ -1,0 +1,11 @@
+.hr-icon {
+  @include size(1em);
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible;
+  vertical-align: middle;
+}
+
+.icon-grapes {
+  background:transparent url('/wp-content/themes/hr/i/grape-dash.png') left top no-repeat;
+}

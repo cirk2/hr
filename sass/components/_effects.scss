@@ -2,43 +2,29 @@
 //   global blur effects on modal or menu open
 // =============================================================================
 
-// body {
-//     perspective: 500px;
-// }
-
-// nav.navbar,
-
-nav + section + section,
-nav + section,
+nav ~ section,
 section + footer {
-  transition: all $tduration $teasing;
-  .has_no-backdropfilter .show-menu &,
-  .has_no-backdropfilter.modal-is-open & {
-    @include filter(blur(10px));
+  transition: filter $htd $hte;
+  // .has_no-backdropfilter .show-menu &,
+  .has_no-backdropfilter.modal-is-open &,
+  .has_no-backdropfilter .mfp-search-open & {
+    @include filter(blur(5px));
   }
 }
 
 @include media("screen", "from-sm") {
-  nav + section,
+  nav ~ section,
   section + footer {
-    transition: all $tduration $teasing;
+    transition: filter $htd $hte;
     .has_no-backdropfilter.modal-is-open & {
-      @include filter(blur(15px));
+      @include filter(blur(5px));
     }
     .has_no-backdropfilter .show-menu & {
-      @include filter(blur(4px));
-      // transform: scale(0.9);
-      // transform: rotateZ(15deg);
-      // transform: translate(100vw);
-      // transform: rotateZ(1deg) scale(0.95);
-      // transform: translateY(100%) scale3d(1, 1, 0);
+      @include filter(blur(5px));
 
-      transition: filter 1s $ease-in-cubic .6s,
-                  opacity   $tduration .1s $ease-in-sine,
-                  transform $tduration $ease-out-quart;
-      // @supports (-ms-ime-align: auto) {
-      //   @include filter(none);
-      // }
+      transition: filter 1s $ease-in-sine .2s,
+                  opacity   $htd .1s $ease-in-sine,
+                  transform $htd $ease-out-quart;
     }
   }
 }
@@ -51,21 +37,15 @@ body {
   }
   #loading-page {
     @include coverer(0, fixed);
-    transition: opacity 1s;
+    transition: opacity 1s $ease-out-quart 1s;
     background: #252525;
     z-index: 1040;
     pointer-events: none;
+    #wineLoader {
+      @include center(xy);
+    }
   }
   .modal-is-open & {
     overflow-y: hidden !important;
   }
 }
-
-// footer,
-// .page-title,
-// .entry-content div > section > *,
-// .entry-content div > section {
-//     transition: all .2s $teasing;
-//     // perspective: 500px;
-
-// }

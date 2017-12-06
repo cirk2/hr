@@ -1,0 +1,110 @@
+/**
+ * Custom Ajax Modal Plugin
+ *
+ * @package H-Code
+ * @author  reflect.media GmbH
+ *
+ */
+
+(function ($) {
+
+    'use strict';
+
+    $(function () {
+
+        var modalOpen = false;
+
+        function hideModal() {
+            $('.modal-wrapper').fadeOut('slow').removeClass('show');
+            $('#modal-content').html('');
+            $('html').removeClass('modal-is-open');
+            $('#btnContainer').removeClass('open');
+        }
+
+        $(document).keydown(function (e) {
+            if (e.keyCode === 27 && $('.modal-wrapper').hasClass('show')) {
+                hideModal();
+            }
+        });
+
+        $(document).on('click', '.close-modal', hideModal);
+       
+        $(window).click(function(event) {
+          if (!$('body').hasClass('show-menu')) {
+            hideModal();
+          }
+        });
+
+        $(document).on('click', '.modal', function (e) {
+            e.stopPropagation();
+        });
+
+        // remove click handlers
+        $('.vc_basic_grid').off("click", ".vc_gitem-link");
+        $('body').off('click', '.modal-link');
+        $('.modal-link a').css({"pointerEvents": "none"});
+
+        $('body').on('click', '.modal-link', function (event) {
+
+            var modalOpen = $('html').hasClass('modal-is-open');
+
+            event.stopImmediatePropagation();
+
+            if ($(this).hasClass('small-modal')) {
+                $('.modal-wrapper').addClass('modal-small');
+            } else {
+                $('.modal-wrapper').removeClass('modal-small');
+            }
+            var modalContent = $('#modal-content');
+            var $this = ($(this).attr('href') != null) ? $(this) : $(this).children('a').first();
+            var postLink = $this.attr('href');
+            var loader = '<div class="glass-container"><div class="glass-mask"><div class="glass"><div class="fill"></div></div></div></div>';
+            
+            modalContent.html(loader);
+
+            event.preventDefault();
+
+            modalContent.load(postLink + ' #modal-ready', function( status ) {
+
+                // wrap first part of excerpt
+                var excLength = 180;
+                $(".modal-excerpt p").text(function (i,text) {
+                  var first = text.substring(0, text.indexOf(' ', excLength)),
+                      last  = text.substring(text.indexOf(' ', excLength));
+                  $(this).html('<span class="grid-excerpt">' + first + ' [...] </span>' + last);
+                });
+
+                var opts = {
+                    offset: '90%',
+                    context: '.modal-wrapper'
+                };
+
+                $('.rebsorte-status').waypoint(function(event, direction) {
+                    console.log('modal-waypoint loaded');
+                    $('.rebsorte-status').addClass('animated');
+                    $.waypoints('refresh');
+                }, opts);
+
+                // var waypoints = $('.rebsorte-status').waypoint({
+                //   handler: function() {
+                //     console.log('modal-waypoint loaded');
+                //     $('.rebsorte-status').addClass('animated');
+                //   },
+                //   context: '.modal',
+                //   offset: '50%'
+                // })
+            });
+
+            $('html').addClass('modal-is-open');
+            $('.modal-wrapper').fadeIn('slow', function () {
+                $(this).addClass('show');
+                $('.modal').addClass('show');
+            });
+            $('.navbar-default').addClass('shrink-nav');
+            $('#btnContainer').addClass('open');
+
+            return false;
+        });
+    });
+
+})(jQuery);

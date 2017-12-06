@@ -1,70 +1,118 @@
-.mission-col {
+
+#mission-col {
+  padding-top: 2rem;
   @include media("screen", "from-md", "to-xl") {
     width: 100%;
   }
 }
-
 .mission-grid {
   .vc_col-sm-3 {
     // max-height: 10%;
-    @include media("from-xl") { width: 25%; }
-    @include media("to-xl")   { width: 50%; }
+    @include media("from-lg") { width: 25%; }
+    @include media("to-lg")   { width: 50%; }
     @include media("to-xs")   { width: 80%; }
     @include media("from-sm", "to-lg") {
       &:nth-of-type(odd) { left: 5%; }
       &:nth-of-type(even) { right: 5%; }
     }
-    @include media("from-lg", "to-xl") {
+    @include media("from-lg", "to-lg") {
       &:nth-of-type(odd) { left: 10%; }
       &:nth-of-type(even) { right: 10%; }
     }
   }
-
-  h3,
-  .tagline,
-  .mission-description-acf {
-    margin: 0 auto;
-    @include headerstyle-2(1.3rem);
-    text-align: center !important;
-    max-width: 8em;
-    color: #999;
-    -webkit-font-smoothing: subpixel-antialiased !important;
-  }
-  .tagline {
-    &:before {
-      content: "Wir ";
-      font-weight: 800;
-      color: $light-red;
+  .mission-grid-item {
+    .mission-field {
+      font: 300 1.4rem/1.2 $sans-stack;
+      letter-spacing: -0.06rem;
+      color: #777;
+      max-width: 10rem;
+      margin: 0 auto;
     }
-  }
-  .mission-description-acf {
-    &:after {
-      content: "\:";
+    .tagline-acf::before {
+        content: "Wir ";
+        font-weight: 600;
+        color: $light-red;
+        @at-root {
+          .tagline-acf {
+            transition: all .5s;
+            .vc_is-hover & {
+              opacity: 0.7;
+              filter: blur(1.5px);
+          }
+        }
+      }
     }
-    font-size: 1.6em;
-    font-weight: 500;
-    color: #fff;
-    text-shadow: 0 0 30px rgba(25, 25, 25, 0.74);
-  }
-  h3 {                        // Name
-    color: rgba(221, 51, 51, 0.8);
-    text-transform: none;
-  }
-  .wpb_single_image {
-    max-width: 280px;
-    padding: 20px;
-    margin: 0 auto !important;
-  }
-  .vc_is-hover .vc_figure {
-    position: relative;
-    &:before {
-      @include coverer(0);
-      @include size(100%);
-      content: "";
-      background: transparentize(#fff, .5);
+    .description-acf {
+      margin-top: 1rem;
+      
+      font-size: 1.2rem;
+      &::after {
+        content: "\:";
+      }
     }
-  }
-  .vc_gitem-zone-c {
-    margin-top: -1.5em;
+    .mission-title h3 {
+      font-size: 1.6rem;
+      font-weight: 500;
+      margin: 0 auto 3rem;
+      max-width: 8rem;
+      color: $red;
+    }
+    .wpb_single_image {
+      max-width: 330px;
+      padding: 20px;
+      margin: 0 auto !important;
+    }
+    .vc_gitem-zone-c {
+      margin-top: 0em;
+    }
+    .modal-open-btn {
+      max-width: 150px !important;
+      margin-bottom: 2.5rem !important;
+    }
   }
 }
+
+.vc_gitem-animate-blurScaleOut {
+  .vc_figure {
+    position: relative;
+    img {
+      filter: grayscale(0.3);
+      border-radius: 3px;
+      .vc_is-hover & {
+        filter: none;
+      }
+    }
+    &:before {
+      content: "";
+      @include coverer(0);
+      background: white(0.75);
+      opacity: 0;
+      transition: opacity 0.5s;
+      .vc_is-hover & {
+        opacity: 1;
+      }
+    }
+  }
+}
+.vc_gitem-zone-a.NORMAL-STATE {
+  -webkit-transform: scale(1.2) !important;
+  -ms-transform: scale(1.2) !important;
+  transform: scale(1.2) !important;
+  will-change: transform;
+  max-width: 350px !important;
+  margin: 0 auto;
+  @include media(mobile) {
+    max-width: 230px !important;
+  }
+  @include media(ipad) {
+    max-width: 250px !important;
+  }
+
+  .vc_grid-item-mini.vc_is-hover & {
+   -webkit-transform: scale(1.1) !important;
+   -ms-transform: scale(1.1) !important;
+   transform: scale(1.1) !important;
+  }
+}
+
+

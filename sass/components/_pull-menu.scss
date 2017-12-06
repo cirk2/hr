@@ -1,0 +1,304 @@
+/* full width pull menu */
+
+.full-width-pull-menu .menu-button {
+  margin: 0
+}
+
+.show-menu .full-width-pull-menu .menu-wrap {
+  opacity: 1;
+  display: block;
+  top: 0;
+}
+
+.show-menu .navbar-header {
+  display: block;
+}
+
+.full-width-pull-menu .menu-wrap {
+  width: 100%;
+  opacity: 0;
+  display: none;
+  left: 0;
+  top: -50px;
+  height: 100%;
+  overflow: auto;
+  background: rgba(26, 26, 26, 1)
+}
+
+.full-width-pull-menu .close-button {
+  height: 64px;
+  width: 64px;
+  background: transparent;
+}
+
+.full-width-pull-menu .close-button::before,
+.full-width-pull-menu .close-button::after {
+  background: #fff;
+}
+
+.full-width-pull-menu .pull-menu .navbar-nav {
+  text-align: left;
+  float: none;
+  padding: 0 0 100px 0;
+  margin: 0 auto;
+  width: 480px;
+}
+
+.full-width-pull-menu.navbar .navbar-nav li {
+  border-bottom: 1px solid rgba(255, 255, 255, .1);
+  padding: 7px 0 9px;
+  position: relative;
+}
+
+.full-width-pull-menu.navbar .navbar-nav li a {
+  font-size: 26px;
+  line-height: 45px;
+  padding: 0;
+  color: #ffffff;
+  font-weight: 700
+}
+
+.full-width-pull-menu.navbar .navbar-nav li:hover {
+  background-color: transparent;
+}
+
+.full-width-pull-menu.navbar .navbar-nav li.active {
+  background-color: transparent;
+}
+
+.full-width-pull-menu.navbar .navbar-nav li.active a {
+  border-bottom: 0px solid #797979;
+  background-color: transparent;
+}
+
+.full-width-pull-menu.navbar .navbar-nav li a:hover {
+  background-color: transparent;
+}
+
+.full-width-pull-menu.navbar .navbar-nav li a.active {
+  background-color: transparent;
+}
+
+.full-width-pull-menu .navbar-nav .dropdown-menu li ul {
+  margin: 20px;
+}
+
+.full-width-pull-menu .pull-menu .sub-menu {
+  display: none;
+  padding: 20px 0 10px 0;
+}
+
+.full-width-pull-menu .pull-menu .sub-menu li .sub-menu {
+  padding: 10px 0 15px;
+}
+
+.full-width-pull-menu.navbar .navbar-nav li .sub-menu a {
+  font-size: 14px;
+  font-weight: 700;
+  color: #9a9a9a;
+  line-height: 22px;
+}
+
+.full-width-pull-menu.navbar .navbar-nav li .sub-menu li ul a {
+  font-size: 14px;
+  color: #565656;
+  font-weight: 600;
+  line-height: 20px;
+  text-transform: none;
+}
+
+.full-width-pull-menu.navbar .navbar-nav li .sub-menu li ul li {
+  margin-bottom: 0 !important;
+}
+
+.full-width-pull-menu .pull-menu .sub-menu li {
+  margin-bottom: 10px !important;
+  border: 0;
+  padding: 0;
+}
+
+.full-width-pull-menu.navbar .megamenu-right-icon {
+  display: inline-block !important;
+  float: none !important;
+  height: auto;
+  margin-left: 5px;
+  right: 0;
+  position: absolute !important;
+  top: 20px !important;
+}
+
+.full-width-pull-menu.navbar .megamenu-right-icon .fa {
+  display: block;
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.full-width-pull-menu.navbar .megamenu-right-icon.open>.fa-angle-down:before {
+  content: "\f106"
+}
+
+.full-width-pull-menu .pull-menu .navbar-nav a,
+.full-width-pull-menu .pull-menu .navbar-nav li a.active,
+.full-width-pull-menu .pull-menu .navbar-nav li a:hover {
+  border-bottom: 0;
+  display: inline-block
+}
+
+.full-width-pull-menu .dropdown-menu {
+  position: relative;
+  top: 0 !important;
+  width: 100% !important;
+  text-align: center
+}
+
+.full-width-pull-menu .dropdown-menu li a {
+  font-size: 12px;
+  line-height: 30px;
+  font-weight: 400;
+}
+
+.full-width-pull-menu .open .dropdown-menu {
+  display: block;
+}
+
+.full-width-pull-menu .dropdown .collapse {
+  opacity: 0;
+  margin: 0 !important
+}
+
+.full-width-pull-menu .dropdown .collapse.in {
+  opacity: 1;
+  margin: 0 !important
+}
+
+.full-width-pull-menu .pull-menu-open {
+  display: table;
+  height: 100%;
+  width: 100%
+}
+
+.full-width-pull-menu .pull-menu-open-sub {
+  display: table-cell;
+  vertical-align: middle;
+  height: 100%
+}
+
+.full-width-pull-menu .menu-item span::after {
+  content: "";
+  margin: 0;
+}
+
+.full-width-pull-menu .nav-dark li a.active {
+  border-bottom: none !important;
+}
+
+.full-width-pull-menu.navbar .sub-menu .megamenu-right-icon .fa {
+  font-size: 16px;
+  margin: 0;
+  cursor: pointer;
+  top: 2px !important;
+  right: 0;
+  color: #575757;
+}
+
+.full-width-pull-menu.navbar .sub-menu .megamenu-right-icon {
+  margin-left: 0;
+  padding-left: 5px;
+  padding-right: 5px;
+  top: 4px !important;
+  margin-right: 6px;
+}
+
+.full-width-pull-menu.navbar .sub-menu .megamenu-right-icon.open>.fa-angle-down:before {
+  content: "\f106"
+}
+
+.full-width-pull-menu .sub-menu:hover ul {
+  display: none;
+}
+
+.full-width-pull-menu-dark .navbar-nav li a {
+  color: #000;
+  display: inline-block !important;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  line-height: 45px;
+  padding: 0;
+}
+
+.full-width-pull-menu-dark .navbar-nav li a:hover,
+.full-width-pull-menu-dark .pull-menu .navbar-nav li a.active {
+  color: #797979
+}
+
+.full-width-pull-menu-dark .close-button::before,
+.full-width-pull-menu-dark .close-button::after {
+  background: #000;
+  height: 25%;
+  left: 45%;
+  top: 45%;
+  width: 3px;
+}
+
+.full-width-pull-menu-dark .pull-menu {
+  height: 100%;
+  position: fixed;
+  overflow-y: scroll;
+}
+
+.full-width-pull-menu-dark .pull-menu .navbar-nav {
+  text-align: left;
+}
+
+.full-width-pull-menu-dark .menu-number {
+  color: #bbbbbb;
+  font-size: 14px;
+  font-weight: 400;
+  margin-right: 15px;
+}
+
+.full-width-pull-menu-dark .pull-menu-open-sub {
+  padding-left: 100px;
+}
+
+.full-width-pull-menu-dark .btn {
+  margin-right: 10px;
+}
+
+.full-width-pull-menu-dark.sticky-nav .logo-light,
+.full-width-pull-menu-dark.shrink-nav .logo-dark {
+  height: inherit;
+}
+
+.full-width-pull-menu-dark.transparent-header.shrink-nav {
+  background: #000
+}
+
+.nav-black.full-width-pull-menu.navbar .navbar-nav li a {
+  color: #000
+}
+
+.nav-black.full-width-pull-menu.navbar .navbar-nav li a:hover {
+  color: #797979
+}
+
+.nav-black.full-width-pull-menu.navbar .navbar-nav li>a.active,
+.nav-black.full-width-pull-menu.navbar .navbar-nav li.current-menu-ancestor>a,
+.nav-black.full-width-pull-menu.navbar .navbar-nav li.current-menu-item>a {
+  color: #797979
+}
+
+.nav-white.full-width-pull-menu.navbar .navbar-nav li a {
+  color: #fff
+}
+
+.nav-white.full-width-pull-menu.navbar .navbar-nav li a:hover {
+  color: #797979
+}
+
+.nav-white.full-width-pull-menu.navbar .navbar-nav li>a.active,
+.nav-white.full-width-pull-menu.navbar .navbar-nav li.current-menu-ancestor>a,
+.nav-white.full-width-pull-menu.navbar .navbar-nav li.current-menu-item>a {
+  color: #797979
+}

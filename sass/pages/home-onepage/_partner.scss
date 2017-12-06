@@ -1,17 +1,23 @@
 .partner-grid {
+  .vc_grid-item-mini {
+//     border: 4px solid #ffcfcf;
+    border: 1px solid $red;
+  }
   .vc_grid-item {
-    @include media("from-xs") { width: 25%; }
+    @include media("from-md") { width: 25%; }
+    @include media("to-md")   { width: 33%; }
     @include media("to-xs")   { width: 50%; }
     .partner-grid-item {
-      background-size: auto !important;
-      @include media("screen", "to-sm", "to-lg-dev", "retina",) {
-        background-size: 90% !important;
+      background-size: 176px !important;
+      background-color: hsl(0, 0%, 100%);
+      @media (max-width: 675px) {
+        background-size: contain !important;
       }
     }
     h3 {
-      font-size: 1.5em;
-      color: #fff;
-      text-shadow: 0 0 2px #000;
+      margin: 15px 0 0;
+      font-size: 1.4em;
+      color: $red;
     }
   }
 }

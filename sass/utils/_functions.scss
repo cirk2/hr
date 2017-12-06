@@ -1,8 +1,138 @@
 // =============================================================================
-//   Get viewport width
+// Functions
+// =============================================================================
+
+// Base px
+$base-px-default: 16px !default;
+// Breakpoints
+$hdpi-ratio-default: 1.3 !default;
+// Border Radius
+$border-radius-default: 5px !default;
+// Placeholder Color
+$placeholder-color-default: #555555 !default;
+// Triangle
+$triangle-direction-default: right !default;
+$triangle-size-default: $base-px-default !default;
+$triangle-color-default: #222222 !default;
+$triangle-element-default: after !default;
+// Circle
+$circle-size-default: $base-px-default !default;
+$circle-color-default: inherit !default;
+$circle-border-width-default: null !default;
+$circle-border-color-default: #222222 !default;
+$circle-display-default: inline-block !default;
+// Position
+$position-default: null !default;
+// Tint/Shade
+$mix-percent-default: 15% !default;
+
+// =============================================================================
+// Get viewport width
 // =============================================================================
 
 @function get-vw($target) {
   $vw-context: (1000*.01) * 1px;
   @return ($target/$vw-context) * 1vw;
 }
+
+// =============================================================================
+// Black, White and $red Opacity Functions
+// =============================================================================
+
+@function black($opacity) {
+  @return rgba(black, $opacity);
+}
+
+@function white($opacity) {
+  @return rgba(white, $opacity);
+}
+
+@function red($opacity) {
+  @return rgba($red, $opacity);
+}
+
+// =============================================================================
+// Mix white with another color
+// =============================================================================
+@function tint($color, $percent: $mix-percent-default){
+  @return mix(white, $color, $percent);
+}
+
+// =============================================================================
+// Mix black with another color
+// =============================================================================
+
+@function shade($color, $percent: $mix-percent-default){
+  @return mix(black, $color, $percent);
+}
+
+// =============================================================================
+// Strip the units from a value
+// =============================================================================
+
+@function strip-units($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+// =============================================================================
+// Calculate rems from a px value
+// =============================================================================
+
+@function rem-calc($px, $base-val: $base-px-default) {
+  @if not unitless($px) {
+    $px: strip-units($px);
+  }
+  @if not unitless($base-val) {
+    $base-val: strip-units($base-val);
+  }
+  @return ($px / $base-val) * 1rem;
+}
+
+// =============================================================================
+// Calculate ems from a px value
+// =============================================================================
+
+@function em-calc($px, $base-val: $base-px-default) {
+  @if not unitless($px) {
+    $px: strip-units($px);
+  }
+  @if not unitless($base-val) {
+    $base-val: strip-units($base-val);
+  }
+  @return ($px / $base-val) * 1em;
+}
+
+// =============================================================================
+// Create a random color
+// =============================================================================
+
+@function random-color($min: 0, $max: 255, $alpha: 1) {
+  @if $min < 0 {
+    $min: -1;
+  } @else {
+    $min: $min - 1;
+  }
+  @if $max > 255 {
+    $max: 256;
+  } @else {
+    $max: $max + 1;
+  }
+  $red: random($max) + $min;
+  $green: random($max) + $min;
+  $blue: random($max) + $min;
+  @return rgba($red, $green, $blue, $alpha);
+}
+
+// =============================================================================
+// Reverse a string
+// =============================================================================
+
+@function reverse($string) {
+  $reversed-string: '';
+  @for $i from 1 through str-length($string) {
+    $char: str-slice($string, $i, $i);
+    $reversed-string: "#{$char}#{$reversed-string}";
+  }
+  @return #{$reversed-string};
+}
+

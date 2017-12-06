@@ -1,1 +1,492 @@
 @import url('https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700');
+
+// =============================================================================
+// HR custom icomoon.io font
+// =============================================================================
+
+@import 'icon-variables';
+
+@font-face {
+  font-family: 'hr-icons';
+  src:
+    url('#{$icomoon-font-path}/hr-icons.ttf?icwpgu') format('truetype'),
+    url('#{$icomoon-font-path}/hr-icons.woff?icwpgu') format('woff'),
+    url('#{$icomoon-font-path}/hr-icons.svg?icwpgu#hr-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// =============================================================================
+// Proxima Nova webfont
+// =============================================================================
+
+@font-face {
+    font-family: 'proxima_nova_altblack';
+    src: url('../fonts/proxima-nova-alt-black.eot');
+    src: url('../fonts/proxima-nova-alt-black.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/proxima-nova-alt-black.woff2') format('woff2'),
+         url('../fonts/proxima-nova-alt-black.woff') format('woff'),
+         url('../fonts/proxima-nova-alt-black.ttf') format('truetype'),
+         url('../fonts/proxima-nova-alt-black.svg#proxima_nova_altblack') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'proxima_nova_altbold';
+    src: url('../fonts/proxima-nova-alt-bold.eot');
+    src: url('../fonts/proxima-nova-alt-bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/proxima-nova-alt-bold.woff2') format('woff2'),
+         url('../fonts/proxima-nova-alt-bold.woff') format('woff'),
+         url('../fonts/proxima-nova-alt-bold.ttf') format('truetype'),
+         url('../fonts/proxima-nova-alt-bold.svg#proxima_nova_altbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('../fonts/proxima-nova-alt-regular.eot');
+    src: url('../fonts/proxima-nova-alt-regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/proxima-nova-alt-regular.woff2') format('woff2'),
+         url('../fonts/proxima-nova-alt-regular.woff') format('woff'),
+         url('../fonts/proxima-nova-alt-regular.ttf') format('truetype'),
+         url('../fonts/proxima-nova-alt-regular.svg#proxima_nova_altregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'proxima_nova_scosfthin';
+    src: url('../fonts/proxima-nova-scosf-thin.eot');
+    src: url('../fonts/proxima-nova-scosf-thin.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/proxima-nova-scosf-thin.woff2') format('woff2'),
+         url('../fonts/proxima-nova-scosf-thin.woff') format('woff'),
+         url('../fonts/proxima-nova-scosf-thin.ttf') format('truetype'),
+         url('../fonts/proxima-nova-scosf-thin.svg#proxima_nova_scosfthin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'proxima_nova_ltsemibold';
+    src: url('../fonts/proxima-nova-semibold.eot');
+    src: url('../fonts/proxima-nova-semibold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/proxima-nova-semibold.woff2') format('woff2'),
+         url('../fonts/proxima-nova-semibold.woff') format('woff'),
+         url('../fonts/proxima-nova-semibold.ttf') format('truetype'),
+         url('../fonts/proxima-nova-semibold.svg#proxima_nova_ltsemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'proxima_nova_ltthin';
+    src: url('../fonts/proxima-nova-thin.eot');
+    src: url('../fonts/proxima-nova-thin.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/proxima-nova-thin.woff2') format('woff2'),
+         url('../fonts/proxima-nova-thin.woff') format('woff'),
+         url('../fonts/proxima-nova-thin.ttf') format('truetype'),
+         url('../fonts/proxima-nova-thin.svg#proxima_nova_ltthin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'proxima_nova_alt_condensed-semibold';
+    src: url('../fonts/proxima-nova-alt-condensed-semibold.eot');
+    src: url('../fonts/proxima-nova-alt-condensed-semibold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/proxima-nova-alt-condensed-semibold.ttf') format('truetype'),
+         url('../fonts/proxima-nova-alt-condensed-semibold.svg#proxima_nova_alt_condensedSBd') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// =============================================================================
+// HR font selectors
+// =============================================================================
+
+
+.fa, [class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'hr-icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-logo-bg .path1 {
+  &:before {
+    content: $icon-logo-bg-path1;  
+    color: rgb(255, 255, 255);
+  }
+}
+.icon-logo-bg .path2 {
+  &:before {
+    content: $icon-logo-bg-path2;  
+    margin-left: -0.9619140625em;  
+    color: rgb(26, 23, 27);
+  }
+}
+.icon-logo-bg .path3 {
+  &:before {
+    content: $icon-logo-bg-path3;  
+    margin-left: -0.9619140625em;  
+    color: rgb(26, 23, 27);
+  }
+}
+.icon-logo-bg .path4 {
+  &:before {
+    content: $icon-logo-bg-path4;  
+    margin-left: -0.9619140625em;  
+    color: rgb(26, 23, 27);
+  }
+}
+.icon-logo-bg .path5 {
+  &:before {
+    content: $icon-logo-bg-path5;  
+    margin-left: -0.9619140625em;  
+    color: rgb(26, 23, 27);
+  }
+}
+.icon-logo-combined .path1 {
+  &:before {
+    content: $icon-logo-combined-path1;  
+    color: rgb(26, 23, 27);
+  }
+}
+.icon-logo-combined .path2 {
+  &:before {
+    content: $icon-logo-combined-path2;  
+    margin-left: -4.4169921875em;  
+    color: rgb(26, 23, 27);
+  }
+}
+.icon-logo-combined .path3 {
+  &:before {
+    content: $icon-logo-combined-path3;  
+    margin-left: -4.4169921875em;  
+    color: rgb(26, 23, 27);
+  }
+}
+.icon-logo-combined .path4 {
+  &:before {
+    content: $icon-logo-combined-path4;  
+    margin-left: -4.4169921875em;  
+    color: rgb(26, 23, 27);
+  }
+}
+.icon-logo-combined .path5 {
+  &:before {
+    content: $icon-logo-combined-path5;  
+    margin-left: -4.4169921875em;  
+    color: rgb(167, 168, 170);
+  }
+}
+.icon-logo-combined .path6 {
+  &:before {
+    content: $icon-logo-combined-path6;  
+    margin-left: -4.4169921875em;  
+    color: rgb(26, 23, 27);
+  }
+}
+.icon-logo-combined .path7 {
+  &:before {
+    content: $icon-logo-combined-path7;  
+    margin-left: -4.4169921875em;  
+    color: rgb(226, 0, 26);
+  }
+}
+.icon-logo-combined .path8 {
+  &:before {
+    content: $icon-logo-combined-path8;  
+    margin-left: -4.4169921875em;  
+    color: rgb(26, 23, 27);
+  }
+}
+.icon-logo {
+  &:before {
+    content: $icon-logo;
+  }
+}
+.icon-wortmarke .path1 {
+  &:before {
+    content: $icon-wortmarke-path1;  
+    color: rgb(26, 23, 27);
+  }
+}
+.icon-wortmarke .path2 {
+  &:before {
+    content: $icon-wortmarke-path2;  
+    margin-left: -3.5em;  
+    color: rgb(226, 0, 26);
+  }
+}
+.icon-wortmarke .path3 {
+  &:before {
+    content: $icon-wortmarke-path3;  
+    margin-left: -3.5em;  
+    color: rgb(26, 23, 27);
+  }
+}
+.icon-wortmarke .path4 {
+  &:before {
+    content: $icon-wortmarke-path4;  
+    margin-left: -3.5em;  
+    color: rgb(26, 23, 27);
+  }
+}
+.fa-angle-up {
+  &:before {
+    content: $icon-fa-angle-up;
+  }
+}
+.fa-angle-right {
+  &:before {
+    content: $icon-fa-angle-right;
+  }
+}
+.fa-angle-left {
+  &:before {
+    content: $icon-fa-angle-left;
+  }
+}
+.fa-angle-down {
+  &:before {
+    content: $icon-fa-angle-down;
+  }
+}
+.icon-arrow-up {
+  &:before {
+    content: $icon-arrow-up;
+  }
+}
+.icon-arrow-right {
+  &:before {
+    content: $icon-arrow-right;
+  }
+}
+.icon-triangle-up {
+  &:before {
+    content: $icon-triangle-up;
+  }
+}
+.icon-triangle-down {
+  &:before {
+    content: $icon-triangle-down;
+  }
+}
+.icon-arrow-down {
+  &:before {
+    content: $icon-arrow-down;
+  }
+}
+.icon-arrow-left {
+  &:before {
+    content: $icon-arrow-left;
+  }
+}
+.icon-sprout {
+  &:before {
+    content: $icon-sprout;
+  }
+}
+.icon-grape-3 {
+  &:before {
+    content: $icon-grape-3;
+  }
+}
+.icon-grape {
+  &:before {
+    content: $icon-grape;
+  }
+}
+.icon-grape-2 {
+  &:before {
+    content: $icon-grape-2;
+  }
+}
+.icon-grape-4 {
+  &:before {
+    content: $icon-grape-4;
+  }
+}
+.icon-phone {
+  &:before {
+    content: $icon-phone;
+  }
+}
+.icon-search {
+  &:before {
+    content: $icon-search;
+  }
+}
+.icon-calendar {
+  &:before {
+    content: $icon-calendar;
+  }
+}
+.icon-picture {
+  &:before {
+    content: $icon-picture;
+  }
+}
+.icon-wallet {
+  &:before {
+    content: $icon-wallet;
+  }
+}
+.icon-hourglass {
+  &:before {
+    content: $icon-hourglass;
+  }
+}
+.icon-flag {
+  &:before {
+    content: $icon-flag;
+  }
+}
+.icon-map {
+  &:before {
+    content: $icon-map;
+  }
+}
+.icon-puzzle {
+  &:before {
+    content: $icon-puzzle;
+  }
+}
+.icon-envelope {
+  &:before {
+    content: $icon-envelope;
+  }
+}
+.icon-telescope {
+  &:before {
+    content: $icon-telescope;
+  }
+}
+.icon-gears {
+  &:before {
+    content: $icon-gears;
+  }
+}
+.icon-link {
+  &:before {
+    content: $icon-link;
+  }
+}
+.icon-tags {
+  &:before {
+    content: $icon-tags;
+  }
+}
+.icon-bulb {
+  &:before {
+    content: $icon-bulb;
+  }
+}
+.icon-tools {
+  &:before {
+    content: $icon-tools;
+  }
+}
+.icon-find {
+  &:before {
+    content: $icon-find;
+  }
+}
+.icon-beaker {
+  &:before {
+    content: $icon-beaker;
+  }
+}
+.icon-warn {
+  &:before {
+    content: $icon-warn;
+  }
+}
+.icon-male {
+  &:before {
+    content: $icon-male;
+  }
+}
+.icon-female {
+  &:before {
+    content: $icon-female;
+  }
+}
+.icon-wine {
+  &:before {
+    content: $icon-wine;
+  }
+}
+.icon-globe {
+  &:before {
+    content: $icon-globe;
+  }
+}
+.icon-genius {
+  &:before {
+    content: $icon-genius;
+  }
+}
+.icon-map-pin {
+  &:before {
+    content: $icon-map-pin;
+  }
+}
+.icon-chat {
+  &:before {
+    content: $icon-chat;
+  }
+}
+.icon-heart {
+  &:before {
+    content: $icon-heart;
+  }
+}
+.icon-global {
+  &:before {
+    content: $icon-global;
+  }
+}
+.icon-clock {
+  &:before {
+    content: $icon-clock;
+  }
+}
+.icon-facebook {
+  &:before {
+    content: $icon-facebook;
+  }
+}
+.icon-twitter {
+  &:before {
+    content: $icon-twitter;
+  }
+}
+.icon-googleplus {
+  &:before {
+    content: $icon-googleplus;
+  }
+}
+.icon-rss {
+  &:before {
+    content: $icon-rss;
+  }
+}
+.icon-tumblr {
+  &:before {
+    content: $icon-tumblr;
+  }
+}
+.icon-linkedin {
+  &:before {
+    content: $icon-linkedin;
+  }
+}
+
+

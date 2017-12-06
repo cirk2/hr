@@ -7,7 +7,8 @@
     @include display(flex);
     align-items: center;
     justify-content: center;
-    @include media("screen", "to-lg-dev") {
+    // will-change: opacity, transform; 
+    @include media("mobile") {
       height: 200px !important;
     }
     @include media("ipad") {
@@ -19,7 +20,7 @@
       display: block !important;
       visibility: visible;
       opacity: .04;
-      -moz-backface-visibility: hidden;
+      // -moz-backface-visibility: hidden;
       @include media("screen", "to-md") {
         top: 1.5rem;
       }
@@ -31,12 +32,12 @@
       .vc_custom_heading {
         // Bezeichnung
         @include brand-title(1.7rem, 5.5rem, none );
-        @include media("screen", "to-sm") {
+        @include media("mobile") {
           margin: 0 !important;
           min-height: 1.6rem !important;
           padding: 0;
           &::after { margin-top: 0.5rem; }
-          h2 { font-size: 1.1rem !important; }
+          h2 { font-size: 1.5rem !important; }
         }
         @include media("ipad") {
           h2 { font-size: 1.2rem !important; }
@@ -46,10 +47,6 @@
       // Fundnummer
       .vc_gitem-acf {
         @include brand-nr(2rem);
-        @include media("screen", "to-sm") {
-          font-size: 1.4rem !important;
-          padding-top: 0.2rem;
-        }
         @include media("ipad") {
           font-size: 1.6rem !important;
         }
@@ -60,11 +57,11 @@
     // Zitat
     .grid-zitat {
       height: 2.8rem;
-      font: normal 600 1rem/1.1 $sans-stack;
+      font: normal 600 1.3em/1.1 $sans-stack;
       letter-spacing: -1px;
       color: $light-red;
       @include hyphens(auto);
-      @include media("screen", "to-lg-dev") {
+      @include media("to-md-devX") {
         height: auto;
         font-size: 1.1em;
       }
@@ -73,13 +70,14 @@
     }
     .rebsorten-grid-excerpt {
       // Kurztext
-      @include media("screen", "to-md") {
+      @include media("to-xs-devX") {
         display: none;
       }
       p {
         font: normal 400 1.1em/1.4 $serif-stack;
         letter-spacing: -0.8px;
         text-align: center;
+        text-align-last: center;
         .has_shapes & {
           text-align: justify;
         }
@@ -101,9 +99,6 @@
       -webkit-shape-outside: polygon(0% 90%,33% 80%,55% 70%,65% 65%,70% 60%,75% 55%,85% 43%,92% 20%,92%  0%,100%  0%,100% 100%,0% 100% );
          -moz-shape-outside: polygon(0% 90%,33% 80%,55% 70%,65% 65%,70% 60%,75% 55%,85% 43%,92% 20%,92%  0%,100%  0%,100% 100%,0% 100% );
               shape-outside: polygon(0% 90%,33% 80%,55% 70%,65% 65%,70% 60%,75% 55%,85% 43%,92% 20%,92%  0%,100%  0%,100% 100%,0% 100% ); }
-    .more-button {
-      margin-bottom: 0;
-      font-family: $sans-stack;
-    }
+ 
   }
 }

@@ -1,11 +1,19 @@
+@charset 'utf-8';
 // =============================================================================
 //   Typography
 // =============================================================================
 
+body {
+  text-rendering: optimizeLegibility;
+  font-variant-ligatures: common-ligatures
+}
+
 // Quotes
 
 :root {
-  quotes: "„" "“" "‚" "‘";
+  // quotes: "„" "“" "‚" "‘";
+  quotes: '\201E' '\201C' "\201A" "\2018";
+  font-variant-ligatures: normal;
 }
 
 // Headings
@@ -22,7 +30,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1, h2, h3 {
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: -0.07rem !important;
 }
 
@@ -33,6 +41,10 @@ h4 { font-size: 1.5rem; }
 h5 { font-size: 1.4rem; }
 h6 { font-size: 1.2rem; }
 
+.section-title {
+  color: $red-text;
+}
+
 // Paragraphs
 
 p {
@@ -41,11 +53,21 @@ p {
   letter-spacing: -0.0115rem;
   hyphens: auto;
   color: $text-color;
-  .pilcrow:after {
-    content: "\2761"; // \2767 \2761
-    padding-right: 0.3rem;
-    color: lighten(#888, 20);
+  font-variant-ligatures: common-ligatures;
+  .pilcrow {
+    display: none;
+    &::after {
+      content: "\2761"; // \2767 \2761
+      padding-right: 0.3rem;
+      color: lighten(#888, 20);
+    }
   }
+}
+
+// Links
+
+.entry-content a {
+  color: $red;
 }
 
 strong {
@@ -63,25 +85,30 @@ strong {
 // Onepage section headings
 
 .section-heading {
-  margin: 2rem 0;
+  margin: 1rem 0 -1rem;
   position: relative;
+  &.double-line:before {
+    z-index: 0;
+  }
   .subheader {
+    z-index: 0;
    .home &::after {
       content: "\2766";
       display: block;
       margin: 2rem -1rem 1rem;
       font-size: 2rem;
       text-align: center;
-      color: hsl(0, 0%, 80%);
+      color: #eee;
+      color: hsla(0, 0%, 0%, 0);
     }
     .grey-bg & { background: #eee !important; }
     .section-title {
       padding: 0;
       margin: 1rem 0 .5rem;
-      @include media("screen", "to-md-dev") {
+      @include media("screen", "to-md-devX") {
         margin: 1.7rem -4rem .5rem;
       }
-      font: 800 calc(2.5rem)/1 $sans-stack !important;
+      font: 700 calc(2.5rem)/1 $sans-stack !important;
       color: $red;
       &::after {
         content: '';
@@ -90,11 +117,11 @@ strong {
         z-index: 0;
         pointer-events: none;
         background: radial-gradient(circle farthest-side at top,
-                                    rgba(255, 255, 255, 0.6 ) 0,
+                                    rgba(255, 255, 255, 0.3 ) 0,
                                     rgba(255, 255, 255, 0) 100%);
         .grey-bg & {
           background: radial-gradient(circle farthest-side at top,
-                                    rgba(238, 238, 238, 0.6) 0,
+                                    rgba(238, 238, 238, 0.3) 0,
                                     rgba(255, 255, 255, 0) 100%);
         }
         @include media("screen", "to-xs") {
@@ -106,13 +133,13 @@ strong {
     h6 {
       max-width: 25rem;
       padding: 0;
-      margin: 0.5rem auto 0;
+      margin: 0.9rem auto 0;
       font-size: 1.5rem;
       line-height: 1.3;
       font-weight: 300;
       letter-spacing: -0.05em !important;
       color: #777;
-      @include media("screen", "to-md-dev") {
+      @include media("screen", "to-md-devX") {
         font-size: 1.2rem;
         max-width: 15rem;
       }
@@ -137,6 +164,19 @@ strong {
     .section-title {
       font-size: 1.6rem !important;
       margin-bottom: 0.5rem;
+      @include media(mobile) {
+        font-size: 2rem !important;
+      }
+    }
+  }
+  p {
+    hyphens: none;
+  }
+  @include media(mobile) {
+    p {
+      padding-top: 1rem;
+      text-align: justify;
+      hyphens: auto;
     }
   }
 }
@@ -149,7 +189,7 @@ blockquote {
   font-family: $serif-stack;
   font-size: 2em;
   font-style: italic;
-  quotes: "„" "“" "‚" "‘";
+  quotes: '\201E' '\201C' '\201A' '\2018';
   &:before {
     content: open-quote;
   }

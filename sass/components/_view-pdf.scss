@@ -1,0 +1,47 @@
+.view-pdf {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  float: none;
+  @include transition(all 0.3s ease);
+  img {
+    @include transition(all 0.3s ease);
+    @include pgBorder;
+    padding: 2px;
+    overflow: hidden;
+    border: 5px solid rgba(0, 0, 0, 0.15);
+    // background-clip: content-box;
+    transform: scale(1);
+  }
+  &:after, &::before {
+    @include font-awesome("\F1C1");
+    @include coverer(50%);
+    @include transition(all 0.3s ease);
+    font-size: 5rem;
+    line-height: 0;
+    color: $red;
+    pointer-events: none;
+  }
+  &::before {
+    @include transition(all 0.3s ease);
+    z-index: 1;
+    content: "\f019";
+    opacity: 0;
+  }
+  &:hover {
+    &::after {
+      opacity: 0;
+    }
+    &::before {
+      transition-delay: 0.1s;
+      opacity: 0.4;
+      font-size: 10em;
+    }
+    img {
+      @include filter(none);
+      border-width: 0;
+      overflow: visible;
+      transform: scale(1.175);
+    }
+  }
+}

@@ -1,0 +1,84 @@
+// .wrapper {
+//     height: 100vh;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+// }
+
+$search-size: ($header-height * 0.32);
+$stroke: $search-size/8;
+$null: 0s;
+$short: 250ms;
+$fast: ($short * .85);
+$half: ($short * 2);
+$long: ($short * 3);
+
+$pseudo-posleft: calc(#{$search-size} / 2 - #{$stroke / 2});
+
+.top-search {
+  .search {
+    position: relative;
+    width: $search-size; height: $search-size*2;
+    transform: rotate(-45deg);
+    &::before, &::after {
+      content: '';
+      @include position(absolute, NULL NULL ($search-size/2) $pseudo-posleft);
+      @include size($stroke ($search-size / 2));
+      background-color: #fff;
+      .shrink-nav &,
+      .mfp-search-open & {
+        background-color: $text-color;
+        @include media("!retina") {
+          transition-delay: $null, $short, ($htd * 2);
+        }
+        @include media("mobile") { 
+          transition-delay: $null, $short, ($htd / 2);
+        }
+      }
+      transform-origin: 50% 50%;
+      // will-change: transform, height;
+    }
+    &-button {    
+      z-index: 1;
+      @include position(absolute, 0 NULL NULL 0);
+      @include size($search-size);
+      border: $stroke solid #fff;
+      .shrink-nav &,
+      .mfp-search-open & {
+        border-color: $text-color;
+        @include media("!retina") {
+          transition-delay: $half, $short, ($htd * 2);
+        }
+        @include media("mobile") { 
+          transition-delay: $half, $short, ($htd / 2);
+        }
+      }
+      border-radius: 50%;
+      transform-origin: 50% 50%;
+      // will-change: transform, top;
+                                          // Circle
+                                          // | -> O   transform: rotateY(0) translateY(0);
+                                          transition: transform $half  $half  cubic-bezier(.25, 0.1, .25, 1.0),   
+                                                      top       $half  $short cubic-bezier(0.4, 0.7, 0.7, 0.2),
+                                                      border-color .2s 0s ease;
+  }}                                      // active      
+                                          // O -> |   transform: rotateY(90deg) translateY(($search-size / 2.2));
+  .mfp-search-open & .search {&-button {  transition: transform $half  $null  cubic-bezier(0.6, 0.1, 0.6, 0.6),
+                                                      top       $short $fast  cubic-bezier(1.0, 1.0, 1.0, 1.0);
+    
+                                          transform: rotateY(90deg)/* translateY(($search-size / 2.2)) */ ;
+                                          transform-style: preserve-3d;
+                                          top: ($search-size / 2.1);
+  }                                                 
+  &::before {transform: rotate(90deg);}   // Lines    
+  @at-root {                              // X -> i   height: $search-size / 2;
+    .search::before, .search::after {     transition: transform $short $null  cubic-bezier(.25, 0.1, .25, 1.0),
+                                                      height    $half  $short cubic-bezier(0.5, 0.5, 0.5, 1.5),
+                                                      background-color .2s 0s ease; }}
+  &::before, &::after {                   // active
+    height: ($search-size * 1.5);         // i -> X   transform: rotate(90deg); height: ($search-size * 1.5); 
+                                          transition: transform $short $half  cubic-bezier(.25, 0.1, .25, 1.0),
+                                                      height    $short $short cubic-bezier(.25, 0.1, .25, 1.0);
+  }}
+}

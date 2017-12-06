@@ -24,16 +24,16 @@
       background: inherit;
     }
     .glass {
-      @include position(absolute, 5% NULL NULL 5%);
-      @include size(90%);
+      @include position(absolute, 7% NULL NULL 7%);
+      @include size(87%);
       opacity: 0.7;
       border-bottom-left-radius: 50%;
       border-bottom-right-radius: 50%;
       z-index: 3;
       overflow: hidden;
       .fill {
-        @include position(absolute, NULL NULL -5% 0);
-        @include size(100% 5%);
+        @include position(absolute, NULL NULL -5% -23px);
+        @include size(200% 5%);
         background: #da0000;
         opacity: 0.8;
         animation: wine 2s infinite alternate;
@@ -45,7 +45,11 @@
 
 //animations
 @keyframes wine{
-  to {
-    height: 90%;
-  }
+  to   { height: 90%; }
+  0%   { transform: rotate(-10deg); }
+  20%  { transform: rotate(10deg);  }
+  40%  { transform: rotate(-10deg); }
+  60%  { transform: rotate(10deg);  }
+  80%  { transform: rotate(-10deg); }
+  100% { transform: rotate(10deg);  }
 }

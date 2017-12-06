@@ -1,7 +1,6 @@
 .grid-container {
-  display: grid;
-  grid-gap: 40px;
-  max-width: 991px;
+  @include display(grid);
+  max-width: 860px;
   margin: 0 auto;
   > * {
     color: #fff;
@@ -9,17 +8,27 @@
     padding: 0;
     margin-bottom: 10px;
   }
+  .grid-fullwidth {
+    grid-column-start: 1;
+    grid-column-end: -1;
+  }
 }
 @include media("screen", "from-md") {
-  .sidebar { width: 19.1489%; }
-  .content { width: 79.7872%; }
   .grid-container {
     margin: 0 auto;
-    grid-template-columns: 5fr 200px;
-  }
-  header, footer {
-    grid-column: 1 / -1;
-    clear: both;
+    grid-template-columns: 1fr 200px;
+    grid-template-rows: 275px 2rem auto 1fr;
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+    .sidebar { width: 19.1489%; }
+    .content { width: 79.7872%; }
+    .content {
+      grid-column: 1 / -1 / -1;
+    }
+    header, footer {
+      grid-column: 1 / -1;
+      clear: both;
+    }
   }
 }
 .grid-container > * {
@@ -30,7 +39,7 @@
 }
 @supports (display: grid) {
     .grid-container > * {
-    width: auto;
+    width: auto !important;
     margin: 0;
   }
 }

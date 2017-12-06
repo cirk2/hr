@@ -1,313 +1,581 @@
-// fluid type
 
-@function strip-unit($value) {
-  @return $value / ($value * 0 + 1);
-}
+// =============================================================================
+// Fluid Type function
+// 
+// sets min/max font size
+// from variables in utils/settings.scss
+// 
+//  $min_width: 320px;  => $min_font: 16px;
+//  $max_width: 1920px; => $max_font: 24px;
+// =============================================================================
+  
+  @function strip-unit($value) {
+    @return $value / ($value * 0 + 1);
+  }
 
-@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
-  $u1: unit($min-vw);
-  $u2: unit($max-vw);
-  $u3: unit($min-font-size);
-  $u4: unit($max-font-size);
+  @mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+    $u1: unit($min-vw);
+    $u2: unit($max-vw);
+    $u3: unit($min-font-size);
+    $u4: unit($max-font-size);
 
-  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
-    & {
-      font-size: $min-font-size;
-      @media screen and (min-width: $min-vw) {
-        font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
-      }
-      @media screen and (min-width: $max-vw) {
-        font-size: $max-font-size;
+    @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+      & {
+        font-size: $min-font-size;
+        @media screen and (min-width: $min-vw) {
+          font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+        }
+        @media screen and (min-width: $max-vw) {
+          font-size: $max-font-size;
+        }
       }
     }
   }
-}
-
-// rebsorten typo
-
-@mixin brand-title($font-size, $border-width: 0, $anim: borderWidth) {
-  @include display(flex);
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-  min-height: ($font-size + 2rem);
-  margin: -1.7rem 2rem 0rem !important;
-  font: normal normal 400 $font-size $serif-stack;
-  line-height: 1;
-  text-align: center;
-  letter-spacing: -0.05rem;
-  color: currentColor;
-  &::after {
-    @include size($border-width 3px);
-    content: "";
-    display: block;
-    margin: 0.5rem auto 0;
-    background: $light-red;
-    animation: $anim 1s linear 1.5s forwards 1;
-  }
-}
-
-@mixin brand-nr($font-size) {
-  font: normal normal $font-size $sans-stack !important;
-  // text-align: center;
-  margin: 0 auto;
-  color: $light-red;
-}
-
-// progressbar bg
-
-@mixin pgBG() {
-  padding: 5px;
-  background: rgba(0, 0, 0, 0.15);
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px rgba(255, 255, 255, 0.05);
-}
-@mixin pgBBG($bgs) {
-  padding: 5px;
-  background-image: radial-gradient(circle farthest-side at top,rgba(255, 255, 255, 0.1 ) 0,rgba(255, 255, 255, 0) 100%);
-  background-position: 0 0;
-  background-size: $bgs;
-  background-color: #c76164;
-  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2), inset 0 1px rgba(255, 255, 255, 0.1);
-}
-
-// @include coverer($bottom)
-
-@mixin coverer($top: 0, $pos: absolute) {
-    display: block;
-    position: $pos;
-    top: $top;
-    right: 0;
-    bottom: 0;
-    left: 0;
-}
-
-// @include font-awesome()
-
-@mixin font-awesome($content) {
-  content: $content;
-  display: inline-block;
-  text-align: center;
-  vertical-align: middle;
-  font-family: FontAwesome;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-@mixin user-select-none {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-   -moz-touch-callout: none;
-    -ms-touch-callout: none;
-     -o-touch-callout: none;
--webkit-touch-callout: none;
-        touch-callout: none;
-}
-
-// @include transitions($value)
-
-@mixin transition($value) {
-    -webkit-transition: $value; // obsolete
-          transition: $value; // IE 10, Fx 16+, Op 12.1+
-}
-
-@mixin transition_easing($value) {
-    -webkit-transition-timing-function: $value; // obsolete
-          transition-timing-function: $value; // IE 10, Fx 16+, Op 12.1+
-}
-
-@mixin transition_duration($value) {
-    -webkit-transition-duration: $value; // obsolete
-          transition-duration: $value; // IE 10, Fx 16+, Op 12.1+
-}
-
-@mixin transform($value)  {
-    -webkit-transform: $value; // Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4
-      -ms-transform: $value; // IE 9
-          transform: $value; // IE 10, Fx 16+, Op 12.1+
-}
-
-@mixin filter($value)  {
-    -webkit-filter: $value; /* Ch 23+, Saf 6.0+, BB 10.0+ */
-            filter: $value; /* FF 35+ */
-}
-
-@mixin keyframe($name) {
-  @-webkit-keyframes #{$name} {
-    @content;
-  }
-  @keyframes #{$name} {
-    @content;
-  }
-}
-
-@mixin animation($name, $duration, $easing, $iterations) {
-  -webkit-animation: $name $duration $easing $iterations; /* Safari 4+ */
-          animation: $name $duration $easing $iterations; /* IE 10+, Fx 29+ */
-}
-
-
-// center vertically and/or horizontally an absolute positioned element
-
-@mixin center($xy:xy) {
-  @if $xy == xy {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    bottom: auto;
-    right: auto;
-    @include transform(translateX(-50%) translateY(-50%));
-  }
-  @else if $xy == x {
-    position: absolute;
-    left: 50%;
-    right: auto;
-    @include transform(translateX(-50%));
-  }
-  @else if $xy == y {
-    position: absolute;
-    top: 50%;
-    bottom: auto;
-    @include transform(translateY(-50%));
-  }
-}
-
 
 // ===============================================================//endregion
 // Breakpoints
 // ==================================================================//region
 
-$xl-width: 1441px;
-$lg-width: 1199px;
-$md-width:  991px;
-$sm-width:  767px;
-$xs-width:  575px;
-$xxs-width: 320px;
+  $xl-width: 1441px;
+  $lg-width: 1199px;
+  $md-width:  991px;
+  $sm-width:  767px;
+  $xs-width:  575px;
+  $xxs-width: 320px;
 
-$lg-dev-width: 1024px;
-$md-dev-width:  768px;
-$sm-dev-width:  414px;
-$xs-dev-width:  375px;
-$xxs-dev-width: 320px;
+  $lg-dev-width: 1024px;
+  $md-dev-width:  768px;
+  $sm-dev-width:  414px;
+  $xs-dev-width:  375px;
+  $xxs-dev-width: 320px;
 
-$lg-dev-height: 736px;
-$md-dev-height: 667px;
-$sm-dev-height: 568px;
-$xs-dev-height: 480px;
+  $lg-dev-height: 736px;
+  $md-dev-height: 667px;
+  $sm-dev-height: 568px;
+  $xs-dev-height: 480px;
 
 // ===============================================================//endregion
-// Media Query Mixin
+// Media Query map and mixin
 // ==================================================================//region
 
-@function translate-media-condition($c) {
-  $condMap: (
-        "screen":        "only screen",
-        "print":         "only print",
-        "portrait":      "(orientation:portrait)",
-        "landscape":     "(orientation:landscape)",
-        "retina":        "(-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-device-pixel-ratio: 1.5), (min-resolution: 120dpi)",
-        "from-xl":       "(min-width:         #{$xl-width + 1})",
-        "to-xl":         "(max-width:         #{$xl-width})",
-        "from-lg":       "(min-width:         #{$lg-width + 1})",
-        "to-lg":         "(max-width:         #{$lg-width})",
-        "from-md":       "(min-width:         #{$md-width + 1})",
-        "to-md":         "(max-width:         #{$md-width})",
-        "from-sm":       "(min-width:         #{$sm-width + 1})",
-        "to-sm":         "(max-width:         #{$sm-width})",
-        "from-xs":       "(min-width:         #{$xs-width + 1})",
-        "to-xs":         "(max-width:         #{$xs-width})",
-        "from-xxs":      "(min-width:         #{$xxs-width + 1})",
-        "to-xxs":        "(max-width:         #{$xxs-width})",
-        "from-lg-dev":   "(min-device-width:  #{$lg-dev-width})",
-        "from-md-dev":   "(min-device-width:  #{$md-dev-width})",
-        "from-sm-dev":   "(min-device-width:  #{$sm-dev-width})",
-        "from-xs-dev":   "(min-device-width:  #{$xs-dev-width})",
-        "from-xxs-dev":  "(min-device-width:  #{$xxs-dev-width})",
-        "to-lg-dev":     "(max-device-height: #{$lg-dev-height})",
-        "to-md-dev":     "(max-device-height: #{$md-dev-height})",
-        "to-sm-dev":     "(max-device-height: #{$sm-dev-height})",
-        "to-xs-dev":     "(max-device-height: #{$xs-dev-height})",
-        "ipad":          "(min-device-width:  #{$md-dev-width}) and (max-device-width: #{$lg-dev-width}) and (-webkit-min-device-pixel-ratio : 2)"
-        );
-  @return map-get( $condMap, $c );
-}
+  @function translate-media-condition($c) {
+    $condMap: (
+          "screen":        "only screen",
+          "print":         "only print",
+          "portrait":      "(orientation:portrait)",
+          "landscape":     "(orientation:landscape)",
+          "mobile":        "(min-device-width:  #{$xxs-dev-width}) and (max-device-width: #{$sm-dev-width}) and (-webkit-min-device-pixel-ratio : 2)",
+          "ipad":          "(min-device-width:  #{$md-dev-width}) and (max-device-width: #{$lg-dev-width}) and (-webkit-min-device-pixel-ratio : 2)",
+          "retina":        "(-webkit-min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx)",
+          "!retina":       "(min-width:         #{$xxs-width}),not screen and(-webkit-min-device-pixel-ratio: 2),not screen and(min--moz-device-pixel-ratio: 2), not screen and (-o-min-device-pixel-ratio: 2/1), not screen and (min-device-pixel-ratio: 2), not screen and (min-resolution: 192dpi), not screen and (min-resolution: 2dppx)",
+          "hidpi":         "(min-width:         #{$lg-width})  and (-webkit-min-device-pixel-ratio : 2)",
+          "from-xl":       "(min-width:         #{$xl-width + 1})",
+          "to-xl":         "(max-width:         #{$xl-width})",
+          "from-lg":       "(min-width:         #{$lg-width + 1})",
+          "to-lg":         "(max-width:         #{$lg-width})",
+          "from-md":       "(min-width:         #{$md-width + 1})",
+          "to-md":         "(max-width:         #{$md-width})",
+          "from-sm":       "(min-width:         #{$sm-width + 1})",
+          "to-sm":         "(max-width:         #{$sm-width})",
+          "from-xs":       "(min-width:         #{$xs-width + 1})",
+          "to-xs":         "(max-width:         #{$xs-width})",
+          "from-xxs":      "(min-width:         #{$xxs-width + 1})",
+          "to-xxs":        "(max-width:         #{$xxs-width})",
+          "from-lg-devX":  "(min-device-width:  #{$lg-dev-width + 1})",
+          "from-md-devX":  "(min-device-width:  #{$md-dev-width + 1})",
+          "from-sm-devX":  "(min-device-width:  #{$sm-dev-width + 1})",
+          "from-xs-devX":  "(min-device-width:  #{$xs-dev-width + 1})",
+          "from-xxs-devX": "(min-device-width:  #{$xxs-dev-width + 1})",
+          "to-lg-devX":    "(max-device-width:  #{$lg-dev-width})",
+          "to-md-devX":    "(max-device-width:  #{$md-dev-width})",
+          "to-sm-devX":    "(max-device-width:  #{$sm-dev-width})",
+          "to-xs-devX":    "(max-device-width:  #{$xs-dev-width})",
+          "to-xxs-devX":   "(max-device-width:  #{$xxs-dev-width})",
+          "from-lg-devY":  "(min-device-height: #{$lg-dev-height + 1})",
+          "from-md-devY":  "(min-device-height: #{$md-dev-height + 1})",
+          "from-sm-devY":  "(min-device-height: #{$sm-dev-height + 1})",
+          "from-xs-devY":  "(min-device-height: #{$xs-dev-height + 1})",
+          "to-lg-devY":    "(max-device-height: #{$lg-dev-height})",
+          "to-md-devY":    "(max-device-height: #{$md-dev-height})",
+          "to-sm-devY":    "(max-device-height: #{$sm-dev-height})",
+          "to-xs-devY":    "(max-device-height: #{$xs-dev-height})"
+          );
+    @return map-get( $condMap, $c );
+  }
 
-// The media mixin
-@mixin media($args...) {
-  $query: "";
-  @each $arg in $args {
-    $op: "";
-    @if ( $query != "" ) {
-      $op: " and ";
+  @mixin media($args...) {
+    $query: "";
+    @each $arg in $args {
+      $op: "";
+      @if ( $query != "" ) {
+        $op: " and ";
+      }
+      $query: $query + $op + translate-media-condition($arg);
     }
-    $query: $query + $op + translate-media-condition($arg);
-  }
-  @media #{$query}  { @content; }
-}
-
-
-// ===============================================================//endregion
-//     Layout
-// ==================================================================//region
-
-@function _is-length($value) {
-  @return type-of($value) != "null" and (str-slice($value + "", 1, 4) == "calc"
-       or index(auto inherit initial 0, $value)
-       or (type-of($value) == "number" and not(unitless($value))));
-}
-
-@function _unpack-shorthand($shorthand) {
-  @if length($shorthand) == 1 {
-    @return nth($shorthand, 1) nth($shorthand, 1) nth($shorthand, 1) nth($shorthand, 1);
-  } @else if length($shorthand) == 2 {
-    @return nth($shorthand, 1) nth($shorthand, 2) nth($shorthand, 1) nth($shorthand, 2);
-  } @else if length($shorthand) == 3 {
-    @return nth($shorthand, 1) nth($shorthand, 2) nth($shorthand, 3) nth($shorthand, 2);
-  } @else {
-    @return $shorthand;
-  }
-}
-
-@mixin position(
-  $position,
-  $box-edge-values
-) {
-  $box-edge-values: _unpack-shorthand($box-edge-values);
-  $offsets: (
-  top:    nth($box-edge-values, 1),
-  right:  nth($box-edge-values, 2),
-  bottom: nth($box-edge-values, 3),
-  left:   nth($box-edge-values, 4),
-  );
-
-  position: $position;
-
-  @each $offset, $value in $offsets {
-  @if _is-length($value) {
-    #{$offset}: $value;
-  }
-  }
-}
-
-@mixin size($value) {
-  $width: nth($value, 1);
-  $height: $width;
-
-  @if length($value) > 1 {
-  $height: nth($value, 2);
+    @media #{$query}  { @content; }
   }
 
-  @if is-size($height) {
-  height: $height;
-  } @else {
-  @warn "`#{$height}` is not a valid length for the `$height` parameter in the `size` mixin.";
+// =============================================================================
+// Rebsorten typo
+// =============================================================================
+
+  @mixin brand-title($font-size, $border-width: 0, $anim: borderWidth) {
+    @include display(flex);
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    min-height: ($font-size + 2rem);
+    margin: -1.7rem 2rem 0rem !important;
+    font: normal normal 400 $font-size $serif-stack;
+    line-height: 1;
+    text-align: center;
+    letter-spacing: -0.05rem;
+    color: currentColor;
+    &::after {
+      @include size($border-width 3px);
+      content: "";
+      display: block;
+      margin: 0.5rem auto 0;
+      background: $light-red;
+      animation: $anim 1s linear 1.5s forwards 1;
+    }
   }
 
-  @if is-size($width) {
-  width: $width;
-  } @else {
-  @warn "`#{$width}` is not a valid length for the `$width` parameter in the `size` mixin.";
+  @mixin brand-nr($font-size) {
+    font: normal 500 $font-size $sans-stack !important;
+    // text-align: center;
+    margin: 0 auto;
+    color: $red;
   }
-}
+
+// =============================================================================
+// Progressbar bg
+// =============================================================================
+
+  @mixin pgBorder() {
+    padding: 6px;
+    background: rgba(0, 0, 0, 0.15);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(255, 255, 255, 0.065);
+  }
+  @mixin pgContainerBg($bgs) {
+    padding: 5px;
+    background-image: radial-gradient(circle farthest-side at top,rgba(255, 255, 255, 0.04 ) 0,rgba(255, 255, 255, 0) 100%);
+    background-position: 0 0;
+    background-size: $bgs;
+    // background-color: #c76164;
+    background-color: red(0.5);
+    // background-color: $red;
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.05), inset 0 1px rgba(255, 255, 255, 0.165);
+  }
+
+// =============================================================================
+// Pseudo element overlay
+// =============================================================================
+
+  @mixin coverer($top: 0, $pos: absolute) {
+      @include size(100%);
+      content: "";
+      display: block;
+      position: $pos;
+      top: $top;
+      left: 0;
+  }
+
+// =============================================================================
+// Font Awesom mixin
+// =============================================================================
+
+  @mixin font-awesome($content) {
+    content: $content;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    font-family: FontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+// =============================================================================
+// user-select: none - vendor prefix mixin
+// =============================================================================
+
+  @mixin user-select-none {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+     -moz-touch-callout: none;
+      -ms-touch-callout: none;
+       -o-touch-callout: none;
+  -webkit-touch-callout: none;
+          touch-callout: none;
+  }
+
+// =============================================================================
+// Some transition and animation mixins
+// =============================================================================
+
+  @mixin transition($value) {
+      -webkit-transition: $value; // obsolete
+            transition: $value; // IE 10, Fx 16+, Op 12.1+
+  }
+
+  @mixin transition_easing($value) {
+      -webkit-transition-timing-function: $value; // obsolete
+            transition-timing-function: $value; // IE 10, Fx 16+, Op 12.1+
+  }
+
+  @mixin transition_duration($value) {
+      -webkit-transition-duration: $value; // obsolete
+            transition-duration: $value; // IE 10, Fx 16+, Op 12.1+
+  }
+
+  @mixin transform($value)  {
+      -webkit-transform: $value; // Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4
+        -ms-transform: $value; // IE 9
+            transform: $value; // IE 10, Fx 16+, Op 12.1+
+  }
+
+  @mixin filter($value)  {
+      -webkit-filter: $value; /* Ch 23+, Saf 6.0+, BB 10.0+ */
+              filter: $value; /* FF 35+ */
+  }
+
+  @mixin keyframe($name) {
+    @-webkit-keyframes #{$name} {
+      @content;
+    }
+    @keyframes #{$name} {
+      @content;
+    }
+  }
+
+  @mixin animation($name, $duration, $easing, $iterations) {
+    -webkit-animation: $name $duration $easing $iterations; /* Safari 4+ */
+            animation: $name $duration $easing $iterations; /* IE 10+, Fx 29+ */
+  }
+
+// =============================================================================
+// Centers an absolute positioned element vertically and/or horizontally 
+// =============================================================================
+
+  @mixin center($xy:xy) {
+    @if $xy == xy {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      bottom: auto;
+      right: auto;
+      @include transform(translate(-50%, -50%));
+    }
+    @else if $xy == x {
+      position: absolute;
+      left: 50%;
+      right: auto;
+      @include transform(translate(-50%));
+    }
+    @else if $xy == y {
+      position: absolute;
+      top: 50%;
+      bottom: auto;
+      @include transform(translate(0, -50%));
+    }
+  }
+
+// =============================================================================
+// Mixin to paint css triangles  ( @include triangle(down, 10px, blue); )
+// =============================================================================
+
+  @mixin triangle($direction, $size: 0.375rem, $color: #222){
+    content: '';
+    display: block;
+    position: absolute;
+    height: 0; width: 0;
+    @if ($direction == 'up'){
+      border-bottom: $size solid $color;
+      border-left: $size solid transparent;
+      border-right: $size solid transparent;
+    }
+    @else if ($direction == 'down'){
+      border-top: $size solid $color;
+      border-left: $size solid transparent;
+      border-right: $size solid transparent;
+    }
+    @else if ($direction == 'left'){
+      border-top: $size solid transparent;
+      border-bottom: $size solid transparent;
+      border-right: $size solid $color;
+    }
+    @else if ($direction == 'right'){
+      border-top: $size solid transparent;
+      border-bottom: $size solid transparent;
+      border-left: $size solid $color;
+    }
+  }
+
+// =============================================================================
+// rgba backgrounds and colors mixin 
+// 
+// @include rgba(bg, #fff, .7); 
+// @include rgba(color, #000, .3);
+// =============================================================================
+
+  @function solid-lighten($color, $percentage) {
+    @return lighten($color, (1-$percentage)*5%);
+  }
+  @function solid-darken($color, $percentage) {
+    @return darken($color, (1-$percentage)*5%);
+  }
+  @mixin rgba($type, $color, $percentage, $shade: ligthen) {
+    @if $shade == lighten {
+      @if $type == color {
+        color: solid-lighten($color, $percentage);
+        color: rgba($color, $percentage);
+      }
+      @if $type == bg {
+        background-color: solid-lighten($color, $percentage);
+        background-color: rgba($color, $percentage);
+      }
+    }
+    @else {
+       @if $type == color {
+        color: solid-darken($color, $percentage);
+        color: rgba($color, $percentage);
+      }
+      @if $type == bg {
+        background-color: solid-darken($color, $percentage);
+        background-color: rgba($color, $percentage);
+      }
+    }
+  }
+
+// =============================================================================
+// Single side border radius
+// =============================================================================
+
+  @mixin border-top-radius($radius: $border-radius-default) {
+    border-top-right-radius: $radius;
+    border-top-left-radius: $radius;
+  }
+  @mixin border-right-radius($radius: $border-radius-default) {
+    border-top-right-radius: $radius;
+    border-bottom-right-radius: $radius;
+  }
+  @mixin border-bottom-radius($radius: $border-radius-default) {
+    border-bottom-right-radius: $radius;
+    border-bottom-left-radius: $radius;
+  }
+  @mixin border-left-radius($radius: $border-radius-default) {
+    border-top-left-radius: $radius;
+    border-bottom-left-radius: $radius;
+  }
+
+// =============================================================================
+// Transforms
+// =============================================================================
+
+  @mixin transform-single($property, $value) {
+    transform: #{$property}unquote('"("#{$value}")"');
+  }
+  @mixin rotate($deg) {
+    @include transform-single(rotate, $deg);
+  }
+  @mixin rotateX($deg) {
+    @include transform-single(rotateX, $deg);
+  }
+  @mixin rotateY($deg) {
+    @include transform-single(rotateY, $deg);
+  }
+  @mixin rotateZ($deg) {
+    @include transform-single(rotateZ, $deg);
+  }
+  @mixin rotate3d($x, $y, $z, $deg) {
+    $multi-var: $x, $y, $z, $deg;
+    @include transform-single(rotate3d, $multi-var);
+  }
+  @mixin scale($ratio) {
+    @include transform-single(scale, $ratio);
+  }
+  @mixin scaleX($ratio) {
+    @include transform-single(scaleX, $ratio);
+  }
+  @mixin scaleY($ratio) {
+    @include transform-single(scaleY, $ratio);
+  }
+  @mixin scaleZ($ratio) {
+    @include transform-single(scaleZ, $ratio);
+  }
+  @mixin scale3d($x, $y, $z) {
+    $multi-var: $x, $y, $z;
+    @include transform-single(scale3d, $multi-var);
+  }
+  @mixin skew($x, $y) {
+    $multi-var: $x, $y;
+    @include transform-single(skew, $multi-var);
+    backface-visibility: hidden;
+  }
+  @mixin skewX($deg) {
+    @include transform-single(skewX, $deg);
+    backface-visibility: hidden;
+  }
+  @mixin skewY($deg) {
+    @include transform-single(skewY, $deg);
+    backface-visibility: hidden;
+  }
+  @mixin translate($x, $y) {
+    $multi-var: $x, $y;
+    @include transform-single(translate, $multi-var);
+  }
+  @mixin translateX($x) {
+    @include transform-single(translateX, $x);
+  }
+  @mixin translateY($y) {
+    @include transform-single(translateY, $y);
+  }
+  @mixin translateZ($z) {
+    @include transform-single(translateZ, $z);
+  }
+  @mixin translate3d($x, $y, $z) {
+    $multi-var: $x, $y, $z;
+    @include transform-single(translate3d, $multi-var);
+  }
+
+
+// =============================================================================
+// Emboss effect
+// =============================================================================
+
+  @mixin box-emboss($opacity, $opacity2){
+    box-shadow: rgba(white,$opacity) 0 1px 0, inset rgba(black,$opacity2) 0 1px 0;
+  }
+
+// =============================================================================
+// Letterpress effect
+// =============================================================================
+
+  @mixin letterpress($opacity){
+    text-shadow: rgba(white,$opacity) 0 1px 0;
+  }
+
+// =============================================================================
+// Placeholder text
+// =============================================================================
+
+  @mixin placeholder-color($color: $placeholder-color-default) {
+    &::placeholder {
+      color: $color;
+    }
+  }
+
+// =============================================================================
+// Sizing
+// =============================================================================
+
+  // @mixin size($width, $height: $width) {
+  //   width: $width;
+  //   height: $height;
+  // }
+  // @mixin square($size) {
+  //   @include size($size, $size);
+  // }
+
+// =============================================================================
+// Normal & hover state
+// =============================================================================
+
+  @mixin hoverer($property, $normal, $hovered) {
+    #{$property}: $normal;
+    &:hover {
+      #{$property}: $hovered;
+    }
+  }
+
+  // Advanced positioning
+  // ===========================================================================
+
+  @mixin Position($type,
+                  $top: $position-default,
+                  $right: $position-default,
+                  $bottom: $position-default,
+                  $left: $position-default) {
+    position: $type;
+    $allowed_types: absolute relative fixed;
+    @if not index($allowed_types, $type) {
+      @warn "Unknown position: #{$type}.";
+    }
+    @each $data in top $top, right $right, bottom $bottom, left $left {
+      #{nth($data, 1)}: nth($data, 2);
+    }
+  }
+  @mixin absolute($top: $position-default, $right: $position-default, $bottom: $position-default, $left: $position-default) {
+    @include Position(absolute, $top, $right, $bottom, $left);
+  }
+  @mixin relative($top: $position-default, $right: $position-default, $bottom: $position-default, $left: $position-default) {
+    @include Position(relative, $top, $right, $bottom, $left);
+  }
+  @mixin fixed($top: $position-default, $right: $position-default, $bottom: $position-default, $left: $position-default) {
+    @include Position(fixed, $top, $right, $bottom, $left);
+  }
+
+// =============================================================================
+// Placeholders
+// =============================================================================
+
+  // Clearfix
+  // ===========================================================================
+  %clearfix {
+    *zoom: 1;
+    &:before,
+    &:after {
+      display: table;
+      content:'';
+      line-height: 0;
+    }
+    &:after {
+      clear: both;
+    }
+  }
+
+  // Hide text
+  // ===========================================================================
+  %hide-text {
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+  }
+
+  // Center an element vertically and horizontally
+  // ===========================================================================
+  %centerer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  // Center an element vertically
+  // ============================================================================
+  %vert-centerer {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  // Cover everything
+  // ===========================================================================
+  %coverer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  // Center a block level element
+  // ===========================================================================
+  %center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }

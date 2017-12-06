@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="200" viewBox="0 -10 100 220">
+  <g id="wineLoader" fill="none" fill-rule="evenodd">
+    <path stroke="#B5F0E8" stroke-opacity=".7" stroke-width="5" d="M1.13 0h84.3c.98 29.1-3.73 48.87-14.15 59.28C63.35 67.22 52.9 71.13 42.5 71c-10.07-.13-20.1-4.03-27.78-11.72C4.3 48.88-.23 29.1 1.12 0zm42.52 75.5v81h-.5v-81h.5zM9.5 158.9h68v.1h-68v-.1z"/>
+    <path fill="#c76164" d="M8 31q17.5 9.87 35 0t35 0a35 35 0 0 1-70 0" transform="translate(-7,-19)">
+      <animate attributeName="d" calcMode="spline" values="M15 50 Q32.5 40 50 50 Q67.5 60 85 50 A35 35 0 0 1 15 50;M15 50 Q32.5 60 50 50 Q67.5 40 85 50 A35 35 0 0 1 15 50;M15 50 Q32.5 40 50 50 Q67.5 60 85 50 A35 35 0 0 1 15 50" keyTimes="0;0.5;1" dur="2" keySplines="0.5 0 0.5 1;0.5 0 0.5 1" begin="0s" repeatCount="indefinite"/>
+    </path>
+  </g>
+</svg>

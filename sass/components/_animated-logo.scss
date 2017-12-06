@@ -6,33 +6,36 @@
   @include media("screen", "to-sm") {
     margin: -0.5rem 0 -3rem !important;
   }
-  h2 { display: none; }
+  // h2 { display: none; }
+  svg {
+    @include size(calc(6vw + 7rem) calc(6vh + 7rem));
+    @include position(absolute, 0 -25%);
+    margin: auto;
+    display: block;
+  }
 }
 
-.section-logo-svg {
-  @include size(calc(6vw + 7rem) calc(6vh + 7rem));
-  @include position(absolute, 0 -25%);
-  margin: auto;
-  display: block;
+.animated-logo {
   fill: #333;
   fill: url("#MyGradient");
   stroke: #333;
-  stroke-miterlimit: 5;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+  // stroke-miterlimit: 5;
+  // stroke-linecap: round;
+  // stroke-linejoin: round;
   stroke-opacity: 0.5;
   filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.065));
   .watermark & {
-    @include size(auto 230px);
-    @include center(xy);
-    fill: transparentize(#fff, 0.9);
-    stroke: transparentize(#fff, 0.5);
     z-index: -1;
-    // .single & {
-    //   fill: transparentize(#000, 0.9);
-    //   fill: url("#MyGradient");
-    //   stroke: #333 !important;
-    // }
+    @include size(auto 250px);
+    @include center(xy);
+    @include media(mobile) {
+      @include size(auto 200px);
+    }
+    fill: white(0.1);
+    stroke: white(0.5);
+  }
+  &#logoAfter {
+    
   }
 }
 
@@ -41,15 +44,14 @@
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
-  animation-duration: 2s, 2s, 1s;
-  animation-delay: 0.5s, 1.5s, 2s;
-  animation-delay: 1s, 2s, 2.5s;
+  animation-duration: 1.5s, .5s, 2s;
+  animation-delay: .5s, 2s, 2s;
   .watermark & {
-    animation-duration: 1s, 1s, 1s;
+    animation-duration: 1s, .5s, 1s;
     animation-delay: 0s, 1s, 1s;
   }
+  .images-loaded .logo-header &,
   .section-logo.animated &,
-  .section-logo.animated & ,
   .watermark & {
     animation-name: DrawLine, FadeStroke, FillIn;
   }

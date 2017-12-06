@@ -1,0 +1,115 @@
+
+$btn-width: 350px !default;
+$btn-height: 60px !default;
+$bg-color: #fff !default;
+$btn-color: $red;
+
+.modal-open-btn {
+  white-space: nowrap;
+  position: relative;
+  z-index: 1;
+  display: inline-block
+  overflow: hidden;
+  @include size(200px $btn-height);
+  max-width: $btn-width;
+  padding: 0 !important;
+  // border: 1px solid red(0.7) !important;
+  // border: 0 !important;
+  border-radius: 4px;
+  margin: 0 auto !important;
+  font: normal 600 unquote('0.7rem')/$btn-height $sans-stack !important;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background-color: $bg-color !important;
+  color: $btn-color !important;
+  box-shadow: $box-shadow;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+  &:hover {
+    color: #fff !important;
+    transform: translateY(-1px);
+      box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px black(0.08);
+  }
+  &:active {
+    transform: translateY(1px);
+    box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px black(0.08);
+  }
+  &:before,
+  &:after {
+    z-index: -1;
+    transition: 0.5s ease-in-out;
+  }
+  a {
+    border: none !important;
+  }
+  &:hover a {
+    color: #fff !important;
+  }
+}
+
+.modal-open-btn {
+  position: relative;
+  $btn-color-dark: shade($btn-color, 40%);
+  color: tint($btn-color);
+  
+  &:before,
+  &:after {
+    @include absolute(50%);
+    content: '';
+    @include size(50px);
+    background-color: $btn-color;
+    border-radius: 50%;
+    will-change: left, right, opacity;
+  }
+  &:before {
+    left: -50px;
+    transform: translate(-50%, -50%);
+    // animation: criss-cross-left 0.8s reverse;
+  }
+  &:after {
+    right: -50px;
+    transform: translate(50%, -50%);
+    // animation: criss-cross-right 0.8s reverse;
+  }
+  &:hover {
+    color: tint($btn-color, 75%);
+    &:before,
+    &:after {
+      // @include size($btn-width);
+    }
+    &:before {
+      animation: criss-cross-left 0.8s both;
+      animation-direction: alternate;
+    }
+    &:after {
+      animation: criss-cross-right 0.8s both;
+      animation-direction: alternate;
+    }
+  }
+}
+@keyframes criss-cross-left {
+  0% {
+    left: -20px; 
+  }
+  50% {
+    left: 50%; 
+    @include size(20px);
+  }
+  100% {
+    left: 50%; 
+    @include size($btn-width*1.5);
+  }
+}
+@keyframes criss-cross-right {
+  0% {
+    right: -20px; 
+  }
+  50% {
+    right: 50%; 
+    @include size(20px);
+  }
+  100% {
+    right: 50%; 
+    @include size($btn-width*1.5);
+  }
+}

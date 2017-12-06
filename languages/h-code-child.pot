@@ -1,0 +1,35 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: H-Code\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-29 09:04+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Aniket <aniket@linksture.com>\n"
+"Language-Team: Themezaa <info@themezaa.com>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;esc_html_e;esc_html__;esc_attr_e;wp_kses;_x;"
+"esc_attr;esc_html;_e;_n;_nx;esc_attr__\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-Country: UNITED STATES\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-SearchPath-0: .\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION\n"
+"X-Generator: Loco - https://localise.biz/"
+
+#. Name of the theme
+#. Description of the theme
+msgid "Historische Rebsorten"
+msgstr ""
+
+#. Author of the theme
+msgid "reflect-media GmbH / Kunsang Norbu Tsering"
+msgstr ""
+
+#. Author URI of the theme
+msgid "http://reflect-media.de"
+msgstr ""

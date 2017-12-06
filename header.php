@@ -29,6 +29,7 @@
     <link rel="apple-touch-icon" sizes="114x114" href="<?php if (hcode_option('apple_iPhone_retina_favicon')) { echo hcode_option_url('apple_iPhone_retina_favicon'); } else { echo HCODE_THEME_IMAGES.'/apple-touch-icon-114x114.png'; }?>">
     <link rel="apple-touch-icon" sizes="149x149" href="<?php if (hcode_option('apple_iPad_retina_favicon')) { echo hcode_option_url('apple_iPad_retina_favicon'); } else { echo HCODE_THEME_IMAGES.'/apple-touch-icon-114x114.png'; }?>">
     <?php // End favicon. ?>
+
 <!--     <script>
         var Hyphenopoly = {
             require: {
@@ -45,6 +46,7 @@
             }
         };
     </script> -->
+    
     <?php
         // Set Header for Ajax Popup.
         hcode_set_header( get_the_ID() );
@@ -67,16 +69,44 @@
         endif;
     ?>
 </head>
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> >
+
     <div id="loading-page">
-        <div class="glass-container">
+      <style>
+        #loading-page {
+          width: 100%; height: 100%;
+          position: fixed; top: 0; left: 0;
+          transition: opacity 1s;
+          background: #252525;
+          z-index: 1040;
+          pointer-events: none;
+        }
+        #loading-page #wineLoader {
+          position: absolute; top: 50%; left: 50%;
+          bottom: auto; right: auto;
+          -webkit-transform: translateX(-50%) translateY(-50%);
+          -ms-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+        }
+        body.images-loaded #loading-page {
+           opacity: 0; 
+        }
+      </style>
+      <svg id="wineLoader" xmlns="http://www.w3.org/2000/svg" width="86" height="160" viewBox="0 0 100 200" fill="none">
+        <path id="glassShape" transform="translate(-0.5,-0.5)" stroke="#B5F0E8" stroke-opacity=".7" stroke-width="5" d="M8.13 20h84.3c.98 29.1-3.73 48.87-14.15 59.28C70.35 87.22 59.9 91.13 49.5 91c-10.07-.13-20.1-4.03-27.78-11.72C11.3 68.88 6.77 49.1 8.12 20zm42.52 75.5v81h-.5v-81h.5zM16.5 178.9h68v.1h-68v-.1z"/>
+        <path id="wineFill" fill="#e3001a" fill-rule="nonzero" d="M50 51c11.67-6.6 23.33-6.6 35 0 0 19.32-15.67 35-35 35S15 70.3 15 51c11.67 6.57 23.33 6.57 35 0z">
+          <animate attributeName="d" calcMode="spline" values="M15 50 Q32.5 40 50 50 Q67.5 60 85 50 A35 35 0 0 1 15 50;M15 50 Q32.5 60 50 50 Q67.5 40 85 50 A35 35 0 0 1 15 50;M15 50 Q32.5 40 50 50 Q67.5 60 85 50 A35 35 0 0 1 15 50" keyTimes="0;0.5;1" dur="2" keySplines="0.5 0 0.5 1;0.5 0 0.5 1" begin="0s" repeatCount="indefinite"/>
+        </path>
+      </svg>
+<!--         <div class="glass-container">
             <div class="glass-mask">
                 <div class="glass">
                     <div class="fill"></div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
+
 <?php
     // Add Div For Ajax Popup
     hcode_add_ajax_page_div_header( get_the_ID() );
