@@ -41,12 +41,6 @@ add_action( 'wp_enqueue_scripts', 'hcode_child_style' );
       'redirect'    => false
     ));
 
-    // acf_add_options_sub_page(array(
-    //   'page_title'  => 'Theme Options',
-    //   'menu_title'  => 'Options',
-    //   'parent_slug' => 'hr-theme-settings',
-    // ));
-
     acf_add_options_sub_page(array(
       'page_title'  => 'Theme Homepage Settings',
       'menu_title'  => 'Homepage',
@@ -93,6 +87,23 @@ add_action( 'wp_enqueue_scripts', 'hcode_child_style' );
   }
   add_action( 'wp_enqueue_scripts', 'hr_add_scripts', 35);
 
+  // <!--     <script>
+  //         var Hyphenopoly = {
+  //             require: {
+  //                 "de": "FORCEHYPHENOPOLY"
+  //             },
+  //             paths: {
+  //                 patterndir: "/wp-content/themes/h-code-child/patterns/",
+  //                 maindir: "/wp-content/themes/h-code-child/js/"
+  //             },
+  //             setup: {
+  //                 classnames: {
+  //                     "hyphenate": {}
+  //                 }
+  //             }
+  //         };
+  //     </script> -->
+  
 /**
  * Modal
  *
@@ -261,18 +272,8 @@ add_action( 'wp_enqueue_scripts', 'hcode_child_style' );
   function reflect_remove_plugin_scripts() {
 
       // wp_deregister_script( '' );
-      // wp_deregister_script( '' );
-      // wp_deregister_script( '' );
-      // wp_deregister_script( '' );
-      // wp_deregister_script( '' );
-      // wp_deregister_script( '' );
       wp_deregister_script( 'vc_grid-js-imagesloaded' );
 
-      // wp_dequeue_script( '' );
-      // wp_dequeue_script( '' );
-      // wp_dequeue_script( '' );
-      // wp_dequeue_script( '' );
-      // wp_dequeue_script( '' );
       // wp_dequeue_script( '' );
       wp_dequeue_script( 'vc_grid-js-imagesloaded' );
   }

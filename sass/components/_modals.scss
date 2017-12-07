@@ -21,16 +21,16 @@ $modal-bg: #111;
 }
 
 // modal appear effect
+.modal-wrapper { display: none; }
 .modal,
 .modal-wrapper {
-  display: none;
   opacity: 0;
   transition: opacity .5s ease-out, 
-              backdrop-filter .5s .5s ease-out,
+              backdrop-filter .3s .5s ease-out,
               -webkit-backdrop-filter .5s .5s ease-out;
   .modal-is-open & {
     display: block !important;
-    transition-delay: .5s, 0s, 0s;
+    transition-delay: .0s, 0s, 0s;
   }
   &.show {
     opacity: 1;

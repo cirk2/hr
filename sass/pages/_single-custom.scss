@@ -67,8 +67,9 @@ $modal-bg: #000;
   }
 }
 
-.modal .text-center h3 { 
+.modal .text-center h3 {
   padding: 1rem;
+  margin: 0 auto;
   &::after,
   &::before {
     font-size: 14px;

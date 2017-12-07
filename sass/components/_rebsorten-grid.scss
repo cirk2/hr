@@ -19,12 +19,17 @@
       @include position(absolute, 2rem NULL NULL 0);
       display: block !important;
       visibility: visible;
-      opacity: .04;
+      opacity: .06;
       // -moz-backface-visibility: hidden;
       @include media("screen", "to-md") {
         top: 1.5rem;
       }
     }
+  }
+  .vc_grid-item-mini {
+    box-shadow: 0 3px 5px rgba(90,50,50,.09), 0 1px 3px rgba(0,0,0,.07);
+    border: 2px solid #f8f8f8;
+    background: #fff;
   }
   .normal-state {
     .vc_gitem-row-position-top {

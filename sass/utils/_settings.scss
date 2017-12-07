@@ -11,6 +11,7 @@ $min_font: 16px;
 $max_font: 24px;
 
 $sans-stack:  'Montserrat', 'Proxima Nova', 'Gotham', system-ui, sans-serif;
+// $sans-stack:  'Proxima Nova', 'Montserrat', 'Gotham', system-ui, sans-serif;
 $serif-stack: 'Lora', 'Abril', 'Miller', serif;
 
 // 
@@ -23,13 +24,13 @@ $text-color: #1a171b !default;
 
 // brand color //#e3001a
 
-$red: #df4444  !default;
+$red: #e3001a  !default;
 
 $red-text: $red !default;
 $light-red: $red !default;
 
-$red-text  :   #df4444;
-$light-red :   #c76164 !default;
+// $red-text  :   #df4444;
+// $light-red :   #c76164 !default;
 
 // box-shadow default
 

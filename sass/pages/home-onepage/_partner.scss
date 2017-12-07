@@ -1,6 +1,7 @@
 .partner-grid {
   .vc_grid-item-mini {
-//     border: 4px solid #ffcfcf;
+    border-radius: 3px;
+    box-shadow: $box-shadow !important;
     border: 1px solid $red;
   }
   .vc_grid-item {

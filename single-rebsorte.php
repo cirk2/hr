@@ -80,7 +80,9 @@ get_header(); ?>
           </div>
           <?php endif; ?>
           <div class="partnerwinzer">
+            
             <ul>
+              <h3>Partnerwinzer</h3>
             <?php  $partners = get_posts(array(
                     'post_type' => 'partnerwinzer',
                     'numberposts' => -1,
@@ -93,8 +95,6 @@ get_header(); ?>
                     )
                 ));
               if( $partners ): ?>
-
-              <h3>Partnerwinzer</h3>
 
               <?php foreach( $partners as $partner ): ?>
 

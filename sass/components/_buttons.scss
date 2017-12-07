@@ -8,13 +8,11 @@ $btn-color: $red;
   white-space: nowrap;
   position: relative;
   z-index: 1;
-  display: inline-block
+  display: inline-block;
   overflow: hidden;
   @include size(200px $btn-height);
   max-width: $btn-width;
   padding: 0 !important;
-  // border: 1px solid red(0.7) !important;
-  // border: 0 !important;
   border-radius: 4px;
   margin: 0 auto !important;
   font: normal 600 unquote('0.7rem')/$btn-height $sans-stack !important;

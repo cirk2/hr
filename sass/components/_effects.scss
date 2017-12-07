@@ -38,9 +38,11 @@ body {
   #loading-page {
     @include coverer(0, fixed);
     transition: opacity 1s $ease-out-quart 1s;
-    background: #252525;
+    background: black(0.9);
     z-index: 1040;
     pointer-events: none;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
     #wineLoader {
       @include center(xy);
     }

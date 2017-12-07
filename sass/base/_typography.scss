@@ -32,6 +32,7 @@ h1, h2, h3, h4, h5, h6 {
 h1, h2, h3 {
   font-weight: 600;
   letter-spacing: -0.07rem !important;
+  // font-family: proxima_nova_altblack !important;
 }
 
 h1 { font-size: 2.1rem; }
@@ -75,13 +76,6 @@ strong {
   font-weight: 600;
 }
 
-@mixin headerstyle-2($font-size) {
-  font: 600 $font-size/1 $sans-stack;
-  letter-spacing: -0.06rem;
-  color: $red;
-  // -webkit-font-smoothing: subpixel-antialiased !important;
-}
-
 // Onepage section headings
 
 .section-heading {
@@ -109,26 +103,30 @@ strong {
         margin: 1.7rem -4rem .5rem;
       }
       font: 700 calc(2.5rem)/1 $sans-stack !important;
-      color: $red;
-      &::after {
-        content: '';
-        @include position(absolute, -35% NULL NULL 5%);
-        @include size(150%);
-        z-index: 0;
-        pointer-events: none;
-        background: radial-gradient(circle farthest-side at top,
-                                    rgba(255, 255, 255, 0.3 ) 0,
-                                    rgba(255, 255, 255, 0) 100%);
-        .grey-bg & {
-          background: radial-gradient(circle farthest-side at top,
-                                    rgba(238, 238, 238, 0.3) 0,
-                                    rgba(255, 255, 255, 0) 100%);
-        }
-        @include media("screen", "to-xs") {
-          @include position(absolute, 10% NULL NULL -10%);
-          @include size(150% 60%);
-        }
-      }
+      color: $red-text;
+
+      // font-size: 2.5rem;
+      // font-family: proxima_nova_altblack !important;
+      // &::after {
+      //   content: '';
+      //   @include position(absolute, -35% NULL NULL 5%);
+      //   @include size(150%);
+      //   z-index: 0;
+      //   pointer-events: none;
+      //   background: radial-gradient(circle farthest-side at top,
+      //                               rgba(255, 255, 255, 0.3 ) 0,
+      //                               rgba(255, 255, 255, 0) 100%);
+      //   .grey-bg & {
+      //     background: radial-gradient(circle farthest-side at top,
+      //                               rgba(238, 238, 238, 0.3) 0,
+      //                               rgba(255, 255, 255, 0) 100%);
+      //   }
+      //   @include media("screen", "to-xs") {
+      //     @include position(absolute, 10% NULL NULL -10%);
+      //     @include size(150% 60%);
+      //   }
+      // }
+
     }
     h6 {
       max-width: 25rem;

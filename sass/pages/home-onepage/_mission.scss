@@ -20,12 +20,17 @@
       &:nth-of-type(even) { right: 10%; }
     }
   }
+  .vc_grid-item-mini  {
+    // box-shadow: $box-shadow !important;
+    // border: 1px solid $red;
+    // background: #fff;
+  }
   .mission-grid-item {
     .mission-field {
       font: 300 1.4rem/1.2 $sans-stack;
       letter-spacing: -0.06rem;
       color: #777;
-      max-width: 10rem;
+      max-width: 10em;
       margin: 0 auto;
     }
     .tagline-acf::before {
@@ -44,15 +49,14 @@
     }
     .description-acf {
       margin-top: 1rem;
-      
       font-size: 1.2rem;
       &::after {
         content: "\:";
       }
     }
     .mission-title h3 {
-      font-size: 1.6rem;
-      font-weight: 500;
+      font-size: 1.4rem;
+      font-weight: 600;
       margin: 0 auto 3rem;
       max-width: 8rem;
       color: $red;
@@ -66,14 +70,15 @@
       margin-top: 0em;
     }
     .modal-open-btn {
-      max-width: 150px !important;
-      margin-bottom: 2.5rem !important;
+      max-width: 200px !important;
+      margin-bottom: 1.5rem !important;
     }
   }
 }
 
 .vc_gitem-animate-blurScaleOut {
   .vc_figure {
+    box-shadow: $box-shadow !important;
     position: relative;
     img {
       filter: grayscale(0.3);
