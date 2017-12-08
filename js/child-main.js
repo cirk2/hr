@@ -10,6 +10,11 @@ if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
     isiPhoneiPad = true;
 }
 
+if (navigator.userAgent.search("Safari") >= 0 && navigator.userAgent.search("Chrome") < 0) 
+{
+   document.getElementsByTagName("BODY")[0].className += " safari";
+}
+
 // IE Detection
 var isIE  = false,
     ua    = window.navigator.userAgent,

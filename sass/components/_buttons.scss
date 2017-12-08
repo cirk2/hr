@@ -25,6 +25,7 @@ $btn-color: $red;
   transition: 0.5s ease-in-out;
   &:hover {
     color: #fff !important;
+    background: $red !important;
     transform: translateY(-1px);
       box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px black(0.08);
   }
@@ -39,13 +40,18 @@ $btn-color: $red;
   }
   a {
     border: none !important;
+    background: #fff !important;
   }
   &:hover a {
     color: #fff !important;
+    background: $red !important;
+  }
+  a.vc-spinner:before {
+    display: none;
   }
 }
 
-.modal-open-btn {
+.modal-open-btn.animation {
   position: relative;
   $btn-color-dark: shade($btn-color, 40%);
   color: tint($btn-color);

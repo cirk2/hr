@@ -67,11 +67,18 @@ $mix-percent-default: 15% !default;
 }
 
 // =============================================================================
-// Strip the units from a value
+// Remove the unit of a length
+//
+// @param {Number} $number - Number to remove unit from
+// @return {Number} - Unitless number
 // =============================================================================
 
-@function strip-units($value) {
-  @return $value / ($value * 0 + 1);
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
 }
 
 // =============================================================================

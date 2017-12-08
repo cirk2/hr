@@ -9,7 +9,7 @@
     justify-content: center;
     // will-change: opacity, transform; 
     @include media("mobile") {
-      height: 200px !important;
+      height: 220px !important;
     }
     @include media("ipad") {
       height: 220px !important;
@@ -75,7 +75,10 @@
     }
     .rebsorten-grid-excerpt {
       // Kurztext
-      @include media("to-xs-devX") {
+      @include media("mobile") {
+        display: none;
+      }
+      @include media("ipad") {
         display: none;
       }
       p {
