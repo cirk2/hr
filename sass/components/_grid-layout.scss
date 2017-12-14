@@ -1,6 +1,6 @@
 .grid-container {
   @include display(grid);
-  max-width: 860px;
+  max-width: 910px;
   margin: 0 auto;
   > * {
     color: #fff;

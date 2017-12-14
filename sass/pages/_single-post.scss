@@ -8,10 +8,22 @@
 }
 
 .widget {
+  ul {
+    list-style: none outside none;
+    padding: 0;
+    margin: 0;
+  }
   .widget-title {
     font-size: 1.1rem;
     color: $red;
     letter-spacing: -0.8px;
+  }
+  .widget-posts-details {
+    margin-bottom: 1rem;
+    font-size: 0.7rem;
+    a {
+      display: block;
+    }
   }
 }
 
@@ -26,7 +38,7 @@
     }
   }
   .widget-posts-details {
-    float: left;
+    // float: left;
     top: 8px;
   }
 }

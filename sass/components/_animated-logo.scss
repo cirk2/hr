@@ -17,11 +17,9 @@
 .animated-logo {
   fill: #333;
   fill: url("#MyGradient");
-  stroke: #333;
-  // stroke-miterlimit: 5;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-opacity: 0.5;
+  stroke: #999;
+  stroke-miterlimit: 5;
+  // stroke-opacity: 0.5;
   filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.065));
   .watermark & {
     z-index: -1;

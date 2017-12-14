@@ -1,5 +1,6 @@
 [data-tooltip] {
   position: relative;
+  outline: 0 !important;
   &::after {
     content: attr(data-tooltip);
     position: absolute;
@@ -19,7 +20,8 @@
     // pointer-events: none;
     transition: opacity .3s;
   }
-  &:hover::after  {
+  &:hover::after,
+  &:focus::after  {
       opacity: 1;
   }
 }

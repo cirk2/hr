@@ -12,13 +12,16 @@
       background-size: 176px !important;
       background-color: hsl(0, 0%, 100%);
       @media (max-width: 675px) {
-        background-size: contain !important;
+        background-size: 90% !important;
       }
     }
     h3 {
       margin: 15px 0 0;
       font-size: 1.4em;
       color: $red;
+      @include media("mobile") {
+        font-size: 1rem;
+      }
     }
   }
 }

@@ -85,7 +85,7 @@ get_header(); ?>
               <h3>Partnerwinzer</h3>
             <?php  $partners = get_posts(array(
                     'post_type' => 'partnerwinzer',
-                    'numberposts' => -1,
+                    'numberposts' => 8,
                     'meta_query' => array(
                         array(
                         'key' => 'rebsorten',
@@ -110,12 +110,48 @@ get_header(); ?>
             <?php endif; ?>
             </ul>
           </div>
+
+          <?php 
+            $show_posts = "style='display: none;'"; 
+
+            global $post;
+            $args = array( 'numberposts' => 10, 
+                           'category_name' => get_the_title(), 
+                         );
+            $posts = get_posts( $args );
+
+            if (!empty($posts)) {
+              $show_posts = "style='display: block;'";
+            }
+          ?>
+
+          <h3 <?php echo $show_posts ?> >Artikel zur Rebsorte <?php echo the_title(); ?></h3>
+          
+          <ul>
+            
+          <?php foreach( $posts as $post ): setup_postdata($post); ?>
+           
+            <li><a href="<?php echo the_permalink() ?>">
+              <?php echo the_title() ?></a>
+            </li>
+
+          <?php 
+            endforeach; 
+            wp_reset_postdata();
+          ?>
+
+          </ul>
+
           <div class="separator">&#x2766;</div>
         </div>
         <div class="content">
         <!-- research section -->
 
           <h2 class="section-science">Forschungsergebnisse Andreas Jung</h2>
+
+          <div class="featured-image-thumb visible-sm visible-xs" >
+            <?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'medium' ); }  ?>
+          </div>
 
           <?php if (get_field( 'status' )): ?>
           <h3>Status</h3>
@@ -140,7 +176,7 @@ get_header(); ?>
         </div>
         <!-- sidebar -->
         <div class="sidebar">
-          <div class="featured-image-thumb">
+          <div class="featured-image-thumb hidden-sm hidden-xs" >
             <!-- <a href="<?php echo $thumb_url ?>" class="fancybox"> -->
             <?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'medium' ); }  ?>
             <!-- </a> -->

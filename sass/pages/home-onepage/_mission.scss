@@ -20,54 +20,58 @@
       &:nth-of-type(even) { right: 10%; }
     }
   }
-  .vc_grid-item-mini  {
-    // box-shadow: $box-shadow !important;
-    // border: 1px solid $red;
-    // background: #fff;
-  }
   .mission-grid-item {
     .mission-field {
-      font: 300 1.4rem/1.2 $sans-stack;
+      font: 300 1.5rem/1.2 $sans-stack;
       letter-spacing: -0.06rem;
       color: #777;
       max-width: 10em;
       margin: 0 auto;
     }
     .tagline-acf::before {
-        content: "Wir ";
-        font-weight: 600;
-        color: $light-red;
-        @at-root {
-          .tagline-acf {
-            transition: all .5s;
-            .vc_is-hover & {
-              opacity: 0.7;
-              filter: blur(1.5px);
+      content: "Wir ";
+      font-weight: 600;
+      color: $light-red;
+      @at-root {
+        .tagline-acf {
+          transition: opacity .5s;
+          // transition: filter .5s;
+          // -webkit-backface-visibility: hidden;
+          // transform: translate3d(1px, 0, 0) !important;
+          // filter: blur(0.01px);
+          .vc_is-hover & {
+            opacity: 0.3;
+            // filter: blur(1.5px);
           }
         }
       }
     }
     .description-acf {
-      margin-top: 1rem;
-      font-size: 1.2rem;
+      @include center(x);
+      top: 2rem;
+      font-size: 1.4rem;
+      width: 8em;
       &::after {
         content: "\:";
       }
     }
     .mission-title h3 {
-      font-size: 1.4rem;
+      font-size: 1.5rem;
       font-weight: 600;
-      margin: 0 auto 3rem;
-      max-width: 8rem;
+      margin: 0 auto 2rem;
+      max-width: 9rem;
       color: $red;
     }
     .wpb_single_image {
       max-width: 330px;
-      padding: 20px;
+      padding: 0;
       margin: 0 auto !important;
     }
     .vc_gitem-zone-c {
       margin-top: 0em;
+      .vc_gitem-col {
+        padding: 0;
+      }
     }
     .modal-open-btn {
       max-width: 200px !important;
@@ -76,48 +80,54 @@
   }
 }
 
-.vc_gitem-animate-blurScaleOut {
-  .vc_figure {
-    box-shadow: $box-shadow !important;
-    position: relative;
-    img {
+.vc_gitem-animate-none {
+  margin: 0 auto;
+  max-width: 350px !important;
+  @include media(mobile) {
+    max-width: 230px !important;
+    height: 270px !important;
+  }
+  @include media(ipad) {
+    max-width: 250px !important;
+  }
+  // .vc_gitem-col {
+  //   padding: 0 !important;
+  // }
+  .NORMAL-STATE {
+    .vc_figure img { 
+      box-shadow: $box-shadow !important;
       filter: grayscale(0.3);
       border-radius: 3px;
-      .vc_is-hover & {
-        filter: none;
-      }
     }
-    &:before {
-      content: "";
-      @include coverer(0);
-      background: white(0.75);
+    transition: all .5s;
+    -webkit-transform: scale(1) translateZ(0) !important;
+    -ms-transform: scale(1) translateZ(0) !important;
+    transform: scale(1) translateZ(0) !important;
+    .vc_is-hover & {
       opacity: 0;
-      transition: opacity 0.5s;
-      .vc_is-hover & {
+      -webkit-transform: scale(0.95) translateZ(0) !important;
+      -ms-transform: scale(0.95) translateZ(0) !important;
+      transform: scale(0.95) translateZ(0) !important;
+    }
+  }
+  .HOVER-STATE {
+    transition: all .5s;
+    .vc_figure {
+      filter: blur(2px) grayscale(0.3);
+      position: relative;
+      -webkit-transform: scale(0.95) !important;
+      -ms-transform: scale(0.95) !important;
+      transform: scale(0.95) !important;
+      &:before {
+        @include coverer(0);
+        content: "";
+        z-index: 1;
+        background: white(0.75);
         opacity: 1;
       }
     }
   }
 }
-.vc_gitem-zone-a.NORMAL-STATE {
-  -webkit-transform: scale(1.2) !important;
-  -ms-transform: scale(1.2) !important;
-  transform: scale(1.2) !important;
-  will-change: transform;
-  max-width: 350px !important;
-  margin: 0 auto;
-  @include media(mobile) {
-    max-width: 230px !important;
-  }
-  @include media(ipad) {
-    max-width: 250px !important;
-  }
 
-  .vc_grid-item-mini.vc_is-hover & {
-   -webkit-transform: scale(1.1) !important;
-   -ms-transform: scale(1.1) !important;
-   transform: scale(1.1) !important;
-  }
-}
 
 

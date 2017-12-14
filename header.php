@@ -61,7 +61,7 @@
           position: fixed; top: 0; left: 0;
           transition: opacity 1s;
           background: rgba(37, 37, 37, 0.9);
-          z-index: 1199;
+          z-index: 1999;
           -webkit-backdrop-filter: blur(8px);
           backdrop-filter: blur(8px);
         }
@@ -82,6 +82,11 @@
           <animate attributeName="d" calcMode="spline" values="M15 50 Q32.5 40 50 50 Q67.5 60 85 50 A35 35 0 0 1 15 50;M15 50 Q32.5 60 50 50 Q67.5 40 85 50 A35 35 0 0 1 15 50;M15 50 Q32.5 40 50 50 Q67.5 60 85 50 A35 35 0 0 1 15 50" keyTimes="0;0.5;1" dur="2" keySplines="0.5 0 0.5 1;0.5 0 0.5 1" begin="0s" repeatCount="indefinite"/>
         </path>
       </svg>
+    </div>
+    <div id="landscape-blocker">
+        <div class="inner">
+            <p>Bitte drehen sie Ihr Gerät.</p>
+        </div>
     </div>
 <?php
     // Add Div For Ajax Popup

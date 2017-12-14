@@ -1,16 +1,17 @@
 
 $btn-width: 350px !default;
 $btn-height: 60px !default;
+$btn-height-mobile: 40px !default;
 $bg-color: #fff !default;
 $btn-color: $red;
 
 .modal-open-btn {
+  @include size(200px $btn-height);
   white-space: nowrap;
   position: relative;
   z-index: 1;
   display: inline-block;
   overflow: hidden;
-  @include size(200px $btn-height);
   max-width: $btn-width;
   padding: 0 !important;
   border-radius: 4px;
@@ -23,6 +24,10 @@ $btn-color: $red;
   box-shadow: $box-shadow;
   cursor: pointer;
   transition: 0.5s ease-in-out;
+  @include media("to-md-devX") {
+    height: $btn-height-mobile;
+    line-height: $btn-height-mobile !important;
+  }
   &:hover {
     color: #fff !important;
     background: $red !important;

@@ -117,6 +117,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-file-pdf {
+  &:before {
+    content: $icon-file-pdf;
+  }
+}
 .icon-logo-bg .path1 {
   &:before {
     content: $icon-logo-bg-path1;  
@@ -448,6 +453,11 @@
     content: $icon-heart;
   }
 }
+.icon-download {
+  &:before {
+    content: $icon-download;
+  }
+}
 .icon-global {
   &:before {
     content: $icon-global;
@@ -488,5 +498,4 @@
     content: $icon-linkedin;
   }
 }
-
 

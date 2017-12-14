@@ -1,19 +1,27 @@
+// div.separator {
+//   @include user-select-none;
+//   position: relative;
+//   margin: 4rem auto 3rem;
+//   text-align: center;
+//   font-size: 2rem;
+//   line-height: 0;
+//   color: white(0.07);
+//   &::before, &::after {
+//     content: "";
+//     display: block;
+//     position: absolute;
+//     width: 46%;
+//     border-bottom: 3px double white(0.07);
+//   }
+//   &::after {
+//     right: 0;
+//   }
+// }
+
+
+
 div.separator {
-  @include user-select-none;
-  position: relative;
   margin: 4rem auto 3rem;
-  text-align: center;
-  font-size: 2rem;
-  line-height: 0;
-  color: white(0.07);
-  &::before, &::after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 46%;
-    border-bottom: 3px double white(0.07);
-  }
-  &::after {
-    right: 0;
-  }
+  text-indent: -200vw;
+  border-bottom: 3px double white(0.07);
 }

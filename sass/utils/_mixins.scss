@@ -64,7 +64,8 @@
           "print":         "only print",
           "portrait":      "(orientation:portrait)",
           "landscape":     "(orientation:landscape)",
-          "mobile":        "(min-device-width:  #{$xxs-dev-width}) and (max-device-width: #{$sm-dev-width}) and (-webkit-min-device-pixel-ratio : 2)",
+          // "mobile":        "(min-device-width:  #{$xxs-dev-width}) and (max-device-width: #{$sm-dev-width}) and (-webkit-min-device-pixel-ratio : 2)",
+          "mobile":        "(min-device-width:  #{$xxs-dev-width}) and (max-device-width: #{$sm-dev-width})",
           "ipad":          "(min-device-width:  #{$md-dev-width}) and (max-device-width: #{$lg-dev-width}) and (-webkit-min-device-pixel-ratio : 2)",
           "retina":        "(-webkit-min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx)",
           "!retina":       "(min-width:         #{$xxs-width}),not screen and(-webkit-min-device-pixel-ratio: 2),not screen and(min--moz-device-pixel-ratio: 2), not screen and (-o-min-device-pixel-ratio: 2/1), not screen and (min-device-pixel-ratio: 2), not screen and (min-resolution: 192dpi), not screen and (min-resolution: 2dppx)",
@@ -81,20 +82,20 @@
           "to-xs":         "(max-width:         #{$xs-width})",
           "from-xxs":      "(min-width:         #{$xxs-width + 1})",
           "to-xxs":        "(max-width:         #{$xxs-width})",
-          "from-lg-devX":  "(min-device-width:  #{$lg-dev-width + 1})",
-          "from-md-devX":  "(min-device-width:  #{$md-dev-width + 1})",
-          "from-sm-devX":  "(min-device-width:  #{$sm-dev-width + 1})",
-          "from-xs-devX":  "(min-device-width:  #{$xs-dev-width + 1})",
-          "from-xxs-devX": "(min-device-width:  #{$xxs-dev-width + 1})",
+          "from-lg-devX":  "(min-device-width:  #{$lg-dev-width})",
+          "from-md-devX":  "(min-device-width:  #{$md-dev-width})",
+          "from-sm-devX":  "(min-device-width:  #{$sm-dev-width})",
+          "from-xs-devX":  "(min-device-width:  #{$xs-dev-width})",
+          "from-xxs-devX": "(min-device-width:  #{$xxs-dev-width})",
           "to-lg-devX":    "(max-device-width:  #{$lg-dev-width})",
           "to-md-devX":    "(max-device-width:  #{$md-dev-width})",
           "to-sm-devX":    "(max-device-width:  #{$sm-dev-width})",
           "to-xs-devX":    "(max-device-width:  #{$xs-dev-width})",
           "to-xxs-devX":   "(max-device-width:  #{$xxs-dev-width})",
-          "from-lg-devY":  "(min-device-height: #{$lg-dev-height + 1})",
-          "from-md-devY":  "(min-device-height: #{$md-dev-height + 1})",
-          "from-sm-devY":  "(min-device-height: #{$sm-dev-height + 1})",
-          "from-xs-devY":  "(min-device-height: #{$xs-dev-height + 1})",
+          "from-lg-devY":  "(min-device-height: #{$lg-dev-height})",
+          "from-md-devY":  "(min-device-height: #{$md-dev-height})",
+          "from-sm-devY":  "(min-device-height: #{$sm-dev-height})",
+          "from-xs-devY":  "(min-device-height: #{$xs-dev-height})",
           "to-lg-devY":    "(max-device-height: #{$lg-dev-height})",
           "to-md-devY":    "(max-device-height: #{$md-dev-height})",
           "to-sm-devY":    "(max-device-height: #{$sm-dev-height})",
@@ -142,7 +143,7 @@
   }
 
   @mixin brand-nr($font-size) {
-    font: normal 500 $font-size $sans-stack !important;
+    font: normal 400 $font-size $sans-stack !important;
     // text-align: center;
     margin: 0 auto;
     color: $red;
@@ -190,7 +191,7 @@
     display: inline-block;
     text-align: center;
     vertical-align: middle;
-    font-family: FontAwesome;
+    font-family: hr-icons;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

@@ -127,8 +127,8 @@ add_action( 'wp_enqueue_scripts', 'hcode_child_style' );
   function reflect_modal_wrapper()
   {
       $HTML = '';
-      $HTML .= '<div class="modal-wrapper">';
-      $HTML .= '<div class="modal">';
+      $HTML .= '<div class="modal-wrapper" tabindex="0">';
+      $HTML .= '<div class="modal" tabindex="0">';
       $HTML .= '<div class="close-modal">&times;</div>';
       $HTML .= '<div id="modal-content"></div>';
       $HTML .= '</div>';

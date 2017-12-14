@@ -8,7 +8,11 @@
     align-items: center;
     justify-content: center;
     // will-change: opacity, transform; 
-    @include media("mobile") {
+    
+    @include media("from-xxs-devX", "to-sm-devY") {
+      height: 180px !important;
+    }
+    @include media("from-xs-devX", "to-lg-devY") {
       height: 220px !important;
     }
     @include media("ipad") {
@@ -42,7 +46,7 @@
           min-height: 1.6rem !important;
           padding: 0;
           &::after { margin-top: 0.5rem; }
-          h2 { font-size: 1.5rem !important; }
+          h2 { font-size: 1.3rem !important; }
         }
         @include media("ipad") {
           h2 { font-size: 1.2rem !important; }
@@ -68,7 +72,7 @@
       @include hyphens(auto);
       @include media("to-md-devX") {
         height: auto;
-        font-size: 1.1em;
+        font-size: 1em;
       }
       &::before { content: open-quote;  }
       &::after  { content: close-quote; }

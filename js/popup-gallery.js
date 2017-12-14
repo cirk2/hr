@@ -81,7 +81,23 @@
             mainClass: 'mfp-zoom-out',
             callbacks: {
                 open: function () {
-                    setTimeout(function () { $('.search-input').focus(); }, 500);
+                  setTimeout(function () { 
+                  $('.search-input').focus(); 
+                    if (isMobile) {
+                      $(window).on('touchstart', '.mfp-bg', function(event) {
+                        event.preventDefault();
+                        $('.search-input').focus(); 
+                      });
+                    }
+                  }, 500);
+
+                  // function focusInput() {
+                  //     var input = this;
+                  //     setTimeout(function () {
+                  //         input.selectionStart = 0;
+                  //         input.selectionEnd = input.value.length;
+                  //     }, 100);
+                  // }
                     
                     $('#search-header').parent().addClass('search-popup');
                     $('body').addClass('mfp-search-open');
@@ -97,10 +113,7 @@
                         var $searchval = this.value;
                         $('.main-search input').val($searchval);
                     });
-                    $('#top-search').one('click', function(event) {
-                        event.stopImmediatePropagation;
-                        $.magnificPopup.proto.close.call(this);
-                    });
+
                 },
                 close: function () {
                     if(!isMobile){

@@ -206,6 +206,18 @@ if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
 /*==============================================================*/
 //Search - START CODE
 /*==============================================================*/
+
+        // $('#top-search').on('click', function(event) {
+        //     event.stopImmediatePropagation;
+        //     $.magnificPopup.proto.close.call(this);
+        // });
+
+        $('div').off('click', '.mfp-bg');
+        $(window).on('click', '.mfp-bg', function(event) {
+          event.preventDefault();
+
+        });
+
         $("input.search-input").bind("keypress", function (event) {
             if (event.which == 13 && !isMobile) {
                 $("button.search-button").click();
@@ -246,43 +258,43 @@ if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
             event.preventDefault();
         });
 
-        $('.navbar .navbar-collapse a.dropdown-toggle, .accordion-style1 .panel-heading a, .accordion-style2 .panel-heading a, .accordion-style3 .panel-heading a, .toggles .panel-heading a, .toggles-style2 .panel-heading a, .toggles-style3 .panel-heading a, a.carousel-control, .nav-tabs a[data-toggle="tab"], a.shopping-cart').click(function (e) {
-            e.preventDefault();
-        });
-        $('body').on('touchstart click', function (e) {
-            if ($(window).width() < 992) {
-                if (!$('.navbar-collapse').has(e.target).is('.navbar-collapse') && $('.navbar-collapse').hasClass('in') && !$(e.target).hasClass('navbar-toggle')) {
-                    $('.navbar-collapse').collapse('hide');
-                }
-            }
-            else {
-                if (!$('.navbar-collapse').has(e.target).is('.navbar-collapse') && $('.navbar-collapse ul').hasClass('in')) {
-                    $('.navbar-collapse').find('a.dropdown-toggle').addClass('collapsed');
-                    $('.navbar-collapse').find('ul.dropdown-menu').removeClass('in');
-                    $('.navbar-collapse a.dropdown-toggle').removeClass('active');
-                }
-            }
-        });
-        $('.navbar-collapse a.dropdown-toggle').on('touchstart', function (e) {
-            $('.navbar-collapse a.dropdown-toggle').not(this).removeClass('active');
-            if ($(this).hasClass('active'))
-                $(this).removeClass('active');
-            else
-                $(this).addClass('active');
-        });
+        // $('.navbar .navbar-collapse a.dropdown-toggle, .accordion-style1 .panel-heading a, .accordion-style2 .panel-heading a, .accordion-style3 .panel-heading a, .toggles .panel-heading a, .toggles-style2 .panel-heading a, .toggles-style3 .panel-heading a, a.carousel-control, .nav-tabs a[data-toggle="tab"], a.shopping-cart').click(function (e) {
+        //     e.preventDefault();
+        // });
+        // $('body').on('touchstart click', function (e) {
+        //     if ($(window).width() < 992) {
+        //         if (!$('.navbar-collapse').has(e.target).is('.navbar-collapse') && $('.navbar-collapse').hasClass('in') && !$(e.target).hasClass('navbar-toggle')) {
+        //             $('.navbar-collapse').collapse('hide');
+        //         }
+        //     }
+        //     else {
+        //         if (!$('.navbar-collapse').has(e.target).is('.navbar-collapse') && $('.navbar-collapse ul').hasClass('in')) {
+        //             $('.navbar-collapse').find('a.dropdown-toggle').addClass('collapsed');
+        //             $('.navbar-collapse').find('ul.dropdown-menu').removeClass('in');
+        //             $('.navbar-collapse a.dropdown-toggle').removeClass('active');
+        //         }
+        //     }
+        // });
+        // $('.navbar-collapse a.dropdown-toggle').on('touchstart', function (e) {
+        //     $('.navbar-collapse a.dropdown-toggle').not(this).removeClass('active');
+        //     if ($(this).hasClass('active'))
+        //         $(this).removeClass('active');
+        //     else
+        //         $(this).addClass('active');
+        // });
 
-        $("button.navbar-toggle").click(function () {
-            if (isMobile) {
-                $(".cart-content").css('opacity', '0');
-                $(".cart-content").css('visibility', 'hidden');
-            }
-        });
-        $("a.dropdown-toggle").click(function () {
-            if (isMobile) {
-                $(".cart-content").css('opacity', '0');
-                $(".cart-content").css('visibility', 'hidden');
-            }
-        });
+        // $("button.navbar-toggle").click(function () {
+        //     if (isMobile) {
+        //         $(".cart-content").css('opacity', '0');
+        //         $(".cart-content").css('visibility', 'hidden');
+        //     }
+        // });
+        // $("a.dropdown-toggle").click(function () {
+        //     if (isMobile) {
+        //         $(".cart-content").css('opacity', '0');
+        //         $(".cart-content").css('visibility', 'hidden');
+        //     }
+        // });
 
     
 /*==============================================================*/
@@ -316,66 +328,66 @@ if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
             }
         });
 
-        if( $('div').hasClass('feature_nav')){
-            $(".feature_nav .next").click(function () {
-                $(this).parent().parent().find('.owl-carousel').trigger('owl.next');
-            });
-            $(".feature_nav .prev").click(function () {
-                $(this).parent().parent().find('.owl-carousel').trigger('owl.prev');
-            });
-        }
+        // if( $('div').hasClass('feature_nav')){
+        //     $(".feature_nav .next").click(function () {
+        //         $(this).parent().parent().find('.owl-carousel').trigger('owl.next');
+        //     });
+        //     $(".feature_nav .prev").click(function () {
+        //         $(this).parent().parent().find('.owl-carousel').trigger('owl.prev');
+        //     });
+        // }
     });
 
 /*==============================================================*/
 // Counter Number Appear - START CODE
 /*==============================================================*/
 
-    if (php_vars.countdownTimer) {
+    // if (php_vars.countdownTimer) {
 
-        console.log('countdown timer active');
+    //     console.log('countdown timer active');
 
-        $(document).ready(function () {
-            // Check counter div is visible then animate counter
-            $('.counter-number').appear();
-            $(document.body).on('appear', '.counter-number', function (e) {
-                // this code is executed for each appeared element
-                var element = $(this);
-                if (!$(this).hasClass('appear')) {
-                    animatecounters(element);
-                    $(this).addClass('appear');
-                }
-            });
+    //     $(document).ready(function () {
+    //         // Check counter div is visible then animate counter
+    //         $('.counter-number').appear();
+    //         $(document.body).on('appear', '.counter-number', function (e) {
+    //             // this code is executed for each appeared element
+    //             var element = $(this);
+    //             if (!$(this).hasClass('appear')) {
+    //                 animatecounters(element);
+    //                 $(this).addClass('appear');
+    //             }
+    //         });
 
-            // Check chart div is visible then animate chart
-            $('.chart').appear();
-            $(document.body).on('appear', '.chart', function (e) {
-                // this code is executed for each appeared element
-                var element = $(this);
-                if (!$(this).hasClass('appear')) {
-                    animatecharts(element);
-                    $(this).addClass('appear');
-                }
-            });
-        });
+    //         // Check chart div is visible then animate chart
+    //         $('.chart').appear();
+    //         $(document.body).on('appear', '.chart', function (e) {
+    //             // this code is executed for each appeared element
+    //             var element = $(this);
+    //             if (!$(this).hasClass('appear')) {
+    //                 animatecharts(element);
+    //                 $(this).addClass('appear');
+    //             }
+    //         });
+    //     });
 
         
     /*==============================================================*/
     //Counter Number - START CODE
     /*==============================================================*/
 
-        function animatecounters(element) {
-             var getCounterNumber = $(element).attr('data-to');
-             $({ ValuerHbcO: 0 }).delay(0).animate({ ValuerHbcO: getCounterNumber },
-             {
-                 duration: 2000,
-                 easing: "swing",
-                 step: function (currentLeft) {
-                     var roundNumber = Math.ceil( currentLeft );
-                     $(element).text( roundNumber );
-                 }
-             });
-        }
-    }
+    //     function animatecounters(element) {
+    //          var getCounterNumber = $(element).attr('data-to');
+    //          $({ ValuerHbcO: 0 }).delay(0).animate({ ValuerHbcO: getCounterNumber },
+    //          {
+    //              duration: 2000,
+    //              easing: "swing",
+    //              step: function (currentLeft) {
+    //                  var roundNumber = Math.ceil( currentLeft );
+    //                  $(element).text( roundNumber );
+    //              }
+    //          });
+    //     }
+    // }
 
 
 /*==============================================================*/
@@ -517,13 +529,13 @@ if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
                  var menu_link = $(this).children('a');
                  var dataurl = menu_link.attr('data-redirect-url');
                  var datadefaulturl = menu_link.attr('data-default-url');
-                 if (minwidth >= 992) {
+                 // if (minwidth >= 992) {
                      $(menu_link).removeAttr('data-toggle');
                      $(this).children('a').attr('href', dataurl);
-                 } else {
-                     $(menu_link).attr('data-toggle', 'collapse');
-                     $(this).children('a').attr('href', datadefaulturl);
-                 }
+                 // } else {
+                     // $(menu_link).attr('data-toggle', 'collapse');
+                     // $(this).children('a').attr('href', datadefaulturl);
+                 // }
              });
         }
 

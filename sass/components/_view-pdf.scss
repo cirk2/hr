@@ -14,19 +14,25 @@
     transform: scale(1);
   }
   &:after, &::before {
-    @include font-awesome("\F1C1");
     @include coverer(50%);
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    font-family: hr-icons;
     @include transition(all 0.3s ease);
-    font-size: 5rem;
+    font-size: 6rem !important;
     line-height: 0;
     color: $red;
     pointer-events: none;
   }
   &::before {
-    @include transition(all 0.3s ease);
+    content: "\e04d";
     z-index: 1;
-    content: "\f019";
     opacity: 0;
+  }
+  &::after {
+    content: "\e921";
+    opacity: 0.7;
   }
   &:hover {
     &::after {
