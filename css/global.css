@@ -1502,12 +1502,19 @@ footer .footer-bottom .footer-logo img {
   pointer-events: none !important; }
 
 /* line 11, ../sass/components/_modals.scss */
+.modal-is-open .navbar {
+  pointer-events: none; }
+  /* line 13, ../sass/components/_modals.scss */
+  .modal-is-open .navbar .top-burger {
+    pointer-events: all; }
+
+/* line 19, ../sass/components/_modals.scss */
 .close-modal {
   display: none;
   z-index: 100;
   overflow: hidden;
   cursor: pointer; }
-  /* line 16, ../sass/components/_modals.scss */
+  /* line 24, ../sass/components/_modals.scss */
   .modal-is-open .top-burger > .close-modal {
     position: absolute;
     top: 0;
@@ -1515,30 +1522,27 @@ footer .footer-bottom .footer-logo img {
     bottom: 0;
     left: 0;
     display: block; }
-    /* line 19, ../sass/components/_modals.scss */
+    /* line 27, ../sass/components/_modals.scss */
     .modal-is-open .top-burger > .close-modal:hover {
       background-color: rgba(227, 0, 26, 0.3); }
 
-/* line 24, ../sass/components/_modals.scss */
+/* line 32, ../sass/components/_modals.scss */
 .modal, .modal-wrapper {
   display: none;
   opacity: 0;
   transition: opacity .5s ease-out; }
-  /* line 31, ../sass/components/_modals.scss */
+  /* line 39, ../sass/components/_modals.scss */
   .modal-is-open .modal,
   .modal-is-open .modal-wrapper {
     display: block !important;
     transition-delay: 0s, 0s, 0s; }
-  /* line 35, ../sass/components/_modals.scss */
+  /* line 43, ../sass/components/_modals.scss */
   .modal.show, .modal-wrapper.show {
     opacity: 1; }
 
-/* line 40, ../sass/components/_modals.scss */
-.modal-small .modal:focus {
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); }
-
-/* line 44, ../sass/components/_modals.scss */
+/* line 48, ../sass/components/_modals.scss */
 .modal-wrapper {
+  pointer-events: none;
   position: fixed;
   top: 0;
   right: 0;
@@ -1547,27 +1551,71 @@ footer .footer-bottom .footer-logo img {
   z-index: 1050;
   overflow-x: hidden;
   overflow-y: auto; }
-  /* line 49, ../sass/components/_modals.scss */
+  /* line 54, ../sass/components/_modals.scss */
   .modal-wrapper.show {
-    -webkit-backdrop-filter: blur(8px);
-    backdrop-filter: blur(8px); }
-  /* line 53, ../sass/components/_modals.scss */
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    backdrop-filter: blur(20px) saturate(180%); }
+  /* line 58, ../sass/components/_modals.scss */
   .modal-wrapper:not(.modal-small) {
     top: 75px; }
-    /* line 54, ../sass/components/_modals.scss */
+    /* line 59, ../sass/components/_modals.scss */
     .modal-wrapper:not(.modal-small) .close-modal {
       display: none; }
+  /* line 62, ../sass/components/_modals.scss */
+  .modal-wrapper.modal-small {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    right: auto;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    position: fixed;
+    top: 50%;
+    right: auto;
+    bottom: auto;
+    left: 50%;
+    min-height: 40%;
+    min-width: 60%; }
+    /* line 67, ../sass/components/_modals.scss */
+    .modal-wrapper.modal-small::before {
+      height: 100%;
+      width: 100%;
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      /* box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5); */
+      /* background: red; */
+      /* z-index: 1515; */
+      }
+    /* line 71, ../sass/components/_modals.scss */
+    .modal-wrapper.modal-small .modal {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      -webkit-transform: none;
+      -ms-transform: none;
+      transform: none; }
 
-/* line 59, ../sass/components/_modals.scss */
+/* line 78, ../sass/components/_modals.scss */
 .modal {
-  overflow-y: scroll !important;
-  background-color: rgba(17, 17, 17, 0.88);
+  pointer-events: all;
+  overflow-y: auto !important;
+  background-color: rgba(17, 17, 17, 0.9);
   padding: 2rem; }
+  /* line 82, ../sass/components/_modals.scss */
+  .has_backdropfilter .modal {
+    background-color: rgba(17, 17, 17, 0.8); }
   @media only screen and (max-device-width: 768px) {
-    /* line 59, ../sass/components/_modals.scss */
+    /* line 78, ../sass/components/_modals.scss */
     .modal {
       padding: 1rem; } }
-  /* line 66, ../sass/components/_modals.scss */
+  /* line 89, ../sass/components/_modals.scss */
   .modal .close-modal {
     position: absolute;
     top: 0;
@@ -1575,10 +1623,10 @@ footer .footer-bottom .footer-logo img {
     display: block;
     font: 100 2.5rem/1 sans-serif !important;
     color: #f7f7f7; }
-    /* line 71, ../sass/components/_modals.scss */
+    /* line 94, ../sass/components/_modals.scss */
     .modal .close-modal:hover {
       color: #ff1732; }
-  /* line 75, ../sass/components/_modals.scss */
+  /* line 98, ../sass/components/_modals.scss */
   .modal #modal-content #wineLoader {
     position: absolute;
     left: 50%;
@@ -1588,42 +1636,42 @@ footer .footer-bottom .footer-logo img {
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%); }
-  /* line 79, ../sass/components/_modals.scss */
+  /* line 102, ../sass/components/_modals.scss */
   .modal #modal-content > section {
     padding: 80px 0 60px !important; }
-  /* line 82, ../sass/components/_modals.scss */
+  /* line 105, ../sass/components/_modals.scss */
   .modal #modal-content h1, .modal #modal-content h2, .modal #modal-content h3, .modal #modal-content h4 {
     color: #f7f7f7; }
-  /* line 85, ../sass/components/_modals.scss */
+  /* line 108, ../sass/components/_modals.scss */
   .modal #modal-content h1 {
     font-size: 2.5rem; }
-  /* line 86, ../sass/components/_modals.scss */
+  /* line 109, ../sass/components/_modals.scss */
   .modal #modal-content a {
     color: #f7f7f7; }
-  /* line 87, ../sass/components/_modals.scss */
+  /* line 110, ../sass/components/_modals.scss */
   .modal #modal-content blockquote {
     padding: 0 1rem;
     font-size: 1.7rem;
     text-align: center; }
-  /* line 93, ../sass/components/_modals.scss */
+  /* line 116, ../sass/components/_modals.scss */
   .modal-small .modal #modal-content h1 {
     font-size: 1.8rem;
     margin-top: 0; }
-  /* line 97, ../sass/components/_modals.scss */
+  /* line 120, ../sass/components/_modals.scss */
   .modal-small .modal #modal-content h2 {
     margin: 1rem 0 0.5rem;
     font-size: 1.3rem;
     color: #e3001a; }
-  /* line 102, ../sass/components/_modals.scss */
+  /* line 125, ../sass/components/_modals.scss */
   .modal-small .modal #modal-content p {
     font-size: 0.9rem;
     line-height: 1.6;
     text-align: left;
     color: #f7f7f7; }
-    /* line 107, ../sass/components/_modals.scss */
+    /* line 130, ../sass/components/_modals.scss */
     .has_no-csshyphens .modal-small .modal #modal-content p {
       text-align: left; }
-  /* line 114, ../sass/components/_modals.scss */
+  /* line 137, ../sass/components/_modals.scss */
   .modal-small .modal {
     position: absolute;
     left: 50%;
@@ -1637,38 +1685,38 @@ footer .footer-bottom .footer-logo img {
     min-height: 40%;
     min-width: 60%;
     border-radius: 4px; }
-    /* line 120, ../sass/components/_modals.scss */
+    /* line 143, ../sass/components/_modals.scss */
     .modal-small .modal img {
       border-radius: 100% 0 100% 100%;
       margin: 1rem;
       shape-outside: circle(50% at center);
       max-width: 45%; }
     @media (min-device-width: 320px) and (max-device-width: 414px) {
-      /* line 114, ../sass/components/_modals.scss */
+      /* line 137, ../sass/components/_modals.scss */
       .modal-small .modal {
         height: 100%;
         width: 100%;
         min-height: 100%;
         padding: 2rem;
         margin-top: 75px; }
-        /* line 131, ../sass/components/_modals.scss */
+        /* line 154, ../sass/components/_modals.scss */
         .modal-small .modal .close-modal {
           display: none; } }
     @media only screen and (min-width: 768px) {
-      /* line 134, ../sass/components/_modals.scss */
+      /* line 157, ../sass/components/_modals.scss */
       .modal-small .modal #modal-content {
         padding: 1rem; } }
     @media (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
-      /* line 114, ../sass/components/_modals.scss */
+      /* line 137, ../sass/components/_modals.scss */
       .modal-small .modal {
         padding: 0 2rem 2rem;
         width: 75%; }
-        /* line 141, ../sass/components/_modals.scss */
+        /* line 164, ../sass/components/_modals.scss */
         .modal-small .modal #modal-content {
           padding: 2rem;
           font-size: 1.3rem;
           line-height: 1.3; }
-        /* line 146, ../sass/components/_modals.scss */
+        /* line 169, ../sass/components/_modals.scss */
         .modal-small .modal img {
           width: 150%; } }
 
@@ -2236,16 +2284,13 @@ div.separator {
 @keyframes progressHeight00 {
   to {
     height: 100%; } }
-/* line 5, ../sass/components/_effects.scss */
-nav ~ section, section + footer {
-  transition: filter 200ms cubic-bezier(0.66, 0, 0.33, 1); }
-  /* line 9, ../sass/components/_effects.scss */
-  .has_no-backdropfilter.modal-is-open nav ~ section, .has_no-backdropfilter .mfp-search-open nav ~ section,
-  .has_no-backdropfilter.modal-is-open section + footer, .has_no-backdropfilter .mfp-search-open section + footer {
-    -webkit-filter: blur(5px);
-    /* Ch 23+, Saf 6.0+, BB 10.0+ */
-    filter: blur(5px);
-    /* FF 35+ */ }
+/* line 9, ../sass/components/_effects.scss */
+.has_no-backdropfilter.modal-is-open nav ~ section, .has_no-backdropfilter .mfp-search-open nav ~ section,
+.has_no-backdropfilter.modal-is-open section + footer, .has_no-backdropfilter .mfp-search-open section + footer {
+  -webkit-filter: blur(5px);
+  /* Ch 23+, Saf 6.0+, BB 10.0+ */
+  filter: blur(5px);
+  /* FF 35+ */ }
 
 @media only screen and (min-width: 768px) {
   /* line 16, ../sass/components/_effects.scss */
@@ -2263,8 +2308,7 @@ nav ~ section, section + footer {
       -webkit-filter: blur(5px);
       /* Ch 23+, Saf 6.0+, BB 10.0+ */
       filter: blur(5px);
-      /* FF 35+ */
-      transition: filter 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.2s, opacity 200ms 0.1s cubic-bezier(0.47, 0, 0.745, 0.715), transform 200ms cubic-bezier(0.165, 0.84, 0.44, 1); } }
+      /* FF 35+ */ } }
 /* line 34, ../sass/components/_effects.scss */
 body.images-loaded #loading-page {
   opacity: 0; }

@@ -7,6 +7,14 @@ $modal-bg: #111;
   pointer-events: none !important;
 }
 
+// prevent scrolling page when hovering over header
+.modal-is-open .navbar {
+  pointer-events: none;
+  .top-burger {
+    pointer-events: all;
+  }
+}
+
 // close button in header
 .close-modal {
   display: none;
@@ -37,28 +45,43 @@ $modal-bg: #111;
   }
 }
 
-.modal-small .modal:focus {
-  box-shadow: 0 10px 30px black(0.5);
-}
-
 .modal-wrapper {
+  pointer-events: none;
   @include position(fixed, 0);
   z-index: 1050;
   overflow-x: hidden;
   overflow-y: auto;
   &.show {
-    -webkit-backdrop-filter: blur(8px);
-    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    backdrop-filter: blur(20px) saturate(180%);
   }
   &:not(.modal-small) {
     .close-modal { display: none; }
     top: $header-height;
   }
+  &.modal-small {
+    @include center(xy);
+    @include position(fixed, 50% auto auto 50%);
+    min-height: 40%;
+    min-width: 60%;
+    &::after {
+      @include coverer;
+      box-shadow: 0 10px 40px black(0.5);
+    }
+    .modal {
+      @include position(absolute, 0);
+      @include transform(none);
+    }
+  }
 }
 
 .modal {
-  overflow-y: scroll !important;
-  background-color: transparentize($modal-bg, .12);
+  pointer-events: all;
+  overflow-y: auto !important;
+  background-color: transparentize($modal-bg, .1);
+  .has_backdropfilter & {
+    background-color: transparentize($modal-bg, .2);
+  }
   padding: 2rem;
   @include media("screen", "to-md-devX") {
     padding: 1rem;

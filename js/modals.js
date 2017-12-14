@@ -14,6 +14,11 @@
 
         var modalOpen = false;
 
+        var isMobile = false;
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            isMobile = true;
+        }
+
         function hideModal() {
             $('.modal-wrapper, .modal').removeClass('show');
             $('#btnContainer').removeClass('open');
@@ -23,6 +28,13 @@
               $('#modal-content').html('');
               $('html').removeClass('modal-is-open');
             }, 500);
+        }
+
+        function ScrollStop() {
+            return false;
+        }
+        function ScrollStart() {
+            return true;
         }
 
         $(document).keydown(function (e) {
@@ -69,6 +81,14 @@
 
             event.preventDefault();
 
+            if (!isMobile) {
+                document.onmousewheel = ScrollStop;
+            } else {
+                $('body, html').on('touchmove', function(e){
+                    e.preventDefault();
+                });
+            }
+
             modalContent.load(postLink + ' #modal-ready', function( status ) {
 
               // wrap first part of excerpt
@@ -88,12 +108,20 @@
                 offset: '90%',
                 triggerOnce: true
               });
-
               
               setTimeout(function() {
                 $('.modal-wrapper .modal').click().focus();
               }, 100);
               // $('body').removeClass('modal-is-loading');
+
+
+              setTimeout(function() {
+                if(!isMobile){
+                    document.onmousewheel = ScrollStart;
+                } else {
+                     $('body, html').unbind('touchmove');
+                }
+              }, 500);
 
             });
             // $('.navbar-default').addClass('shrink-nav');
