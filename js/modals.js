@@ -96,7 +96,7 @@
               $(".modal-excerpt p").text(function (i,text) {
                 var first = text.substring(0, text.indexOf(' ', excLength)),
                     last  = text.substring(text.indexOf(' ', excLength));
-                $(this).html('<span class="grid-excerpt">' + first + ' [...] </span>' + last);
+                $(this).html('<span class="grid-excerpt">' + first + ' </span>' + last);
               });
 
               var modalWaypoint = $('.rebsorte-status').waypoint({

@@ -30,8 +30,8 @@
     }
     .tagline-acf::before {
       content: "Wir ";
-      font-weight: 600;
-      color: $light-red;
+      font-weight: 500;
+      color: $red;
       @at-root {
         .tagline-acf {
           transition: opacity .5s;
@@ -57,7 +57,7 @@
     }
     .mission-title h3 {
       font-size: 1.5rem;
-      font-weight: 600;
+      font-weight: 500;
       margin: 0 auto 2rem;
       max-width: 9rem;
       color: $red;

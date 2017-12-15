@@ -81,8 +81,8 @@ img {
   text-align: center;
   display: none;
   background-color: black(0.9);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  backdrop-filter: blur(20px) saturate(180%);
   .inner {
     @include center(xy);
     width: 90%;

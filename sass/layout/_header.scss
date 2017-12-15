@@ -9,7 +9,7 @@
 
   // 75px / (75 / 100) = 100px
   $logo-height: ($header-height / ( strip-unit($header-height) / 100) );
-  $logo-width: ($logo-height * 3.5);
+  $logo-width: ($logo-height * 3.5) - 2px;
   $mobile-logo-height: ($logo-height * 0.5);
   $mobile-logo-width: ($logo-width * 0.5);
   $header-logo-offset: 30px;
@@ -47,7 +47,6 @@
     width: $logo-width;
     transform-origin: center $logo-height;
     @include transform(rotateX(89.5deg));
-    // transform: rotateX(88.47deg) translateX(-50%);
     background-color: $red;
     @include media("to-sm") {  // simple header transition on mobile
       width: $mobile-logo-width;
@@ -74,14 +73,13 @@
       width: 100%;
       transform-origin: center 56px;
       @include transform(rotateX(0deg));
-      // transform: rotateX(0deg)  translateX(-50%);
       background-color: #fff;
       opacity: 0.92;
 
       .has_backdropfilter & {
         background-color: white(0.8) !important;
-        -webkit-backdrop-filter: blur(10px);
-        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(20px) saturate(180%);
+        backdrop-filter: blur(20px) saturate(180%);
         opacity: 1;
       }
     }
@@ -233,8 +231,8 @@
                 background-color $htd .5s $hte;
     .show-menu & {
       transform: scale(1) translateY(0%);
-      -webkit-backdrop-filter: blur(10px);
-      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      backdrop-filter: blur(20px) saturate(180%);
       opacity: 1 !important;
       pointer-events: all;
     }

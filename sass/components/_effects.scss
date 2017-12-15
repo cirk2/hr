@@ -15,7 +15,7 @@ section + footer {
 @include media("screen", "from-sm") {
   nav ~ section,
   section + footer {
-    transition: filter $htd $hte;
+    // transition: filter $htd $hte;
     .has_no-backdropfilter.modal-is-open & {
       @include filter(blur(5px));
     }
@@ -41,8 +41,8 @@ body {
     background: black(0.9);
     z-index: 1040;
     pointer-events: none;
-    -webkit-backdrop-filter: blur(8px);
-    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    backdrop-filter: blur(20px) saturate(180%);
     #wineLoader {
       @include center(xy);
     }

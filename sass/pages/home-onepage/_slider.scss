@@ -4,15 +4,17 @@ section#slider {
   padding: 0 !important;
 }
 
+.bg-black {
+  @include coverer();
+  z-index: 0;
+  background: hsla(0, 0%, 0%, 0.1) url(/wp-content/themes/hr/i/patterns/noisy-net-dark.png) !important;
+  opacity: 1;
+}
 
 .owl-carousel {
-  .bg-black {
-    @include coverer();
-    z-index: 0;
-    background: hsla(0, 0%, 0%, 0.2) url(/wp-content/themes/hr/i/patterns/noisy-net-dark.png);
-    opacity: 0.85;
-  }
+
   .owl-bg-img {
+    background-position-y: center;
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -89,7 +91,7 @@ section#slider {
           margin-left: -0.5rem;
 
           font-style: normal;
-          color: $red-text;
+          color: $light-red;
 
           @include media("to-xs") {
             display: block;

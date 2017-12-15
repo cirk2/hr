@@ -69,8 +69,9 @@ $modal-bg: #111;
       box-shadow: 0 10px 40px black(0.5);
     }
     .modal {
-      @include position(absolute, 0);
+      @include position(relative, 0);
       @include transform(none);
+      min-height: 500px;
     }
   }
 }

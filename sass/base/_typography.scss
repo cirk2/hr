@@ -27,17 +27,16 @@ h1, h2, h3, h4, h5, h6 {
 
 h1, h2, h3, h4, h5, h6 {
   margin: 2rem 0 1rem;
-}
-
-h1, h2, h3 {
-  font-weight: 700;
   letter-spacing: -0.07rem !important;
-  // font-family: proxima_nova_altblack !important;
 }
 
-h1 { font-size: 2.5rem; }
-h2 { font-size: 2.2rem; }
-h3 { font-size: 1.6rem; }
+// h1 {
+  // font-family: proxima_nova_altblack !important;
+// }
+
+h1 { font-size: 2.5rem; font-weight: 700; }
+h2 { font-size: 2.2rem; font-weight: 500; }
+h3 { font-size: 1.6rem; font-weight: 500; }
 h4 { font-size: 1.5rem; }
 h5 { font-size: 1.4rem; }
 h6 { font-size: 1.2rem; }
@@ -73,7 +72,11 @@ p {
 
 strong {
   color: $red;
-  font-weight: 600;
+  font-weight: 500;
+}
+
+p strong {
+  font-weight: 700;
 }
 
 // Onepage section headings

@@ -3,8 +3,8 @@
   border-radius: 4px;
   @include pgBorder;
   .progress-bar.animated {
-  	animation-timing-function: $ease-out-quart;
-    @include pgContainerBg(150%);    animation: progressWidth25 4s $ease-out-quart 1s 1 forwards;
+  	animation-timing-function: $ease-in-cubic;
+    @include pgContainerBg(150%);    animation: progressWidth25 6s $ease-in-cubic 1s 1 forwards;
     .developing ~ &  { animation-name: progressWidth50 /* 2s steps(2, end) 0.5s 1 forwards */; }
     .growing    ~ &  { animation-name: progressWidth75 /* 2s steps(3, end) 0.5s 1 forwards */; }
     .available  ~ &  { animation-name: progressWidth00 /* 2s steps(4, end) 0.5s 1 forwards */; }

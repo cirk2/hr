@@ -30,7 +30,6 @@ $modal-bg: #000;
       @include media("mobile") {
         background-size: cover !important;
       }
-      .bg-black { background: hsla(0, 0%, 0%, 0.33); }
       .white-text { display: none; }
       ~ .hentry {
         .watermark svg { fill: hsla(0, 0%, 100%, 0.2); }
@@ -129,6 +128,15 @@ $modal-bg: #000;
     > h2 { margin-top: 0; }
     .modal-excerpt p span {
       color: white(.5);
+      &::after {
+        content: '[...]'
+      }
+      @include media(mobile) {
+        color: $text-color;
+        &::after {
+          display: none;
+        }
+      }
     }
     @include media(mobile) {
       padding: 1rem;
