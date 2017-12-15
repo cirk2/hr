@@ -75,6 +75,12 @@ $modal-bg: #000;
   border-bottom: 1px double white(0.2);
 }
 
+.parallax-fix {
+  .bg-black {
+    background: black(0.1) url(/wp-content/themes/hr/i/patterns/noisy-net-dark.png);
+  }
+}
+
 .grid-container {
   .brand-wrapper {
     @include display(flex);

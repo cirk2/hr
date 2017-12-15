@@ -2347,6 +2347,9 @@ body #loading-page {
   margin: 0 auto;
   border-bottom: 1px double rgba(255, 255, 255, 0.2); }
 
+.parallax-fix .bg-black {
+  background: rgba(0, 0, 0, 0.1) url(/wp-content/themes/hr/i/patterns/noisy-net-dark.png); }
+
 .grid-container .brand-wrapper {
   display: -webkit-box;
   display: -moz-box;
@@ -2653,7 +2656,7 @@ body #loading-page {
 section#slider {
   padding: 0 !important; }
 
-.bg-black {
+.owl-carousel .bg-black {
   height: 100%;
   width: 100%;
   content: "";
@@ -2662,9 +2665,8 @@ section#slider {
   top: 0;
   left: 0;
   z-index: 0;
-  background: rgba(0, 0, 0, 0.1) url(/wp-content/themes/hr/i/patterns/noisy-net-dark.png) !important;
+  background: rgba(0, 0, 0, 0.1) url(/wp-content/themes/hr/i/patterns/noisy-net-dark.png);
   opacity: 1; }
-
 .owl-carousel .owl-bg-img {
   background-position-y: center;
   background-repeat: no-repeat;
