@@ -108,6 +108,8 @@
                 offset: '90%',
                 triggerOnce: true
               });
+
+              wpcf7.initForm('div.wpcf7 > form');
               
               setTimeout(function() {
                 $('.modal-wrapper .modal').click().focus();
