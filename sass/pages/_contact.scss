@@ -1,0 +1,18 @@
+.modal .wpcf7 {
+  * {
+    font-family: $sans-stack;
+  }
+  input,
+  textarea {
+    color: #fff;
+    background-color: transparent;
+    font-size: 1.1rem;
+    font-weight: 300;
+  }
+  .wpcf7-response-output {
+    color: #fff;
+  }
+  .wpcf7-not-valid-tip {
+    color: $light-red;
+  }
+}

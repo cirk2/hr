@@ -3582,4 +3582,17 @@ blockquote.blog-image:before, .blog-image blockquote:before {
     letter-spacing: -0.07rem;
     color: #e3001a; }
 
+.modal .wpcf7 * {
+  font-family: "Montserrat", "Proxima Nova", "Gotham", system-ui, sans-serif; }
+.modal .wpcf7 input,
+.modal .wpcf7 textarea {
+  color: #fff;
+  background-color: transparent;
+  font-size: 1.1rem;
+  font-weight: 300; }
+.modal .wpcf7 .wpcf7-response-output {
+  color: #fff; }
+.modal .wpcf7 .wpcf7-not-valid-tip {
+  color: #ff192d; }
+
 /*# sourceMappingURL=global.css.map */
