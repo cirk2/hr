@@ -1,7 +1,8 @@
-// .mfp-bg {
-//   pointer-events: none;
-//   display: none;
-// }
+.mfp-bg {
+  @include position(absolute, 0 0 auto auto);
+  @include size($header-height);
+  opacity: 0;
+}
 
 .search-form {
   position: relative;

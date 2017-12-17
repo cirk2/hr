@@ -1407,6 +1407,16 @@ footer .footer-bottom .footer-logo img {
         .modal-small .modal img {
           width: 150%; } }
 
+.mfp-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: auto;
+  left: auto;
+  height: 75px;
+  width: 75px;
+  opacity: 0; }
+
 .search-form {
   position: relative;
   width: 80%;

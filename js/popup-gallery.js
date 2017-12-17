@@ -20,14 +20,13 @@
         }
         
         $('.header-search-form').magnificPopup({
-            // mainClass: 'mfp-fade',
+            closeOnContentClick: false,
             closeOnBgClick: false,
+            modal: true,
             removalDelay: 500,
             preloader: false,
             whitebg: true,
-            // alignTop: true,
             fixedContentPos: true,
-            // closeBtnInside: false,
             mainClass: 'mfp-zoom-out',
             callbacks: {
                 open: function () {
@@ -41,14 +40,6 @@
                     }
                   }, 500);
 
-                  // function focusInput() {
-                  //     var input = this;
-                  //     setTimeout(function () {
-                  //         input.selectionStart = 0;
-                  //         input.selectionEnd = input.value.length;
-                  //     }, 100);
-                  // }
-                    
                     $('#search-header').parent().addClass('search-popup');
                     $('body').addClass('mfp-search-open');
                      
