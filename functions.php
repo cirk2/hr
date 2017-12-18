@@ -509,7 +509,7 @@ add_action( 'wp_enqueue_scripts', 'hcode_child_style' );
       "rewrite" => array( "slug" => "rebsorte", "with_front" => true ),
       "query_var" => true,
       "menu_icon" => "/wp-content/themes/hr/i/grape-dash.png",
-      "supports" => array( "title", "editor", "thumbnail", "excerpt", "custom-fields", "revisions", "reveal-modal", "reveal", "modal", "reveal-modal-options" ),
+      "supports" => array( "title", "editor", "thumbnail", "excerpt", "custom-fields", "revisions" ),
       "taxonomies" => array( "weinsorte" ),
     );
 
@@ -534,7 +534,7 @@ add_action( 'wp_enqueue_scripts', 'hcode_child_style' );
       "show_ui" => true,
       "show_in_rest" => false,
       "rest_base" => "",
-      "has_archive" => false,
+      "has_archive" => true,
       "show_in_menu" => true,
       "exclude_from_search" => false,
       "capability_type" => "post",
@@ -583,6 +583,29 @@ add_action( 'wp_enqueue_scripts', 'hcode_child_style' );
   }
 
   add_action( 'init', 'cptui_register_my_taxes' );
+
+
+/**
+   * Add All Custom Post Types to search
+   *
+   * Returns the main $query.
+   *
+   * @access      public
+   * @since       1.0 
+   * @return      $query
+  */
+
+    // function reflect_cpt_search( $query ) {
+     
+    //     if ( is_search() && $query->is_main_query() && $query->get( 's' ) ){
+     
+    //         $query->set('post_type', array('post', 'page', 'rebsorte', 'partnerwinzer'));
+    //     }
+     
+    //     return $query;
+    // };
+     
+    // add_filter('pre_get_posts', 'reflect_cpt_search');
 
 
 
