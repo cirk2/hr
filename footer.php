@@ -25,6 +25,9 @@ if (hcode_option('space_before_body')):
     echo hcode_option('space_before_body');
 endif;
 ?>
+  
+  <input id="excerptLength" type="hidden" class="hidden" value="<?php echo the_field( 'admin_options_excerpt_length', 'option' ) ?>">
+
   <svg id="Logo-Defs" version="1.2" baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <defs>
       <linearGradient id="MyGradient" x1="0%" y1="0%" x2="0%" y2="100%">

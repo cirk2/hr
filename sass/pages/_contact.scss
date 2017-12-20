@@ -2,17 +2,36 @@
   * {
     font-family: $sans-stack;
   }
+  p { 
+    margin: 0;
+  }
   input,
   textarea {
+    margin: 0;
     color: #fff;
     background-color: transparent;
     font-size: 1.1rem;
     font-weight: 300;
+    border-color: white(0.2);
+    &:focus {
+      border-color: white(0.5);
+      background-color: white(0.03);
+    }
+  }
+  .wpcf7-form-control-wrap {
+    display: block;
+    margin: 0 0 .2rem;
   }
   .wpcf7-response-output {
     color: #fff;
   }
   .wpcf7-not-valid-tip {
-    color: $light-red;
+    color: lighten($red, 25);
+  }
+  .wpcf7-submit {
+    &:hover {
+      background-color: white(0.1);
+    }
   }
 }
+ 

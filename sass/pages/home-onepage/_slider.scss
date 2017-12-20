@@ -4,6 +4,9 @@ section#slider {
   padding: 0 !important;
 }
 
+.owl-carousel .owl-item {
+  cursor: default !important;
+}
 
 .owl-carousel {
   .bg-black {

@@ -8,6 +8,9 @@
     .developing ~ &  { animation-name: progressWidth50 /* 2s steps(2, end) 0.5s 1 forwards */; }
     .growing    ~ &  { animation-name: progressWidth75 /* 2s steps(3, end) 0.5s 1 forwards */; }
     .available  ~ &  { animation-name: progressWidth00 /* 2s steps(4, end) 0.5s 1 forwards */; }
+    .single-rebsorte & {
+      background-color: desaturate($red, 20);
+    }
   }
   @include media(mobile) {
     .progress-bar {

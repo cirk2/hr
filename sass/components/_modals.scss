@@ -45,6 +45,10 @@ $modal-bg: #111;
   }
 }
 
+body.modal-is-loading {
+  cursor: wait;
+}
+
 .modal-wrapper {
   pointer-events: none;
   @include position(fixed, 0);

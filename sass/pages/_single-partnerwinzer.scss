@@ -47,6 +47,9 @@ $rSize: 150px;
 					position: absolute;
 					background:transparent url('/wp-content/themes/hr/i/logo-hr-white.svg') left top/contain no-repeat;
 					opacity: 0.06;
+          .single & {
+            background:transparent url('/wp-content/themes/hr/i/logo-hr.svg') left top/contain no-repeat;
+          }
 				}
 				.rebsorte-title {
 					@include brand-title(1rem, ($rSize /2), none);
@@ -62,12 +65,20 @@ $rSize: 150px;
 				}
 				&:link h2, &:visited h2 {
 					color: #aaa !important;
+          .single & {
+             color: #666 !important;
+          }
 				}
 				&:hover {
 					border-color: transparentize($light-red, 0.5);
 					h2 {
 						color: #fff !important;
 					}
+          .single & {
+            h2 {
+              color: $text-color !important;
+            }
+          }
 				}
 			}
 		}

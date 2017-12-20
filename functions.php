@@ -286,18 +286,14 @@ add_action( 'wp_enqueue_scripts', 'hcode_child_style' );
 
   function reflect_remove_hcode_stylesheets() {
 
-    wp_dequeue_style( 'animate-css' );
-    // wp_dequeue_style( 'hcode-fonts' );
-    // wp_dequeue_style( 'hcode-fonts' );
+    // wp_dequeue_style( 'animate-css' );
     wp_dequeue_style( 'hcode-fonts' );
     wp_dequeue_style( 'hcode-animate-style' );
     wp_dequeue_style( 'hcode-extralayers-style' );
     wp_dequeue_style( 'hcode-menu-hamburger-style' ); 
     // wp_dequeue_style( 'hcode-magnific-popup-style' );
 
-    wp_deregister_style( 'animate-css' );
-    // wp_deregister_style( 'hcode-fonts' );
-    // wp_deregister_style( 'hcode-fonts' );
+    // wp_deregister_style( 'animate-css' );
     wp_deregister_style( 'hcode-fonts' );
     wp_deregister_style( 'hcode-animate-style' );
     wp_deregister_style( 'hcode-extralayers-style' );
@@ -595,17 +591,17 @@ add_action( 'wp_enqueue_scripts', 'hcode_child_style' );
    * @return      $query
   */
 
-    // function reflect_cpt_search( $query ) {
+    function reflect_cpt_search( $query ) {
      
-    //     if ( is_search() && $query->is_main_query() && $query->get( 's' ) ){
+        if ( is_search() && $query->is_main_query() && $query->get( 's' ) ){
      
-    //         $query->set('post_type', array('post', 'page', 'rebsorte', 'partnerwinzer'));
-    //     }
+            $query->set('post_type', array('post', 'page', 'rebsorte', 'partnerwinzer'));
+        }
      
-    //     return $query;
-    // };
+        return $query;
+    };
      
-    // add_filter('pre_get_posts', 'reflect_cpt_search');
+    add_filter('pre_get_posts', 'reflect_cpt_search');
 
 
 

@@ -1,7 +1,11 @@
 .mfp-bg {
-  @include position(absolute, 0 0 auto auto);
+  @include position(fixed, 0 0 auto auto);
   @include size($header-height);
   opacity: 0;
+  background-color: red(0.2);
+  &:hover {
+    opacity: 1 !important;
+  }
 }
 
 .search-form {

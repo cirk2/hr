@@ -1,6 +1,6 @@
 // Custom Post Template
 
-$text-color: #f7f7f7;
+$modal-text: #f7f7f7;
 $modal-bg: #000;
 
 .modal-is-open .rebsorte-template-default {
@@ -20,8 +20,9 @@ $modal-bg: #000;
 }
 
 .single {
-  .logo-after { display: none; }
+  .logo-header { display: none; }
   section.hentry { padding: 0 !important; }
+  .text-center h3 { text-align: left; }
   > section {
     .grid-container {
       grid-template-rows: 0 2rem auto 1fr;
@@ -54,14 +55,17 @@ $modal-bg: #000;
           margin: 0 0 1rem;
           text-align: left;
           .subheader {
+            display: inline-block;
             padding: 0;
             font-size: 1.7rem;
             h2 {
+              position: relative;
               padding: 0;
+              margin: 1rem 0 0;
               font-size: inherit !important;
-              margin: 1rem 0 0; } } }
-        b.quote-mark-left {  @include position(absolute, 50px NULL NULL -33px); }
-        b.quote-mark-right { @include position(absolute, 13px -32px NULL NULL); }
+              color: $red; } } }
+        b.quote-mark-left {  @include position(absolute, 20px NULL NULL -30px); }
+        b.quote-mark-right { @include position(absolute, -10px -30px NULL NULL); }
         .separator::after, .separator::before { border-color: hsla(0, 0%, 0%, 0.1);}
         .content,
         .sidebar { color: #333;
@@ -107,13 +111,16 @@ $modal-bg: #000;
   .content,
   .sidebar {
     opacity: 0;
-    color: $text-color;
+    color: $modal-text;
     animation: Appear 1s linear 1s forwards 1;
     h2, h3 {
       margin: 3rem 0 1.5rem;
       text-transform: none;
       font-weight: 500;
-      color: $text-color;
+      color: $modal-text;
+      .single & {
+        color: $text-color;
+      }
       @include media(mobile) {
         text-align: center;
         margin-bottom: 2rem;
@@ -126,7 +133,7 @@ $modal-bg: #000;
     }
     p {
       font-size: 0.9rem ;
-      color: $text-color;
+      color: $modal-text;
     }
   }
   .content {
@@ -138,7 +145,7 @@ $modal-bg: #000;
         content: '[...]'
       }
       @include media(mobile) {
-        color: $text-color;
+        color: $modal-text;
         &::after {
           display: none;
         }
@@ -249,7 +256,7 @@ $modal-bg: #000;
     }
   }
   .sidebar {
-    color: $text-color;
+    color: $modal-text;
     .featured-image-thumb {
       display: inline-block;
       margin-bottom: -1.2rem;

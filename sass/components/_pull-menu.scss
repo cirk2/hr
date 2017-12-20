@@ -22,7 +22,6 @@
   top: -50px;
   height: 100%;
   overflow: auto;
-  background: rgba(26, 26, 26, 1)
 }
 
 .full-width-pull-menu .close-button {
@@ -279,26 +278,3 @@
   color: #000
 }
 
-.nav-black.full-width-pull-menu.navbar .navbar-nav li a:hover {
-  color: #797979
-}
-
-.nav-black.full-width-pull-menu.navbar .navbar-nav li>a.active,
-.nav-black.full-width-pull-menu.navbar .navbar-nav li.current-menu-ancestor>a,
-.nav-black.full-width-pull-menu.navbar .navbar-nav li.current-menu-item>a {
-  color: #797979
-}
-
-.nav-white.full-width-pull-menu.navbar .navbar-nav li a {
-  color: #fff
-}
-
-.nav-white.full-width-pull-menu.navbar .navbar-nav li a:hover {
-  color: #797979
-}
-
-.nav-white.full-width-pull-menu.navbar .navbar-nav li>a.active,
-.nav-white.full-width-pull-menu.navbar .navbar-nav li.current-menu-ancestor>a,
-.nav-white.full-width-pull-menu.navbar .navbar-nav li.current-menu-item>a {
-  color: #797979
-}

@@ -5,7 +5,8 @@ $btn-height-mobile: 40px !default;
 $bg-color: #fff !default;
 $btn-color: $red;
 
-.modal-open-btn {
+.modal-open-btn,
+.highlight-button {
   @include size(200px $btn-height);
   white-space: nowrap;
   position: relative;
@@ -18,6 +19,7 @@ $btn-color: $red;
   margin: 0 auto !important;
   font: normal 400 unquote('0.7rem')/$btn-height $sans-stack !important;
   text-transform: uppercase;
+  text-align: center;
   letter-spacing: 0.5px;
   background-color: $bg-color !important;
   color: $btn-color !important;

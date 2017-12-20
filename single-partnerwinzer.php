@@ -68,27 +68,35 @@ get_header(); ?>
                     <li><a href="<?php the_field("shop_url") ?>"> Online Shop von <?php the_title(); ?></a></li>
                 </ul>
 
-                <h3>Artikel zu <?php echo the_title(); ?></h3>
-                
-                <ul>
-                <?php  
+                <?php 
+                  $show_posts = "style='display: none;'"; 
 
-                global $post;
-                $args = array( 'numberposts' => 10, 
-                               'category_name' => get_the_title(), 
-                             );
-                $posts = get_posts( $args );
-                foreach( $posts as $post ): setup_postdata($post); 
+                  global $post;
+                  $args = array( 'numberposts' => 5, 
+                                 'category_name' => get_the_title(), 
+                               );
+                  $posts = get_posts( $args );
 
+                  if (!empty($posts)) {
+                    $show_posts = "style='display: block;'";
+                  }
                 ?>
 
+                <h3 <?php echo $show_posts ?> >Artikel zu <?php echo the_title(); ?></h3>
+                
+                <ul>
+                  
+                <?php foreach( $posts as $post ): setup_postdata($post); ?>
+                 
                   <li><a href="<?php echo the_permalink() ?>">
                     <?php echo the_title() ?></a>
                   </li>
 
-                <?php endforeach; 
-                      wp_reset_postdata();
+                <?php 
+                  endforeach; 
+                  wp_reset_postdata();
                 ?>
+
                 </ul>
 
             </div>

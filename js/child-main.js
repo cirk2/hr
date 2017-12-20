@@ -72,6 +72,8 @@ if ((oldIE > -1) || (newIE > -1) || (edgIE > -1)) {
 
     $(function() {
 
+      var excerptLength = $('#excerptLength').val();
+
         $('body').imagesLoaded()
 
             .always( function( instance ) {
@@ -100,9 +102,18 @@ if ((oldIE > -1) || (newIE > -1) || (edgIE > -1)) {
                     }
                 });
 
+                var modalWaypoint = $('.single-rebsorte .rebsorte-status').waypoint({
+                  handler: function() {
+                    console.log('single-rebsorte-waypoint hit');
+                    $('.progress-bar').addClass('animated');
+                  },
+                  offset: '90%',
+                  triggerOnce: true
+                });
+
                 setTimeout(function() {
                     // trim excerpt length without cutting words
-                    var excLength = 185;
+                    var excLength = excerptLength;
                     $(".rebsorten-grid-excerpt p").each(
                         function() {
                             if ($(this).text().length > excLength) {

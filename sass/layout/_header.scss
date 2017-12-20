@@ -166,6 +166,7 @@
       transform: scale(1);
       transition: transform ($htd * 2) $ease-out-cubic,
                   opacity ($htd * 2) $ease-out-cubic;
+      .search-results &,
       .draw-frame {
         display: none;
       }
@@ -223,7 +224,7 @@
     padding-top: 220px;
     overflow: auto;
     opacity: 0;
-    background-color: transparentize(#999, .1) !important;
+    background-color: black(0.7) !important;
     pointer-events: none;
     transform: scale(0.7) translateY(-0%);
     transition: opacity .5s 0s $ease-out-cubic,
@@ -236,9 +237,9 @@
       opacity: 1 !important;
       pointer-events: all;
     }
-    .show-menu.shrink-nav & {
+    .show-menu .shrink-nav & {
       background-color: white(0.7) !important;
-      transition-delay: .3s, 0s, 0s;
+      transition-delay: 0s, 0s, 0s;
     }
     .nav {
       @include center(xy);

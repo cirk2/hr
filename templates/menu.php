@@ -55,7 +55,7 @@ $hcode_search_placeholder_text = (isset($hcode_options['hcode_search_placeholder
 			<form id="search-header" method="get" action="<?php echo esc_url( home_url( '/' ) ) ?>" name="search-header" class="mfp-hide search-form-result">
 				<div class="search-form position-relative">
 					<button type="submit" class="fa fa-search close-search search-button black-text"></button>
-					<input type="text" name="s" class="search-input" value="<?php echo get_search_query() ?>" placeholder="<?php echo $hcode_search_placeholder_text ?>" autocomplete="off">
+					<input type="text" name="s" class="search-input" value="<?php echo get_search_query() ?>" placeholder="Suchbegriff eingeben" autocomplete="off">
 				</div>
 			</form>
 		<!-- main menu -->
