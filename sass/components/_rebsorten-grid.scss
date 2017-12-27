@@ -53,8 +53,7 @@
         }
         h2 { all: inherit; }
       }
-      // Fundnummer
-      .vc_gitem-acf {
+      .vc_gitem-acf {           // Fundnummer
         @include brand-nr(2rem);
         @include media("ipad") {
           font-size: 1.6rem !important;
@@ -62,8 +61,8 @@
       }
     }
   }
-  .hover-state {
-    // Zitat
+  .hover-state {    // Zitat
+    
     .grid-zitat {
       height: 2.8rem;
       font: normal 500 1.3em/1.1 $sans-stack;
@@ -77,8 +76,8 @@
       &::before { content: open-quote;  }
       &::after  { content: close-quote; }
     }
-    .rebsorten-grid-excerpt {
-      // Kurztext
+    .rebsorten-grid-excerpt {   // Kurztext
+      margin-top: -7px;             
       @include media("mobile") {
         display: none;
       }
@@ -86,20 +85,24 @@
         display: none;
       }
       p {
-        font: normal 400 1.1em/1.4 $serif-stack;
-        letter-spacing: -0.8px;
+        font: normal 400 16px /1.5$serif-stack;
+        letter-spacing: -0.5px;
         text-align: center;
         text-align-last: center;
-        .has_shapes & {
-          text-align: justify;
-        }
+        // .has_shapes & {
+        //   text-align: justify;
+        // }
         @include hyphens(auto);
-        color: #444;
+        color: #333;
       }
     }
     .left-flow, .right-flow {
-      @include size(50% 260px);
-      shape-margin: 7px;
+      @include size(50% 270px);
+      shape-margin: 2px;
+
+      .has_no-shapes & {
+        display: none;
+      }
     }
     .left-flow {
       float: left;

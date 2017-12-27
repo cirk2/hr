@@ -2,6 +2,19 @@
 $modal-text: #f7f7f7;
 $modal-bg: #111;
 
+.modal li a {
+  color: $modal-text !important;
+  font-family: $sans-stack;
+  font-weight: 100;
+  font-size: 1rem;
+  text-decoration: $modal-text solid underline !important;
+  -webkit-text-decoration-skip: ink;
+  text-decoration-skip: ink;
+  &:hover {
+    text-decoration-style: wavy !important;
+  }
+}
+
 // prevent triggering event handlers on links inside vc_grid
 .vc_grid .modal-link a {
   pointer-events: none !important;

@@ -2420,26 +2420,26 @@ if(class_exists('Vc_Manager')){
 }
 
 // Post excerpt
-add_filter('the_content', 'hcode_trim_excerpts');
-if ( ! function_exists( 'hcode_trim_excerpts' ) ) {
-    function hcode_trim_excerpts($content = false) {
-        global $post;
-        if(!is_singular()){
-            $content = $post->post_excerpt;
-            // If an excerpt is set in the Optional Excerpt box
-            if($content) :
-                $content = apply_filters('the_excerpt', $content);
+// add_filter('the_content', 'hcode_trim_excerpts');
+// if ( ! function_exists( 'hcode_trim_excerpts' ) ) {
+//     function hcode_trim_excerpts($content = false) {
+//         global $post;
+//         if(!is_singular()){
+//             $content = $post->post_excerpt;
+//             // If an excerpt is set in the Optional Excerpt box
+//             if($content) :
+//                 $content = apply_filters('the_excerpt', $content);
 
-            // If no excerpt is set
-            else :
-                $content = $post->post_content;
-            endif;
-        }
-        $content = str_replace("|br|", "<br>", $content );
-        // Make sure to return the content
-        return $content;
-    }
-}
+//             // If no excerpt is set
+//             else :
+//                 $content = $post->post_content;
+//             endif;
+//         }
+//         $content = str_replace("|br|", "<br>", $content );
+//         // Make sure to return the content
+//         return $content;
+//     }
+// }
 
 // Customize wp password form
 if ( ! function_exists( 'hcode_password_form' ) ) {

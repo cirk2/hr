@@ -113,23 +113,23 @@ if ((oldIE > -1) || (newIE > -1) || (edgIE > -1)) {
 
                 setTimeout(function() {
                     // trim excerpt length without cutting words
-                    var excLength = excerptLength;
-                    $(".rebsorten-grid-excerpt p").each(
-                        function() {
-                            if ($(this).text().length > excLength) {
+                    // var excLength = excerptLength;
+                    // $(".rebsorten-grid-excerpt p").each(
+                    //     function() {
+                    //         if ($(this).text().length > excLength) {
 
-                                var trimmedExc = $(this).text().substr(0, excLength),
-                                    trimmedExc = trimmedExc.substr(0, Math.min(trimmedExc.length, trimmedExc.lastIndexOf(" ")));
-                                $(this).text( trimmedExc + ' ...' );
-                            }
-                        });
+                    //             var trimmedExc = $(this).text().substr(0, excLength),
+                    //                 trimmedExc = trimmedExc.substr(0, Math.min(trimmedExc.length, trimmedExc.lastIndexOf(" ")));
+                    //             $(this).text( trimmedExc + ' ...' );
+                    //         }
+                    //     });
 
                     // wrap excerpt in two divs with css shapes
-                    if ( Modernizr.shapes ) {
-                            $('.rebsorten-grid-excerpt p')
-                                .before("<div class='left-flow'></div>" +
-                                        "<div class='right-flow'></div>");
-                        }
+                    // if ( Modernizr.shapes ) {
+                    //         $('.rebsorten-grid-excerpt p')
+                    //             .before("<div class='left-flow'></div>" +
+                    //                     "<div class='right-flow'></div>");
+                    //     }
 
                     // highlight first word
                     $( '.wrap-first-word h6, .slider-text-middle span' ).each(function() {

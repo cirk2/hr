@@ -137,6 +137,70 @@ add_action( 'wp_enqueue_scripts', 'hcode_child_style' );
       echo $HTML;
   }
 
+  /**
+   * Add css shape elements to acf excerpt and trim excerpt length
+   *
+  */
+
+  // add_filter('acf/format_value/name=rebsorten_excerpt', 'add_css_shapes', 10, 3);
+
+  // function add_css_shapes( $value, $post_id, $field ) {
+
+  //   var_dump($field);
+  //   $wordCount = get_field( 'admin_options_excerpt_length', 'option' );
+  //   $shapeHTML = '<div class="left-flow"></div><div class="right-flow"></div>';
+
+
+  //   if($field != '') {
+      
+  //     $value = wp_trim_words( $value, $num_words = $wordCount, $more = '...' );
+  //     $value = $shapeHTML . '<p>' . $value . '</p>';
+
+  //     return $value;
+
+  //   } else {
+  //     return null;
+  //   }
+  // }
+
+  // echo "<pre>wordCount ". print_r($wordCount) . "</pre>";
+
+
+  add_action('acf/save_post', 'reflect_copyACFfieldToExcerpt', 50);
+
+  function reflect_copyACFfieldToExcerpt() {
+
+      global $post;
+
+      $post_id        = ( $post->ID ); // Current post ID
+      $post_excerpt   = get_field( 'rebsorten_excerpt', $post_id ); // ACF field
+
+      $charCount = get_field( 'admin_options_excerpt_length', 'option' );
+      $shapeHTML = '<div class="left-flow"></div><div class="right-flow"></div>';
+
+      if ( ( !empty( $post_id ) ) AND ( $post_excerpt ) ) {
+
+          $post_excerpt = mb_substr($post_excerpt, 0, $charCount);
+          $post_excerpt = $shapeHTML . '<p>' . $post_excerpt . '...' . '</p>';
+
+          $post_array     = array(
+
+              'ID'            => $post_id,
+              'post_excerpt'  => $post_excerpt
+
+          );
+
+          remove_action('save_post', 'reflect_copyACFfieldToExcerpt', 50); // Unhook this function so it doesn't loop infinitely
+
+          wp_update_post( $post_array );
+
+          add_action( 'save_post', 'reflect_copyACFfieldToExcerpt', 50); // Re-hook this function
+
+      }
+
+  }
+
+
 /**
  * Dequeue unused parent theme scripts
  *
@@ -367,32 +431,6 @@ add_action( 'wp_enqueue_scripts', 'hcode_child_style' );
   }
   add_action( 'wp_enqueue_scripts', 'reflect_custom_hcodemain', 27);
   
-/**
- * add css/js to acf admin header
- *
-*/ 
-
-  function my_acf_admin_head() {
-      ?>
-      <style type="text/css">
-
-          .acf_postbox .field textarea {
-              min-height: 0;
-          }
-
-      </style>
-
-      <script type="text/javascript">
-      (function($){
-
-          /* ... */
-
-      })(jQuery);
-      </script>
-      <?php
-  }
-
-  add_action( 'acf/input/admin_head', 'my_acf_admin_head' );
 
 // load comment-reply script only if comments are open
 
@@ -579,6 +617,120 @@ add_action( 'wp_enqueue_scripts', 'hcode_child_style' );
   }
 
   add_action( 'init', 'cptui_register_my_taxes' );
+
+  /**
+   * add css/js to acf admin header
+   *
+  */ 
+
+    function my_acf_admin_head() {
+        ?>
+        <style type="text/css">
+
+            @import url('https://fonts.googleapis.com/css?family=Montserrat:800');
+
+            .post-column--fundnummer input[type="number"] {
+              width: 4em;
+              padding: 1em 0;
+              font: normal 800 3em 'Montserrat';
+              text-align: center;
+              color: #e3001a;
+            }
+
+            /*  Hide wpbakery settings error message in post editor */
+
+            #setting-error-tgmpa.update-nag {
+              display: none !important;
+            }
+
+            /*  Admin List View  */
+
+            .acf_postbox .field textarea {
+                min-height: 0;
+            }
+
+            .column-featured_image img {
+              max-height: 100px;
+            }
+
+            .post-type-rebsorte .wp-list-table {
+              table-layout: auto;
+            }
+
+            .rebsorten-meta-column {
+              min-height: auto;
+            }
+
+            .inline-edit-col-qed .acf-field {
+              clear: none !important;
+            }
+            .inline-edit-col-qed [data-field-type="text"],
+            .inline-edit-col-qed [data-field-type="textarea"] {
+              width: 97% !important;
+              width: -webkit-fill-available !important;
+            }
+
+            /*  Post Edit View  */
+
+
+
+
+
+        </style>
+
+        <script>
+        (function($){
+
+           // $('#hSelect').change(function(event) {
+           //   console.log($(this));
+           // });
+
+        })(jQuery);
+        </script>
+        <?php
+    }
+
+    add_action( 'acf/input/admin_head', 'my_acf_admin_head' );
+
+
+  /**
+     * Add Custom Columns to post list screens
+     *
+     * @access      public
+     * @since       1.0 
+    */
+
+    // add preview image size
+
+    // add_image_size('featured_preview', 55, 55, true);
+
+    // get featured image
+    function reflect_get_featured_image($post_ID) {
+        $post_thumbnail_id = get_post_thumbnail_id($post_ID);
+        if ($post_thumbnail_id) {
+            $post_thumbnail_img = wp_get_attachment_image_src($post_thumbnail_id, 'featured_preview');
+            return $post_thumbnail_img[0];
+        }
+    }
+
+    // add new column
+    function reflect_columns_head($defaults) {
+        $defaults['featured_image'] = 'Bild der Rebsorte';
+        return $defaults;
+    }
+     
+    // show the featured image
+    function reflect_columns_content($column_name, $post_ID) {
+        if ($column_name == 'featured_image') {
+            $post_featured_image = reflect_get_featured_image($post_ID);
+            if ($post_featured_image) {
+                echo '<img src="' . $post_featured_image . '" />';
+            }
+        }
+    }
+
+    add_filter('manage_posts_columns', 'reflect_columns_head');
+    add_action('manage_posts_custom_column', 'reflect_columns_content', 10, 2);
 
 
 /**

@@ -40,13 +40,13 @@ get_header(); ?>
       </header>
       <div class="content grid-fullwidth">
 
-      <blockquote id="claim"><?php the_field( 'zitat' ) ?></blockquote>
+      <blockquote id="claim"><?php the_field( 'claim' ) ?></blockquote>
 
-      <?php if (get_field( 'zitat' ) ): ?>
+      <?php if (get_field( 'claim' ) ): ?>
       <div class="section-heading">
         <div class="subheader">
           <h2 class="section-title">
-            <b class="quote-mark-left">&#x275E;</b><?php the_field( 'zitat' ) ?><b class="quote-mark-right">&#x275D;</b>
+            <b class="quote-mark-left">&#x275E;</b><?php the_field( 'claim' ) ?><b class="quote-mark-right">&#x275D;</b>
           </h2>
         </div>
       </div>
@@ -55,7 +55,8 @@ get_header(); ?>
       </div>
         <div class="content grid-fullwidth text-center">
 
-          <div class="text-center modal-excerpt"><?php the_excerpt(); ?></div>
+          <!-- <div class="text-center modal-excerpt"><?php the_excerpt(); ?></div> -->
+          <div class="text-center modal-excerpt"><p><?php the_field( 'rebsorten_excerpt' ); ?></p></div>
 
           <?php if( get_field('wein_vorhanden')): ?>
             <?php if( get_field('wein_vorhanden') ){
@@ -80,9 +81,10 @@ get_header(); ?>
           </div>
           <?php endif; ?>
           <div class="partnerwinzer">
+
+            <h3 class="text-center">Partnerwinzer</h3>
             
-            <ul>
-              <h3>Partnerwinzer</h3>
+            <ul>              
             <?php  $partners = get_posts(array(
                     'post_type' => 'partnerwinzer',
                     'numberposts' => 8,
@@ -147,31 +149,23 @@ get_header(); ?>
         <div class="content">
         <!-- research section -->
 
+        <?php if (get_field( 'forschung' )): ?>
+        
           <h2 class="section-science">Forschungsergebnisse Andreas Jung</h2>
 
           <div class="featured-image-thumb visible-sm visible-xs" >
             <?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'medium' ); }  ?>
           </div>
 
-          <?php if (get_field( 'status' )): ?>
-          <h3>Status</h3>
-          <p><?php the_field( 'status' ) ?></p>
-          <?php endif;
+          <?php while(has_sub_field('forschung')): ?>
 
-          if (get_field( 'fundsituation' )): ?>
-          <h3>Fundsituation</h3>
-          <p><?php the_field( 'fundsituation' ) ?></p>
-          <?php endif;
+              <h3><?php the_sub_field('heading-select') ?></h3>
 
-          if (get_field( 'herkunft_und_verbreitung' )): ?>
-          <h3>Herkunft und Verbreitung</h3>
-          <p><?php the_field( 'herkunft_und_verbreitung' ) ?></p>
-          <?php endif;
+              <p><?php the_sub_field('paragraph') ?></p>
 
-          if (get_field( 'eigenschaften' )): ?>
-          <h3>Eigenschaften</h3>
-          <p><?php the_field( 'eigenschaften' ) ?></p>
-          <?php endif; ?>
+          <?php endwhile; ?>
+
+        <?php endif; ?>
 
         </div>
         <!-- sidebar -->

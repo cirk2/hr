@@ -13,7 +13,7 @@ section#slider {
     @include coverer();
     z-index: 0;
     background: hsla(0, 0%, 0%, 0.1) url(/wp-content/themes/hr/i/patterns/noisy-net-dark.png);
-    opacity: 1;
+    opacity: 0.9;
   }
   .owl-bg-img {
     background-position-y: center;
