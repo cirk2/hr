@@ -25,7 +25,7 @@ section#rebsorten {
   .logo-description-text {
     p {
       text-align: left;
-      hyphens: none;
+      @include hyphens(none);
     }
   }
   .vc_gitem-zone {

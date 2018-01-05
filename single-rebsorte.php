@@ -81,10 +81,7 @@ get_header(); ?>
           </div>
           <?php endif; ?>
           <div class="partnerwinzer">
-
-            <h3 class="text-center">Partnerwinzer</h3>
-            
-            <ul>              
+         
             <?php  $partners = get_posts(array(
                     'post_type' => 'partnerwinzer',
                     'numberposts' => 8,
@@ -98,6 +95,10 @@ get_header(); ?>
                 ));
               if( $partners ): ?>
 
+            <h3 class="text-center">Partnerwinzer</h3>
+
+            <ul> 
+
               <?php foreach( $partners as $partner ): ?>
 
               <li>
@@ -109,8 +110,9 @@ get_header(); ?>
               </li>
 
               <?php endforeach; ?>
-            <?php endif; ?>
             </ul>
+            <?php endif; ?>
+            
           </div>
 
           <?php 
@@ -127,14 +129,16 @@ get_header(); ?>
             }
           ?>
 
-          <h3 <?php echo $show_posts ?> >Artikel zur Rebsorte <?php echo the_title(); ?></h3>
+          <h3 <?php echo $show_posts ?> >Blogbeitrag zur Rebsorte<?php echo the_title(); ?></h3>
           
-          <ul>
+          <ul class="related-post-links">
             
           <?php foreach( $posts as $post ): setup_postdata($post); ?>
            
-            <li><a href="<?php echo the_permalink() ?>">
-              <?php echo the_title() ?></a>
+            <li>
+              <a target="_blank" href="<?php echo the_permalink() ?>">
+                <?php echo the_title() ?>
+              </a>
             </li>
 
           <?php 

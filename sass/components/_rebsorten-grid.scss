@@ -12,7 +12,7 @@
     @include media("from-xxs-devX", "to-sm-devY") {
       height: 180px !important;
     }
-    @include media("from-xs-devX", "to-lg-devY") {
+    @include media("to-sm-devX") {
       height: 220px !important;
     }
     @include media("ipad") {
@@ -68,7 +68,7 @@
       font: normal 500 1.3em/1.1 $sans-stack;
       letter-spacing: -1px;
       color: $light-red;
-      @include hyphens(auto);
+      @include hyphens(none);
       @include media("to-md-devX") {
         height: auto;
         font-size: 1em;

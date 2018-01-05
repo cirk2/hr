@@ -9,20 +9,7 @@
 
 if ( ! function_exists( 'hcode_child_style' ) ) :
     function hcode_child_style() {
-        wp_enqueue_style( 'hcode-parent-style', get_template_directory_uri(). '/style.css', 
-          // array( 
-          //     'hcode-animate-style'
-          //   , 'hcode-bootstrap'
-          //   , 'hcode-mCustomScrollbar-style'
-          //   , 'hcode-text-effect-style'
-          //   , 'hcode-et-line-icons-style'
-          //   , 'hcode-font-awesome-style'
-          //   , 'hcode-owl-carousel-style'
-          //   , 'hcode-menu-hamburger-style'
-          //   , 'hcode-owl-transitions-style'
-          //   , 'hcode-magnific-popup-style'
-          // ), 
-          '1.0' );
+        wp_enqueue_style( 'hcode-parent-style', get_template_directory_uri(). '/style.css', '1.0' );
     } endif;
 add_action( 'wp_enqueue_scripts', 'hcode_child_style' );
 
@@ -61,10 +48,8 @@ add_action( 'wp_enqueue_scripts', 'hcode_child_style' );
 */
   
   function reflect_child_main() {
-
       wp_register_script( 'reflect-main', get_stylesheet_directory_uri().'/js/child-main.js', array( 'jquery', 'underscore', 'reflect-waypoints' ), "1.8.2", true);
       wp_enqueue_script( 'reflect-main' );
-
   }
   add_action( 'wp_enqueue_scripts', 'reflect_child_main', 23);
 
@@ -78,31 +63,9 @@ add_action( 'wp_enqueue_scripts', 'hcode_child_style' );
 
       wp_register_script( 'reflect-modal', get_stylesheet_directory_uri() . '/js/modals.js', array( 'jquery' ), "1.8.2", true);
       wp_enqueue_script( 'reflect-modal' );
-
-      // wp_register_script( 'adobe-shapes-polyfill', get_stylesheet_directory_uri().'/js/shapes-polyfill.min.js' );
-      // wp_enqueue_script( 'adobe-shapes-polyfill' );
-
-      // wp_register_script( 'reflect-hyphenopoly', get_stylesheet_directory_uri().'/js/Hyphenopoly_Loader.js' );
-      // wp_enqueue_script( 'reflect-hyphenopoly' );
   }
   add_action( 'wp_enqueue_scripts', 'hr_add_scripts', 35);
 
-  // <!--     <script>
-  //         var Hyphenopoly = {
-  //             require: {
-  //                 "de": "FORCEHYPHENOPOLY"
-  //             },
-  //             paths: {
-  //                 patterndir: "/wp-content/themes/h-code-child/patterns/",
-  //                 maindir: "/wp-content/themes/h-code-child/js/"
-  //             },
-  //             setup: {
-  //                 classnames: {
-  //                     "hyphenate": {}
-  //                 }
-  //             }
-  //         };
-  //     </script> -->
   
 /**
  * Modal
@@ -138,32 +101,10 @@ add_action( 'wp_enqueue_scripts', 'hcode_child_style' );
   }
 
   /**
-   * Add css shape elements to acf excerpt and trim excerpt length
+   * Hooks into acf/save_post to to copy the contents of the acf excerpt field 
+   * to wp excerpt, adds css shape elements to acf excerpt and trims excerpt length
    *
   */
-
-  // add_filter('acf/format_value/name=rebsorten_excerpt', 'add_css_shapes', 10, 3);
-
-  // function add_css_shapes( $value, $post_id, $field ) {
-
-  //   var_dump($field);
-  //   $wordCount = get_field( 'admin_options_excerpt_length', 'option' );
-  //   $shapeHTML = '<div class="left-flow"></div><div class="right-flow"></div>';
-
-
-  //   if($field != '') {
-      
-  //     $value = wp_trim_words( $value, $num_words = $wordCount, $more = '...' );
-  //     $value = $shapeHTML . '<p>' . $value . '</p>';
-
-  //     return $value;
-
-  //   } else {
-  //     return null;
-  //   }
-  // }
-
-  // echo "<pre>wordCount ". print_r($wordCount) . "</pre>";
 
 
   add_action('acf/save_post', 'reflect_copyACFfieldToExcerpt', 50);
@@ -434,12 +375,6 @@ add_action( 'wp_enqueue_scripts', 'hcode_child_style' );
 
 // load comment-reply script only if comments are open
 
-  // function theme_queue_js(){
-  // if ( (!is_admin()) && is_singular() && comments_open() && get_option( 'thread_comments' ) )
-  //   wp_enqueue_script( 'comment-reply' );
-  // }
-  // add_action( 'wp_print_scripts', 'theme_queue_js' );
-
   function reflect_comment_reply(){
   if( !get_field( 'hcodepage-scroll', 'option' ) ):
     wp_deregister_script( 'hcodepage-scroll' );
@@ -493,6 +428,31 @@ add_action( 'wp_enqueue_scripts', 'hcode_child_style' );
   }
   add_action( 'get_header', 'clean_meta_generators', 100);
   add_action( 'wp_footer', function(){ ob_end_flush(); }, 100);
+
+
+  /**
+   * enables categories for pages
+
+  */
+
+  function add_taxonomies_to_pages() {
+   register_taxonomy_for_object_type( 'post_tag', 'page' );
+   register_taxonomy_for_object_type( 'category', 'page' );
+   }
+  add_action( 'init', 'add_taxonomies_to_pages' );
+   if ( ! is_admin() ) {
+   add_action( 'pre_get_posts', 'category_and_tag_archives' );
+   
+   }
+  function category_and_tag_archives( $wp_query ) {
+  $my_post_array = array('post','page');
+   
+   if ( $wp_query->get( 'category_name' ) || $wp_query->get( 'cat' ) )
+   $wp_query->set( 'post_type', $my_post_array );
+   
+   if ( $wp_query->get( 'tag' ) )
+   $wp_query->set( 'post_type', $my_post_array );
+  }
 
 
 /**
@@ -629,12 +589,33 @@ add_action( 'wp_enqueue_scripts', 'hcode_child_style' );
 
             @import url('https://fonts.googleapis.com/css?family=Montserrat:800');
 
+            /*  Rebsorte Edit View  */
+
             .post-column--fundnummer input[type="number"] {
               width: 4em;
               padding: 1em 0;
               font: normal 800 3em 'Montserrat';
               text-align: center;
               color: #e3001a;
+            }
+
+            .acf-field-5a4f1445993a5{
+              padding-left: 45px !important;
+            }
+
+            .acf-field-5a4f1445993a5 input[type='range'] {
+              transform: rotate(90deg);
+              position: absolute;
+              left: -85px;
+              top: 30px;
+            }
+
+            .post-column--fundnummer {
+              width: 183px !important;
+            }
+
+            .post-column--sortierung {
+              width: 138px !important;
             }
 
             /*  Hide wpbakery settings error message in post editor */
@@ -663,27 +644,63 @@ add_action( 'wp_enqueue_scripts', 'hcode_child_style' );
 
             .inline-edit-col-qed .acf-field {
               clear: none !important;
+              width: 23% !important;
             }
             .inline-edit-col-qed [data-field-type="text"],
             .inline-edit-col-qed [data-field-type="textarea"] {
-              width: 97% !important;
-              width: -webkit-fill-available !important;
+              width: 48% !important;
+              /*width: -webkit-fill-available !important;*/
             }
 
-            /*  Post Edit View  */
+            #the-list .wein_vorhanden ol {
+              list-style: none;
+              margin: 0;
+            }
 
+            .post-type-rebsorte .wp-list-table {
+              table-layout: fixed;
+            }
 
+            .post-type-rebsorte .wp-list-table tbody tr {
+              height: 90px;
+            }
 
+            th#ursprungsnummer {
+              width: 0;
+              visibility: hidden;
+            }
 
+            th#reihenfolge {
+              width: 120px;
+            }
+
+            .post-type-rebsorte .wp-list-table .title strong {
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+
+            .post-type-rebsorte .wp-list-table .title strong a {
+              font-family: Georgia;
+              font-size: 1.5em !important;
+              color: #555;
+              font-weight: 400;
+            }
+
+            td.ursprungsnummer {
+              padding: 0;
+              transform: translate(12px, 50px);
+              overflow: visible;
+              white-space: nowrap;
+              font-size: 1.5em;
+              font-family: Montserrat;
+              color: #e3001a;
+            }
 
         </style>
 
         <script>
         (function($){
-
-           // $('#hSelect').change(function(event) {
-           //   console.log($(this));
-           // });
 
         })(jQuery);
         </script>
@@ -715,7 +732,7 @@ add_action( 'wp_enqueue_scripts', 'hcode_child_style' );
 
     // add new column
     function reflect_columns_head($defaults) {
-        $defaults['featured_image'] = 'Bild der Rebsorte';
+        $defaults['featured_image'] = 'Bild';
         return $defaults;
     }
      
@@ -755,6 +772,33 @@ add_action( 'wp_enqueue_scripts', 'hcode_child_style' );
      
     add_filter('pre_get_posts', 'reflect_cpt_search');
 
+// remove jpeg compression
+
+    add_filter( 'jpeg_quality', create_function( '', 'return 75;' ) );
+
+// DEBUG
+
+    add_filter( 'intermediate_image_sizes_advanced', 'prefix_remove_default_images' );
+    // Remove default image sizes here. 
+    function prefix_remove_default_images( $sizes ) {
+     // unset( $sizes['small']); // 150px
+     // unset( $sizes['medium']); // 300px
+     unset( $sizes['large']); // 1024px
+     unset( $sizes['medium_large']); // 768px
+     return $sizes;
+    }
+
+    // add_action( 'admin_init', 'theme_additional_images' );
+     /**
+     * Display all image sizes other than the default, thumbnail, medium and large
+     *
+     */
+    //  function theme_additional_images() {
+    //  global $_wp_additional_image_sizes;
+    //  $get_intermediate_image_sizes = get_intermediate_image_sizes();
+
+    // echo '<pre>' . print_r($_wp_additional_image_sizes) . '</pre>';
+    // }
 
 
 ?>

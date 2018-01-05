@@ -96,7 +96,7 @@ img {
   }
 }
 
-@include media("landscape", "to-lg-devY") {
+@include media("landscape", "to-sm-devX") {
   #landscape-blocker {
     display: block;
   }

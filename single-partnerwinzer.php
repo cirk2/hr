@@ -33,13 +33,13 @@ get_header(); ?>
 
             <div class="content">
 
-                <h2><?php the_title(); ?></h2>
+                <h2 class="text-center"><?php the_title(); ?></h2>
 
-                <?php the_excerpt(); ?>
+                <div class="partnerwinzer-content text-center">
+                  <?php the_field( 'partnerwinzer-text' ) ?>
+                </div>
 
-                <p>Spicy jalapeno bacon ipsum dolor amet boudin reprehenderit meatloaf ex mollit dolore excepteur picanha kielbasa. Shankle minim est voluptate short ribs ham hock filet mignon ea dolore in. Andouille short ribs lorem spare ribs duis jowl short loin pancetta meatloaf hamburger landjaeger porchetta consequat ut. Filet mignon ham hock venison do aute sed. Nostrud reprehenderit burgdoggen, sirloin excepteur quis velit pork chop corned beef commodo duis deserunt tail pastrami. Consectetur laboris flank, hamburger meatball cillum kevin lorem.</p>
-
-                <h3>Verfügbare Rebsorten</h3>
+                <h3 class="text-center">Verfügbare Rebsorten</h3>
 
                 <div class="rebsorten">
 
@@ -101,7 +101,7 @@ get_header(); ?>
 
             </div>
 
-            <!-- <footer><?php the_content(); ?></footer> -->
+            <!-- <footer></footer> -->
 
         </div>
 

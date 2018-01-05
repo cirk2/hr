@@ -102,6 +102,7 @@ $modal-bg: #000;
     }
     .rebsorte-title {
       @include brand-title(1.5rem);
+      @include hyphens(none);
     }
     .ursprungsnummer-title {
       @include brand-nr(1.8rem);
@@ -138,16 +139,24 @@ $modal-bg: #000;
   }
   .content {
     position: relative;
+    margin: 0 auto;
     > h2 { margin-top: 0; }
-    .modal-excerpt p span {
-      color: white(.5);
-      &::after {
-        content: '[...]'
-      }
-      @include media(mobile) {
-        color: $modal-text;
-        &::after {
-          display: none;
+    .modal-excerpt {
+      max-width: 42em;
+      margin: 0 auto;
+      p {
+        @include hyphens(none);
+        span {
+          color: white(.5);
+          &::after {
+            content: '[...]'
+          }
+          @include media(mobile) {
+            color: $modal-text;
+            &::after {
+              display: none;
+            }
+          }
         }
       }
     }
@@ -164,7 +173,7 @@ $modal-bg: #000;
         flex-grow: 1;
         position: absolute;
         color: #fff;
-        @include media("to-lg-devY") {
+        @include media("to-sm-devX") {
           align-items: stretch;
           flex-direction: column-reverse;
           height: 12em;
@@ -195,7 +204,7 @@ $modal-bg: #000;
       }
     }
     .progress {
-      @include media("to-lg-devY") {
+      @include media("to-sm-devX") {
         height: 12em;
         z-index: -1;
         padding: 0;
@@ -242,6 +251,9 @@ $modal-bg: #000;
         }
       }
     }
+    .related-post-links {
+      text-align: left;
+    }
     .section-science {
       font-size: 1.6rem;
       line-height: 1;
@@ -252,6 +264,10 @@ $modal-bg: #000;
       img {
         display: block;
         margin: 0 auto;
+        @include media("ipad") {
+          float: right;
+          margin: 2rem;
+        }
       }
     }
   }

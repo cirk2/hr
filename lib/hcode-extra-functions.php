@@ -323,6 +323,10 @@ if ( ! function_exists( 'hcode_force_under_construction' ) ) {
                 }
             }
 
+            if( strpos($userrequest, '/contact-form-7') !== 0 ) {
+                return;
+            }
+
             if ( strpos($userrequest, '/wp-login') !== 0 && strpos($userrequest, '/wp-admin') !== 0 ) {
                 // Make sure it gets all the proper decoding and rtrim action
                 $userrequest = str_replace('*','(.*)',$userrequest);
@@ -844,7 +848,16 @@ if ( ! function_exists( 'hcode_get_title_part_for_archive' ) ) {
                 
                 $image_url = $page_title_image ;
                 if( esc_url( $image_url ) ) {
-                    $output .= '<section class="'.$top_header_class.' page-title-section page-title '.$hcode_title_parallax_effect.' parallax-fix" style="background: url('.$image_url.'); background-position: 50% 0%;">';
+                    $img_id = hcode_get_attachment_id_from_url( $image_url  );
+                    $hcode_srcset = $hcode_srcset_data = $hcode_srcset_classes = '';
+                    $hcode_srcset = wp_get_attachment_image_srcset( $img_id, 'full' );
+                    if( $hcode_srcset ){
+                        $hcode_srcset_data = ' data-bg-srcset="'.esc_attr( $hcode_srcset ).'"';
+                        $hcode_srcset_classes = ' bg-image-srcset';
+                    }
+                    $hcode_image_url = wp_get_attachment_image_src($img_id, 'full' );
+
+                    $output .= '<section class="'.$top_header_class.' page-title-section page-title '.$hcode_title_parallax_effect.$hcode_srcset_classes.' parallax-fix" style="background: url('.$hcode_image_url[0].'); background-position: 50% 0%;"'.$hcode_srcset_data.'>';
                 } else {
                     $output .= '<section class="'.$top_header_class.' page-title-section page-title '.$hcode_title_parallax_effect.' parallax-fix">';
                 }
@@ -881,7 +894,15 @@ if ( ! function_exists( 'hcode_get_title_part_for_archive' ) ) {
                 $image_url = $page_title_image ;
 
                 if( esc_url( $image_url ) ) {
-                    $output .= '<section class="page-title '.$hcode_title_parallax_effect.' parallax-fix page-title-large" style="background: url('.$image_url.'); background-position: 50% 0%;">';
+                    $img_id = hcode_get_attachment_id_from_url( $image_url  );
+                    $hcode_srcset = $hcode_srcset_data = $hcode_srcset_classes = '';
+                    $hcode_srcset = wp_get_attachment_image_srcset( $img_id, 'full' );
+                    if( $hcode_srcset ){
+                        $hcode_srcset_data = ' data-bg-srcset="'.esc_attr( $hcode_srcset ).'"';
+                        $hcode_srcset_classes = ' bg-image-srcset';
+                    }
+                    $hcode_image_url = wp_get_attachment_image_src($img_id, 'full' );
+                    $output .= '<section class="page-title '.$hcode_title_parallax_effect.$hcode_srcset_classes.' parallax-fix page-title-large" style="background: url('.$image_url.'); background-position: 50% 0%;"'.$hcode_srcset_data.'>';
                 } else {
                     $output .= '<section class="page-title '.$hcode_title_parallax_effect.' parallax-fix page-title-large">';
                 }
@@ -910,7 +931,15 @@ if ( ! function_exists( 'hcode_get_title_part_for_archive' ) ) {
                 $image_url = $page_title_image ;
 
                 if( esc_url( $image_url ) ) {
-                    $output .= '<section class="page-title '.$hcode_title_parallax_effect.' parallax-fix page-title-large" style="background: url('.$image_url.'); background-position: 50% 0%;">';
+                    $img_id = hcode_get_attachment_id_from_url( $image_url  );
+                    $hcode_srcset = $hcode_srcset_data = $hcode_srcset_classes = '';
+                    $hcode_srcset = wp_get_attachment_image_srcset( $img_id, 'full' );
+                    if( $hcode_srcset ){
+                        $hcode_srcset_data = ' data-bg-srcset="'.esc_attr( $hcode_srcset ).'"';
+                        $hcode_srcset_classes = ' bg-image-srcset';
+                    }
+                    $hcode_image_url = wp_get_attachment_image_src($img_id, 'full' );
+                    $output .= '<section class="page-title '.$hcode_title_parallax_effect.$hcode_srcset_classes.' parallax-fix page-title-large" style="background: url('.$image_url.'); background-position: 50% 0%;"'.$hcode_srcset_data.'>';
                 } else {
                     $output .= '<section class="page-title '.$hcode_title_parallax_effect.' parallax-fix page-title-large">';
                 }
@@ -1113,7 +1142,15 @@ if ( ! function_exists( 'hcode_get_title_part_for_archive' ) ) {
 
                         
                         if( esc_url( $product_category_image ) ) {
-                            $output .= '<section class="page-title parallax3 parallax-fix page-title-large page-title-shop" style="background: url('.esc_url( $product_category_image ).'); background-position: 50% 0%;">';
+                            $img_id = hcode_get_attachment_id_from_url( $product_category_image  );
+                            $hcode_srcset = $hcode_srcset_data = $hcode_srcset_classes = '';
+                            $hcode_srcset = wp_get_attachment_image_srcset( $img_id, 'full' );
+                            if( $hcode_srcset ){
+                                $hcode_srcset_data = ' data-bg-srcset="'.esc_attr( $hcode_srcset ).'"';
+                                $hcode_srcset_classes = ' bg-image-srcset';
+                            }
+                            $hcode_image_url = wp_get_attachment_image_src($img_id, 'full' );
+                            $output .= '<section class="page-title parallax3 parallax-fix page-title-large page-title-shop'.$hcode_srcset_classes.'" style="background: url('.esc_url( $hcode_image_url[0] ).'); background-position: 50% 0%;"'.$hcode_srcset_data.'>';
                         } else {
                             $output .= '<section class="page-title parallax3 parallax-fix page-title-large page-title-shop">';
                         }
@@ -1260,8 +1297,8 @@ if ( ! function_exists( 'hcode_the_category' ) ) {
 }
 
 if ( ! function_exists( 'hcode_get_attachment_id_from_url' ) ) {
-    function hcode_get_attachment_id_from_url($attachment_url,$attachment_size) {
-        global $wpdb;
+    function hcode_get_attachment_id_from_url($image_url) {
+        /*global $wpdb;
         $image = array('null');
         $attachment = false;
         if ( '' == $attachment_url )
@@ -1271,9 +1308,27 @@ if ( ! function_exists( 'hcode_get_attachment_id_from_url' ) ) {
 
         if ( false !== strpos( $attachment_url, $upload_dir_paths['baseurl'] ) ) {
             $attachment = $wpdb->get_col($wpdb->prepare("SELECT ID FROM $wpdb->posts WHERE guid='%s';", $attachment_url )); 
+            print_r($attachment);die;
             $image = !empty( $attachment[0] ) ? wp_get_attachment_image_src($attachment[0], $attachment_size) : '';
         }
-        return $image;
+        return $image;*/
+
+        global $wpdb;
+        $image = '';
+        $attachment = false;
+        if ( '' == $image_url )
+                return;
+
+        $upload_dir_paths = wp_upload_dir();
+        
+        if ( false !== strpos( $image_url, $upload_dir_paths['baseurl'] ) ) {
+
+            // Remove the upload path base directory from the attachment URL
+            $image_url = str_replace( $upload_dir_paths['baseurl'] . '/', '', $image_url );
+
+            $attachment = $wpdb->get_var( $wpdb->prepare( "SELECT hcodeposts.ID FROM $wpdb->posts hcodeposts, $wpdb->postmeta hcodepostmeta WHERE hcodeposts.ID = hcodepostmeta.post_id AND hcodepostmeta.meta_key = '_wp_attached_file' AND hcodepostmeta.meta_value = '%s' AND hcodeposts.post_type = 'attachment'", $image_url ) );
+        }
+        return $attachment;
     }
 }
 
@@ -1282,17 +1337,17 @@ if ( ! function_exists( 'hcode_single_post_navigation' ) ) :
     function hcode_single_post_navigation() {
         // Don't print empty markup if there's nowhere to navigate.
         if( is_singular('post') ){
-            $link = $cat_name = $next_image = $prev_image = '';
+            $link = $cat_name = $next_image = $prev_image = $thumb_icon = $thumb_icon_next = '';
             // no image
             $hcode_options = get_option( 'hcode_theme_setting' );
             $hcode_no_image = (isset($hcode_options['hcode_no_image'])) ? $hcode_options['hcode_no_image'] : '';
             
             if( isset( $hcode_no_image['url'] ) ) {
-                $image_thumb = hcode_get_attachment_id_from_url($hcode_no_image['url'], 'hcode-navigation-img');
+                $image_thumb = $hcode_no_image['url'];
             } else {
                 $image_thumb = array();
             }
-            
+
             $cat = get_the_category(); 
             $link = get_category_link($cat[0]->cat_ID);
             $current_cat_id = $cat[0]->cat_ID;
@@ -1325,41 +1380,83 @@ if ( ! function_exists( 'hcode_single_post_navigation' ) ) :
             }
 
             if ( $previd &&  has_post_thumbnail( $previd ) ) {
-                $prevthumb = wp_get_attachment_image_src( get_post_thumbnail_id( $previd ), 'hcode-navigation-img' );
+                $prevthumb = wp_get_attachment_image_src( get_post_thumbnail_id( $previd ), 'full' );
                 if($prevthumb[0]):
                     $prev_image = $prevthumb[0];
                 else:
-                    if( isset( $image_thumb[0] ) && esc_url( $image_thumb[0] ) ){
-                        $prev_image = $image_thumb[0];
+                    if( isset( $image_thumb ) && esc_url( $image_thumb ) ){
+                        $prev_image = $image_thumb;
                     }else{
                         $prev_image = HCODE_THEME_ASSETS_URI . '/images/no-image-133x83.jpg';
                     }
                 endif;
             }else{
-                if( isset( $image_thumb[0] ) && esc_url( $image_thumb[0] ) ){
-                    $prev_image = $image_thumb[0];
+                if( isset( $image_thumb ) && esc_url( $image_thumb ) ){
+                    $prev_image = $image_thumb;
                 }else{
                     $prev_image = HCODE_THEME_ASSETS_URI . '/images/no-image-133x83.jpg';
                 }
             }
 
             if ( $nextid && has_post_thumbnail( $nextid ) ) {
-                $nextthumb = wp_get_attachment_image_src( get_post_thumbnail_id( $nextid ), 'hcode-navigation-img' );
+                $nextthumb = wp_get_attachment_image_src( get_post_thumbnail_id( $nextid ), 'full' );
                 if($nextthumb[0]):
                     $next_image = $nextthumb[0];
                 else:
-                    if( isset( $image_thumb[0] ) && esc_url( $image_thumb[0] ) ){
-                        $next_image = $image_thumb[0];
+                    if( isset( $image_thumb ) && esc_url( $image_thumb ) ){
+                        $next_image = $image_thumb;
                     }else{
                         $next_image = HCODE_THEME_ASSETS_URI . '/images/no-image-133x83.jpg';
                     }
                 endif;
             }else{
-                if( isset( $image_thumb[0] ) && esc_url( $image_thumb[0] ) ){
-                    $next_image = $image_thumb[0];
+                if( isset( $image_thumb ) && esc_url( $image_thumb ) ){
+                    $next_image = $image_thumb;
                 }else{
                     $next_image = HCODE_THEME_ASSETS_URI . '/images/no-image-133x83.jpg';
                 }
+            }
+
+            $image_id = hcode_get_attachment_id_from_url( $prev_image );
+            $navigation_image_srcset  = !empty($hcode_options['navigation_image_srcset']) ? $hcode_options['navigation_image_srcset'] : 'full';
+            if( $image_id ){
+                $thumb_icon = wp_get_attachment_image_src($image_id, $navigation_image_srcset);
+
+                $srcset_prev = $srcset_data_prev = $sizes_prev = $sizes_data_prev = '';
+                $srcset_prev = wp_get_attachment_image_srcset( $image_id, $navigation_image_srcset );
+                if( $srcset_prev ){
+                    $srcset_data_prev = ' srcset="'.esc_attr( $srcset_prev ).'"';
+                }
+
+                $sizes_prev = wp_get_attachment_image_sizes( $image_id, $navigation_image_srcset );
+                if( $sizes_prev ){
+                    $sizes_data_prev = ' sizes="'.esc_attr( $sizes_prev ).'"';
+                }
+
+                $prev_thumb = $thumb_icon[0];
+            }else{
+                $prev_thumb = $prev_image;
+            }
+
+            $next_image_id = hcode_get_attachment_id_from_url( $next_image );
+            $navigation_image_srcset  = !empty($hcode_options['navigation_image_srcset']) ? $hcode_options['navigation_image_srcset'] : 'full';
+            if( $next_image_id ){
+                $thumb_icon_next = wp_get_attachment_image_src($next_image_id, $navigation_image_srcset);
+
+                $srcset_next = $srcset_data_next = $sizes_next = $sizes_data_next = '';
+                $srcset_next = wp_get_attachment_image_srcset( $next_image_id, $navigation_image_srcset );
+                if( $srcset_next ){
+                    $srcset_data_next = ' srcset="'.esc_attr( $srcset_next ).'"';
+                }
+
+                $sizes_next = wp_get_attachment_image_sizes( $next_image_id, $navigation_image_srcset );
+                if( $sizes_next ){
+                    $sizes_data_next = ' sizes="'.esc_attr( $sizes_next ).'"';
+                }
+
+                $next_thumb = $thumb_icon_next[0];
+            }else{
+                $next_thumb = $next_image;
             }
             ?>
             <?php
@@ -1396,12 +1493,12 @@ if ( ! function_exists( 'hcode_single_post_navigation' ) ) :
                     <?php if ( ! empty( $nextid ) ) { ?>
                         <div class="next-project">
                         <?php
-                            echo '<a rel="next" href="'.get_permalink($nextid).'"><img alt="'.__("Next Project", "H-Code").'" class="next-project-img" src="'.HCODE_THEME_ASSETS_URI.'/images/next-project.png" width="33" height="83"><span>'.esc_html__( 'Next Post','H-Code').'</span><!-- next project image --><img alt="'.__("Next Project", "H-Code").'" src="'.$next_image.'"></a>';
+                            echo '<a rel="next" href="'.get_permalink($nextid).'"><img alt="'.__("Next Project", "H-Code").'" class="next-project-img" src="'.HCODE_THEME_ASSETS_URI.'/images/next-project.png" width="33" height="83"><span>'.esc_html__( 'Next Post','H-Code').'</span><!-- next project image --><img alt="'.__("Next Project", "H-Code").'" src="'.$next_thumb.'"'.$srcset_data_next.$sizes_data_next.'></a>';
                         ?>
                         </div>
                     <?php } if ( ! empty( $previd) ) {?>
                         <div class="previous-project">
-                        <?php echo '<a rel="prev" href="'.get_permalink($previd).'"><img alt="'.__("Previous Project", "H-Code").'" src="'.$prev_image.'"><img alt="'.__("Previous Project", "H-Code").'" class="previous-project-img" src="'.HCODE_THEME_ASSETS_URI.'/images/previous-project.png" width="33" height="83"><span>'.esc_html__( 'Previous Post','H-Code').'</span></a>'; ?>
+                        <?php echo '<a rel="prev" href="'.get_permalink($previd).'"><img alt="'.__("Previous Project", "H-Code").'" src="'.$prev_thumb.'"'.$srcset_data_prev.$sizes_data_prev.'><img alt="'.__("Previous Project", "H-Code").'" class="previous-project-img" src="'.HCODE_THEME_ASSETS_URI.'/images/previous-project.png" width="33" height="83"><span>'.esc_html__( 'Previous Post','H-Code').'</span></a>'; ?>
                         </div>
                     <?php } ?>
                 </div>
@@ -1419,12 +1516,12 @@ if ( ! function_exists( 'hcode_single_portfolio_navigation' ) ) :
         $hcode_no_image = (isset($hcode_options['hcode_no_image'])) ? $hcode_options['hcode_no_image'] : '';
 
         if( isset( $hcode_no_image['url'] ) ) {
-            $image_thumb = hcode_get_attachment_id_from_url($hcode_no_image['url'], 'hcode-navigation-img');
+            $image_thumb = $hcode_no_image['url'];
         } else {
             $image_thumb = array();
         }
 
-        $link = $cat_name = $next_image = $prev_image = '';
+        $link = $cat_name = $next_image = $prev_image = $thumb_icon = $thumb_icon_next = '';
 
         $terms = get_the_terms( get_the_ID() , 'portfolio-category' );
         
@@ -1478,41 +1575,84 @@ if ( ! function_exists( 'hcode_single_portfolio_navigation' ) ) :
             $cat_name = get_term_link($terms[0]->name,'portfolio-category');
         }
         if ( $previd &&  has_post_thumbnail( $previd ) ) {
-            $prevthumb = wp_get_attachment_image_src( get_post_thumbnail_id( $previd ), 'hcode-navigation-img' );
+            $prevthumb = wp_get_attachment_image_src( get_post_thumbnail_id( $previd ), 'full' );
             if($prevthumb[0]):
                 $prev_image = $prevthumb[0];
             else:
-                if( isset( $image_thumb[0] ) && esc_url( $image_thumb[0] ) ){
-                    $prev_image = $image_thumb[0];
+                if( isset( $image_thumb ) && esc_url( $image_thumb ) ){
+                    $prev_image = $image_thumb;
                 }else{
                     $prev_image = HCODE_THEME_ASSETS_URI . '/images/no-image-133x83.jpg';
                 }
             endif;
         }else{
-            if( isset( $image_thumb[0] ) && esc_url( $image_thumb[0] ) ){
-                $prev_image = $image_thumb[0];
+            if( isset( $image_thumb ) && esc_url( $image_thumb ) ){
+                $prev_image = $image_thumb;
             }else{
                 $prev_image = HCODE_THEME_ASSETS_URI . '/images/no-image-133x83.jpg';
             }
         }
 
         if ( $nextid && has_post_thumbnail( $nextid ) ) {
-            $nextthumb = wp_get_attachment_image_src( get_post_thumbnail_id( $nextid ), 'hcode-navigation-img' );
+            $nextthumb = wp_get_attachment_image_src( get_post_thumbnail_id( $nextid ), 'full' );
             if($nextthumb[0]):
                 $next_image = $nextthumb[0];
             else:
-                if( isset( $image_thumb[0] ) && esc_url( $image_thumb[0] ) ){
-                    $next_image = $image_thumb[0];
+                if( isset( $image_thumb ) && esc_url( $image_thumb ) ){
+                    $next_image = $image_thumb;
                 }else{
                     $next_image = HCODE_THEME_ASSETS_URI . '/images/no-image-133x83.jpg';
                 }
             endif;
         }else{
-            if( isset( $image_thumb[0] ) && esc_url( $image_thumb[0] ) ){
-                $next_image = $image_thumb[0];
+            if( isset( $image_thumb ) && esc_url( $image_thumb ) ){
+                $next_image = $image_thumb;
             }else{
                 $next_image = HCODE_THEME_ASSETS_URI . '/images/no-image-133x83.jpg';
             }
+        }
+
+        $image_id = hcode_get_attachment_id_from_url( $prev_image );
+        $navigation_image_srcset  = !empty($hcode_options['portfolio_navigation_image_srcset']) ? $hcode_options['portfolio_navigation_image_srcset'] : 'full';
+        if( $image_id ){
+            $thumb_icon = wp_get_attachment_image_src($image_id, $navigation_image_srcset);
+
+            $srcset_prev = $srcset_data_prev = $sizes_prev = $sizes_data_prev = '';
+            $srcset_prev = wp_get_attachment_image_srcset( $image_id, $navigation_image_srcset );
+            if( $srcset_prev ){
+                $srcset_data_prev = ' srcset="'.esc_attr( $srcset_prev ).'"';
+            }
+
+            $sizes_prev = wp_get_attachment_image_sizes( $image_id, $navigation_image_srcset );
+            if( $sizes_prev ){
+                $sizes_data_prev = ' sizes="'.esc_attr( $sizes_prev ).'"';
+            }
+
+            $prev_thumb = $thumb_icon[0];
+        }else{
+            $prev_thumb = $prev_image;
+        }
+
+        $next_image_id = hcode_get_attachment_id_from_url( $next_image );
+        
+        $navigation_image_srcset  = !empty($hcode_options['portfolio_navigation_image_srcset']) ? $hcode_options['portfolio_navigation_image_srcset'] : 'full';
+        if( $next_image_id ){
+            $thumb_icon_next = wp_get_attachment_image_src($next_image_id, $navigation_image_srcset);
+
+            $srcset_next = $srcset_data_next = $sizes_next = $sizes_data_next = '';
+            $srcset_next = wp_get_attachment_image_srcset( $next_image_id, $navigation_image_srcset );
+            if( $srcset_next ){
+                $srcset_data_next = ' srcset="'.esc_attr( $srcset_next ).'"';
+            }
+
+            $sizes_next = wp_get_attachment_image_sizes( $next_image_id, $navigation_image_srcset );
+            if( $sizes_next ){
+                $sizes_data_next = ' sizes="'.esc_attr( $sizes_next ).'"';
+            }
+
+            $next_thumb = $thumb_icon_next[0];
+        }else{
+            $next_thumb = $next_image;
         }
         ?>
         <?php
@@ -1547,12 +1687,12 @@ if ( ! function_exists( 'hcode_single_portfolio_navigation' ) ) :
                 <?php if ( ! empty( $nextid ) ) { ?>
                     <div class="next-project">
                     <?php
-                        echo '<a rel="next" href="'.get_permalink($nextid).'"><img alt="'.__("Next Project", "H-Code").'" class="next-project-img" src="'.HCODE_THEME_ASSETS_URI.'/images/next-project.png" width="33" height="83"><span>'.esc_html__( 'Next Project','H-Code').'</span><!-- next project image --><img alt="Next Project" src="'.$next_image.'"></a>';
+                        echo '<a rel="next" href="'.get_permalink($nextid).'"><img alt="'.__("Next Project", "H-Code").'" class="next-project-img" src="'.HCODE_THEME_ASSETS_URI.'/images/next-project.png" width="33" height="83"><span>'.esc_html__( 'Next Project','H-Code').'</span><!-- next project image --><img alt="Next Project" src="'.$next_thumb.'"'.$srcset_data_next.$sizes_data_next.'></a>';
                     ?>
                     </div>
                 <?php } if ( ! empty( $previd) ) {?>
                     <div class="previous-project">
-                    <?php echo '<a rel="prev" href="'.get_permalink($previd).'"><img alt="'.__("Previous Project", "H-Code").'" src="'.$prev_image.'"><img alt="Previous Project" class="previous-project-img" src="'.HCODE_THEME_ASSETS_URI.'/images/previous-project.png" width="33" height="83"><span>'.esc_html__( 'Previous Project','H-Code').'</span></a>'; ?>
+                    <?php echo '<a rel="prev" href="'.get_permalink($previd).'"><img alt="'.__("Previous Project", "H-Code").'" src="'.$prev_thumb.'"'.$srcset_data_prev.$sizes_data_prev.'><img alt="Previous Project" class="previous-project-img" src="'.HCODE_THEME_ASSETS_URI.'/images/previous-project.png" width="33" height="83"><span>'.esc_html__( 'Previous Project','H-Code').'</span></a>'; ?>
                     </div>
                 <?php } ?>
             </div>
@@ -1591,9 +1731,22 @@ if ( ! function_exists( 'hcode_single_post_related_posts' ) ) :
         $hcode_no_image = (isset($hcode_options['hcode_no_image'])) ? $hcode_options['hcode_no_image'] : '';
         
         if( isset( $hcode_no_image['url'] ) ) {
-            $image_thumb = hcode_get_attachment_id_from_url($hcode_no_image['url'], 'hcode-related-post');
+            $image_thumb = $hcode_no_image['url'];
         } else {
             $image_thumb = array();
+        }
+        $related_post_image_srcset  = !empty($hcode_options['related_post_image_srcset']) ? $hcode_options['related_post_image_srcset'] : 'full';
+        $thumb_id = hcode_get_attachment_id_from_url($image_thumb);
+        $srcset_icon = $srcset_data_icon = $sizes_icon = $sizes_data_icon = '';
+        $thumb = wp_get_attachment_image_src($thumb_id, $related_post_image_srcset);
+        $srcset_icon = wp_get_attachment_image_srcset( $thumb_id, $related_post_image_srcset );
+        if( $srcset_icon ){
+            $srcset_data_icon = ' srcset="'.esc_attr( $srcset_icon ).'"';
+        }
+
+        $sizes_icon = wp_get_attachment_image_sizes( $thumb_id, $related_post_image_srcset );
+        if( $sizes_icon ){
+            $sizes_data_icon = ' sizes="'.esc_attr( $sizes_icon ).'"';
         }
 
         $title = (isset($hcode_options['hcode_related_post_title'])) ? $hcode_options['hcode_related_post_title'] : '';
@@ -1663,9 +1816,6 @@ if ( ! function_exists( 'hcode_single_post_related_posts' ) ) :
                                             'title' => $image_title_post,
                                             'alt' => $image_alt_post,
                                         );
-                        $url = wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()) );
-                        //$post_author = get_post_field( 'post_author', get_the_ID() );
-                        //$author = get_the_author_meta( 'user_nicename', $post_author);
                         $author = '<span class="author vcard"><a class="url fn n" href='.get_author_posts_url( get_the_author_meta( 'ID' ) ).'>'.get_the_author().'</a></span> ';
                         $author = ($author) ? esc_html__('Posted by ','H-Code').$author : '';
                         $blog_quote = hcode_post_meta('hcode_quote');
@@ -1675,11 +1825,11 @@ if ( ! function_exists( 'hcode_single_post_related_posts' ) ) :
                         if(!empty($blog_image)){
                             $output .= '<div class="blog-image"><a href="'.get_permalink().'">';
                                     if ( has_post_thumbnail() ) {
-                                            $output .= get_the_post_thumbnail(get_the_ID() ,'hcode-related-post',$img_attr_post );
+                                            $output .= get_the_post_thumbnail(get_the_ID() ,$related_post_image_srcset,$img_attr_post );
                                     }
                                     else {
-                                        if( isset( $image_thumb[0] ) && esc_url( $image_thumb[0] ) ){
-                                            $output .= '<img src="'.esc_url( $image_thumb[0] ).'" width="374" height="234" alt="'.__( 'No Image', 'H-Code' ).'" />';
+                                        if( isset( $thumb[0] ) && esc_url( $thumb[0] ) ){
+                                            $output .= '<img src="'.esc_url( $thumb[0] ).'" width="'.$thumb[1].'" height="'.$thumb[2].'" alt="'.__( 'No Image', 'H-Code' ).'"'.$srcset_data_icon.$sizes_data_icon.' />';
                                         }else{
                                             $output .= '<img src="' . HCODE_THEME_ASSETS_URI . '/images/no-image-374x234.jpg" width="374" height="234"  alt="'.__( 'No Image', 'H-Code' ).'" />';
                                         }
@@ -1687,15 +1837,13 @@ if ( ! function_exists( 'hcode_single_post_related_posts' ) ) :
                             $output .= '</a></div>';
                         }
                         else{
-                            $thumb = wp_get_attachment_image_src( get_post_thumbnail_id(get_the_ID()), 'full' );
-                            $url = $thumb['0'];
                             $output .='<div class="blog-image"><a href="'.get_permalink().'">';
                             if ( has_post_thumbnail() ) {
-                                $output .= get_the_post_thumbnail( get_the_ID(), 'hcode-related-post',$img_attr_post );
+                                $output .= get_the_post_thumbnail( get_the_ID(), $related_post_image_srcset,$img_attr_post );
                             }
                             else {
-                                    if( isset( $image_thumb[0] ) && esc_url( $image_thumb[0] ) ){
-                                        $output .= '<img src="'.esc_url( $image_thumb[0] ).'" width="374" height="234"  alt="'.__( 'No Image', 'H-Code' ).'"/>';
+                                    if( isset( $thumb[0] ) && esc_url( $thumb[0] ) ){
+                                        $output .= '<img src="'.esc_url( $thumb[0] ).'" width="'.$thumb[1].'" height="'.$thumb[2].'" alt="'.__( 'No Image', 'H-Code' ).'"'.$srcset_data_icon.$sizes_data_icon.' />';
                                     }else{
                                         $output .= '<img src="' . HCODE_THEME_ASSETS_URI . '/images/no-image-374x234.jpg" width="374" height="234"  alt="'.__( 'No Image', 'H-Code' ).'" />';
                                     }
@@ -1762,9 +1910,23 @@ if ( ! function_exists( 'hcode_single_portfolio_related_posts' ) ) :
         $hcode_no_image = (isset($hcode_options['hcode_no_image'])) ? $hcode_options['hcode_no_image'] : '';
 
         if( isset( $hcode_no_image['url'] ) ) {
-            $image_thumb = hcode_get_attachment_id_from_url($hcode_no_image['url'], 'hcode-related-post');
+            $image_thumb = $hcode_no_image['url'];
         } else {
             $image_thumb = array();
+        }
+
+        $related_portfolio_image_srcset  = !empty($hcode_options['related_portfolio_image_srcset']) ? $hcode_options['related_portfolio_image_srcset'] : 'full';
+        $thumb_id = hcode_get_attachment_id_from_url($image_thumb);
+        $srcset_icon = $srcset_data_icon = $sizes_icon = $sizes_data_icon = '';
+        $thumb_portfolio = wp_get_attachment_image_src($thumb_id, $related_portfolio_image_srcset);
+        $srcset_icon = wp_get_attachment_image_srcset( $thumb_id, $related_portfolio_image_srcset );
+        if( $srcset_icon ){
+            $srcset_data_icon = ' srcset="'.esc_attr( $srcset_icon ).'"';
+        }
+
+        $sizes_icon = wp_get_attachment_image_sizes( $thumb_id, $related_portfolio_image_srcset );
+        if( $sizes_icon ){
+            $sizes_data_icon = ' sizes="'.esc_attr( $sizes_icon ).'"';
         }
 
         $title = (isset($hcode_options['hcode_related_title'])) ? $hcode_options['hcode_related_title'] : '';
@@ -1842,19 +2004,29 @@ if ( ! function_exists( 'hcode_single_portfolio_related_posts' ) ) :
                                 $portfolio_subtitle = hcode_post_meta('hcode_subtitle');
 
                                 if(!empty($portfolio_image)){
-                                    $thumb = wp_get_attachment_image_src( get_post_thumbnail_id(get_the_ID()), 'hcode-related-post' );
+                                    $srcset = $srcset_data = $sizes = $sizes_data = '';
+                                    $thumb = wp_get_attachment_image_src( get_post_thumbnail_id(get_the_ID()), $related_portfolio_image_srcset );
+                                    $srcset = wp_get_attachment_image_srcset( get_post_thumbnail_id(get_the_ID()), $related_portfolio_image_srcset );
+                                    if( $srcset ){
+                                        $srcset_data = ' srcset="'.esc_attr( $srcset ).'"';
+                                    }
+
+                                    $sizes = wp_get_attachment_image_sizes( get_post_thumbnail_id(get_the_ID()), $related_portfolio_image_srcset );
+                                    if( $sizes ){
+                                        $sizes_data = ' sizes="'.esc_attr( $sizes ).'"';
+                                    }
                                     $url = $thumb['0'];
                                     if($url):
                                         $output .= '<div class="gallery-img">';
                                             $output .= '<a href="'.get_permalink().'">';
-                                                $output .= '<img src="' . $url . '" width="'.$thumb[1].'" height="'.$thumb[2].'" '.$image_alt.$image_title.'/>';
+                                                $output .= '<img src="' . $url . '" width="'.$thumb[1].'" height="'.$thumb[2].'" '.$image_alt.$image_title.$srcset_data.$sizes_data.'/>';
                                             $output .= '</a>';
                                         $output .= '</div>';
                                     else : 
                                         $output .= '<div class="gallery-img">';
                                             $output .= '<a href="'.get_permalink().'">';
-                                            if( isset( $image_thumb[0] ) && esc_url( $image_thumb[0] ) ){
-                                                $output .= '<img src="'.esc_url( $image_thumb[0] ).'" width="374" height="234" alt="'.__( 'No Image', 'H-Code' ).'" />';
+                                            if( isset( $thumb_portfolio[0] ) && esc_url( $thumb_portfolio[0] ) ){
+                                                $output .= '<img src="'.esc_url( $thumb_portfolio[0] ).'" width="'.$thumb_portfolio[1].'" height="'.$thumb_portfolio[2].'" alt="'.__( 'No Image', 'H-Code' ).'"'.$srcset_data_icon.$sizes_data_icon.' />';
                                             }else{
                                                 $output .= '<img src="' . HCODE_THEME_ASSETS_URI . '/images/no-image-374x234.jpg" width="374" height="234" alt="'.__( 'No Image', 'H-Code' ).'" />';
                                             }
@@ -1862,16 +2034,26 @@ if ( ! function_exists( 'hcode_single_portfolio_related_posts' ) ) :
                                         $output .= '</div>';
                                     endif; 
                                 }else{
-                                    $thumb = wp_get_attachment_image_src( get_post_thumbnail_id(get_the_ID()), 'hcode-related-post' );
+                                    $srcset = $srcset_data = $sizes = $sizes_data = '';
+                                    $thumb = wp_get_attachment_image_src( get_post_thumbnail_id(get_the_ID()), $related_portfolio_image_srcset );
+                                    $srcset = wp_get_attachment_image_srcset( get_post_thumbnail_id(get_the_ID()), $related_portfolio_image_srcset );
+                                    if( $srcset ){
+                                        $srcset_data = ' srcset="'.esc_attr( $srcset ).'"';
+                                    }
+
+                                    $sizes = wp_get_attachment_image_sizes( get_post_thumbnail_id(get_the_ID()), $related_portfolio_image_srcset );
+                                    if( $sizes ){
+                                        $sizes_data = ' sizes="'.esc_attr( $sizes ).'"';
+                                    }
                                     $url = $thumb['0'];
                                     $output .= '<div class="gallery-img">';
                                         $output .= '<a href="'.get_permalink().'">';
                                             if ( $url ) {
-                                                $output .= '<img src="' . $url . '" width="'.$thumb[1].'" height="'.$thumb[2].'" '.$image_alt.$image_title.'/>';
+                                                $output .= '<img src="' . $url . '" width="'.$thumb[1].'" height="'.$thumb[2].'" '.$image_alt.$image_title.$srcset_data.$sizes_data.'/>';
                                             }
                                             else {
-                                                if( isset( $image_thumb[0] ) && esc_url( $image_thumb[0] ) ){
-                                                    $output .= '<img src="'.esc_url( $image_thumb[0] ).'" width="374" height="234" alt="'.__( 'No Image', 'H-Code' ).'" />';
+                                                if( isset( $thumb_portfolio[0] ) && esc_url( $thumb_portfolio[0] ) ){
+                                                    $output .= '<img src="'.esc_url( $thumb_portfolio[0] ).'" width="'.$thumb_portfolio[1].'" height="'.$thumb_portfolio[2].'" alt="'.__( 'No Image', 'H-Code' ).'"'.$srcset_data_icon.$sizes_data_icon.' />';
                                                 }else{
                                                     $output .= '<img src="' . HCODE_THEME_ASSETS_URI . '/images/no-image-374x234.jpg" width="374" height="234" alt="'.__( 'No Image', 'H-Code' ).'" />';
                                                 }                                                
@@ -1929,6 +2111,7 @@ if ( ! function_exists( 'hcode_posts_customize' ) ) {
                 
                 if( !empty($search_content)){
                     $query->set('post_type', array('post', 'page', 'rebsorte', 'partnerwinzer'));
+                    // $query->set('post_type', $search_content);
                 }
             }elseif( is_home() ){
                 if ( get_query_var('paged') ) { $paged = get_query_var('paged'); } else if ( get_query_var('page') ) {$paged = get_query_var('page'); } else {$paged = 1; }
@@ -2018,6 +2201,16 @@ if ( ! function_exists( 'hcode_hook_for_ajax_page' ) ) {
         $output="<script>
         ( function( $ ) {
         'use strict';
+            
+            var isMobile = false;
+            var isiPhoneiPad = false;
+            
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                isMobile = true;
+            }
+            if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+                isiPhoneiPad = true;
+            }
             $(document).ready(function () {
                 $('.owl-pagination > .owl-page').click(function (e) {
                     if ($(e.target).is('.mfp-close'))
@@ -2042,12 +2235,44 @@ if ( ! function_exists( 'hcode_hook_for_ajax_page' ) ) {
                     });
                 });
                 SetResizeContent();
+                SetResizeHeaderMenu();
+
+                if( !isiPhoneiPad || !isMobile ) {
+                    $('[data-hover=dropdown]').dropdownHover();
+                }
             });
 
+            function SetResizeHeaderMenu() {
+                var width = $('nav.navbar').children('div.container').width();
+                $('ul.mega-menu-full').each(function () {
+                    $(this).css('width', width + 'px');
+                });
+            }
             function SetResizeContent() {
                 var minheight = $(window).height();
+                var minwidth = $(window).width();
                 $('.full-screen').css('min-height', minheight);
+                $('.menu-first-level').each(function () {
+                    $(this).find('ul.collapse').removeClass('in');
+                    var menu_link = $(this).children('a');
+                    var dataurl = menu_link.attr('data-redirect-url');
+                    var datadefaulturl = menu_link.attr('data-default-url');
+                    if (minwidth >= 992) {
+                        $(menu_link).removeAttr('data-toggle');
+                        $(this).children('a').attr('href', dataurl);
+                    } else {
+                        $(menu_link).attr('data-toggle', 'collapse');
+                        $(this).children('a').attr('href', datadefaulturl);
+                    }
+                });
             }
+            $(window).resize(function () {
+                setTimeout(function () {
+                    SetResizeHeaderMenu();
+                    SetResizeContent();
+                }, 200);
+            });
+
         })( jQuery );
         </script>";
 
@@ -2119,7 +2344,9 @@ if ( ! function_exists( 'hcode_single_post_meta' ) ) :
         }
 
         if( !empty( $posted_by ) ) {
+            echo '<div class="blog-date no-padding-top standard-post-meta">';
             echo implode(' | ', $posted_by);
+            echo '</div>';
         }
 
 
@@ -2420,26 +2647,26 @@ if(class_exists('Vc_Manager')){
 }
 
 // Post excerpt
-// add_filter('the_content', 'hcode_trim_excerpts');
-// if ( ! function_exists( 'hcode_trim_excerpts' ) ) {
-//     function hcode_trim_excerpts($content = false) {
-//         global $post;
-//         if(!is_singular()){
-//             $content = $post->post_excerpt;
-//             // If an excerpt is set in the Optional Excerpt box
-//             if($content) :
-//                 $content = apply_filters('the_excerpt', $content);
+add_filter('the_content', 'hcode_trim_excerpts');
+if ( ! function_exists( 'hcode_trim_excerpts' ) ) {
+    function hcode_trim_excerpts($content = false) {
+        global $post;
+        if(!is_singular()){
+            $content = $post->post_excerpt;
+            // If an excerpt is set in the Optional Excerpt box
+            if($content) :
+                $content = apply_filters('the_excerpt', $content);
 
-//             // If no excerpt is set
-//             else :
-//                 $content = $post->post_content;
-//             endif;
-//         }
-//         $content = str_replace("|br|", "<br>", $content );
-//         // Make sure to return the content
-//         return $content;
-//     }
-// }
+            // If no excerpt is set
+            else :
+                $content = $post->post_content;
+            endif;
+        }
+        $content = str_replace("|br|", "<br>", $content );
+        // Make sure to return the content
+        return $content;
+    }
+}
 
 // Customize wp password form
 if ( ! function_exists( 'hcode_password_form' ) ) {
@@ -2644,3 +2871,103 @@ if ( ! function_exists( 'hcode_get_header_layout' ) ) :
         }
     }
 endif;
+
+if( ! function_exists( 'hcode_get_intermediate_image_sizes' ) ) :
+    function hcode_get_intermediate_image_sizes() {
+        global $wp_version;
+        $image_sizes = array('full', 'thumbnail', 'medium', 'medium_large', 'large'); // Standard sizes
+        if( $wp_version >= '4.7.0'){
+            $_wp_additional_image_sizes = wp_get_additional_image_sizes();
+            if ( ! empty( $_wp_additional_image_sizes ) ) {
+                $image_sizes = array_merge( $image_sizes, array_keys( $_wp_additional_image_sizes ) );
+            }
+            return apply_filters( 'intermediate_image_sizes', $image_sizes );
+        }else{
+            return $image_sizes;
+        }
+    }
+endif;
+
+if( ! function_exists( 'hcode_get_image_sizes' ) ) :
+    function hcode_get_image_sizes() {
+        global $_wp_additional_image_sizes;
+
+        $sizes = array();
+
+        foreach ( get_intermediate_image_sizes() as $_size ) {
+            if ( in_array( $_size, array('full', 'thumbnail', 'medium', 'medium_large', 'large') ) ) {
+                $sizes[ $_size ]['width']  = get_option( "{$_size}_size_w" );
+                $sizes[ $_size ]['height'] = get_option( "{$_size}_size_h" );
+                $sizes[ $_size ]['crop']   = (bool) get_option( "{$_size}_crop" );
+            } elseif ( isset( $_wp_additional_image_sizes[ $_size ] ) ) {
+                $sizes[ $_size ] = array(
+                    'width'  => $_wp_additional_image_sizes[ $_size ]['width'],
+                    'height' => $_wp_additional_image_sizes[ $_size ]['height'],
+                    'crop'   => $_wp_additional_image_sizes[ $_size ]['crop'],
+                );
+            }
+        }
+        return $sizes;
+    }
+endif;
+
+if( ! function_exists( 'hcode_get_image_size' ) ) :
+        function hcode_get_image_size( $size ) {
+            $sizes = hcode_get_image_sizes();
+
+            if ( isset( $sizes[ $size ] ) ) {
+                return $sizes[ $size ];
+            }
+
+            return false;
+        }
+    endif;
+
+if( ! function_exists( 'hcode_get_thumbnail_image_sizes' ) ) :
+    function hcode_get_thumbnail_image_sizes() {
+
+        $thumbnail_image_sizes = array();
+
+        // Hackily add in the data link parameter.
+        $hcode_srcset = hcode_get_intermediate_image_sizes();
+
+        if(!empty($hcode_srcset)) {
+            foreach ( $hcode_srcset as $value => $label ){
+                
+                $key = esc_attr( $label );
+
+                $hcode_srcset_image_data = hcode_get_image_size( $label );
+                $width = ( $hcode_srcset_image_data['width'] == 0 ) ? esc_html( 'Auto', 'H-Code' ) : $hcode_srcset_image_data['width'].'px';
+                $height = ( $hcode_srcset_image_data['height'] == 0 ) ? esc_html( 'Auto', 'H-Code' ) : $hcode_srcset_image_data['height'].'px';
+                if( $label == 'full' ) {
+                    $data = esc_html__( 'Original Full Size', 'H-Code' );
+                } else {
+                    $data = ucwords( str_replace( '_', ' ', str_replace( '-', ' ', esc_attr( $label ) ) ) ).' ('.esc_attr( $width ).' X '.esc_attr( $height ).')';
+                }
+
+                $thumbnail_image_sizes[$data] = $key;
+            }
+        }
+
+        return $thumbnail_image_sizes;
+    }
+endif;
+
+if ( ! function_exists( 'hcode_hide_feature_image' ) ) :
+    function hcode_hide_feature_image( $classes ) {
+
+        global $post;
+        if( is_single() ) {
+
+            $hcode_options = get_option( 'hcode_theme_setting' );
+            $hcode_disable_feature_image = ( isset( $hcode_options[ 'hcode_disable_feature_image' ] ) ) ? $hcode_options[ 'hcode_disable_feature_image' ] : '';
+
+            if( $hcode_disable_feature_image != 1 ){
+                $classes[] = 'hide-post-feature-image';
+            }
+        }
+        
+        return $classes;
+    }
+endif;
+add_filter( 'post_class', 'hcode_hide_feature_image' );

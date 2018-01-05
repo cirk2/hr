@@ -132,7 +132,7 @@ p strong {
 
     }
     h6 {
-      max-width: 25rem;
+      max-width: 26rem;
       padding: 0 1rem;
       margin: 0.5rem auto 0;
       font-size: 1.5rem;
@@ -140,6 +140,7 @@ p strong {
       font-weight: 300;
       letter-spacing: -0.05em !important;
       color: #777;
+      @include hyphens(none);
       @include media("screen", "to-md-devX") {
         font-size: 1.2rem;
         max-width: 15rem;
@@ -171,12 +172,11 @@ p strong {
     }
   }
   p {
-    hyphens: none;
+    @include hyphens(none);
   }
   @include media(mobile) {
     p {
       padding-top: 1rem;
-//       hyphens: auto;
     }
   }
 }

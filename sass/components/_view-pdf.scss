@@ -50,4 +50,8 @@
       transform: scale(1.175);
     }
   }
+  @include media("screen", "to-sm") {
+    margin: 0 auto;
+    display: block;
+  }
 }

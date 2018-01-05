@@ -72,23 +72,25 @@ body.modal-is-loading {
     -webkit-backdrop-filter: blur(20px) saturate(180%);
     backdrop-filter: blur(20px) saturate(180%);
   }
-  &:not(.modal-small) {
+  // &:not(.modal-small) {
     .close-modal { display: none; }
     top: $header-height;
-  }
-  &.modal-small {
-    @include center(xy);
-    @include position(fixed, 50% auto auto 50%);
-    min-height: 40%;
-    min-width: 60%;
-    &::after {
-      @include coverer;
-      box-shadow: 0 10px 40px black(0.5);
-    }
-    .modal {
-      @include position(relative, 0);
-      @include transform(none);
-      min-height: 500px;
+  // }
+  @include media("screen", "from-md") {
+    &.modal-small {
+      @include center(xy);
+      @include position(fixed, 50% auto auto 50%);
+      min-height: 40%;
+      min-width: 60%;
+      &::after {
+        @include coverer;
+        box-shadow: 0 10px 40px black(0.5);
+      }
+      .modal {
+        @include position(relative, 0);
+        @include transform(none);
+        min-height: 500px;
+      }
     }
   }
 }
@@ -159,10 +161,11 @@ body.modal-is-loading {
     min-width: 60%;
     border-radius: 4px;
     img {
-      border-radius: 100% 0 100% 100%;
+/*       border-radius: 100% 0 100% 100%; */
+      border-radius: 4px;
       margin: 1rem;
-      shape-outside: circle(50% at center);
-      max-width: 45%;
+/*       shape-outside: circle(50% at center); */
+      max-width: 35%;
     }
     @include media(mobile) {
       @include size(100%);
@@ -177,8 +180,8 @@ body.modal-is-loading {
       }
     }
     @include media("ipad") {
-      padding: 0 2rem 2rem;
-      width: 75%;
+/*       padding: 0 2rem 2rem; */
+/*       width: 75%; */
       #modal-content {
         padding: 2rem;
         font-size: 1.3rem;
