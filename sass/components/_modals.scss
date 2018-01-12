@@ -65,7 +65,7 @@ body.modal-is-loading {
 .modal-wrapper {
   pointer-events: none;
   @include position(fixed, 0);
-  z-index: 1050;
+  z-index: 1090;
   overflow-x: hidden;
   overflow-y: auto;
   &.show {
@@ -96,11 +96,12 @@ body.modal-is-loading {
 }
 
 .modal {
+  position: absolute;
   pointer-events: all;
   overflow-y: auto !important;
-  background-color: transparentize($modal-bg, .1);
+  background-color: transparentize($modal-bg, .05);
   .has_backdropfilter & {
-    background-color: transparentize($modal-bg, .2);
+    background-color: transparentize($modal-bg, .1);
   }
   padding: 2rem;
   @include media("screen", "to-md-devX") {
@@ -108,7 +109,10 @@ body.modal-is-loading {
   }
   .close-modal {
     @include position(absolute, 0 NULL NULL 12px);
-    display: block;
+    display: none;
+    .modal-small & {
+      display: block;
+    }
     font: 100 2.5rem/1 sans-serif !important;
     color: $modal-text;
     &:hover { color: lighten($light-red, 10); }
@@ -157,7 +161,9 @@ body.modal-is-loading {
   .modal-small & {
     @include center(xy);
     height: auto !important;
+    overflow: auto;
     min-height: 40%;
+    max-height: 80vh;
     min-width: 60%;
     border-radius: 4px;
     img {

@@ -142,7 +142,7 @@ $modal-bg: #000;
     margin: 0 auto;
     > h2 { margin-top: 0; }
     .modal-excerpt {
-      max-width: 42em;
+//       max-width: 42em;
       margin: 0 auto;
       p {
         @include hyphens(none);
@@ -152,6 +152,12 @@ $modal-bg: #000;
             content: '[...]'
           }
           @include media(mobile) {
+            color: $modal-text;
+            &::after {
+              display: none;
+            }
+          }
+          @include media(ipad) {
             color: $modal-text;
             &::after {
               display: none;

@@ -5,10 +5,12 @@
     border: 1px solid $red;
   }
   .vc_grid-item {
+    padding-right: 31px !important;
     @include media("from-md") { width: 25%; }
     @include media("to-md")   { width: 33%; }
     @include media("to-xs")   { width: 50%; }
     .partner-grid-item {
+      margin: 1px;
       background-size: 176px !important;
       background-color: hsl(0, 0%, 100%);
       @media (max-width: 675px) {

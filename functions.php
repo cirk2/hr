@@ -503,7 +503,7 @@ add_action( 'wp_enqueue_scripts', 'hcode_child_style' );
       "rewrite" => array( "slug" => "rebsorte", "with_front" => true ),
       "query_var" => true,
       "menu_icon" => "/wp-content/themes/hr/i/grape-dash.png",
-      "supports" => array( "title", "editor", "thumbnail", "excerpt", "custom-fields", "revisions" ),
+      "supports" => array( "title", "thumbnail", "excerpt", "custom-fields", "revisions", 'page-attributes' ),
       "taxonomies" => array( "weinsorte" ),
     );
 
@@ -537,7 +537,7 @@ add_action( 'wp_enqueue_scripts', 'hcode_child_style' );
       "rewrite" => array( "slug" => "partnerwinzer", "with_front" => true ),
       "query_var" => true,
       "menu_icon" => "dashicons-groups",
-      "supports" => array( "title", "editor", "thumbnail" ),
+      "supports" => array( "title", "editor", "thumbnail", 'page-attributes' ),
     );
 
     register_post_type( "partnerwinzer", $args );

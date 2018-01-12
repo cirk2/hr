@@ -64,8 +64,16 @@ get_header(); ?>
                 </div>
 
                 <ul>
-                    <li><a href="<?php the_field("website") ?>"> Website von <?php the_title(); ?></a></li>
-                    <li><a href="<?php the_field("shop_url") ?>"> Online Shop von <?php the_title(); ?></a></li>
+                    <?php if( get_field("website")): ?>
+                      <li><a href="<?php the_field("website") ?>" target="_blank"> Website von <?php if (get_field( "website_link_text" )) {
+                        the_field( "website_link_text" );
+                      } else { the_title(); } ?></a></li>
+                    <?php endif; ?>
+                    <?php if( get_field("shop_url")): ?>
+                      <li><a href="<?php the_field("shop_url") ?>" target="_blank"> Online Shop von <?php if (get_field( "website_link_text" )) {
+                        the_field( "website_link_text" );
+                      } else { the_title(); } ?></a></li>
+                    <?php endif; ?>
                 </ul>
 
                 <?php 

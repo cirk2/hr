@@ -83,6 +83,10 @@ img {
   background-color: black(0.9);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
   backdrop-filter: blur(20px) saturate(180%);
+  .modal-is-open &,
+  .mfp-search-open & {
+    display: none !important;
+  }
   .inner {
     @include center(xy);
     width: 90%;

@@ -23,7 +23,7 @@
       @include position(absolute, 2rem NULL NULL 0);
       display: block !important;
       visibility: visible;
-      opacity: .06;
+      opacity: 0.075;
       // -moz-backface-visibility: hidden;
       @include media("screen", "to-md") {
         top: 1.5rem;
@@ -62,7 +62,9 @@
     }
   }
   .hover-state {    // Zitat
-    
+    .vc_gitem-zone-img {
+      opacity: 0.06 !important;
+    }
     .grid-zitat {
       height: 2.8rem;
       font: normal 500 1.3em/1.1 $sans-stack;

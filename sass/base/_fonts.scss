@@ -117,6 +117,22 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.fa-twitter {
+  &:before {
+    content: $fa-twitter;
+  }
+}
+.fa-facebook {
+  &:before {
+    content: $fa-facebook;
+  }
+}
+.fa-google-plus {
+  &:before {
+    content: $fa-google-plus;
+  }
+}
+
 .icon-file-pdf {
   &:before {
     content: $icon-file-pdf;
