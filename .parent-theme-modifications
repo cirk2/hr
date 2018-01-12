@@ -1,6 +1,30 @@
 delete assets/js/velocity-animation.js
 delete assets/js/velocity.min.js
 
+
+hcode/lib/hcode-extra-functions.php - LINE 2112 {
+
+  if( !empty($search_content)){
+      $query->set('post_type', array('post', 'page', 'rebsorte', 'partnerwinzer'));
+      // $query->set('post_type', $search_content);
+  }
+
+}
+
+hcode/functions.php - LINE 112 - remove image sizes {
+
+  /**
+   * Custom image sizes for posts, pages, port, portfolio, gallery, slider.
+   */
+  add_theme_support( 'post-thumbnails');
+  // set_post_thumbnail_size( 825, 510, true );
+  // add_image_size( 'hcode-navigation-img', 133, 83, true );
+  // add_image_size( 'hcode-related-post', 374, 234, true );
+  // add_image_size( 'recent-posts-thumb', 81, '', true );
+
+}
+
+
 delete from style.css {
 	Line 79 [
 		* {
@@ -16,8 +40,11 @@ delete from style.css {
 	]
 	Line 3099 - 3102 [
 		.shrink-nav { background-color:#FFF; position: fixed !important; top: 0 !important; transition-timing-function: ease-in-out; -moz-transition-timing-function: ease-in-out; -webkit-transition-timing-function: ease-in-out; -o-transition-timing-function: ease-in-out; transition-duration: .5s; -moz-transition-duration: .5s; -webkit-transition-duration: .5s; -o-transition-duration: .5s; }
-		.sticky-nav { transition-timing-function: ease-in-out; -moz-transition-timing-function: ease-in-out; -webkit-transition-timing-function: ease-in-out; -o-transition-timing-function: ease-in-out; transition-duration: .4s; -moz-transition-duration: .4s; -webkit-transition-duration: .4s; -o-transition-duration: .4s; }
-		header .sticky-nav{ position: absolute; top: 38px; display: inline-table;}
-		header { position: absolute; width: 100%; top: 0; }
+		
+    .sticky-nav { transition-timing-function: ease-in-out; -moz-transition-timing-function: ease-in-out; -webkit-transition-timing-function: ease-in-out; -o-transition-timing-function: ease-in-out; transition-duration: .4s; -moz-transition-duration: .4s; -webkit-transition-duration: .4s; -o-transition-duration: .4s; }
+		
+    header .sticky-nav{ position: absolute; top: 38px; display: inline-table;}
+		
+    header { position: absolute; width: 100%; top: 0; }
 	]
 }
