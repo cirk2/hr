@@ -31,7 +31,14 @@
   .wpcf7-not-valid-tip {
     color: lighten($red, 25);
   }
+  .wpcf7-recaptcha {
+    width: 50%;
+      float: left;
+  }
   .wpcf7-submit {
+    height: 76px;
+    width: 50%;
+    float: right;
     &:hover {
       background-color: white(0.1);
     }
