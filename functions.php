@@ -619,7 +619,8 @@ add_action( 'wp_enqueue_scripts', 'hcode_child_style' );
             }
 
             /*  Hide wpbakery settings error message in post editor */
-
+            
+            #setting-error-tgmpa,
             #setting-error-tgmpa.update-nag {
               display: none !important;
             }
