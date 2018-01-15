@@ -43,12 +43,12 @@ get_header(); ?>
 
                 <div class="rebsorten">
 
-                  <?php $posts = get_field('rebsorten');
+                  <?php $rebsorten = get_field('rebsorten');
 
-                    if( $posts ): ?>
+                    if( $rebsorten ): ?>
                         <ul>
-                        <?php foreach( $posts as $post):?>
-                            <?php setup_postdata($post); ?>
+                        <?php foreach( $rebsorten as $rebsorte):?>
+                            <?php setup_postdata($rebsorte); ?>
                             <li>
                                 <a class="modal-link" href="<?php the_permalink(); ?>">
                                     <div class="watermark"></div>
@@ -90,7 +90,7 @@ get_header(); ?>
                   }
                 ?>
 
-                <h3 <?php echo $show_posts ?> >Artikel zu <?php echo the_title(); ?></h3>
+                <h3 <?php echo $show_posts ?> >Blogbeiträge über <?php echo the_title(); ?></h3>
                 
                 <ul class="related-post-links">
                   
