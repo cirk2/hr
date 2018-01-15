@@ -145,12 +145,8 @@
                 triggerOnce: true
               });
 
-              // var widgetId = grecaptcha.render($('div.wpcf7 > form .g-recaptcha'));
-              // grecaptcha.reset(widgetId);
-              
-              var onloadCallback = function() {
-                  wpcf7.initForm('div.wpcf7 > form');
-                };
+              $.getScript("https://www.google.com/recaptcha/api.js");
+              wpcf7.initForm('div.wpcf7 > form');
               
               setTimeout(function() {
                 $('.modal-wrapper .modal').click().focus();
