@@ -1089,11 +1089,11 @@ section.parent-section.no-padding {
 .vc_grid .vc_col-sm-3,
 .vc_grid .vc_col-sm-4 {
   display: inline-block !important; }
-  @media (min-width: 992px) {
+  @media (min-width: 1200px) {
     .vc_grid .vc_col-sm-3,
     .vc_grid .vc_col-sm-4 {
       width: 33%; } }
-  @media (max-width: 991px) {
+  @media (max-width: 1199px) {
     .vc_grid .vc_col-sm-3,
     .vc_grid .vc_col-sm-4 {
       width: 50%; } }
