@@ -3927,15 +3927,20 @@ blockquote.blog-image:before, .blog-image blockquote:before {
   color: #fff; }
 .modal .wpcf7 .wpcf7-not-valid-tip {
   color: #ff6475; }
-.modal .wpcf7 .wpcf7-recaptcha {
+.has_no-flexbox .modal .wpcf7 .wpcf7-recaptcha {
   width: 50%;
   float: left; }
 .modal .wpcf7 .wpcf7-submit {
-  height: 76px;
-  width: 50%;
-  float: right; }
+  height: 76px; }
+  .has_no-flexbox .modal .wpcf7 .wpcf7-submit {
+    width: 50%;
+    float: right; }
   .modal .wpcf7 .wpcf7-submit:hover {
     background-color: rgba(255, 255, 255, 0.1); }
+.modal .wpcf7 .wpcf7-submit-container {
+  display: flex; }
+  .modal .wpcf7 .wpcf7-submit-container > p {
+    width: 100%; }
 
 .rebsorte .blog-date,
 .partnerwinzer .blog-date {

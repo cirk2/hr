@@ -34,15 +34,25 @@
     color: lighten($red, 25);
   }
   .wpcf7-recaptcha {
-    width: 50%;
-    float: left;
+    .has_no-flexbox & {
+      width: 50%;
+      float: left;
+    }
   }
   .wpcf7-submit {
     height: 76px;
-    width: 50%;
-    float: right;
+    .has_no-flexbox & {
+      width: 50%;
+      float: right;
+    }
     &:hover {
       background-color: white(0.1);
+    }
+  }
+  .wpcf7-submit-container {
+    display: flex;
+    > p {
+      width: 100%;
     }
   }
 }
