@@ -23,7 +23,7 @@
   display: none; }
 
 .display-block {
-  display: block; }
+  display: block !important; }
 
 .alignright {
   float: right;
