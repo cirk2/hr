@@ -43,12 +43,12 @@ get_header(); ?>
 
                 <div class="rebsorten">
 
-                  <?php $rebsorten = get_field('rebsorten');
+                  <?php $posts = get_field('rebsorten');
 
-                    if( $rebsorten ): ?>
+                    if( $posts ): ?>
                         <ul>
-                        <?php foreach( $rebsorten as $rebsorte):?>
-                            <?php setup_postdata($rebsorte); ?>
+                        <?php foreach( $posts as $post):?>
+                            <?php setup_postdata($post); ?>
                             <li>
                                 <a class="modal-link" href="<?php the_permalink(); ?>">
                                     <div class="watermark"></div>
