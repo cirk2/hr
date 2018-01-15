@@ -92,7 +92,7 @@ get_header(); ?>
 
                 <h3 <?php echo $show_posts ?> >Artikel zu <?php echo the_title(); ?></h3>
                 
-                <ul>
+                <ul class="related-post-links">
                   
                 <?php foreach( $posts as $post ): setup_postdata($post); ?>
                  
