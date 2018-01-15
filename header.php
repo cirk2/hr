@@ -51,7 +51,9 @@
             echo hcode_option('space_before_head');
         endif;
     ?>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+            async defer>
+        </script>
 </head>
 <body <?php body_class(); ?> >
 
