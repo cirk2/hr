@@ -3900,47 +3900,49 @@ blockquote.blog-image:before, .blog-image blockquote:before {
     letter-spacing: -0.07rem;
     color: #e3001a; }
 
-.modal .wpcf7 * {
-  font-family: "Montserrat", "Proxima Nova", "Gotham", system-ui, sans-serif; }
-.modal .wpcf7 p {
-  margin: 0; }
-.modal .wpcf7 input,
-.modal .wpcf7 textarea {
-  margin: 0;
-  color: #fff;
-  background-color: transparent;
-  font-size: 1.1rem;
-  font-weight: 300;
-  border-color: rgba(255, 255, 255, 0.2);
-  border-radius: 3px; }
-  .modal .wpcf7 input:focus,
-  .modal .wpcf7 textarea:focus {
-    border-color: rgba(255, 255, 255, 0.5);
-    background-color: rgba(255, 255, 255, 0.03); }
-.modal .wpcf7 textarea {
-  height: 8rem; }
-.modal .wpcf7 .wpcf7-form-control-wrap {
-  display: block;
-  margin: 0 0 .2rem; }
-.modal .wpcf7 .wpcf7-response-output {
-  margin: 0;
-  color: #fff; }
-.modal .wpcf7 .wpcf7-not-valid-tip {
-  color: #ff6475; }
-.has_no-flexbox .modal .wpcf7 .wpcf7-recaptcha {
-  width: 50%;
-  float: left; }
-.modal .wpcf7 .wpcf7-submit {
-  height: 76px; }
-  .has_no-flexbox .modal .wpcf7 .wpcf7-submit {
+.modal .wpcf7 {
+  margin-bottom: -1rem; }
+  .modal .wpcf7 * {
+    font-family: "Montserrat", "Proxima Nova", "Gotham", system-ui, sans-serif; }
+  .modal .wpcf7 p {
+    margin: 0; }
+  .modal .wpcf7 input,
+  .modal .wpcf7 textarea {
+    margin: 0;
+    color: #fff;
+    background-color: transparent;
+    font-size: 1.1rem;
+    font-weight: 300;
+    border-color: rgba(255, 255, 255, 0.2);
+    border-radius: 3px; }
+    .modal .wpcf7 input:focus,
+    .modal .wpcf7 textarea:focus {
+      border-color: rgba(255, 255, 255, 0.5);
+      background-color: rgba(255, 255, 255, 0.03); }
+  .modal .wpcf7 textarea {
+    height: 8rem; }
+  .modal .wpcf7 .wpcf7-form-control-wrap {
+    display: block;
+    margin: 0 0 .2rem; }
+  .modal .wpcf7 .wpcf7-response-output {
+    margin: 0;
+    color: #fff; }
+  .modal .wpcf7 .wpcf7-not-valid-tip {
+    color: #ff6475; }
+  .has_no-flexbox .modal .wpcf7 .wpcf7-recaptcha {
     width: 50%;
-    float: right; }
-  .modal .wpcf7 .wpcf7-submit:hover {
-    background-color: rgba(255, 255, 255, 0.1); }
-.modal .wpcf7 .wpcf7-submit-container {
-  display: flex; }
-  .modal .wpcf7 .wpcf7-submit-container > p {
-    width: 100%; }
+    float: left; }
+  .modal .wpcf7 .wpcf7-submit {
+    height: 76px; }
+    .has_no-flexbox .modal .wpcf7 .wpcf7-submit {
+      width: 50%;
+      float: right; }
+    .modal .wpcf7 .wpcf7-submit:hover {
+      background-color: rgba(255, 255, 255, 0.1); }
+  .modal .wpcf7 .wpcf7-submit-container {
+    display: flex; }
+    .modal .wpcf7 .wpcf7-submit-container > p {
+      width: 100%; }
 
 .rebsorte .blog-date,
 .partnerwinzer .blog-date {
