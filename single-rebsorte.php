@@ -91,7 +91,7 @@ get_header(); ?>
                         'value' => '"' . get_the_ID() . '"',
                         'compare' => 'LIKE'
                         )
-                    )
+                    ),
                     'meta_key' => 'reihenfolge', 
                     'orderby' => 'meta_value_num',
                     'order' => 'ASC'
