@@ -83,9 +83,9 @@ get_header(); ?>
                   $args = array( 'numberposts' => 5, 
                                  'category_name' => get_the_title(), 
                                );
-                  $posts = get_posts( $args );
+                  $related_posts = get_posts( $args );
 
-                  if (!empty($posts)) {
+                  if (!empty($related_posts)) {
                     $show_posts = "style='display: block;'";
                   }
                 ?>
@@ -94,7 +94,7 @@ get_header(); ?>
                 
                 <ul class="related-post-links">
                   
-                <?php foreach( $posts as $post ): setup_postdata($post); ?>
+                <?php foreach( $related_posts as $post ): setup_postdata($post); ?>
                  
                   <li><a href="<?php echo the_permalink() ?>">
                     <?php echo the_title() ?></a>
