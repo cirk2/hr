@@ -21,6 +21,10 @@
   display: none;
 }
 
+.display-block {
+  display: block;
+}
+
 .alignright {
   float: right;
   height: auto;
@@ -67,6 +71,11 @@ section {
 
 .margin-three-bottom { margin-bottom: 3% !important}
 
+.margin-0auto,
+.sm-margin-0auto,
+.xs-margin-0auto {
+  margin: auto !important;
+}
 
 .opacity-medium {
   position: absolute;
