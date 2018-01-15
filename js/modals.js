@@ -146,6 +146,7 @@
               });
 
               wpcf7.initForm('div.wpcf7 > form');
+              grecaptcha.reset();
               
               setTimeout(function() {
                 $('.modal-wrapper .modal').click().focus();
