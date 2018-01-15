@@ -129,7 +129,7 @@ get_header(); ?>
             }
           ?>
 
-          <h3 <?php echo $show_posts ?> >Blogbeitrag zur Rebsorte<?php echo the_title(); ?></h3>
+          <h3 <?php echo $show_posts ?> >Blogbeitrag zur Rebsorte <?php echo the_title(); ?></h3>
           
           <ul class="related-post-links">
             
