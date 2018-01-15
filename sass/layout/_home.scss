@@ -35,6 +35,29 @@ section.parent-section.no-padding {
   }
 }
 
+// infinite scroll
+
+#infscr-loading > img {
+  display: none;
+}
+
+.paging-loader {
+  @include position(absolute, NULL NULL -2rem NULL);
+  width: 100%;
+  display: block;
+  margin-top: 2rem;
+  transform: none !important;
+  text-align: center;
+  animation: pulse 1s infinite both;
+  &:after {
+    content: "Weitere Beiträge werden geladen...";
+    font: 500 normal 1.1rem "Montserrat", sans-serif;
+    color: $red;
+  }
+}
+
+// 
+
 
 #Logo-Defs { height: 0; position: absolute; }
 
@@ -68,6 +91,16 @@ section.parent-section.no-padding {
     box-shadow: $box-shadow !important;
     background: #fff;
   }
+}
+
+.vc_grid.vc_grid-owl-theme .vc_grid-owl-nav {
+  .vc_grid-owl-next, 
+  .vc_grid-owl-prev {
+    transform: translateY(-50%);
+    margin-top: -37.5px !important
+  }
+  .vc_grid-owl-next { right: -40px !important }
+  .vc_grid-owl-prev { left:  -40px !important }
 }
 
 

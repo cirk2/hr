@@ -1065,6 +1065,23 @@ section.parent-section.no-padding {
       .dividers-header .subheader {
         padding: 0; } }
 
+#infscr-loading > img {
+  display: none; }
+
+.paging-loader {
+  position: absolute;
+  bottom: -2rem;
+  width: 100%;
+  display: block;
+  margin-top: 2rem;
+  transform: none !important;
+  text-align: center;
+  animation: pulse 1s infinite both; }
+  .paging-loader:after {
+    content: "Weitere Beiträge werden geladen...";
+    font: 500 normal 1.1rem "Montserrat", sans-serif;
+    color: #e3001a; }
+
 #Logo-Defs {
   height: 0;
   position: absolute; }
@@ -1091,6 +1108,15 @@ section.parent-section.no-padding {
   border: 2px solid #f8f8f8;
   box-shadow: 0 4px 6px rgba(90, 50, 50, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08) !important;
   background: #fff; }
+
+.vc_grid.vc_grid-owl-theme .vc_grid-owl-nav .vc_grid-owl-next,
+.vc_grid.vc_grid-owl-theme .vc_grid-owl-nav .vc_grid-owl-prev {
+  transform: translateY(-50%);
+  margin-top: -37.5px !important; }
+.vc_grid.vc_grid-owl-theme .vc_grid-owl-nav .vc_grid-owl-next {
+  right: -40px !important; }
+.vc_grid.vc_grid-owl-theme .vc_grid-owl-nav .vc_grid-owl-prev {
+  left: -40px !important; }
 
 .single > footer, .archive > footer {
   margin-top: 10em; }
@@ -3305,6 +3331,19 @@ section#rebsorten .vc_gitem-zone {
   line-height: 0.9;
   color: #e3001a; }
 
+.post .blog-image {
+  float: right;
+  margin: 1rem 0 1rem 2rem;
+  height: auto;
+  width: 400px;
+  overflow: hidden; }
+  .single-format-video .post .blog-image {
+    display: none !important; }
+
+.single-format-video .entry-content iframe {
+  width: 100%;
+  min-height: 440px; }
+
 .widget ul {
   list-style: none outside none;
   padding: 0;
@@ -3319,18 +3358,9 @@ section#rebsorten .vc_gitem-zone {
   .widget .widget-posts-details a {
     display: block; }
 
-.widget-posts a img {
-  width: 265px;
-  opacity: 0.5;
-  transition: opacity .5s;
-  will-change: opacity; }
-  .widget-posts a img:hover {
-    opacity: 1; }
-.widget-posts .widget-posts-details {
-  top: 8px; }
-
 .blog-listing .blog-post .blog-image {
-  max-height: 220px;
+  height: 140px;
+  width: 100%;
   overflow: hidden;
   border-radius: 3px;
   box-shadow: 0 4px 6px rgba(90, 50, 50, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08) !important; }
@@ -3342,11 +3372,16 @@ section#rebsorten .vc_gitem-zone {
       transform: scale(1.2, 1.2);
       opacity: 0.5; }
 .blog-listing .blog-post .blog-details {
-  padding-top: 30px; }
+  padding-top: 30px;
+  line-height: 1.7; }
   .blog-listing .blog-post .blog-details .blog-date {
-    font-size: 11px;
-    letter-spacing: 2px;
-    text-transform: uppercase; }
+    font-size: 0.7rem;
+    letter-spacing: 0.5px; }
+    .blog-listing .blog-post .blog-details .blog-date > * {
+      line-height: 1; }
+    .blog-listing .blog-post .blog-details .blog-date .published {
+      line-height: 1;
+      padding-right: 5px; }
   .blog-listing .blog-post .blog-details .blog-title a {
     display: block;
     margin: 5px 0 20px;
@@ -3355,7 +3390,8 @@ section#rebsorten .vc_gitem-zone {
     text-transform: none; }
   .blog-listing .blog-post .blog-details .blog-short-description p {
     width: 90%;
-    font-size: 0.8rem; }
+    font-size: 0.8rem;
+    word-break: break-all; }
 
 .parallax-fix .row {
   position: relative;
