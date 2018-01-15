@@ -84,14 +84,14 @@ get_header(); ?>
          
             <?php  $partners = get_posts(array(
                     'post_type' => 'partnerwinzer',
-                    'numberposts' => 8,
+                    'numberposts' => 16,
                     'meta_query' => array(
                         array(
                         'key' => 'rebsorten',
                         'value' => '"' . get_the_ID() . '"',
                         'compare' => 'LIKE'
                         )
-                    ),
+                    )
                     'meta_key' => 'reihenfolge', 
                     'orderby' => 'meta_value_num',
                     'order' => 'ASC'
