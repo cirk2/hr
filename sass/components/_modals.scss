@@ -79,8 +79,8 @@ body.modal-is-loading {
   @include media("screen", "from-md") {
     &.modal-small {
       @include center(xy);
-      @include position(fixed, 50% 0 0 50%);
-      min-height: 40%;
+      @include position(fixed, 50% auto auto 50%);
+/*       min-height: 40%; */
       min-width: 60%;
       &::after {
         @include coverer;
