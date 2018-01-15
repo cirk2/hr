@@ -187,7 +187,7 @@ get_header(); ?>
                   $pdf_thumb = substr($pdf_url, 0, -4) . '-pdf-212x300.jpg';
           ?>
 
-          <h3>Ursprungsnachweis</h3>
+          <h3>Ursprungs&shy;nachweis</h3>
 
           <div class="view-pdf" style="margin-bottom: 22px">
             <a  href="<?php the_field( 'pdf' ) ?>" class="fancybox-pdf" target="_blank">

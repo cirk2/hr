@@ -1914,7 +1914,7 @@ body.modal-is-loading {
     transform: scale(1.175); }
   @media only screen and (max-width: 767px) {
     .view-pdf {
-      margin: 0 auto;
+      /*     margin: 0 auto; */
       display: block; } }
 
 div.separator {
@@ -2659,7 +2659,11 @@ body #loading-page {
     margin: 3rem 0 1.5rem;
     text-transform: none;
     font-weight: 500;
-    color: #f7f7f7; }
+    color: #f7f7f7;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto; }
     .single .grid-container .content h2, .single .grid-container .content h3,
     .single .grid-container .sidebar h2,
     .single .grid-container .sidebar h3 {
@@ -2673,7 +2677,7 @@ body #loading-page {
     font-size: 2rem; }
   .grid-container .content h3,
   .grid-container .sidebar h3 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 400; }
   .grid-container .content p,
   .grid-container .sidebar p {
@@ -2802,7 +2806,7 @@ body #loading-page {
     padding: 0; }
     .grid-container .content .featured-image-thumb img {
       display: block;
-      margin: 0 auto; }
+      /*         margin: 0 auto; */ }
       @media (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
         .grid-container .content .featured-image-thumb img {
           float: right;
