@@ -95,7 +95,7 @@ get_header(); ?>
                       ));
                     if( $related_posts ): ?>
 
-                  <h3>Blogbeiträge über <?php echo the_title(); ?></h3>
+                  <h3>Blogbeiträge über den Winzer <?php // echo the_title(); ?></h3>
 
                   <ul class="related-post-links">
 

@@ -143,7 +143,7 @@ get_header(); ?>
                 ));
               if( $related_posts ): ?>
 
-            <h3>Blogbeiträge zur Rebsorte <?php echo the_title(); ?></h3>
+            <h3>Blogbeiträge zur Rebsorte<?php // echo the_title(); ?></h3>
 
             <ul class="related-post-links">
 
