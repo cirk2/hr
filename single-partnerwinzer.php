@@ -76,36 +76,44 @@ get_header(); ?>
                     <?php endif; ?>
                 </ul>
 
-                <?php 
-                  $show_posts = "style='display: none;'"; 
+                <!-- related posts -->
 
-                  global $post;
-                  $args = array( 'numberposts' => 5, 
-                                 'category_name' => get_the_title(), 
-                               );
-                  $related_posts = get_posts( $args );
+                <div class="related-posts">
 
-                  if (!empty($related_posts)) {
-                    $show_posts = "style='display: block;'";
-                  }
-                ?>
+                  <?php  $related_posts = get_posts(array(
+                          'post_status' => 'publish',
+                          'post_type'   => 'post',
+                          // 'cat'         => '138',
+                          'numberposts' => -1,
+                          'meta_query'  => array(
+                              array(
+                              'key'     => 'partnerwinzer',
+                              'value'   => '"' . get_the_ID() . '"',
+                              'compare' => 'LIKE'
+                              )
+                          )
+                      ));
+                    if( $related_posts ): ?>
 
-                <h3 <?php echo $show_posts ?> >Blogbeiträge über <?php echo the_title(); ?></h3>
-                
-                <ul class="related-post-links">
-                  
-                <?php foreach( $related_posts as $post ): setup_postdata($post); ?>
-                 
-                  <li><a href="<?php echo the_permalink() ?>">
-                    <?php echo the_title() ?></a>
-                  </li>
+                  <h3>Blogbeiträge über <?php echo the_title(); ?></h3>
 
-                <?php 
-                  endforeach; 
-                  wp_reset_postdata();
-                ?>
+                  <ul class="related-post-links">
 
-                </ul>
+                    <?php foreach( $related_posts as $related_post ): ?>
+
+                    <li>
+                      <a href="<?php echo get_permalink( $related_post->ID ); ?>">
+                        <?php echo get_the_title( $related_post->ID ); ?>
+                      </a>
+                    </li>
+
+                    <?php endforeach; ?>
+
+                  </ul>
+
+                  <?php endif; ?>
+
+                  <?php wp_reset_postdata(); ?>
 
             </div>
 

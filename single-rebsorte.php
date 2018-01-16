@@ -80,15 +80,18 @@ get_header(); ?>
             </div>
           </div>
           <?php endif; ?>
+
+          <!-- partnerwinzer -->
+
           <div class="partnerwinzer">
          
             <?php  $partners = get_posts(array(
-                    'post_type' => 'partnerwinzer',
+                    'post_type'   => 'partnerwinzer',
                     'numberposts' => 16,
-                    'meta_query' => array(
+                    'meta_query'  => array(
                         array(
-                        'key' => 'rebsorten',
-                        'value' => '"' . get_the_ID() . '"',
+                        'key'     => 'rebsorten',
+                        'value'   => '"' . get_the_ID() . '"',
                         'compare' => 'LIKE'
                         )
                     ),
@@ -114,42 +117,55 @@ get_header(); ?>
 
               <?php endforeach; ?>
             </ul>
+
             <?php endif; ?>
-            
+
+            <?php wp_reset_postdata(); ?>
+
           </div>
-
-          <?php 
-            $show_posts = "style='display: none;'"; 
-
-            global $post;
-            $args = array( 'numberposts' => 10, 
-                           'category_name' => get_the_title(), 
-                         );
-            $posts = get_posts( $args );
-
-            if (!empty($posts)) {
-              $show_posts = "style='display: block;'";
-            }
-          ?>
-
-          <h3 <?php echo $show_posts ?> >Blogbeiträge zur Rebsorte <?php echo the_title(); ?></h3>
           
-          <ul class="related-post-links">
-            
-          <?php foreach( $posts as $post ): setup_postdata($post); ?>
-           
-            <li>
-              <a target="_blank" href="<?php echo the_permalink() ?>">
-                <?php echo the_title() ?>
-              </a>
-            </li>
+          <!-- related posts -->
 
-          <?php 
-            endforeach; 
-            wp_reset_postdata();
-          ?>
+          <div class="related-posts">
 
-          </ul>
+            <?php  $related_posts = get_posts(array(
+                    'post_status' => 'publish',
+                    'post_type'   => 'post',
+                    'cat'         => '87',
+                    'numberposts' => -1,
+                    'meta_query'  => array(
+                        array(
+                        'key'     => 'rebsorten',
+                        'value'   => '"' . get_the_ID() . '"',
+                        'compare' => 'LIKE'
+                        )
+                    )
+                ));
+              if( $related_posts ): ?>
+
+            <h3>Blogbeiträge zur Rebsorte <?php echo the_title(); ?></h3>
+
+            <ul class="related-post-links">
+
+              <?php foreach( $related_posts as $related_post ): ?>
+
+              <li>
+                <a href="<?php echo get_permalink( $related_post->ID ); ?>">
+                  <?php echo get_the_title( $related_post->ID ); ?>
+                </a>
+              </li>
+
+              <?php endforeach; ?>
+
+            </ul>
+
+            <?php endif; ?>
+
+            <?php wp_reset_postdata(); ?>
+
+            <!-- research -->
+
+          </div>
 
           <div class="separator">&#x2766;</div>
         </div>
