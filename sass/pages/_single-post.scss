@@ -46,7 +46,7 @@
 .blog-listing {
   .blog-post {
     .blog-image {
-      @include size(100% 140px);
+      @include size(100% 200px);
       overflow: hidden;
       border-radius: 3px;
       box-shadow: $box-shadow !important;
