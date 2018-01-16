@@ -19,6 +19,8 @@ $modal-bg: #000;
   }
 }
 
+section.page-title { background-size: 168% !important; }
+
 .single {
   .logo-header { display: none; }
   section.hentry { padding: 0 !important; }
@@ -27,7 +29,6 @@ $modal-bg: #000;
     .grid-container {
       grid-template-rows: 0 2rem auto 1fr;
     }
-    &.page-title { background-size: 168% !important;
       @include media("mobile") {
         background-size: cover !important;
       }
