@@ -65,6 +65,9 @@ section {
 .margin-three-bottom {
   margin-bottom: 3% !important; }
 
+.margin-tb-30px {
+  margin: 30px 0; }
+
 .margin-0auto,
 .sm-margin-0auto,
 .xs-margin-0auto {
@@ -631,6 +634,9 @@ input, textarea, select {
   resize: none;
   -webkit-font-smoothing: antialiased !important;
   -moz-osx-font-smoothing: grayscale !important; }
+
+iframe {
+  border: 0; }
 
 img.wp-post-image,
 img.size-large,
@@ -3344,15 +3350,6 @@ section#rebsorten .vc_gitem-zone {
   font-size: 1.8rem;
   line-height: 0.9;
   color: #e3001a; }
-
-.post .blog-image {
-  float: right;
-  margin: 1rem 0 1rem 2rem;
-  height: auto;
-  width: 400px;
-  overflow: hidden; }
-  .single-format-video .post .blog-image {
-    display: none !important; }
 
 .single-format-video .entry-content iframe {
   width: 100%;

@@ -7,17 +7,14 @@
   }
 }
 
-.post {
-  .blog-image {
-    float: right;
-    margin: 1rem 0 1rem 2rem;
-    @include size(400px auto);
-    overflow: hidden;
-    .single-format-video & {
-      display: none !important;
-    }
-  }
-}
+// .post {
+//   .blog-image {
+// //     float: right;
+//     margin: 1rem 0 1rem 2rem;
+//     @include size(400px auto);
+//     overflow: hidden;
+//   }
+// }
 
 .single-format-video {
   .entry-content iframe {

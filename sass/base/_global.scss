@@ -61,6 +61,10 @@ input, textarea, select {
   -moz-osx-font-smoothing: grayscale !important;
 }
 
+iframe {
+  border: 0;
+}
+
 // images
 
 img.wp-post-image,
