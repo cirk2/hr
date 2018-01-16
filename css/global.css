@@ -734,7 +734,9 @@ p {
       color: #bbbbbb; }
 
 .entry-content a {
-  color: #e3001a; }
+  color: #e3001a;
+  text-decoration: underline;
+  text-decoration-skip: ink; }
 
 strong {
   color: #e3001a;
@@ -2848,8 +2850,6 @@ section.page-title {
       display: block;
       height: 100%;
       box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px rgba(255, 255, 255, 0.05); }
-  .grid-container .sidebar h3 {
-    font-size: 1.4em !important; }
 
 .partnerwinzer .grid-container {
   display: block;

@@ -68,6 +68,8 @@ p {
 
 .entry-content a {
   color: $red;
+  text-decoration: underline;
+  text-decoration-skip: ink;
 }
 
 strong {
