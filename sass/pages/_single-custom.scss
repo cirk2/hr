@@ -23,8 +23,12 @@ section.page-title {
   background-size: 168% !important;
 }
 
-.single {
+.single,
+.blog {
   .logo-header { display: none; }
+}
+
+.single {
   section.hentry { padding: 0 !important; }
   .text-center h3 { text-align: left; }
   > section {
