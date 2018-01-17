@@ -700,7 +700,7 @@ body {
 .menu-item a,
 .slider-typography,
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Montserrat", "Proxima Nova", "Gotham", system-ui, sans-serif;
+  font-family: "Montserrat", "Proxima Nova", "Gotham", system-ui, sans-serif !important;
   text-transform: none !important; }
 
 h1, h2, h3, h4, h5, h6 {

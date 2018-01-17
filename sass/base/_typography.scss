@@ -21,7 +21,7 @@ body {
 .menu-item a,
 .slider-typography,
 h1, h2, h3, h4, h5, h6 {
-  font-family: $sans-stack;
+  font-family: $sans-stack !important;
   text-transform: none !important;
 }
 
