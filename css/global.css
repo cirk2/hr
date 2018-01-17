@@ -114,12 +114,12 @@ section {
   left: 0; }
 
 /* line 96, ../sass/utils/_helpers.scss */
-.single .page-title-large {
+.page-title-large {
   min-height: 450px;
   padding: 240px 0 0; }
   @media (min-device-width: 320px) and (max-device-width: 414px) {
     /* line 96, ../sass/utils/_helpers.scss */
-    .single .page-title-large {
+    .page-title-large {
       height: 120px !important;
       background-size: contain !important;
       background-position-y: top !important;
