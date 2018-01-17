@@ -20,10 +20,7 @@ $modal-bg: #000;
 }
 
 section.page-title { 
-  background-size: 168% !important; 
-  @include media("mobile") {
-    background-size: cover !important;
-  }
+  background-size: 168% !important;
 }
 
 .single {

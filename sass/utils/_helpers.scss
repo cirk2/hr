@@ -34,9 +34,8 @@ section {
   clear: both;
 }
 
-.no-padding {
-  padding: 0 !important;
-}
+.no-padding { padding: 0 !important; }
+.no-padding-lr { padding-left: 0 !important; padding-right: 0 !important; }
 
 .center-col{ 
   float:none !important;
@@ -94,9 +93,16 @@ section {
   left: 0;
 }
 
-.page-title-large {
+.single .page-title-large {
   min-height: 450px;
   padding: 240px 0 0;
+  @include media(mobile) {
+    height: 120px !important; 
+    background-size: contain !important;
+    background-position-y: top !important;
+    padding: 0 !important;
+    min-height: 0;
+  }
 }
 
 .parallax-fix {
