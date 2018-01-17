@@ -1427,7 +1427,6 @@ footer .footer-position {
   background: transparent url("/wp-content/themes/hr/i/grape-dash.png") left top no-repeat; }
 
 .grid-container {
-  display: -ms-grid;
   display: grid;
   max-width: 910px;
   margin: 0 auto; }
@@ -1437,14 +1436,12 @@ footer .footer-position {
     padding: 0;
     margin-bottom: 10px; }
   .grid-container .grid-fullwidth {
-    -ms-grid-column: 1;
     grid-column-start: 1;
     grid-column-end: -1; }
 
 @media only screen and (min-width: 992px) {
   .grid-container {
     margin: 0 auto;
-    -ms-grid-columns: 80% 40px 20%;
     grid-template-columns: 1fr 200px;
     grid-template-rows: 275px 2rem auto 1fr;
     grid-column-gap: 40px;
@@ -1454,9 +1451,6 @@ footer .footer-position {
     .grid-container .content {
       width: 79.7872%; }
     .grid-container .content {
-      -ms-grid-row: 1;
-      -ms-grid-column: -1;
-      -ms-grid-column-span: 3;
       grid-column: 1 / -1 / -1; }
     .grid-container header, .grid-container footer {
       grid-column: 1 / -1;
