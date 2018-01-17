@@ -1149,6 +1149,11 @@ section.parent-section.no-padding {
 .single > footer, .archive > footer {
   margin-top: 10em; }
 
+.fb-link-footer {
+  color: #3b5998; }
+  .fb-link-footer a {
+    padding-left: 4px; }
+
 footer h6,
 footer .small-icon {
   font-size: 120%;

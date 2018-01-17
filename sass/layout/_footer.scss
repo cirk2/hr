@@ -4,6 +4,13 @@
   }
 }
 
+.fb-link-footer {
+  color: $facebook-color;
+  a {
+    padding-left: 4px;
+  }
+}
+
 footer {
   h6,
   .small-icon {
