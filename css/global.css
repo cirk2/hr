@@ -68,6 +68,12 @@ section {
 .margin-tb-30px {
   margin: 30px 0; }
 
+.padding-four-bottom {
+  padding-bottom: 4% !important; }
+
+.padding-four-top {
+  padding-top: 4% !important; }
+
 .margin-0auto,
 .sm-margin-0auto,
 .xs-margin-0auto {
@@ -351,6 +357,12 @@ section {
 
 .fa-google-plus:before {
   content: ""; }
+
+.fa-linkedin:before {
+  content: ""; }
+
+.fa-xing:before {
+  content: ""; }
 
 .icon-file-pdf:before {
   content: ""; }

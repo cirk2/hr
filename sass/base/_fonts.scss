@@ -132,6 +132,16 @@
     content: $fa-google-plus;
   }
 }
+.fa-linkedin {
+  &:before {
+    content: $fa-linkedin;
+  }
+}
+.fa-xing {
+  &:before {
+    content: $fa-xing;
+  }
+}
 
 .icon-file-pdf {
   &:before {
